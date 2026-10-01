@@ -1,0 +1,16 @@
+label "Metacognitive monitoring and control diagram"
+box meta 150 20 130 50 "meta level|monitor + control" acc
+box obj 150 150 130 50 "object level|generates"
+box task 14 155 90 40 "task"
+box ver 330 150 116 50 "verify"
+box out 330 20 116 50 "answer|or abstain"
+arrow task obj
+arrow obj ver
+arrow ver out
+arrow meta out
+path "M185 150 L185 74" arrow dashed
+path "M245 70 L245 146" arrow
+text 178 114 "confidence" size=10 right
+text 252 114 "continue / retry" size=10 left
+text 305 38 "stop" size=10
+note "dashed: monitoring up · solid: control down"

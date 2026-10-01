@@ -1,0 +1,88 @@
+# The gate of this node, on every push and every pull request.
+#
+#   What runs  the engine repository is checked out beside this one and installed;
+#              then, from this Bundle's root: `agsc lint`, `agsc build`,
+#              `agsc verify --ledger`, `agsc ci` (lint, two builds compared byte for
+#              byte, verify), `agsc conform --level 2`, the shipped discovery checker
+#              at Level 2 over the built discovery document, the publish-set tool in
+#              its report-only mode, and the engine's hygiene sweep over this
+#              repository.
+#   Engine     `andreibesleaga/agentic-system-core` at ENGINE_REF (below):
+#              `main` by default; set the variable to a tag or a commit to pin, or
+#              name another ref in a manual run.
+#   History    this checkout takes the full history: a Level-2 node publishes its
+#              ledger, and the ledger derives from the git log (AGSC-10-04).
+#   Output     `www/` is generated here and never committed, so nothing is compared
+#              with a committed copy; `agsc ci` compares its own two builds.
+#   Secrets    none. Permissions: read the repositories, nothing else.
+#
+# Every action is pinned to a commit SHA with the version beside it — the SHAs the
+# engine's own workflows pin — so that a moved tag cannot change what runs.
+
+name: test
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      engine_ref:
+        description: 'engine ref to check out beside the node (empty = ENGINE_REF)'
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  contents: read
+
+env:
+  ENGINE_REF: main
+
+jobs:
+  node:
+    name: node (lint, build, verify, ci, conform, discovery, hygiene)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: agsc-demo-node
+    steps:
+      - name: this repository, with its history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          path: agsc-demo-node
+          fetch-depth: 0
+          persist-credentials: false
+      - name: the engine, beside it
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: andreibesleaga/agentic-system-core
+          ref: ${{ inputs.engine_ref || env.ENGINE_REF }}
+          path: agentic-system-core
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.13.0'
+          package-manager-cache: false
+      - name: install the engine
+        working-directory: agentic-system-core
+        run: npm ci
+      - name: lint (parse, schema, links, governance)
+        run: node ../agentic-system-core/bin/agsc.js lint
+      - name: build (the route set into www/)
+        run: node ../agentic-system-core/bin/agsc.js build
+      - name: verify (the built output against its digests, and the ledger)
+        run: node ../agentic-system-core/bin/agsc.js verify --ledger
+      - name: ci (lint, two builds compared, verify)
+        run: node ../agentic-system-core/bin/agsc.js ci
+      - name: conform at Level 2
+        run: node ../agentic-system-core/bin/agsc.js conform --level 2
+      - name: the discovery document at Level 2, by the shipped checker
+        run: node ../agentic-system-core/tools/validate-wellknown www/.well-known/knowledge-linkset --level 2
+      - name: the publish set is applied (report only, writes nothing)
+        run: node ../agentic-system-core/tools/publish-set --check .
+      - name: public means clean
+        run: node ../agentic-system-core/tools/public-hygiene .

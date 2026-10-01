@@ -1,0 +1,15 @@
+label "Unbounded agent loops anti-pattern diagram"
+canvas 460 250
+box think 30 30 90 40 "think"
+box act 170 30 90 40 "act"
+box obs 100 120 90 40 "observe"
+arrow think act
+arrow act obs
+arrow obs think
+text 145 186 "no cap · no budget · no done test" size=11
+box gate 290 90 156 60 "exit gate|step cap · budget · done?" acc
+box stop 316 180 104 40 "stop|or escalate"
+arrow obs gate dashed
+arrow gate stop
+text 238 118 "missing" size=10
+note "the loop is fine; running it without a gate is the anti-pattern"

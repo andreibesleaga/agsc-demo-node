@@ -1,0 +1,8 @@
+{
+  "_": "Allow-list of tools/public-hygiene (in the engine repository) for this node. Every entry says why the hit is public by intent.",
+  "built": [
+    "www"
+  ],
+  "skip": [],
+  "allow": []
+}

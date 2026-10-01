@@ -1,0 +1,3 @@
+Contact: https://github.com/andreibesleaga/agentic-system-core/security/advisories/new
+Contact: https://andreibesleaga.com/contact/
+Preferred-Languages: en

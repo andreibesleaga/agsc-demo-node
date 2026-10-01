@@ -1,0 +1,77 @@
+{
+  "build": {
+    "out": "www"
+  },
+  "bundle": {
+    "id": "agenticsystemcore-patterns",
+    "license_prose": "LicenseRef-AgenticSystemCore-Content-Use-1.0",
+    "license_schema": "CC0-1.0",
+    "operator": "human:andreibesleaga"
+  },
+  "peers": [
+    "https://agenticsystemcore.com/.well-known/knowledge-linkset"
+  ],
+  "releases": {
+    "advanced": true,
+    "antipatterns": true,
+    "ethics": true,
+    "future": true,
+    "launch": true,
+    "ops-evals": true,
+    "reference-architectures": true,
+    "sdlc": true,
+    "specs": true
+  },
+  "site": {
+    "author": "Andrei N. Besleaga",
+    "base": "https://patterns.agenticsystemcore.com/",
+    "tagline": "A live demonstration node of the AgenticSystemCore reference engine, running on a small sample of well-known agent-system patterns.",
+    "tdm_crawlers": [
+      "Applebot-Extended",
+      "CCBot",
+      "ClaudeBot",
+      "GPTBot",
+      "Google-Extended",
+      "meta-externalagent"
+    ],
+    "title": "AgenticSystemCore Demo Node"
+  },
+  "spec_version": "1.0.0-rc.6",
+  "tags": {
+    "allowed": [
+      "accountability",
+      "adoption",
+      "autonomy",
+      "blueprint",
+      "calibration",
+      "coding-agents",
+      "compliance",
+      "concurrency",
+      "coordination",
+      "cost-control",
+      "delegation",
+      "ensemble",
+      "evaluation",
+      "fault-tolerance",
+      "governance",
+      "grounding",
+      "human-oversight",
+      "isolation",
+      "least-privilege",
+      "loop",
+      "memory",
+      "metrics",
+      "multi-agent",
+      "observability",
+      "persistence",
+      "planning",
+      "prompt-injection",
+      "reasoning",
+      "safety",
+      "scheduling",
+      "self-improvement",
+      "standards",
+      "taxonomy"
+    ]
+  }
+}

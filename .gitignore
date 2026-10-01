@@ -1,0 +1,17 @@
+# The build output: derived from content/ and agsc.config.json, never authored.
+www/
+.wrangler
+
+# Secrets. A tracked `.env` is a lint error in its own right (AGSC-01-37, AGSC-E403).
+.env
+.env.*
+!.env.example
+
+# Local tooling
+node_modules/
+.agsc/
+
+# Editor and platform noise
+.DS_Store
+Thumbs.db
+*.swp

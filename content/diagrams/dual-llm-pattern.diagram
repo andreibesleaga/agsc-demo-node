@@ -1,0 +1,15 @@
+label "Dual-LLM pattern diagram"
+canvas 460 270
+box user 14 116 80 50 "user"
+box priv 150 16 160 50 "privileged LLM|plans, chooses actions" acc
+box ctrl 150 116 160 50 "controller (code)|holds $VAR1, $VAR2"
+box tools 366 116 80 50 "tools|email, web"
+box quar 150 196 160 46 "quarantined LLM|no tools"
+arrow user ctrl both
+arrow priv ctrl both
+arrow ctrl tools both
+arrow ctrl quar both
+text 238 96 "variable names only" size=10 left
+text 238 186 "untrusted text in" size=10 left
+text 338 162 "untrusted" size=10
+note "the privileged LLM never reads untrusted text — only variable names"

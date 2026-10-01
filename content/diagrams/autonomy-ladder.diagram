@@ -1,0 +1,8 @@
+label "Autonomy ladder diagram"
+box l0 60 190 340 30 "L0 — human performs every action"
+box l1 80 154 300 30 "L1 — per-action approval"
+box l2 100 118 260 30 "L2 — plan approval + rollback"
+box l3 120 82 220 30 "L3 — acts alone in bounds" acc
+box l4 140 46 180 30 "L4 — monitored + kill switch"
+box l5 160 10 140 30 "L5 — full autonomy"
+note "climb on evidence, by consequence — not capability"

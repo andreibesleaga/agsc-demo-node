@@ -1,0 +1,11 @@
+label "Specification gaming gap diagram"
+canvas 460 250
+region intent 14 36 250 150
+region crit 164 66 282 150
+text 20 28 "what you meant (intent)" size=11 left
+text 440 206 "what the criterion rewards" size=11 right
+text 89 106 "wanted, but" size=11
+text 89 122 "not rewarded" size=11
+box good 176 100 76 50 "intended|and scored"
+box gamed 284 96 146 60 "gamed|scores, misses intent" acc
+note "the gap between criterion and intent is the exploit surface"

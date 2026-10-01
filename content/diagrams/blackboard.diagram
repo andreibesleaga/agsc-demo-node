@@ -1,0 +1,15 @@
+label "Blackboard shared state diagram"
+canvas 460 270
+box bb 160 100 140 66 "blackboard|shared state" acc
+box s1 20 24 96 34 "specialist"
+box s2 344 24 96 34 "specialist"
+box s3 20 200 96 34 "specialist"
+box s4 344 200 96 34 "specialist"
+box ctl 160 14 140 42 "control|picks who runs next"
+arrow s1 bb both
+arrow s2 bb both
+arrow s3 bb both
+arrow s4 bb both
+arrow bb ctl dashed
+text 236 83 "reads" size=10 left
+note "no specialist-to-specialist edges — everything goes through the shared state"

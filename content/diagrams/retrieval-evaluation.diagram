@@ -1,0 +1,14 @@
+label "Retrieval evaluation split measurement diagram"
+canvas 460 210
+box q 8 30 54 40 "query"
+box r 86 30 126 40 "retrieve"
+box g 240 30 126 40 "generate"
+box a 392 30 60 40 "answer"
+box m1 86 108 126 50 "retrieval metrics|found? ranked high?" acc
+box m2 240 108 126 50 "grounding metrics|supported? used?"
+arrow q r
+arrow r g
+arrow g a
+arrow r m1
+arrow g m2
+note "measure the two halves separately — else every failure looks like a model failure"

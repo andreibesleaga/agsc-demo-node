@@ -1,0 +1,15 @@
+label "Skill library compounding diagram"
+canvas 460 240
+box task 14 44 86 40 "new task"
+box solve 140 44 100 40 "solve"
+box verify 284 44 90 40 "verify"
+box lib 150 154 200 46 "skill library|verified skills only" acc
+arrow task solve
+arrow solve verify
+arrow verify lib
+arrow lib solve dashed
+arrow verify solve dashed via=329,16;190,16
+text 260 12 "fails: revise" size=10
+text 318 124 "passes" size=10 left
+text 198 124 "retrieved" size=10 right
+note "only verified skills enter; stored skills feed the next task"

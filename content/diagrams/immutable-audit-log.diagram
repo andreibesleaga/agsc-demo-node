@@ -1,0 +1,12 @@
+label "Hash chained audit log diagram"
+canvas 460 240
+box r1 14 30 124 66 "record 1|who, what, verdict|hash: none"
+box r2 166 30 124 66 "record 2|who, what, verdict|hash of record 1"
+box r3 318 30 124 66 "record 3|who, what, verdict|hash of record 2"
+arrow r1 r2
+arrow r2 r3
+box ver 148 150 160 48 "verifier|recomputes every link" acc
+arrow ver r1
+arrow ver r2
+arrow ver r3
+note "append-only: changing any record breaks every hash after it"

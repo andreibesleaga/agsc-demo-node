@@ -1,0 +1,19 @@
+label "Exception handling and recovery diagram"
+canvas 460 262
+box step 14 100 80 50 "call|fails"
+box cls 124 94 116 62 "classify|the fault" acc
+box retry 290 20 156 48 "retry, bounded|with backoff"
+box fb 290 104 156 44 "fallback|other tool, model, plan"
+box deg 290 184 156 44 "degrade honestly|partial result, said so"
+arrow step cls
+arrow cls retry
+arrow cls fb
+arrow retry fb
+arrow fb deg
+arrow retry step dashed via=54,44
+text 172 38 "run again" size=10
+text 262 76 "transient" size=10 right
+text 265 114 "lasting" size=10
+text 374 90 "used up" size=10 left
+text 374 170 "no path left" size=10 left
+note "retry only what can heal — then fall back, then degrade honestly"

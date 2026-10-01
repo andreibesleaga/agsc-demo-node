@@ -1,0 +1,13 @@
+label "Parallelization fan-out gather diagram"
+box in 20 105 80 42 "input"
+box b1 170 26 110 38 "branch 1"
+box b2 170 107 110 38 "branch 2"
+box b3 170 188 110 38 "branch 3"
+box agg 330 100 116 52 "aggregate|code or model" acc
+arrow in b1
+arrow in b2
+arrow in b3
+arrow b1 agg
+arrow b2 agg
+arrow b3 agg
+note "same shape, two modes: split different work, or run the same work N ways"

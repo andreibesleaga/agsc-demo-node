@@ -1,0 +1,13 @@
+label "OWASP Top 10 for Agentic Applications diagram"
+box a1 6 8 221 38 "ASI01|Agent Goal Hijack" acc
+box a2 6 52 221 38 "ASI02|Tool Misuse and Exploitation"
+box a3 6 96 221 38 "ASI03|Identity & Privilege Abuse"
+box a4 6 140 221 38 "ASI04|Agentic Supply Chain Vulnerabilities"
+box a5 6 184 221 38 "ASI05|Unexpected Code Execution"
+box a6 233 8 221 38 "ASI06|Memory & Context Poisoning"
+box a7 233 52 221 38 "ASI07|Insecure Inter-Agent Communication"
+box a8 233 96 221 38 "ASI08|Cascading Failures"
+box a9 233 140 221 38 "ASI09|Human-Agent Trust Exploitation"
+box a10 233 184 221 38 "ASI10|Rogue Agents"
+canvas 460 252
+note "what a system can be made to do — not only what a model can be made to say"

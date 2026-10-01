@@ -1,0 +1,15 @@
+label "Generative Agents architecture diagram"
+box world 14 100 80 44 "world"
+box mem 130 96 130 52 "memory stream|every observation" acc
+box ref 130 16 130 40 "reflection"
+box plan 300 16 140 40 "planning"
+box ret 300 100 140 44 "retrieve|top-scored memories"
+box act 300 176 140 40 "action"
+arrow world mem
+arrow mem ref both
+arrow mem plan both
+arrow mem ret
+arrow ret act
+arrow act world dashed via=54,196
+text 112 90 "perceive" size=10
+note "retrieval scores recency · importance · relevance"

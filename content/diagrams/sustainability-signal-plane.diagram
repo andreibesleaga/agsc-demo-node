@@ -1,0 +1,13 @@
+label "Sustainability signal plane publish and consume symmetry diagram"
+canvas 460 250
+text 14 18 "each serves /.well-known/sustainability-data" size=11 left
+box sysa 14 30 150 40 "system A|publishes its data"
+box sysb 14 96 150 40 "system B|publishes its data"
+box sysc 14 162 150 40 "system C|publishes its data"
+box agent 290 80 150 60 "consuming agent|reads peers, decides" acc
+box own 290 172 150 40 "publishes its own|at the same path"
+arrow sysa agent
+arrow sysb agent
+arrow sysc agent
+arrow agent own
+note "every node is both reporter and sensor"

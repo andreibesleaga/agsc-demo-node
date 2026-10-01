@@ -1,0 +1,12 @@
+label "Meaningful human control diagram"
+canvas 460 240
+box reasons 14 20 130 48 "human moral|reasons"
+box agent 176 96 116 50 "agent|decision" acc
+box action 336 96 110 50 "action"
+box human 14 164 130 48 "responsible human|who understands"
+arrow reasons agent via=234,44
+arrow agent action
+arrow action human via=391,188
+text 150 36 "tracking: responds to them" size=10 left
+text 156 204 "tracing: outcomes lead back to them" size=10 left
+note "meaningful only when both hold — reasons in, responsibility traceable out"

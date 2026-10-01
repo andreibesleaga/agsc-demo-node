@@ -1,0 +1,18 @@
+label "Deep research loop diagram"
+canvas 460 270
+box lead 14 112 84 50 "lead agent|plans"
+box s1 134 36 104 40 "subagent|search + read"
+box s2 134 117 104 40 "subagent|search + read"
+box s3 134 198 104 40 "subagent|search + read"
+box syn 270 112 86 50 "lead agent|synthesizes"
+box cite 382 112 68 50 "citation|pass" acc
+arrow lead s1
+arrow lead s2
+arrow lead s3
+arrow s1 syn
+arrow s2 syn
+arrow s3 syn
+arrow syn cite
+arrow syn lead dashed via=313,14;56,14
+text 319 62 "more needed?" size=10 left
+note "findings return, not transcripts; the lead decides when to stop"

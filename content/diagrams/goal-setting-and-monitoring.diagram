@@ -1,0 +1,19 @@
+label "Goal setting and monitoring diagram"
+canvas 460 220
+box goal 14 20 90 44 "goal with|criteria"
+box mon 130 20 90 44 "monitor" acc
+box ana 260 20 90 44 "analyze"
+box out 380 20 70 44 "done /|escalate"
+box plan 260 130 90 44 "plan"
+box exe 130 130 90 44 "execute"
+box task 14 130 90 44 "managed task"
+box know 196 72 88 46 "shared|knowledge"
+arrow goal mon
+arrow mon ana
+arrow ana out
+arrow ana plan
+arrow plan exe
+arrow exe task
+arrow task mon dashed
+text 86 104 "progress" size=10
+note "every check ends in continue, replan, or stop and escalate"

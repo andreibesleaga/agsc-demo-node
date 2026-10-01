@@ -1,0 +1,30 @@
+{
+ "_": [
+  "The slugs that are published on this node. In this repository every item is on the list.",
+  "The tool: node ../agentic-system-core/tools/publish-set --check ."
+ ],
+ "slugs": [
+  "agents-as-tools",
+  "autonomy-ladder",
+  "blackboard",
+  "deep-research-loop",
+  "dual-llm-pattern",
+  "exception-handling-and-recovery",
+  "generative-agents",
+  "goal-setting-and-monitoring",
+  "immutable-audit-log",
+  "meaningful-human-control",
+  "metacognitive-monitoring",
+  "owasp-agentic-top-10",
+  "parallelization",
+  "plan-approval-gate",
+  "retrieval-evaluation",
+  "saga-for-agents",
+  "skill-library",
+  "specification-gaming",
+  "sustainability-signal-plane",
+  "trajectory-vs-outcome-evals",
+  "unbounded-agent-loops",
+  "weak-to-strong-oversight"
+ ]
+}

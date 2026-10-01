@@ -1,0 +1,14 @@
+label "Plan approval gate diagram"
+canvas 460 230
+region ro 6 40 200 104 "read-only phase"
+box read 14 64 78 56 "agent|explores"
+box plan 118 64 80 56 "writes a|plan"
+box gate 232 60 84 64 "human|decides" acc
+box edit 360 64 90 56 "edit phase|agent writes"
+arrow read plan
+arrow plan gate
+arrow gate edit
+arrow gate plan dashed via=274,176;158,176
+text 338 84 "approve" size=10
+text 215 194 "keep planning, with changes" size=10
+note "the runtime, not the prompt, blocks writes until approval"

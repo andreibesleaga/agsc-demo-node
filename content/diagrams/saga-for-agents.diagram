@@ -1,0 +1,14 @@
+label "Saga compensation diagram"
+box b 24 50 110 40 "book flight"
+box c 176 50 110 40 "charge card"
+box f 328 50 110 40 "confirm|fails" dashed
+arrow b c
+arrow c f
+box rc 176 160 110 40 "refund charge" acc
+box cb 24 160 110 40 "cancel booking"
+arrow f rc dashed via=383,180
+arrow rc cb dashed
+text 24 38 "forward steps" size=10 left
+text 24 148 "compensations, in reverse" size=10 left
+text 390 136 "on failure" size=10 left
+note "compensations run backwards from the failure; each step must undo itself"

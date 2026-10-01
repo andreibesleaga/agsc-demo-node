@@ -1,0 +1,15 @@
+label "Trajectory and outcome evaluation diagram"
+canvas 460 220
+region tr 8 30 306 72 "trajectory (transcript)"
+box s1 18 44 84 44 "step 1|tool call"
+box s2 122 44 84 44 "step 2|tool call"
+box s3 226 44 80 44 "step 3|answer"
+box fin 340 38 110 56 "final state|of environment"
+box tg 60 140 200 50 "trajectory grader|tools · order · efficiency" acc
+box og 340 140 110 50 "outcome grader|is it now true?"
+arrow s1 s2
+arrow s2 s3
+arrow s3 fin
+arrow tg tr
+arrow og fin
+note "graders: code when exact · model when judgment · human to calibrate"

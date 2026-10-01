@@ -1,0 +1,15 @@
+label "Agents as tools diagram"
+box caller 14 60 106 100 "calling agent|keeps the loop"
+box t1 160 26 100 34 "search tool"
+box agtool 160 90 100 40 "agent as tool" acc
+box t3 160 160 100 34 "other tool"
+region ctx 296 54 154 140 "own context window"
+box inner 308 70 130 48 "specialist agent|own prompt + tools"
+box res 308 140 130 40 "final result only"
+arrow caller t1
+arrow caller agtool both
+arrow caller t3
+arrow agtool inner
+arrow inner res
+arrow res agtool dashed
+note "the caller keeps control; only the final result comes back"

@@ -23,9 +23,9 @@ that engine from the files here, with no application server.
 
 **What is different about it.** Other systems have some of these. To the author's knowledge none
 has them together: a knowledge base a machine can find through registered web
-mechanisms, a digest on everything it points at, a typed graph with a published
+mechanisms, an integrity digest on every artefact link of its discovery document, a typed graph with a published
 vocabulary, bytes pinned by conformance vectors, a person on every merge — directly, or
-by a standing rule that person recorded — and a runnable harness out of the same files,
+by a standing rule that person recorded — and a starting harness of seven kinds of file out of the same files,
 with no server. This node shows them working.
 
 **What it demonstrates.** Discovery through `/.well-known/knowledge-linkset`; the typed
@@ -33,7 +33,7 @@ graph (`/graph.jsonld`, `/graph.ttl`, `/graph.nq`); text for agents to search, c
 compose (`/llms.txt`, `/chunks.jsonl`, the seven tools on every item page); a Markdown and a
 JSON-LD view beside every page; provenance and checked references on every item; the change
 ledger (`/ledger.jsonl`); and the `/compose/` page, which turns selected items into a
-starting set of seven harness files. [docs/CARDS.md](docs/CARDS.md) shows how one item
+starting harness of seven kinds of file. [docs/CARDS.md](docs/CARDS.md) shows how one item
 becomes a page, a graph node, a skill and a chunk.
 
 **Try the engine in five minutes.** The engine repository carries one page of runnable

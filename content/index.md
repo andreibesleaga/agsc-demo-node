@@ -1,5 +1,5 @@
 ---
-spec_version: 1.0.0-rc.6
+spec_version: 1.0.0-rc.7
 okf_version: 0.2
 title: AgenticSystemCore Demo Node
 description: A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.

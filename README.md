@@ -54,7 +54,8 @@ against this Bundle.
 | `content/clusters/*.md` | the collections the items name in their `clusters[]` |
 | `content/diagrams/*.diagram` | the text source of each item's diagram; the SVG is produced by the build, never committed (AGSC-01-07) |
 | `publish-set.json` | the list of items that are published; in this repository every item is on it |
-| [docs/](docs/CARDS.md) | how an item becomes a page, a graph node, a skill and a chunk, with a diagram |
+| `.well-known/security.txt` | where to report a security problem; the build publishes it at `/.well-known/security.txt` (RFC 9116), so the folder has no README of its own |
+| [docs/](docs/README.md) | how an item becomes a page, a graph node, a skill and a chunk, with a diagram |
 | `www/` | the build output (generated; not committed) |
 
 [content/README.md](content/README.md) describes the folders of the Bundle.

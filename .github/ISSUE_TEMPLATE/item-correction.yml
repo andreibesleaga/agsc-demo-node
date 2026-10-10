@@ -1,0 +1,32 @@
+# GitHub issue form: a correction to an item of the node.
+# Format: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+name: Correct an item
+description: An item, its sources or its diagram is wrong or unclear.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A security problem does not belong here: report it privately, as SECURITY.md says.
+        A correction can also go straight to a pull request against the item file.
+  - type: input
+    id: item
+    attributes:
+      label: The item
+      description: The address of its page, or its file under content/.
+      placeholder: https://patterns.agenticsystemcore.com/concepts/blackboard/
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: Quote the sentence, the source entry or the part of the diagram.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: The source
+      description: The public source that shows the correction, and the sentence in it you are relying on.
+    validations:
+      required: true

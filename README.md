@@ -153,6 +153,10 @@ in your text and grant the maintainer a non-exclusive licence to publish it here
 other collections and editions the maintainer makes from this catalogue; you may choose,
 contribution by contribution, to assign it instead. Your name stays on the item.
 
+[CONTRIBUTING.md](CONTRIBUTING.md) says how, and the [code of conduct](CODE_OF_CONDUCT.md)
+applies. Security reports go to this repository's private vulnerability reporting, as
+[SECURITY.md](SECURITY.md) says, never to a public issue.
+
 ---
 
 © 2026 Andrei N. Besleaga. Code: Apache-2.0. Schemas, ontology, identifiers and the

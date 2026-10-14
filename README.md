@@ -37,7 +37,7 @@ starting harness of seven kinds of file. [docs/CARDS.md](docs/CARDS.md) shows ho
 becomes a page, a graph node, a skill and a chunk.
 
 **Try the engine in five minutes.** The engine repository carries one page of runnable
-demos — the six modes and the thirteen personas, each from an empty folder with the exact
+demos — the six modes and the sixteen personas, each from an empty folder with the exact
 commands, the lines they print and the one thing it proves, every command run by a test
 so the page cannot drift: [docs/DEMOS.md](https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/DEMOS.md)
 (short form on the main site at <https://agenticsystemcore.com/docs/demos/>). The same
@@ -54,7 +54,8 @@ against this Bundle.
 | `content/clusters/*.md` | the collections the items name in their `clusters[]` |
 | `content/diagrams/*.diagram` | the text source of each item's diagram; the SVG is produced by the build, never committed (AGSC-01-07) |
 | `publish-set.json` | the list of items that are published; in this repository every item is on it |
-| [docs/](docs/CARDS.md) | how an item becomes a page, a graph node, a skill and a chunk, with a diagram |
+| `.well-known/security.txt` | where to report a security problem; the build publishes it at `/.well-known/security.txt` (RFC 9116), so the folder has no README of its own |
+| [docs/](docs/README.md) | how an item becomes a page, a graph node, a skill and a chunk, with a diagram |
 | `www/` | the build output (generated; not committed) |
 
 [content/README.md](content/README.md) describes the folders of the Bundle.
@@ -152,6 +153,10 @@ By contributing you sign off under the contributor agreement of the format,
 in your text and grant the maintainer a non-exclusive licence to publish it here and in
 other collections and editions the maintainer makes from this catalogue; you may choose,
 contribution by contribution, to assign it instead. Your name stays on the item.
+
+[CONTRIBUTING.md](CONTRIBUTING.md) says how, and the [code of conduct](CODE_OF_CONDUCT.md)
+applies. Security reports go to this repository's private vulnerability reporting, as
+[SECURITY.md](SECURITY.md) says, never to a public issue.
 
 ---
 

@@ -37,7 +37,7 @@ starting harness of seven kinds of file. [docs/CARDS.md](docs/CARDS.md) shows ho
 becomes a page, a graph node, a skill and a chunk.
 
 **Try the engine in five minutes.** The engine repository carries one page of runnable
-demos — the six modes and the thirteen personas, each from an empty folder with the exact
+demos — the six modes and the sixteen personas, each from an empty folder with the exact
 commands, the lines they print and the one thing it proves, every command run by a test
 so the page cannot drift: [docs/DEMOS.md](https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/DEMOS.md)
 (short form on the main site at <https://agenticsystemcore.com/docs/demos/>). The same

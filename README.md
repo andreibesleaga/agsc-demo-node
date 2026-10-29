@@ -145,25 +145,10 @@ sentences that promise this node on or off.
 
 ## Contributing
 
-**To propose an item**, add `content/concepts/<slug>.md` with the frontmatter of the other
-items (type, title, description, kind, tags, clusters, provenance and at least one
-source), leave it `status: draft`, run `agsc lint`, and open a pull request. A person
-reads it against its sources. An accepted change is applied in the maintainer's working
-copy and appears here with the next update of this repository.
-
-Corrections to a source, a description or a diagram are welcome as pull requests against
-the item file. Please keep an item's `sources[]` first entry the source its claim actually
-rests on, and quote the sentence you are relying on in the pull request.
-
-By contributing you sign off under the contributor agreement of the format,
-`CONTRIBUTOR-AGREEMENT` in the engine repository (token `CA-v1`): you keep the copyright
-in your text and grant the maintainer a non-exclusive licence to publish it here and in
-other collections and editions the maintainer makes from this catalogue; you may choose,
-contribution by contribution, to assign it instead. Your name stays on the item.
-
-[CONTRIBUTING.md](CONTRIBUTING.md) says how, and the [code of conduct](CODE_OF_CONDUCT.md)
-applies. Security reports go to this repository's private vulnerability reporting, as
-[SECURITY.md](SECURITY.md) says, never to a public issue.
+[CONTRIBUTING.md](CONTRIBUTING.md) says how to propose an item or a correction, and what
+you agree to by contributing. The [code of conduct](CODE_OF_CONDUCT.md) applies. Security
+reports go to this repository's private vulnerability reporting, as [SECURITY.md](SECURITY.md)
+says, never to a public issue.
 
 ---
 

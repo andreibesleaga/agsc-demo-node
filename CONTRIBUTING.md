@@ -26,6 +26,22 @@ Before you open one, from the root of this repository with the engine installed:
 agsc lint && agsc ci
 ```
 
+## Checks that run on every change
+
+Every push and every pull request runs `.github/workflows/test.yml`. GitHub shows it as
+the check `node (lint, build, verify, ci, conform, discovery, hygiene)`, which is a
+required check on `main`. It checks out the engine's `main` beside this repository (a
+manual run can name another engine ref) and takes this repository's full git history,
+because the published ledger is derived from it. From the root of this repository it runs
+`agsc lint`, `agsc build`, `agsc verify --ledger`, `agsc ci` and `agsc conform --level 2`;
+then the engine's `tools/validate-wellknown` over the built discovery document at Level 2,
+`tools/publish-set --check .` and `tools/public-hygiene .`. It uses no secret and has
+read access only. A failed step prints a finding code; the engine's
+[troubleshooting page](https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/guides/troubleshooting.md)
+gives the cause and the fix for the codes its guides and demos print. The actions it uses
+are pinned to commit SHAs, and Dependabot proposes their updates once a month in one pull
+request (`.github/dependabot.yml`).
+
 ## Signing off
 
 An outside contribution, a commit from anyone other than the maintainer, signs off

@@ -56,19 +56,26 @@ against this Bundle.
 | `publish-set.json` | the list of items that are published; in this repository every item is on it |
 | `.well-known/security.txt` | where to report a security problem; the build publishes it at `/.well-known/security.txt` (RFC 9116), so the folder has no README of its own |
 | [docs/](docs/README.md) | how an item becomes a page, a graph node, a skill and a chunk, with a diagram |
+| `.github/workflows/test.yml` | the gate that runs on every push and pull request: [CONTRIBUTING.md](CONTRIBUTING.md#checks-that-run-on-every-change) |
+| `.public-hygiene.json` | the allow-list of the engine's `public-hygiene` sweep, which the gate runs over this repository |
+| `.env.example` | the optional settings of the engine (`SOURCE_DATE_EPOCH` and `AGSC_*` names); this node needs none of them to build |
+| `LICENSE`, `LICENSE-CONTENT`, `NOTICE`, `DISCLAIMER.md`, `PRIVACY.md` | the licences and legal texts; the site's `/legal/` page is built from `LICENSE-CONTENT`, `DISCLAIMER.md` and `PRIVACY.md` |
 | `www/` | the build output (generated; not committed) |
 
 [content/README.md](content/README.md) describes the folders of the Bundle.
 
 ## Working with it
 
-The engine is the `agentic-system-core` package. From the root of this repository:
+The engine is the `agentic-system-core` package. Install it once in a working folder with
+`npm install agentic-system-core` (Node.js 22.13 or later) and put `node_modules/.bin` on your
+`PATH`, as [Before any guide](https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/guides/README.md#before-any-guide)
+in the engine's guides shows. Then, from the root of this repository, in a git clone:
 
 ```sh
 agsc lint            # the parse, schema, link and governance lanes
 agsc build           # the route set of AGSC-06-01 into www/
-agsc verify          # re-checks the built output against its digests (--ledger for the ledger)
-agsc ci              # lint, build twice and compare the bytes, then verify
+agsc verify          # builds twice and compares the bytes (--ledger also recomputes the ledger chain)
+agsc ci              # lint, build twice and compare the bytes, write the gate verdict
 ```
 
 Every emission is byte-reproducible: set `SOURCE_DATE_EPOCH` and two runs on two machines
@@ -84,7 +91,7 @@ repository is `stable`. `publish-set.json` lists them, and the engine's tool rep
 disagreement between the list and the files:
 
 ```sh
-node ../agentic-system-core/tools/publish-set --check .
+node ../agentic-system-core/tools/publish-set --check .   # needs the engine cloned beside this repository; the npm package does not ship this tool
 ```
 
 Nothing here claims priority or novelty for any pattern. Each item cites the public

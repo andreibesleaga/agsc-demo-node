@@ -2,8 +2,9 @@
 #
 #   What runs  the engine repository is checked out beside this one and installed;
 #              then, from this Bundle's root: `agsc lint`, `agsc build`,
-#              `agsc verify --ledger`, `agsc ci` (lint, two builds compared byte for
-#              byte, verify), `agsc conform --level 2`, the shipped discovery checker
+#              `agsc verify --ledger` (two builds compared; the ledger chain),
+#              `agsc ci` (lint, two builds compared byte for byte, the gate
+#              verdict), `agsc conform --level 2`, the shipped discovery checker
 #              at Level 2 over the built discovery document, the publish-set tool in
 #              its report-only mode, and the engine's hygiene sweep over this
 #              repository.
@@ -74,9 +75,9 @@ jobs:
         run: node ../agentic-system-core/bin/agsc.js lint
       - name: build (the route set into www/)
         run: node ../agentic-system-core/bin/agsc.js build
-      - name: verify (the built output against its digests, and the ledger)
+      - name: verify (two builds compared; the ledger chain)
         run: node ../agentic-system-core/bin/agsc.js verify --ledger
-      - name: ci (lint, two builds compared, verify)
+      - name: ci (lint, two builds compared, the gate verdict)
         run: node ../agentic-system-core/bin/agsc.js ci
       - name: conform at Level 2
         run: node ../agentic-system-core/bin/agsc.js conform --level 2

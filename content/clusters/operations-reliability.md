@@ -1,7 +1,7 @@
 ---
 type: cluster
 title: Operations & Reliability
-description: "Running agents in production: handling failures, controlling cost and watching behaviour."
+description: "Running agents in production, including handling failures, controlling cost and watching behaviour."
 status: stable
 date: 2026-03-21
 prov:

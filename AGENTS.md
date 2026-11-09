@@ -34,6 +34,10 @@ cloned beside this repository.
 - Change item files in `content/concepts/` and `content/clusters/` only as CONTRIBUTING.md
   says. A new item stays `status: draft` until a person has read it against its sources.
 - Keep an item's first `sources[]` entry the source its claim rests on.
+- `domain/` holds the node's own vocabulary (`vocabulary.ttl`), one rule its graph must keep
+  (`shapes.ttl`) and one question it must answer (`questions.json`). `agsc lint` checks the
+  vocabulary and the domain keys of the items; `agsc verify` and `agsc ci` check the rule and the
+  question. A term goes into `vocabulary.ttl` before an item names it.
 - `publish-set.json` lists the published slugs. Do not edit it to publish an item; the
   maintainer applies accepted changes.
 - Never commit `www/`, `dist/`, a compiled diagram `.svg` or a `.env` file. `.gitignore`

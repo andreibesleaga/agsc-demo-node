@@ -36,6 +36,7 @@ prov:
 id: meaningful-human-control
 related:
   - autonomy-ladder
+  - weak-to-strong-oversight
 kind: pattern
 evidence: explicit
 maturity: emerging

@@ -39,9 +39,17 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: exception-handling-and-recovery
+related:
+  - saga-for-agents
+  - unbounded-agent-loops
 kind: pattern
 evidence: explicit
 maturity: established
+domain_type: Safeguard
+domain_role: policy
+domain_links:
+  guardsAgainst:
+    - unbounded-agent-loops
 diagram:
   file: exception-handling-and-recovery.svg
   alt: A failed call enters a highlighted classify box; transient faults go to a bounded retry with backoff that runs the call again, lasting faults and used-up retries go to a fallback route, and when no path is left the run degrades honestly with a stated partial result.

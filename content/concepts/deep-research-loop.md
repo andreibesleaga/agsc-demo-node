@@ -29,6 +29,8 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: deep-research-loop
+related:
+  - retrieval-evaluation
 kind: pattern
 evidence: explicit
 maturity: emerging

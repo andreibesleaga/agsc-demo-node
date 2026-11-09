@@ -39,6 +39,8 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: skill-library
+related:
+  - agents-as-tools
 kind: pattern
 evidence: explicit
 maturity: emerging

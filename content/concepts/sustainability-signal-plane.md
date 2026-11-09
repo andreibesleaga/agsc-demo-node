@@ -41,6 +41,8 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: sustainability-signal-plane
+related:
+  - goal-setting-and-monitoring
 kind: pattern
 evidence: single-source
 maturity: emerging

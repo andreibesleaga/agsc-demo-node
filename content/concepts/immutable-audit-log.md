@@ -39,6 +39,9 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: immutable-audit-log
+related:
+  - meaningful-human-control
+  - plan-approval-gate
 kind: pattern
 evidence: explicit
 maturity: established

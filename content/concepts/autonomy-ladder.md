@@ -29,6 +29,8 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: autonomy-ladder
+related:
+  - plan-approval-gate
 kind: taxonomy
 evidence: explicit
 maturity: emerging

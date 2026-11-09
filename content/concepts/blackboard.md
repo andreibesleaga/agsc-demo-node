@@ -32,6 +32,9 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: blackboard
+related:
+  - agents-as-tools
+  - parallelization
 kind: pattern
 evidence: single-source
 maturity: emerging

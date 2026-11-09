@@ -35,6 +35,8 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: specification-gaming
+related:
+  - trajectory-vs-outcome-evals
 kind: pattern
 evidence: explicit
 maturity: established

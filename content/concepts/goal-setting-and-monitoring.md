@@ -37,6 +37,7 @@ id: goal-setting-and-monitoring
 related:
   - metacognitive-monitoring
   - specification-gaming
+  - unbounded-agent-loops
 kind: pattern
 evidence: explicit
 maturity: established

@@ -43,6 +43,7 @@ id: unbounded-agent-loops
 kind: pattern
 evidence: explicit
 maturity: emerging
+domain_type: FailureMode
 diagram:
   file: unbounded-agent-loops.svg
   alt: A think, act, observe cycle loops back on itself with no step cap, no budget and no done test; beside it, a highlighted exit gate that checks those three leads to stop or escalate, joined to the loop by a dashed arrow marked missing.

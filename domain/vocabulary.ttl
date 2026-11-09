@@ -1,0 +1,34 @@
+@prefix anti: <https://patterns.agenticsystemcore.com/ns/antipatterns#> .
+@prefix asc: <https://w3id.org/agentic-system-core/ns#> .
+@prefix ops: <https://patterns.agenticsystemcore.com/ns/operations-reliability#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+asc:Concept a owl:Class .
+skos:definition a owl:AnnotationProperty .
+skos:related a owl:ObjectProperty .
+
+<https://patterns.agenticsystemcore.com/ns/domain> a owl:Ontology ;
+    rdfs:label "Vocabulary of the demonstration node" .
+
+anti:FailureMode a owl:Class ;
+    rdfs:label "Failure mode" ;
+    skos:definition "A way an agent system goes wrong, recognised from signs in its runs." ;
+    rdfs:subClassOf asc:Concept .
+
+anti:guardedBy a owl:ObjectProperty ;
+    rdfs:label "guarded by" ;
+    skos:definition "The failure mode is stopped, or its cost is limited, by the safeguard." ;
+    rdfs:subPropertyOf skos:related .
+
+ops:Safeguard a owl:Class ;
+    rdfs:label "Safeguard" ;
+    skos:definition "A practice that keeps an agent system within its limits when a step fails." ;
+    rdfs:subClassOf asc:Concept .
+
+ops:guardsAgainst a owl:ObjectProperty ;
+    rdfs:label "guards against" ;
+    skos:definition "The safeguard stops the failure mode from starting, or limits what it costs." ;
+    rdfs:subPropertyOf skos:related ;
+    owl:inverseOf anti:guardedBy .

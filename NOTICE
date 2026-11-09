@@ -8,4 +8,14 @@ Which licence covers which part:
   them: the AgenticSystemCore Content Use Terms 1.0 (LICENSE-CONTENT).
 Every right these licences do not grant is reserved by the author.
 
+Third-party code the built site serves as the reference engine writes it, when
+built with an engine of specification 1.1 or later (the build copies it into
+www/; this repository does not hold it):
+- Oxigraph 0.5.13, Copyright (c) 2018 Oxigraph developers, under the MIT licence
+  or the Apache License 2.0, at the user's option: the query engine the /query/
+  page runs, compiled to WebAssembly (/query/vendor/oxigraph-0.5.13/web.js and
+  web_bg.wasm). Its two licence texts and the list of the crates that may be
+  compiled into it, each with its licence expression, are served beside it
+  (LICENSE-MIT.txt, LICENSE-APACHE.txt, THIRD-PARTY.txt).
+
 AgenticSystemCore™ is a trademark of Andrei N. Besleaga. Other names belong to their owners.

@@ -1,0 +1,12 @@
+@prefix anti: <https://patterns.agenticsystemcore.com/ns/antipatterns#> .
+@prefix ops: <https://patterns.agenticsystemcore.com/ns/operations-reliability#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<https://patterns.agenticsystemcore.com/ns/domain-shapes#SafeguardGuardsAgainstAFailureMode> a sh:NodeShape ;
+    sh:targetClass ops:Safeguard ;
+    sh:property [
+        sh:path ops:guardsAgainst ;
+        sh:minCount 1 ;
+        sh:class anti:FailureMode ;
+        sh:message "Every safeguard names at least one failure mode it guards against."@en
+    ] .

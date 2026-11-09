@@ -30,10 +30,12 @@ with no server. This node shows them working.
 
 **What it demonstrates.** Discovery through `/.well-known/knowledge-linkset`; the typed
 graph (`/graph.jsonld`, `/graph.ttl`, `/graph.nq`); text for agents to search, cite and
-compose (`/llms.txt`, `/chunks.jsonl`, the seven tools on every item page); a Markdown and a
+compose (`/llms.txt`, `/chunks.jsonl`, the ten tools on every item page); a Markdown and a
 JSON-LD view beside every page; provenance and checked references on every item; the change
 ledger (`/ledger.jsonl`); and the `/compose/` page, which turns selected items into a
-starting harness of seven kinds of file. [docs/CARDS.md](docs/CARDS.md) shows how one item
+starting harness of seven kinds of file; the `/query/` page, which runs SPARQL over the graph in
+the browser; and a small vocabulary of the node's own in `domain/`, with one rule and one question
+that `agsc verify` and `agsc ci` check. [docs/CARDS.md](docs/CARDS.md) shows how one item
 becomes a page, a graph node, a skill and a chunk.
 
 **Try the engine in five minutes.** The engine repository carries one page of runnable
@@ -53,6 +55,8 @@ against this Bundle.
 | `content/concepts/*.md` | one item per pattern |
 | `content/clusters/*.md` | the collections the items name in their `clusters[]` |
 | `content/diagrams/*.diagram` | the text source of each item's diagram; the SVG is produced by the build, never committed (AGSC-01-07) |
+| `domain/vocabulary.ttl` | the node's own vocabulary: two kinds of item and one link with its reverse, each in the context of one cluster; the build publishes it in the graph files (AGSC-05-38, AGSC-08-32) |
+| `domain/shapes.ttl`, `domain/questions.json` | one rule the graph must keep and one question it must answer; `agsc verify` and `agsc ci` check both (AGSC-05-41, AGSC-09-20) |
 | `publish-set.json` | the list of items that are published; in this repository every item is on it |
 | `.well-known/security.txt` | where to report a security problem; the build publishes it at `/.well-known/security.txt` (RFC 9116), so the folder has no README of its own |
 | [docs/](docs/README.md) | how an item becomes a page, a graph node, a skill and a chunk, with a diagram |

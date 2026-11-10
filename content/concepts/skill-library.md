@@ -15,7 +15,7 @@ aliases:
 clusters:
   - memory-cognition
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-10
 sources:
   - resource: https://arxiv.org/abs/2305.16291
     title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
@@ -23,11 +23,11 @@ sources:
     year: 2023
     verified: 2026-09-29
     grade: primary
-  - resource: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
+  - resource: https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills
     title: "Equipping agents for the real world with Agent Skills"
     author: "Zhang, B.; Lazuka, K.; Murag, M."
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-10
     grade: secondary
   - resource: https://arxiv.org/abs/2309.02427
     title: "Cognitive Architectures for Language Agents"

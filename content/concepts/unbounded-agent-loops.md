@@ -16,13 +16,13 @@ aliases:
 clusters:
   - antipatterns
 date: 2026-08-16
-modified: 2026-09-29
+modified: 2026-11-10
 sources:
-  - resource: https://www.anthropic.com/engineering/building-effective-agents
+  - resource: https://www.anthropic.com/research/building-effective-agents
     title: "Building effective agents"
     author: "Schluntz, E.; Zhang, B."
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-10
     grade: primary
   - resource: https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/
     title: "LLM10:2025 Unbounded Consumption"

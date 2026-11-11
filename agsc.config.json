@@ -51,7 +51,7 @@
     ],
     "title": "AgenticSystemCore Demo Node"
   },
-  "spec_version": "1.0.0",
+  "spec_version": "1.1.0",
   "tags": {
     "allowed": [
       "accountability",

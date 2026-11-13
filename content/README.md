@@ -1,6 +1,6 @@
 # `content/` — the Bundle
 
-**Summary.** The sample content of this demonstration node as one Bundle: one Markdown file per card with a YAML
+**Summary.** The content of this node as one Bundle: one Markdown file per card with a YAML
 block at the top, the collections the cards belong to, and the text source of each
 card's diagram. `index.md` is the Bundle's root document. The engine builds every page,
 graph view, chunk, skill pack and text file of the node from these files.

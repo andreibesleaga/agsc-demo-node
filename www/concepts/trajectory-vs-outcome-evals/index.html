@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trajectory and Outcome Evaluation</title>
+<meta name="description" content="Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.","name":"Trajectory and Outcome Evaluation","url":"https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Trajectory and Outcome Evaluation</h1>
+<p class="summary"><strong>Summary</strong>Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/evaluation-testing/">Evaluation &amp; Testing</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-3222f6ec0d566ad6"></span>Intent</h2>
+<p>Grade the end state an agent produced and the path it took as two separate questions.</p>
+<h2 id="context-forces"><span id="chunk-a83e0d002f9d4059"></span>Context &amp; Forces</h2>
+<p>An agent can reach the right result by a bad path, or take a good path to a wrong result. One score hides one of them.</p>
+<h2 id="structure"><span id="chunk-424762b8ed209d18"></span>Structure</h2>
+<p>Anthropic's guide defines the transcript (trace or trajectory) as the full record of a trial, and the outcome as the final state of the environment (Grace et al., 2026). Graders are code-based, model-based or human. Google's Agent Development Kit scores tool-call paths (<code>tool_trajectory_avg_score</code>) separately from answers (<code>response_match_score</code>). Huyen (2025) lists failures to measure, from invalid tools and wrong parameters to goal failure and inefficiency.</p>
+<ol>
+<li>Grade the outcome against what should be true afterwards.</li>
+<li>Grade the path for tool use, safety and efficiency.</li>
+</ol>
+<h2 id="consequences-trade-offs"><span id="chunk-0f3af5c02f288f33"></span>Consequences &amp; Trade-offs</h2>
+<p>Behaviour changes show even when success rates hold. Anthropic warns that exact tool-call sequences make brittle tests; require them only where the path is the requirement.</p>
+<h2 id="related-patterns"><span id="chunk-0339b0de523eeb3a"></span>Related Patterns</h2>
+<ul>
+<li>Retrieval Evaluation</li>
+<li>Specification Gaming</li>
+</ul>
+
+<h2 id="links">Links</h2>
+<ul class="links"><li><code>related</code>: <a href="/concepts/retrieval-evaluation/">Retrieval Evaluation</a></li></ul>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" role="img" aria-labelledby="trajectory-vs-outcome-evals-title trajectory-vs-outcome-evals-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="trajectory-vs-outcome-evals-title">Three agent steps inside a dashed trajectory area lead to a final-state box; a highlighted trajectory grader below checks the steps for tools, order and efficiency, and a separate outcome grader checks the final state.</title>
+  <desc id="trajectory-vs-outcome-evals-desc">graders: code when exact · model when judgment · human to calibrate</desc>
+  <defs><marker id="trajectory-vs-outcome-evals-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="8" y="30" width="306" height="72" rx="8" stroke-dasharray="6 4"/>
+    <rect x="18" y="44" width="84" height="44" rx="6"/>
+    <rect x="122" y="44" width="84" height="44" rx="6"/>
+    <rect x="226" y="44" width="80" height="44" rx="6"/>
+    <rect x="340" y="38" width="110" height="56" rx="6"/>
+    <rect x="60" y="140" width="200" height="50" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="340" y="140" width="110" height="50" rx="6"/>
+    <path d="M106 66 L118 66" marker-end="url(#trajectory-vs-outcome-evals-arrow)"/>
+    <path d="M210 66 L222 66" marker-end="url(#trajectory-vs-outcome-evals-arrow)"/>
+    <path d="M310 66 L336 66" marker-end="url(#trajectory-vs-outcome-evals-arrow)"/>
+    <path d="M160.3 136 L160.6 106" marker-end="url(#trajectory-vs-outcome-evals-arrow)"/>
+    <path d="M395 136 L395 98" marker-end="url(#trajectory-vs-outcome-evals-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="161" y="22" font-size="11">trajectory (transcript)</text>
+    <text x="60" y="62" font-size="12">step 1</text>
+    <text x="60" y="78" font-size="12">tool call</text>
+    <text x="164" y="62" font-size="12">step 2</text>
+    <text x="164" y="78" font-size="12">tool call</text>
+    <text x="266" y="62" font-size="12">step 3</text>
+    <text x="266" y="78" font-size="12">answer</text>
+    <text x="395" y="62" font-size="12">final state</text>
+    <text x="395" y="78" font-size="12">of environment</text>
+    <text x="160" y="161" font-size="12">trajectory grader</text>
+    <text x="160" y="177" font-size="12">tools · order · efficiency</text>
+    <text x="395" y="161" font-size="12">outcome grader</text>
+    <text x="395" y="177" font-size="12">is it now true?</text>
+    <text x="230" y="208" font-size="11">graders: code when exact · model when judgment · human to calibrate</text>
+  </g>
+</svg><figcaption>Two graders, two questions: did it end in the right place, and did it get there the right way.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Grace, M.; Hadfield, J.; Olivares, R.; et al. (2026). <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Demystifying evals for AI agents</a>. <span class="source-url"><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents</a></span>. Checked 2026-09-29.</li><li id="source-2">Google (2026). <a href="https://adk.dev/evaluate/">Why evaluate agents</a>. <span class="source-url"><a href="https://adk.dev/evaluate/">https://adk.dev/evaluate/</a></span>. Checked 2026-09-29.</li><li id="source-3">Huyen, C. (2025). <a href="https://huyenchip.com/2025/01/07/agents.html">Agents</a>. <span class="source-url"><a href="https://huyenchip.com/2025/01/07/agents.html">https://huyenchip.com/2025/01/07/agents.html</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/trajectory-vs-outcome-evals.md">Markdown</a> · <a href="/pages/trajectory-vs-outcome-evals.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

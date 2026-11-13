@@ -16,25 +16,26 @@ aliases:
 clusters:
   - ethics
 date: 2026-08-18
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2018.00015/full
     title: "Meaningful Human Control over Autonomous Systems: A Philosophical Account"
     author: "Santoni de Sio, F.; van den Hoven, J."
     year: 2018
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://artificialintelligenceact.eu/article/14/
     title: "Article 14: Human Oversight"
     author: "European Parliament; Council of the European Union"
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: meaningful-human-control
 related:
+  - safe-interruptibility
   - autonomy-ladder
   - weak-to-strong-oversight
 kind: pattern
@@ -74,3 +75,4 @@ An approver who does not understand the system fails tracing. A system that igno
 - The Autonomy Ladder
 - Tamper-Evident Agent Audit Log
 - Weak-to-Strong Oversight
+- Safe Interruptibility

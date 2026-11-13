@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goal Setting and Monitoring</title>
+<meta name="description" content="Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop.","name":"Goal Setting and Monitoring","url":"https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Goal Setting and Monitoring</h1>
+<p class="summary"><strong>Summary</strong>Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/reasoning-decision/">Reasoning &amp; Decision</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-ab4207c90a026bc6"></span>Intent</h2>
+<p>Give an agent a goal with checkable criteria, then watch progress and correct course.</p>
+<h2 id="context-forces"><span id="chunk-ccd0ac683ccd1543"></span>Context &amp; Forces</h2>
+<p>An agent can do every step right and still miss the goal. Vague goals cannot be checked; single metrics can be gamed.</p>
+<h2 id="structure"><span id="chunk-ab1adffe64d687f9"></span>Structure</h2>
+<p>The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge. Zhang et al. (2024) trace it to Kephart and Chess (2003) and apply it with language-model agents to microservice management. In CrewAI, a task has an <code>expected_output</code> describing completion and a <code>guardrail</code> that checks the output, retried three times by default.</p>
+<ol>
+<li>Write the goal as a few observable criteria.</li>
+<li>Check progress after each step, ideally outside the acting model.</li>
+<li>Continue, re-plan, or stop and escalate.</li>
+</ol>
+<h2 id="consequences-trade-offs"><span id="chunk-69f24e9c0649766f"></span>Consequences &amp; Trade-offs</h2>
+<p>Progress becomes visible. Each check costs extra. Criteria can replace the goal, so keep them few.</p>
+<h2 id="related-patterns"><span id="chunk-ce21f2e675f8e292"></span>Related Patterns</h2>
+<ul>
+<li>Specification Gaming</li>
+<li>Metacognitive Monitoring and Control</li>
+<li>Unbounded Loops</li>
+</ul>
+
+<h2 id="links">Links</h2>
+<ul class="links"><li><code>related</code>: <a href="/concepts/metacognitive-monitoring/">Metacognitive Monitoring and Control</a>, <a href="/concepts/specification-gaming/">Specification Gaming</a></li></ul>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" role="img" aria-labelledby="goal-setting-and-monitoring-title goal-setting-and-monitoring-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="goal-setting-and-monitoring-title">A goal with success criteria enters a highlighted monitor, the first step of a monitor, analyze, plan and execute loop around shared knowledge; execute acts on the managed task, its progress returns to the monitor, and analyze can exit to done or escalate.</title>
+  <desc id="goal-setting-and-monitoring-desc">every check ends in continue, replan, or stop and escalate</desc>
+  <defs><marker id="goal-setting-and-monitoring-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="20" width="90" height="44" rx="6"/>
+    <rect x="130" y="20" width="90" height="44" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="260" y="20" width="90" height="44" rx="6"/>
+    <rect x="380" y="20" width="70" height="44" rx="6"/>
+    <rect x="260" y="130" width="90" height="44" rx="6"/>
+    <rect x="130" y="130" width="90" height="44" rx="6"/>
+    <rect x="14" y="130" width="90" height="44" rx="6"/>
+    <rect x="196" y="72" width="88" height="46" rx="6"/>
+    <path d="M108 42 L126 42" marker-end="url(#goal-setting-and-monitoring-arrow)"/>
+    <path d="M224 42 L256 42" marker-end="url(#goal-setting-and-monitoring-arrow)"/>
+    <path d="M354 42 L376 42" marker-end="url(#goal-setting-and-monitoring-arrow)"/>
+    <path d="M305 68 L305 126" marker-end="url(#goal-setting-and-monitoring-arrow)"/>
+    <path d="M256 152 L224 152" marker-end="url(#goal-setting-and-monitoring-arrow)"/>
+    <path d="M126 152 L108 152" marker-end="url(#goal-setting-and-monitoring-arrow)"/>
+    <path d="M85.1 127.2 L148.9 66.8" marker-end="url(#goal-setting-and-monitoring-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="59" y="38" font-size="12">goal with</text>
+    <text x="59" y="54" font-size="12">criteria</text>
+    <text x="175" y="46" font-size="12">monitor</text>
+    <text x="305" y="46" font-size="12">analyze</text>
+    <text x="415" y="38" font-size="12">done /</text>
+    <text x="415" y="54" font-size="12">escalate</text>
+    <text x="305" y="156" font-size="12">plan</text>
+    <text x="175" y="156" font-size="12">execute</text>
+    <text x="59" y="156" font-size="12">managed task</text>
+    <text x="240" y="91" font-size="12">shared</text>
+    <text x="240" y="107" font-size="12">knowledge</text>
+    <text x="86" y="104" font-size="10">progress</text>
+    <text x="230" y="208" font-size="11">every check ends in continue, replan, or stop and escalate</text>
+  </g>
+</svg><figcaption>A goal without criteria cannot be monitored; monitoring without a loop back cannot correct.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Zhang, Z.; Yang, F.; Qin, X.; et al. (2024). <a href="https://arxiv.org/html/2407.14402v1">The Vision of Autonomic Computing: Can LLMs Make It a Reality?</a> <span class="source-url"><a href="https://arxiv.org/html/2407.14402v1">https://arxiv.org/html/2407.14402v1</a></span>. Checked 2026-09-29.</li><li id="source-2">CrewAI (2026). <a href="https://docs.crewai.com/en/concepts/tasks">Tasks</a>. <span class="source-url"><a href="https://docs.crewai.com/en/concepts/tasks">https://docs.crewai.com/en/concepts/tasks</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/goal-setting-and-monitoring.md">Markdown</a> · <a href="/pages/goal-setting-and-monitoring.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

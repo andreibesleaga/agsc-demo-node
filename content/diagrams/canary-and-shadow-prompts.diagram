@@ -1,0 +1,15 @@
+label "Canary and shadow deployment diagram"
+box traffic 16 104 80 44 "live|traffic"
+box inc 170 30 120 44 "current version"
+box can 170 104 120 44 "canary|small slice" acc
+box sha 170 178 120 44 "shadow|copy only"
+box users 350 60 90 44 "users"
+box cmp 350 160 90 50 "compare|+ log"
+arrow traffic inc
+arrow traffic can
+arrow traffic sha dashed
+arrow inc users
+arrow can users
+arrow sha cmp
+arrow can cmp dashed
+note "dashed: copies and comparisons; shadow output is not served"

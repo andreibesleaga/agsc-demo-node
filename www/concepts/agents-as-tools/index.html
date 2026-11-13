@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agents as Tools</title>
+<meta name="description" content="Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/agents-as-tools/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control.","name":"Agents as Tools","url":"https://patterns.agenticsystemcore.com/concepts/agents-as-tools/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Agents as Tools</h1>
+<p class="summary"><strong>Summary</strong>Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/foundational/">Foundational</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/agents-as-tools/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-e51a51bc93fd6fc0"></span>Intent</h2>
+<p>Wrap a specialist agent as a tool. The calling agent hands it one bounded task and keeps control.</p>
+<h2 id="context-forces"><span id="chunk-1635f0fa94dcdd99"></span>Context &amp; Forces</h2>
+<p>Some subtasks, such as a search or a review, are bounded but noisy. Handing over the whole conversation gives away control.</p>
+<h2 id="structure"><span id="chunk-d9f828a2b22cfcc2"></span>Structure</h2>
+<ol>
+<li>The caller owns the loop and the conversation.</li>
+<li>The specialist is offered as a tool with a name, a description and an input.</li>
+<li>It runs in its own context, with its own prompt, tools and permissions.</li>
+<li>It returns a short result.</li>
+</ol>
+<p>The OpenAI Agents SDK calls this &quot;agents as tools&quot;: a manager agent keeps control and calls specialists. Claude Code subagents also run in their own context window and return a summary.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-34a5a0e62416bbbf"></span>Consequences &amp; Trade-offs</h2>
+<p>One agent stays accountable and its context stays small. Each call costs time and tokens, and a short summary can drop a needed detail.</p>
+<h2 id="related-patterns"><span id="chunk-ff4734147b723cb6"></span>Related Patterns</h2>
+<p>Used by The Deep Research Loop; Parallelization runs several calls at once.</p>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="agents-as-tools-title agents-as-tools-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="agents-as-tools-title">A calling agent calls three tools; the highlighted one is an agent wrapped as a tool, which works in its own context window with its own prompt and tools, and only its final result returns to the caller, which keeps control.</title>
+  <desc id="agents-as-tools-desc">the caller keeps control; only the final result comes back</desc>
+  <defs><marker id="agents-as-tools-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="60" width="106" height="100" rx="6"/>
+    <rect x="160" y="26" width="100" height="34" rx="6"/>
+    <rect x="160" y="90" width="100" height="40" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="160" y="160" width="100" height="34" rx="6"/>
+    <rect x="296" y="54" width="154" height="140" rx="8" stroke-dasharray="6 4"/>
+    <rect x="308" y="70" width="130" height="48" rx="6"/>
+    <rect x="308" y="140" width="130" height="40" rx="6"/>
+    <path d="M123.6 83.5 L170.1 61.7" marker-end="url(#agents-as-tools-arrow)"/>
+    <path d="M124 110 L156 110" marker-end="url(#agents-as-tools-arrow)" marker-start="url(#agents-as-tools-arrow)"/>
+    <path d="M123.6 136.5 L170.1 158.3" marker-end="url(#agents-as-tools-arrow)"/>
+    <path d="M264 104.7 L304 100.8" marker-end="url(#agents-as-tools-arrow)"/>
+    <path d="M373 122 L373 136" marker-end="url(#agents-as-tools-arrow)"/>
+    <path d="M304.2 138.9 L263.8 126.5" marker-end="url(#agents-as-tools-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="67" y="106" font-size="12">calling agent</text>
+    <text x="67" y="122" font-size="12">keeps the loop</text>
+    <text x="210" y="47" font-size="12">search tool</text>
+    <text x="210" y="114" font-size="12">agent as tool</text>
+    <text x="210" y="181" font-size="12">other tool</text>
+    <text x="373" y="46" font-size="11">own context window</text>
+    <text x="373" y="90" font-size="12">specialist agent</text>
+    <text x="373" y="106" font-size="12">own prompt + tools</text>
+    <text x="373" y="164" font-size="12">final result only</text>
+    <text x="230" y="248" font-size="11">the caller keeps control; only the final result comes back</text>
+  </g>
+</svg><figcaption>Only the return box crosses that boundary — everything the specialist read, tried and discarded is already gone.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">OpenAI (2025). <a href="https://openai.github.io/openai-agents-python/tools/#agents-as-tools">Tools</a>. <span class="source-url"><a href="https://openai.github.io/openai-agents-python/tools/#agents-as-tools">https://openai.github.io/openai-agents-python/tools/#agents-as-tools</a></span>. Checked 2026-09-29.</li><li id="source-2">OpenAI (2025). <a href="https://openai.github.io/openai-agents-python/multi_agent/">Agent orchestration</a>. <span class="source-url"><a href="https://openai.github.io/openai-agents-python/multi_agent/">https://openai.github.io/openai-agents-python/multi_agent/</a></span>. Checked 2026-09-29.</li><li id="source-3">Anthropic (2026). <a href="https://code.claude.com/docs/en/sub-agents">Create custom subagents</a>. <span class="source-url"><a href="https://code.claude.com/docs/en/sub-agents">https://code.claude.com/docs/en/sub-agents</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/agents-as-tools.md">Markdown</a> · <a href="/pages/agents-as-tools.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

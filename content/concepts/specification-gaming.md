@@ -11,25 +11,25 @@ tags:
 clusters:
   - specs
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/
     title: "Specification gaming: the flip side of AI ingenuity"
     author: "Krakovna, V.; Uesato, J.; Mikulik, V.; et al."
     year: 2020
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://arxiv.org/abs/2503.11926
     title: "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation"
     author: "Baker, B.; Huizinga, J.; Gao, L.; et al."
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://arxiv.org/abs/2405.06624
     title: "Towards Guaranteed Safe AI: A Framework for Ensuring Robust and Reliable AI Systems"
     author: "Dalrymple, D.; Skalse, J.; Bengio, Y.; et al."
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

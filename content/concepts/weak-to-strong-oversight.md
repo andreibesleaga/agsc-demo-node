@@ -16,27 +16,28 @@ aliases:
 clusters:
   - future
 date: 2026-08-18
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://arxiv.org/abs/2312.09390
     title: "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision"
     author: "Burns, C.; Izmailov, P.; Kirchner, J. H.; et al."
     year: 2023
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://arxiv.org/abs/2211.03540
     title: "Measuring Progress on Scalable Oversight for Large Language Models"
     author: "Bowman, S. R.; Hyun, J.; Perez, E.; et al."
     year: 2022
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: weak-to-strong-oversight
 related:
-  - plan-approval-gate
+  - judge-calibration
   - specification-gaming
+  - plan-approval-gate
 kind: pattern
 evidence: explicit
 maturity: emerging
@@ -71,3 +72,4 @@ Treat a weak judge as a partial signal. Pair it with confidence signals, smaller
 - Meaningful Human Control
 - Specification Gaming
 - Plan Approval Gate
+- Judge Calibration

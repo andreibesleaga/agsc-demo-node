@@ -16,36 +16,38 @@ aliases:
 clusters:
   - sdlc
 date: 2026-08-18
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://code.claude.com/docs/en/permission-modes
     title: "Choose a permission mode"
     author: "Anthropic"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/
     title: "Research, plan, and code with Copilot cloud agent"
     author: "GitHub"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go/
     title: "GitHub Copilot CLI: Plan before you build, steer as you go"
     author: "GitHub"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://learn.chatgpt.com/guides/best-practices
     title: "Best practices"
     author: "OpenAI"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: plan-approval-gate
+related:
+  - human-only-merge-gate
 kind: pattern
 evidence: explicit
 maturity: emerging
@@ -80,3 +82,4 @@ Reviewers judge the approach, not a large diff. Small tasks pay an extra round t
 
 - The Autonomy Ladder
 - Tamper-Evident Agent Audit Log
+- Human-Only Merge Gate

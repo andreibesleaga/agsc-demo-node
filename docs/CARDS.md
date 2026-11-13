@@ -43,7 +43,7 @@ The picture above is rendered from this Mermaid source; the source is the truth.
 |---|---|---|
 | Page | `/concepts/<slug>/`, readable without JavaScript, with its diagram compiled to SVG inside the page | AGSC-06-01, AGSC-01-07 |
 | Machine views | `/pages/<slug>.md` (the source, normalised) and `/pages/<slug>.jsonld` | AGSC-06-02 |
-| Graph | one node in the four graph views, its links typed, its sources and provenance attached | spec/05 |
+| Graph | one node in the four graph views, its links typed, its sources and provenance attached | `spec/05-graph.md` of the engine repository |
 | Skill | a part of the skill pack of each cluster it belongs to | AGSC-07-19 |
 | Chunks | lines of `/chunks.jsonl`, cut at its headings, each with an identifier and a digest | AGSC-06-26 to AGSC-06-31 |
 | Text and search | a line in `/llms.txt`, its text in `/llms-full.txt`, postings in `/search.json` | AGSC-06-13, AGSC-06-16 |

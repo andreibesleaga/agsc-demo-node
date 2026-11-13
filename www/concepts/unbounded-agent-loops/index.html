@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unbounded Loops</title>
+<meta name="description" content="An agent loop with no step limit, no budget and no independent exit test runs until money, patience or the platform stops it.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"An agent loop with no step limit, no budget and no independent exit test runs until money, patience or the platform stops it.","name":"Unbounded Loops","url":"https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Unbounded Loops</h1>
+<p class="summary"><strong>Summary</strong>An agent loop with no step limit, no budget and no independent exit test runs until money, patience or the platform stops it.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/antipatterns/">Anti-Patterns</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-fd711864f1377d44"></span>Intent</h2>
+<p>Name the mistake: an agent loop with no step limit, no budget and no independent test that the goal is met.</p>
+<h2 id="context-forces"><span id="chunk-950b67ed12a91b5b"></span>Context &amp; Forces</h2>
+<p>In an agent loop the model picks the next step, so it can repeat a tool call or claim progress that did not happen. Anthropic notes that autonomy brings higher costs and compounding errors (Schluntz and Zhang, 2024).</p>
+<h2 id="structure"><span id="chunk-c25145b51ecaf0f3"></span>Structure</h2>
+<p>Signs of it:</p>
+<ol>
+<li><strong>No step limit.</strong> Anthropic lists a maximum number of iterations as a normal stopping condition.</li>
+<li><strong>No cost limit or timeout.</strong> OWASP's LLM10:2025 Unbounded Consumption warns of denial of service and economic loss, and recommends rate limits, quotas and timeouts.</li>
+<li><strong>The model decides the exit.</strong> Inkog traces endless agent loops to missing iteration limits and exit conditions that never fire.</li>
+<li><strong>&quot;Done&quot; is announced, not observed.</strong></li>
+</ol>
+<h2 id="consequences-trade-offs"><span id="chunk-1605a8ba2989c573"></span>Consequences &amp; Trade-offs</h2>
+<p>Bills surprise, sessions hang, and other systems get flooded. Set limits from measured run lengths; a cap that is too tight cuts off hard tasks.</p>
+<h2 id="related-patterns"><span id="chunk-56dab31850aad980"></span>Related Patterns</h2>
+<ul>
+<li>Goal Setting and Monitoring</li>
+<li>Exception Handling and Recovery</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 250" role="img" aria-labelledby="unbounded-agent-loops-title unbounded-agent-loops-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="unbounded-agent-loops-title">A think, act, observe cycle loops back on itself with no step cap, no budget and no done test; beside it, a highlighted exit gate that checks those three leads to stop or escalate, joined to the loop by a dashed arrow marked missing.</title>
+  <desc id="unbounded-agent-loops-desc">the loop is fine; running it without a gate is the anti-pattern</desc>
+  <defs><marker id="unbounded-agent-loops-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="30" y="30" width="90" height="40" rx="6"/>
+    <rect x="170" y="30" width="90" height="40" rx="6"/>
+    <rect x="100" y="120" width="90" height="40" rx="6"/>
+    <path d="M124 50 L166 50" marker-end="url(#unbounded-agent-loops-arrow)"/>
+    <path d="M197 73.2 L163 116.8" marker-end="url(#unbounded-agent-loops-arrow)"/>
+    <path d="M127 116.8 L93 73.2" marker-end="url(#unbounded-agent-loops-arrow)"/>
+    <rect x="290" y="90" width="156" height="60" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="316" y="180" width="104" height="40" rx="6"/>
+    <path d="M194 135.6 L286 127.4" marker-end="url(#unbounded-agent-loops-arrow)" stroke-dasharray="4 3"/>
+    <path d="M368 154 L368 176" marker-end="url(#unbounded-agent-loops-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="75" y="54" font-size="12">think</text>
+    <text x="215" y="54" font-size="12">act</text>
+    <text x="145" y="144" font-size="12">observe</text>
+    <text x="145" y="186" font-size="11">no cap · no budget · no done test</text>
+    <text x="368" y="116" font-size="12">exit gate</text>
+    <text x="368" y="132" font-size="12">step cap · budget · done?</text>
+    <text x="368" y="196" font-size="12">stop</text>
+    <text x="368" y="212" font-size="12">or escalate</text>
+    <text x="238" y="118" font-size="10">missing</text>
+    <text x="230" y="238" font-size="11">the loop is fine; running it without a gate is the anti-pattern</text>
+  </g>
+</svg><figcaption>The loop is the pattern; the missing gate is the anti-pattern.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Schluntz, E.; Zhang, B. (2024). <a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a>. <span class="source-url"><a href="https://www.anthropic.com/engineering/building-effective-agents">https://www.anthropic.com/engineering/building-effective-agents</a></span>. Checked 2026-09-29.</li><li id="source-2">OWASP Gen AI Security Project (2025). <a href="https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/">LLM10:2025 Unbounded Consumption</a>. <span class="source-url"><a href="https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/">https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/</a></span>. Checked 2026-09-29.</li><li id="source-3">Inkog (2026). <a href="https://inkog.io/glossary/infinite-loop-ai-agent">AI Agent Infinite Loop Detection &amp; Prevention</a>. <span class="source-url"><a href="https://inkog.io/glossary/infinite-loop-ai-agent">https://inkog.io/glossary/infinite-loop-ai-agent</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/unbounded-agent-loops.md">Markdown</a> · <a href="/pages/unbounded-agent-loops.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

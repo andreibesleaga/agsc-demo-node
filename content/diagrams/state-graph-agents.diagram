@@ -1,0 +1,16 @@
+label "Agent as state graph diagram"
+box start 16 106 60 40 "start"
+box n1 110 40 100 44 "node|reads state, works"
+box state 170 108 120 44 "shared state" acc
+box n2 110 176 100 44 "node|returns updates"
+box edge 250 40 110 44 "conditional edge"
+box end 384 106 60 40 "end"
+box ckpt 320 176 120 44 "checkpointer|saves state"
+arrow start state
+arrow state n1
+arrow n1 edge
+arrow edge n2
+arrow n2 state
+arrow edge end
+arrow state ckpt dashed
+note "nodes do the work, edges pick the next node, a checkpointer persists the state"

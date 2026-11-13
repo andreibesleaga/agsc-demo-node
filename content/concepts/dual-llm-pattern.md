@@ -15,19 +15,19 @@ aliases:
 clusters:
   - security
 date: 2026-08-16
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://simonwillison.net/2023/Apr/25/dual-llm-pattern/
     title: "The Dual LLM pattern for building AI assistants that can resist prompt injection"
     author: "Willison, S."
     year: 2023
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://arxiv.org/abs/2503.18813
     title: "Defeating Prompt Injections by Design"
     author: "Debenedetti, E.; Shumailov, I.; Fan, T.; et al."
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
@@ -35,6 +35,7 @@ prov:
 id: dual-llm-pattern
 related:
   - owasp-agentic-top-10
+  - memory-context-poisoning
 kind: pattern
 evidence: explicit
 maturity: emerging
@@ -68,4 +69,5 @@ Injected text cannot change the plan. Some usefulness is lost: CaMeL solved 77% 
 
 ## Related Patterns
 
-OWASP Top 10 for Agentic Applications (goal hijack).
+- OWASP Top 10 for Agentic Applications
+- Memory and Context Poisoning Defense

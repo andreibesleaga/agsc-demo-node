@@ -15,25 +15,25 @@ aliases:
 clusters:
   - data-retrieval
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://arxiv.org/abs/2309.15217
     title: "Ragas: Automated Evaluation of Retrieval Augmented Generation"
     author: "Es, S.; James, J.; Espinosa-Anke, L.; et al."
     year: 2023
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://www.trulens.org/getting_started/core_concepts/rag_triad/
     title: "RAG Triad"
     author: "TruLens"
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://arxiv.org/abs/2411.00640
     title: "Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations"
     author: "Miller, E."
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

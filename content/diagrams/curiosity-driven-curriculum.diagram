@@ -1,0 +1,10 @@
+label "Curiosity-driven curriculum diagram"
+box novelty 20 40 120 50 "novelty / progress|signal" dashed
+box prop 176 82 120 76 "curriculum|proposer" acc
+box agent 344 82 96 56 "agent|acts"
+box record 176 190 120 36 "exploration progress"
+arrow novelty prop
+arrow prop agent
+arrow agent record via=392,208
+arrow record prop
+note "the proposer turns novelty and progress into tasks; outcomes feed the record"

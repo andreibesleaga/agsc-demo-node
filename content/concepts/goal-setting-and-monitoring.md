@@ -16,25 +16,26 @@ aliases:
 clusters:
   - reasoning-decision
 date: 2026-08-18
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://arxiv.org/html/2407.14402v1
     title: "The Vision of Autonomic Computing: Can LLMs Make It a Reality?"
     author: "Zhang, Z.; Yang, F.; Qin, X.; et al."
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://docs.crewai.com/en/concepts/tasks
     title: "Tasks"
     author: "CrewAI"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: goal-setting-and-monitoring
 related:
+  - termination-conditions
   - metacognitive-monitoring
   - specification-gaming
   - unbounded-agent-loops
@@ -72,3 +73,4 @@ Progress becomes visible. Each check costs extra. Criteria can replace the goal,
 - Specification Gaming
 - Metacognitive Monitoring and Control
 - Unbounded Loops
+- Termination and Exit Conditions

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Deep Research Loop</title>
+<meta name="description" content="Split a question into parts, search them in parallel, combine the findings and check that every claim has a source.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/deep-research-loop/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Split a question into parts, search them in parallel, combine the findings and check that every claim has a source.","name":"The Deep Research Loop","url":"https://patterns.agenticsystemcore.com/concepts/deep-research-loop/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>The Deep Research Loop</h1>
+<p class="summary"><strong>Summary</strong>Split a question into parts, search them in parallel, combine the findings and check that every claim has a source.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/advanced/">Advanced Architectures</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/deep-research-loop/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-8fef647dd9d55179"></span>Intent</h2>
+<p>Answer an open question by splitting it, searching the parts in parallel, and checking that every claim has a source.</p>
+<h2 id="context-forces"><span id="chunk-46475b597ad77e42"></span>Context &amp; Forces</h2>
+<p>Open questions need many searches. One agent is slow; many agents can produce a fluent report that nobody checked.</p>
+<h2 id="structure"><span id="chunk-b89108136383d54c"></span>Structure</h2>
+<p>Anthropic describes its Research feature this way (Hadfield et al., 2025):</p>
+<ol>
+<li>A lead agent plans and starts subagents that explore parts at the same time.</li>
+<li>Each subagent gets an objective, an output format, tool guidance and clear boundaries.</li>
+<li>The lead combines the findings.</li>
+<li>A citation agent locates the source for each claim.</li>
+</ol>
+<p>Google's AI co-scientist uses a related team of agents that generate, review, rank and improve hypotheses (Gottweis and Natarajan, 2025).</p>
+<h2 id="consequences-trade-offs"><span id="chunk-00bbb44a417e02f4"></span>Consequences &amp; Trade-offs</h2>
+<p>It covers more ground. It is costly: Anthropic reports about 15 times the tokens of a chat. Vague task descriptions cause duplicated work or gaps.</p>
+<h2 id="related-patterns"><span id="chunk-13002dd4967d27f8"></span>Related Patterns</h2>
+<ul>
+<li>Parallelization</li>
+<li>Agents as Tools</li>
+<li>Retrieval Evaluation</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 270" role="img" aria-labelledby="deep-research-loop-title deep-research-loop-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="deep-research-loop-title">A lead agent plans and fans out to three subagents that search and read in parallel; their findings return to the lead, which synthesizes them and either loops back for more research or hands the report to a highlighted citation pass.</title>
+  <desc id="deep-research-loop-desc">findings return, not transcripts; the lead decides when to stop</desc>
+  <defs><marker id="deep-research-loop-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="112" width="84" height="50" rx="6"/>
+    <rect x="134" y="36" width="104" height="40" rx="6"/>
+    <rect x="134" y="117" width="104" height="40" rx="6"/>
+    <rect x="134" y="198" width="104" height="40" rx="6"/>
+    <rect x="270" y="112" width="86" height="50" rx="6"/>
+    <rect x="382" y="112" width="68" height="50" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <path d="M99.5 109.9 L150.5 78.1" marker-end="url(#deep-research-loop-arrow)"/>
+    <path d="M102 137 L130 137" marker-end="url(#deep-research-loop-arrow)"/>
+    <path d="M99.5 164.1 L150.5 195.9" marker-end="url(#deep-research-loop-arrow)"/>
+    <path d="M220.7 78.2 L270.4 109.8" marker-end="url(#deep-research-loop-arrow)"/>
+    <path d="M242 137 L266 137" marker-end="url(#deep-research-loop-arrow)"/>
+    <path d="M220.7 195.8 L270.4 164.2" marker-end="url(#deep-research-loop-arrow)"/>
+    <path d="M360 137 L378 137" marker-end="url(#deep-research-loop-arrow)"/>
+    <path d="M313 112 L313 14 L56 14 L56 112" marker-end="url(#deep-research-loop-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="56" y="133" font-size="12">lead agent</text>
+    <text x="56" y="149" font-size="12">plans</text>
+    <text x="186" y="52" font-size="12">subagent</text>
+    <text x="186" y="68" font-size="12">search + read</text>
+    <text x="186" y="133" font-size="12">subagent</text>
+    <text x="186" y="149" font-size="12">search + read</text>
+    <text x="186" y="214" font-size="12">subagent</text>
+    <text x="186" y="230" font-size="12">search + read</text>
+    <text x="313" y="133" font-size="12">lead agent</text>
+    <text x="313" y="149" font-size="12">synthesizes</text>
+    <text x="416" y="133" font-size="12">citation</text>
+    <text x="416" y="149" font-size="12">pass</text>
+    <text x="319" y="62" font-size="10" text-anchor="start">more needed?</text>
+    <text x="230" y="258" font-size="11">findings return, not transcripts; the lead decides when to stop</text>
+  </g>
+</svg><figcaption>The verification pass is what separates research from confident summarization.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Hadfield, J.; Zhang, B.; Lien, K.; et al. (2025). <a href="https://www.anthropic.com/engineering/multi-agent-research-system">How we built our multi-agent research system</a>. <span class="source-url"><a href="https://www.anthropic.com/engineering/multi-agent-research-system">https://www.anthropic.com/engineering/multi-agent-research-system</a></span>. Checked 2026-09-29.</li><li id="source-2">Gottweis, J.; Natarajan, V. (2025). <a href="https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/">Accelerating scientific breakthroughs with an AI co-scientist</a>. <span class="source-url"><a href="https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/">https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/deep-research-loop.md">Markdown</a> · <a href="/pages/deep-research-loop.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

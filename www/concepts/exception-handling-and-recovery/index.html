@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exception Handling and Recovery</title>
+<meta name="description" content="Classify each failure, retry short faults with limits, switch route for lasting ones, and report reduced results honestly.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Classify each failure, retry short faults with limits, switch route for lasting ones, and report reduced results honestly.","name":"Exception Handling and Recovery","url":"https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Exception Handling and Recovery</h1>
+<p class="summary"><strong>Summary</strong>Classify each failure, retry short faults with limits, switch route for lasting ones, and report reduced results honestly.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/operations-reliability/">Operations &amp; Reliability</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-a1b99cf97c4b36ca"></span>Intent</h2>
+<p>Keep a run going when calls fail: retry short faults, take another route for lasting ones, and say when a result is reduced.</p>
+<h2 id="context-forces"><span id="chunk-74680c83bc6fb2ea"></span>Context &amp; Forces</h2>
+<p>Agents make many remote calls, and some fail. Blind retries waste money and overload services. Retrying a non-idempotent action can repeat it.</p>
+<h2 id="structure"><span id="chunk-83bc0940bf44986d"></span>Structure</h2>
+<ol>
+<li><strong>Classify.</strong> Retry only transient faults. For HTTP, Microsoft names 429 and 5xx as typical candidates.</li>
+<li><strong>Retry with limits.</strong> Use growing, randomised delays. Microsoft: never retry endlessly; set a retry budget.</li>
+<li><strong>Fall back.</strong> Use an alternative service, or offer reduced functionality.</li>
+<li><strong>Log</strong> every retry.</li>
+</ol>
+<p>LangGraph attaches a retry policy to each node; for common HTTP libraries it retries only 5xx errors by default.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-94684afd6ca9761a"></span>Consequences &amp; Trade-offs</h2>
+<p>Runs survive routine faults. Retries add delay and cost. A silent fallback can hide a broken dependency.</p>
+<h2 id="related-patterns"><span id="chunk-8a736b41542ebaf8"></span>Related Patterns</h2>
+<ul>
+<li>Saga for Agent Workflows</li>
+<li>Unbounded Loops</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 262" role="img" aria-labelledby="exception-handling-and-recovery-title exception-handling-and-recovery-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="exception-handling-and-recovery-title">A failed call enters a highlighted classify box; transient faults go to a bounded retry with backoff that runs the call again, lasting faults and used-up retries go to a fallback route, and when no path is left the run degrades honestly with a stated partial result.</title>
+  <desc id="exception-handling-and-recovery-desc">retry only what can heal — then fall back, then degrade honestly</desc>
+  <defs><marker id="exception-handling-and-recovery-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="100" width="80" height="50" rx="6"/>
+    <rect x="124" y="94" width="116" height="62" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="290" y="20" width="156" height="48" rx="6"/>
+    <rect x="290" y="104" width="156" height="44" rx="6"/>
+    <rect x="290" y="184" width="156" height="44" rx="6"/>
+    <path d="M98 125 L120 125" marker-end="url(#exception-handling-and-recovery-arrow)"/>
+    <path d="M243.7 98.1 L309.2 69.6" marker-end="url(#exception-handling-and-recovery-arrow)"/>
+    <path d="M244 125.3 L286 125.6" marker-end="url(#exception-handling-and-recovery-arrow)"/>
+    <path d="M368 72 L368 100" marker-end="url(#exception-handling-and-recovery-arrow)"/>
+    <path d="M368 152 L368 180" marker-end="url(#exception-handling-and-recovery-arrow)"/>
+    <path d="M290 44 L54 44 L54 100" marker-end="url(#exception-handling-and-recovery-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="54" y="121" font-size="12">call</text>
+    <text x="54" y="137" font-size="12">fails</text>
+    <text x="182" y="121" font-size="12">classify</text>
+    <text x="182" y="137" font-size="12">the fault</text>
+    <text x="368" y="40" font-size="12">retry, bounded</text>
+    <text x="368" y="56" font-size="12">with backoff</text>
+    <text x="368" y="122" font-size="12">fallback</text>
+    <text x="368" y="138" font-size="12">other tool, model, plan</text>
+    <text x="368" y="202" font-size="12">degrade honestly</text>
+    <text x="368" y="218" font-size="12">partial result, said so</text>
+    <text x="172" y="38" font-size="10">run again</text>
+    <text x="262" y="76" font-size="10" text-anchor="end">transient</text>
+    <text x="265" y="114" font-size="10">lasting</text>
+    <text x="374" y="90" font-size="10" text-anchor="start">used up</text>
+    <text x="374" y="170" font-size="10" text-anchor="start">no path left</text>
+    <text x="230" y="250" font-size="11">retry only what can heal — then fall back, then degrade honestly</text>
+  </g>
+</svg><figcaption>Retry only what can heal; everything else needs a second path or an honest partial answer.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Microsoft (2024). <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/retry">Retry pattern</a>. <span class="source-url"><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/retry">https://learn.microsoft.com/en-us/azure/architecture/patterns/retry</a></span>. Checked 2026-09-29.</li><li id="source-2">Microsoft (2026). <a href="https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults">Transient fault handling</a>. <span class="source-url"><a href="https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults">https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults</a></span>. Checked 2026-09-29.</li><li id="source-3">LangChain (2026). <a href="https://docs.langchain.com/oss/python/langgraph/use-graph-api">Use the graph API</a>. <span class="source-url"><a href="https://docs.langchain.com/oss/python/langgraph/use-graph-api">https://docs.langchain.com/oss/python/langgraph/use-graph-api</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/exception-handling-and-recovery.md">Markdown</a> · <a href="/pages/exception-handling-and-recovery.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

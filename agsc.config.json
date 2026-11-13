@@ -29,18 +29,23 @@
   "releases": {
     "advanced": true,
     "antipatterns": true,
+    "classical": true,
+    "cognitive": true,
     "ethics": true,
     "future": true,
     "launch": true,
     "ops-evals": true,
+    "product": true,
     "reference-architectures": true,
     "sdlc": true,
-    "specs": true
+    "security": true,
+    "specs": true,
+    "topologies-foundational": true
   },
   "site": {
     "author": "Andrei N. Besleaga",
     "base": "https://patterns.agenticsystemcore.com/",
-    "tagline": "A live demonstration node of the AgenticSystemCore reference engine, running on a small sample of well-known agent-system patterns.",
+    "tagline": "Agent-system designs as a typed, cited graph, built by the AgenticSystemCore reference engine: the second node of the Agentic Knowledge Web.",
     "tdm_crawlers": [
       "Applebot-Extended",
       "CCBot",
@@ -49,13 +54,14 @@
       "Google-Extended",
       "meta-externalagent"
     ],
-    "title": "AgenticSystemCore Demo Node"
+    "title": "AgenticSystemCore Graph"
   },
   "spec_version": "1.1.0",
   "tags": {
     "allowed": [
       "accountability",
       "adoption",
+      "attention",
       "autonomy",
       "blueprint",
       "calibration",
@@ -65,9 +71,11 @@
       "coordination",
       "cost-control",
       "delegation",
+      "determinism",
       "ensemble",
       "evaluation",
       "fault-tolerance",
+      "gate",
       "governance",
       "grounding",
       "human-oversight",
@@ -81,12 +89,17 @@
       "persistence",
       "planning",
       "prompt-injection",
+      "prompting",
       "reasoning",
+      "release",
+      "reliability",
+      "retrieval",
       "safety",
       "scheduling",
       "self-improvement",
       "standards",
-      "taxonomy"
+      "taxonomy",
+      "tool-use"
     ]
   }
 }

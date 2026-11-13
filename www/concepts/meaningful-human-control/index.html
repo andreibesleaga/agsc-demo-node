@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meaningful Human Control</title>
+<meta name="description" content="Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it.","name":"Meaningful Human Control","url":"https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Meaningful Human Control</h1>
+<p class="summary"><strong>Summary</strong>Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/ethics/">Ethics &amp; Sustainability</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-82d7962e17b19b80"></span>Intent</h2>
+<p>Keep people really in control of an autonomous system, not only on paper.</p>
+<h2 id="context-forces"><span id="chunk-978b885417210f67"></span>Context &amp; Forces</h2>
+<p>Agents act faster than people can review, so &quot;a human in the loop&quot; can become a formality.</p>
+<h2 id="structure"><span id="chunk-5f223de05525e29a"></span>Structure</h2>
+<p>Santoni de Sio and van den Hoven (2018) set two conditions:</p>
+<ol>
+<li><strong>Tracking:</strong> the system responds, verifiably, to the relevant human moral reasons.</li>
+<li><strong>Tracing:</strong> its actions trace to at least one person who understands it properly.</li>
+</ol>
+<p>Article 14 of the EU AI Act asks that people overseeing high-risk AI systems stay aware of automation bias, can override or reverse an output, and stop the system safely.</p>
+<p>In practice, tracking lives in goals, guardrails and escalation rules. Tracing needs a named, trained person per system, and clear records.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-078e197722a1cc8f"></span>Consequences &amp; Trade-offs</h2>
+<p>An approver who does not understand the system fails tracing. A system that ignores its rules fails tracking. Training and records cost effort.</p>
+<h2 id="related-patterns"><span id="chunk-bdcfbd1659b9f869"></span>Related Patterns</h2>
+<ul>
+<li>The Autonomy Ladder</li>
+<li>Tamper-Evident Agent Audit Log</li>
+<li>Weak-to-Strong Oversight</li>
+</ul>
+
+<h2 id="links">Links</h2>
+<ul class="links"><li><code>related</code>: <a href="/concepts/autonomy-ladder/">The Autonomy Ladder</a></li></ul>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 240" role="img" aria-labelledby="meaningful-human-control-title meaningful-human-control-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="meaningful-human-control-title">Human moral reasons feed a highlighted agent-decision box (tracking), and every action traces back to a responsible human who understands the system (tracing); the two arrows together define meaningful control.</title>
+  <desc id="meaningful-human-control-desc">meaningful only when both hold — reasons in, responsibility traceable out</desc>
+  <defs><marker id="meaningful-human-control-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="20" width="130" height="48" rx="6"/>
+    <rect x="176" y="96" width="116" height="50" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="336" y="96" width="110" height="50" rx="6"/>
+    <rect x="14" y="164" width="130" height="48" rx="6"/>
+    <path d="M144 44 L234 44 L234 96" marker-end="url(#meaningful-human-control-arrow)"/>
+    <path d="M296 121 L332 121" marker-end="url(#meaningful-human-control-arrow)"/>
+    <path d="M391 146 L391 188 L144 188" marker-end="url(#meaningful-human-control-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="79" y="40" font-size="12">human moral</text>
+    <text x="79" y="56" font-size="12">reasons</text>
+    <text x="234" y="117" font-size="12">agent</text>
+    <text x="234" y="133" font-size="12">decision</text>
+    <text x="391" y="125" font-size="12">action</text>
+    <text x="79" y="184" font-size="12">responsible human</text>
+    <text x="79" y="200" font-size="12">who understands</text>
+    <text x="150" y="36" font-size="10" text-anchor="start">tracking: responds to them</text>
+    <text x="156" y="204" font-size="10" text-anchor="start">tracing: outcomes lead back to them</text>
+    <text x="230" y="228" font-size="11">meaningful only when both hold — reasons in, responsibility traceable out</text>
+  </g>
+</svg><figcaption>Control is meaningful only when both arrows hold — reasons in, responsibility traceable out.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Santoni de Sio, F.; van den Hoven, J. (2018). <a href="https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2018.00015/full">Meaningful Human Control over Autonomous Systems: A Philosophical Account</a>. <span class="source-url"><a href="https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2018.00015/full">https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2018.00015/full</a></span>. Checked 2026-09-29.</li><li id="source-2">European Parliament; Council of the European Union (2024). <a href="https://artificialintelligenceact.eu/article/14/">Article 14: Human Oversight</a>. <span class="source-url"><a href="https://artificialintelligenceact.eu/article/14/">https://artificialintelligenceact.eu/article/14/</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/meaningful-human-control.md">Markdown</a> · <a href="/pages/meaningful-human-control.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

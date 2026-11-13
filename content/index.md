@@ -1,8 +1,8 @@
 ---
 spec_version: 1.1.0
 okf_version: 0.2
-title: AgenticSystemCore Demo Node
-description: A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.
+title: AgenticSystemCore Graph
+description: "Agent-system designs as a typed, cited graph, built by the AgenticSystemCore reference engine: the second node of the Agentic Knowledge Web."
 base: https://patterns.agenticsystemcore.com/
 lang: en
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
@@ -11,9 +11,9 @@ prov:
   operator: human:andreibesleaga
 ---
 
-# AgenticSystemCore Demo Node
+# AgenticSystemCore Graph
 
-This site is software at work. It is a live demonstration node of the AgenticSystemCore reference engine, the open-source program that turns a folder of Markdown files into a knowledge node that people and agents can find, check and cite. It is the second node of the Agentic Knowledge Web, beside [agenticsystemcore.com](https://agenticsystemcore.com/): each of the two names the other in its discovery file. Every page and every file here was built by the engine as static files: no application server and no database run behind it.
+AgenticSystemCore Graph describes well-known agent-system designs — patterns, failure modes and the ways to classify them — as short cards, each written from the public sources it cites and linked to the others by typed relations. It is the second node of the Agentic Knowledge Web, beside [agenticsystemcore.com](https://agenticsystemcore.com/): each of the two names the other in its discovery file. The AgenticSystemCore reference engine, the open-source program that turns a folder of Markdown files into a knowledge node that people and agents can find, check and cite, built every page and every file here as static files: no application server and no database run behind it.
 
 ## What the software does on this node
 
@@ -29,9 +29,9 @@ This site is software at work. It is a live demonstration node of the AgenticSys
 - **A change ledger.** Every published change is a line of [`ledger.jsonl`](/ledger.jsonl); the [changelog](/changelog/) lists the tagged versions.
 - **Composition.** The [compose page](/compose/) turns the items you tick into a starting set of seven harness files, computed in your browser. The [skill packs](/skills/) give one file per cluster for agent tool folders.
 
-## The sample content
+## The cards
 
-The content is a small sample of well-known agent-system patterns, each described from public sources and grouped into clusters. It is here so the software has real material to work on: every item carries its references, checked against those sources, and a diagram whose text source travels beside it. Browse the [concepts](/concepts/) or the [clusters](/clusters/), or start from the [search page](/search/).
+Each card is a short reference text with one diagram: what the design is for, the forces behind it, its structure, what it costs, and the cards it relates to. Every claim rests on the public sources the card cites, each checked against the source and dated. The cards are grouped into clusters and joined by typed links: the [clusters page](/clusters/) shows how the clusters connect, and the [query page](/query/) answers questions over the whole graph. Browse the [concepts](/concepts/), or start from the [search page](/search/). New cards are added over time.
 
 ## Run your own node
 

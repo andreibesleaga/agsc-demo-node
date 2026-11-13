@@ -1,0 +1,9 @@
+label "Resolution, containment and deflection metrics diagram"
+box in 16 104 80 44 "inbound|conversations"
+region deflect 122 24 322 200 "deflected: no human reached"
+region contain 150 60 270 150 "contained: never handed off"
+box agent 176 96 90 50 "agent|handles"
+box res 300 92 100 58 "resolved?|by definition" acc
+arrow in agent
+arrow agent res
+note "deflection: no human · containment: no handoff · resolution: problem addressed"

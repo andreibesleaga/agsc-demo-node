@@ -1,0 +1,14 @@
+label "Shadow-mode rollout diagram"
+box req 16 104 84 44 "live request"
+box human 150 40 120 44 "human / incumbent"
+box shadow 150 150 120 50 "shadow agent|actions suppressed" acc
+box world 330 40 110 44 "real effect"
+box sink 330 112 110 40 "effect sink (log)"
+box cmp 330 172 110 44 "compare|with human actions"
+arrow req human
+arrow req shadow
+arrow human world
+arrow shadow sink
+arrow sink cmp
+arrow human cmp dashed
+note "the agent runs without acting; its proposals are compared with what people did"

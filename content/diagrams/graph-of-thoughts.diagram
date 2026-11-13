@@ -1,0 +1,19 @@
+label "Graph of thoughts diagram"
+box prob 16 106 70 40 "problem"
+box t1 120 30 80 40 "thought A"
+box t2 120 106 80 40 "thought B"
+box t3 120 182 80 40 "thought C"
+box agg 240 68 100 50 "aggregated|thought" acc
+box score 240 160 100 44 "controller"
+box ans 384 106 60 40 "answer"
+arrow prob t1
+arrow prob t2
+arrow prob t3
+arrow t1 agg
+arrow t2 agg
+arrow t3 score
+arrow agg score
+path "M 320 68 C 335 30 375 45 340 82" arrow
+text 372 42 "refine" size=10
+arrow score ans
+note "combine and refine partial thoughts, not only branch them"

@@ -1,0 +1,10 @@
+label "Idempotency keys for agent actions diagram"
+box agent 20 40 110 44 "agent step"
+box store 170 30 130 64 "idempotency store|key → result" acc
+box effect 340 40 100 44 "external effect"
+box retry 20 160 110 44 "retry / replay|same key"
+arrow agent store
+arrow store effect
+arrow retry store
+arrow store retry dashed via=175,165
+note "the first call acts; a repeat with the key replays the record — no second effect"

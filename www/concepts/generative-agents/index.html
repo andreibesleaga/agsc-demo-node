@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generative Agents</title>
+<meta name="description" content="A simulated character with a full memory record, reflection over it, and plans drawn from both, so it stays consistent over days.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/generative-agents/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"A simulated character with a full memory record, reflection over it, and plans drawn from both, so it stays consistent over days.","name":"Generative Agents","url":"https://patterns.agenticsystemcore.com/concepts/generative-agents/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Generative Agents</h1>
+<p class="summary"><strong>Summary</strong>A simulated character with a full memory record, reflection over it, and plans drawn from both, so it stays consistent over days.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/reference-architectures/">Reference Architectures</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/generative-agents/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-6031c0f9e0d68028"></span>Intent</h2>
+<p>Give a simulated character memory, reflection and plans, so it behaves consistently over days.</p>
+<h2 id="context-forces"><span id="chunk-a6f2b04032edccc2"></span>Context &amp; Forces</h2>
+<p>A chat model has no past. The whole history does not fit in a prompt, so the agent must keep everything but use only what matters now.</p>
+<h2 id="structure"><span id="chunk-a2e613dad94b3002"></span>Structure</h2>
+<p>Park et al. (2023) describe three parts:</p>
+<ol>
+<li><strong>Memory stream:</strong> a complete record of experiences in natural language.</li>
+<li><strong>Reflection:</strong> memories are turned into higher-level thoughts.</li>
+<li><strong>Planning:</strong> relevant memories are retrieved to plan behaviour.</li>
+</ol>
+<p>Stanford HAI sums up the loop: perceptions feed memory, retrieval supports reflection and planning, then the agent acts (Miller, 2023). The study ran 25 agents in a small simulated town.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-7b334303fba3d22b"></span>Consequences &amp; Trade-offs</h2>
+<p>One suggested Valentine's Day party led agents to invite each other and arrive together. Removing observation, planning or reflection each made behaviour less believable. Agents still made odd choices, and every step calls the model.</p>
+<h2 id="related-patterns"><span id="chunk-abc8f25a44a716ea"></span>Related Patterns</h2>
+<ul>
+<li>Skill-Library Compounding</li>
+<li>Metacognitive Monitoring and Control</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="generative-agents-title generative-agents-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="generative-agents-title">Observations of the world flow into a highlighted memory stream; reflection and planning each read from it and write back into it, and a retrieval step scores memories to drive the next action, which acts on the world again.</title>
+  <desc id="generative-agents-desc">retrieval scores recency · importance · relevance</desc>
+  <defs><marker id="generative-agents-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="100" width="80" height="44" rx="6"/>
+    <rect x="130" y="96" width="130" height="52" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="130" y="16" width="130" height="40" rx="6"/>
+    <rect x="300" y="16" width="140" height="40" rx="6"/>
+    <rect x="300" y="100" width="140" height="44" rx="6"/>
+    <rect x="300" y="176" width="140" height="40" rx="6"/>
+    <path d="M98 122 L126 122" marker-end="url(#generative-agents-arrow)"/>
+    <path d="M195 92 L195 60" marker-end="url(#generative-agents-arrow)" marker-start="url(#generative-agents-arrow)"/>
+    <path d="M251.5 94.2 L325.7 57.8" marker-end="url(#generative-agents-arrow)" marker-start="url(#generative-agents-arrow)"/>
+    <path d="M264 122 L296 122" marker-end="url(#generative-agents-arrow)"/>
+    <path d="M370 148 L370 172" marker-end="url(#generative-agents-arrow)"/>
+    <path d="M300 196 L54 196 L54 144" marker-end="url(#generative-agents-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="54" y="126" font-size="12">world</text>
+    <text x="195" y="118" font-size="12">memory stream</text>
+    <text x="195" y="134" font-size="12">every observation</text>
+    <text x="195" y="40" font-size="12">reflection</text>
+    <text x="370" y="40" font-size="12">planning</text>
+    <text x="370" y="118" font-size="12">retrieve</text>
+    <text x="370" y="134" font-size="12">top-scored memories</text>
+    <text x="370" y="200" font-size="12">action</text>
+    <text x="112" y="90" font-size="10">perceive</text>
+    <text x="230" y="248" font-size="11">retrieval scores recency · importance · relevance</text>
+  </g>
+</svg><figcaption>Keep everything, read only what scores highest now — reflection turns the stream into beliefs, planning turns it into a day.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Park, J. S.; O&#39;Brien, J. C.; Cai, C. J.; et al. (2023). <a href="https://arxiv.org/abs/2304.03442">Generative Agents: Interactive Simulacra of Human Behavior</a>. <span class="source-url"><a href="https://arxiv.org/abs/2304.03442">https://arxiv.org/abs/2304.03442</a></span>. Checked 2026-09-29.</li><li id="source-2">Miller, K. (2023). <a href="https://hai.stanford.edu/news/computational-agents-exhibit-believable-humanlike-behavior">Computational Agents Exhibit Believable Humanlike Behavior</a>. <span class="source-url"><a href="https://hai.stanford.edu/news/computational-agents-exhibit-believable-humanlike-behavior">https://hai.stanford.edu/news/computational-agents-exhibit-believable-humanlike-behavior</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/generative-agents.md">Markdown</a> · <a href="/pages/generative-agents.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,1063 @@
+@prefix asc: <https://w3id.org/agentic-system-core/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://patterns.agenticsystemcore.com/> a asc:Bundle ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:specVersion "1.0.0" .
+
+<https://patterns.agenticsystemcore.com/clusters/advanced/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Larger agent systems built by combining simpler patterns, such as a research system with a lead agent and parallel searchers."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/deep-research-loop/> ;
+    skos:prefLabel "Advanced Architectures"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/antipatterns/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Common mistakes in agent systems, how to recognise them, and how to avoid them."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/> ;
+    skos:prefLabel "Anti-Patterns"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/classical/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Established software patterns, such as the saga, applied to agent workflows."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/saga-for-agents/> ;
+    skos:prefLabel "Classical Foundations"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/cognitive-behavioral/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Ideas from cognitive science, such as self-monitoring, turned into agent patterns."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/> ;
+    skos:prefLabel "Cognitive & Behavioral"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/data-retrieval/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "How agents find and use the right information, and how to measure whether they did."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/> ;
+    skos:prefLabel "Data & Retrieval"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/ethics/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Human control over autonomous systems, and their effects on people and the environment."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/> ;
+    skos:prefLabel "Ethics & Sustainability"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/evaluation-testing/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "How to test agents and measure whether they work."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/> ;
+    skos:prefLabel "Evaluation & Testing"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/foundational/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "The basic building blocks of agents, such as loops, tools and ways of combining model calls."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/agents-as-tools/> , <https://patterns.agenticsystemcore.com/concepts/parallelization/> ;
+    skos:prefLabel "Foundational"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/future/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Open research questions about agents, with what is known and what is not."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/> ;
+    skos:prefLabel "Future Research"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/governance/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Records, rules and checks that make agent actions accountable."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/> ;
+    skos:prefLabel "Governance & Accountability"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/memory-cognition/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "How agents remember, forget and turn past work into reusable skills."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/skill-library/> ;
+    skos:prefLabel "Memory & Cognition"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/operations-reliability/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Running agents in production, including handling failures, controlling cost and watching behaviour."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/> ;
+    skos:prefLabel "Operations & Reliability"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/product/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Product decisions for agents, such as how much an agent may do on its own."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/> ;
+    skos:prefLabel "Product Practice"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/protocols/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Shared formats and addresses that let agents, tools and organisations work together."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/> ;
+    skos:prefLabel "Protocols & Interop"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/reasoning-decision/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "How agents set goals, decide what to do next and know when to stop."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/> ;
+    skos:prefLabel "Reasoning & Decision"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/reference-architectures/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Complete agent designs that combine several patterns into one working system."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/generative-agents/> ;
+    skos:prefLabel "Reference Architectures"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/sdlc/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Building software with agents through phases, approval gates and reviews."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/> ;
+    skos:prefLabel "Agentic SDLC"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/security/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Threats to agents, and the designs that defend against them."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/> , <https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/> ;
+    skos:prefLabel "Security"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/specs/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "How to state what an agent should do when its behaviour is not fully predictable."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/specification-gaming/> ;
+    skos:prefLabel "Specs & Requirements"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/clusters/topologies/> dcterms:created "2026-03-21T00:00:00Z"^^xsd:dateTime ;
+    a asc:Cluster ;
+    skos:definition "Ways for several agents to work together, such as a shared workspace or a hierarchy."@en ;
+    skos:member <https://patterns.agenticsystemcore.com/concepts/blackboard/> ;
+    skos:prefLabel "Multi-Agent Topologies"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/agents-as-tools/> dcterms:created "2026-08-16T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "context-isolated subagent"@en , "subagent (Claude Code)"@en , "tool-agents (OpenAI Agents SDK)"@en ;
+    skos:definition "Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Agents as Tools"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/agents-as-tools/#source-1> , <https://patterns.agenticsystemcore.com/concepts/agents-as-tools/#source-2> , <https://patterns.agenticsystemcore.com/concepts/agents-as-tools/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/agents-as-tools/#source-1> dcterms:creator "OpenAI" ;
+    dcterms:date "2025" ;
+    dcterms:source "https://openai.github.io/openai-agents-python/tools/#agents-as-tools" ;
+    dcterms:title "Tools" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/agents-as-tools/#source-2> dcterms:creator "OpenAI" ;
+    dcterms:date "2025" ;
+    dcterms:source "https://openai.github.io/openai-agents-python/multi_agent/" ;
+    dcterms:title "Agent orchestration" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/agents-as-tools/#source-3> dcterms:creator "Anthropic" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://code.claude.com/docs/en/sub-agents" ;
+    dcterms:title "Create custom subagents" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:definition "A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "The Autonomy Ladder"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "taxonomy" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/#source-1> , <https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/#source-2> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/#source-1> dcterms:creator "Reavis, J." ;
+    dcterms:date "2026" ;
+    dcterms:source "https://cloudsecurityalliance.org/blog/2026/01/28/levels-of-autonomy" ;
+    dcterms:title "Leveling Up Autonomy in Agentic AI" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/#source-2> dcterms:creator "Mitchell, M.; Ghosh, A.; Luccioni, A. S.; et al." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://arxiv.org/abs/2502.02649" ;
+    dcterms:title "Fully Autonomous AI Agents Should Not be Developed" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/blackboard/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "opportunistic problem solving"@en , "shared workspace"@en ;
+    skos:definition "Independent specialists work on one problem through a shared workspace; a control step picks who contributes next."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Blackboard"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/blackboard/#source-1> , <https://patterns.agenticsystemcore.com/concepts/blackboard/#source-2> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/blackboard/#source-1> dcterms:creator "Erman, L. D.; Hayes-Roth, F.; Lesser, V. R.; et al." ;
+    dcterms:date "1980" ;
+    dcterms:source "https://mas.cs.umass.edu/Documents/Erman_Hearsay80.pdf" ;
+    dcterms:title "The Hearsay-II Speech-Understanding System: Integrating Knowledge to Resolve Uncertainty" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/blackboard/#source-2> dcterms:creator "Han, B.; Zhang, S." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://arxiv.org/abs/2507.01701" ;
+    dcterms:title "Exploring Advanced LLM Multi-Agent Systems Based on Blackboard Architecture" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/deep-research-loop/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:definition "Split a question into parts, search them in parallel, combine the findings and check that every claim has a source."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "The Deep Research Loop"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/parallelization/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/deep-research-loop/#source-1> , <https://patterns.agenticsystemcore.com/concepts/deep-research-loop/#source-2> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/deep-research-loop/#source-1> dcterms:creator "Hadfield, J.; Zhang, B.; Lien, K.; et al." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://www.anthropic.com/engineering/multi-agent-research-system" ;
+    dcterms:title "How we built our multi-agent research system" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/deep-research-loop/#source-2> dcterms:creator "Gottweis, J.; Natarajan, V." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/" ;
+    dcterms:title "Accelerating scientific breakthroughs with an AI co-scientist" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/> dcterms:created "2026-08-16T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "CaMeL"@en , "capability-based prompt-injection defense"@en , "privileged/quarantined LLM split"@en ;
+    skos:definition "Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Dual-LLM Pattern"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/#source-1> , <https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/#source-2> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/#source-1> dcterms:creator "Willison, S." ;
+    dcterms:date "2023" ;
+    dcterms:source "https://simonwillison.net/2023/Apr/25/dual-llm-pattern/" ;
+    dcterms:title "The Dual LLM pattern for building AI assistants that can resist prompt injection" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/#source-2> dcterms:creator "Debenedetti, E.; Shumailov, I.; Fan, T.; et al." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://arxiv.org/abs/2503.18813" ;
+    dcterms:title "Defeating Prompt Injections by Design" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/> dcterms:created "2026-08-18T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "Retry pattern (Azure Architecture Center)"@en , "node retry policy (LangGraph)"@en , "retry / fallback / graceful degradation"@en , "transient-fault handling for agents"@en ;
+    skos:definition "Classify each failure, retry short faults with limits, switch route for lasting ones, and report reduced results honestly."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Exception Handling and Recovery"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/#source-1> , <https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/#source-2> , <https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/#source-1> dcterms:creator "Microsoft" ;
+    dcterms:date "2024" ;
+    dcterms:source "https://learn.microsoft.com/en-us/azure/architecture/patterns/retry" ;
+    dcterms:title "Retry pattern" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/#source-2> dcterms:creator "Microsoft" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults" ;
+    dcterms:title "Transient fault handling" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/#source-3> dcterms:creator "LangChain" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://docs.langchain.com/oss/python/langgraph/use-graph-api" ;
+    dcterms:title "Use the graph API" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/generative-agents/> dcterms:created "2026-08-16T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "Smallville agents"@en , "believable proxies of human behavior"@en , "interactive simulacra of human behavior"@en ;
+    skos:definition "A simulated character with a full memory record, reflection over it, and plans drawn from both, so it stays consistent over days."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Generative Agents"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/generative-agents/#source-1> , <https://patterns.agenticsystemcore.com/concepts/generative-agents/#source-2> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/generative-agents/#source-1> dcterms:creator "Park, J. S.; O'Brien, J. C.; Cai, C. J.; et al." ;
+    dcterms:date "2023" ;
+    dcterms:source "https://arxiv.org/abs/2304.03442" ;
+    dcterms:title "Generative Agents: Interactive Simulacra of Human Behavior" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/generative-agents/#source-2> dcterms:creator "Miller, K." ;
+    dcterms:date "2023" ;
+    dcterms:source "https://hai.stanford.edu/news/computational-agents-exhibit-believable-humanlike-behavior" ;
+    dcterms:title "Computational Agents Exhibit Believable Humanlike Behavior" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/> dcterms:created "2026-08-18T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "MAPE-K for agents"@en , "autonomic control loop"@en , "expected_output + guardrail (CrewAI)"@en , "goal-progress monitoring"@en ;
+    skos:definition "Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Goal Setting and Monitoring"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/> , <https://patterns.agenticsystemcore.com/concepts/specification-gaming/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/#source-1> , <https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/#source-2> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/#source-1> dcterms:creator "Zhang, Z.; Yang, F.; Qin, X.; et al." ;
+    dcterms:date "2024" ;
+    dcterms:source "https://arxiv.org/html/2407.14402v1" ;
+    dcterms:title "The Vision of Autonomic Computing: Can LLMs Make It a Reality?" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/#source-2> dcterms:creator "CrewAI" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://docs.crewai.com/en/concepts/tasks" ;
+    dcterms:title "Tasks" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "append-only action record"@en , "hash-chained audit"@en , "session-log provenance"@en ;
+    skos:definition "An append-only, hash-linked record of every important agent action, so what happened can be rebuilt and checked."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Tamper-Evident Agent Audit Log"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/#source-1> , <https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/#source-2> , <https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/#source-1> dcterms:creator "Haber, S.; Stornetta, W. S." ;
+    dcterms:date "1991" ;
+    dcterms:source "https://doi.org/10.1007/BF00196791" ;
+    dcterms:title "How to time-stamp a digital document" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/#source-2> dcterms:creator "OWASP Gen AI Security Project" ;
+    dcterms:date "2025" ;
+    dcterms:source "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/" ;
+    dcterms:title "Agentic AI – Threats and Mitigations" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/#source-3> dcterms:creator "GitHub" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://github.blog/changelog/2026-03-20-trace-any-copilot-coding-agent-commit-to-its-session-logs/" ;
+    dcterms:title "Trace any Copilot coding agent commit to its session logs" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/> dcterms:created "2026-08-18T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "MHC"@en , "guidance control over autonomous systems"@en , "human oversight by design"@en , "tracking and tracing conditions"@en ;
+    skos:definition "Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Meaningful Human Control"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/#source-1> , <https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/#source-2> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/#source-1> dcterms:creator "Santoni de Sio, F.; van den Hoven, J." ;
+    dcterms:date "2018" ;
+    dcterms:source "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2018.00015/full" ;
+    dcterms:title "Meaningful Human Control over Autonomous Systems: A Philosophical Account" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/#source-2> dcterms:creator "European Parliament; Council of the European Union" ;
+    dcterms:date "2024" ;
+    dcterms:source "https://artificialintelligenceact.eu/article/14/" ;
+    dcterms:title "Article 14: Human Oversight" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/> dcterms:created "2026-08-16T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "know-what-you-know signalling"@en , "meta-level control loop"@en , "metacognitive monitoring"@en , "monitor-generate-verify (MGV)"@en ;
+    skos:definition "A meta level watches how sure the agent is while it works and decides to continue, retry or abstain."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Metacognitive Monitoring and Control"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/#source-1> , <https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/#source-2> , <https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/#source-3> , <https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/#source-4> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/#source-1> dcterms:creator "Flavell, J. H." ;
+    dcterms:date "1979" ;
+    dcterms:source "https://doi.org/10.1037/0003-066X.34.10.906" ;
+    dcterms:title "Metacognition and Cognitive Monitoring: A New Area of Cognitive-Developmental Inquiry" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/#source-2> dcterms:creator "Nelson, T. O.; Narens, L." ;
+    dcterms:date "1990" ;
+    dcterms:source "https://doi.org/10.1016/S0079-7421(08)60053-5" ;
+    dcterms:title "Metamemory: A Theoretical Framework and New Findings" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/#source-3> dcterms:creator "Oh, N.; Gobet, F." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://arxiv.org/abs/2511.04341" ;
+    dcterms:title "Monitor-Generate-Verify (MGV): Formalising Metacognitive Theory for Language Model Reasoning" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/#source-4> dcterms:creator "Kadavath, S.; Conerly, T.; Askell, A.; et al." ;
+    dcterms:date "2022" ;
+    dcterms:source "https://arxiv.org/abs/2207.05221" ;
+    dcterms:title "Language Models (Mostly) Know What They Know" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/> dcterms:created "2026-08-15T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "ASI01–ASI10"@en , "OWASP agentic security risks"@en ;
+    skos:definition "OWASP's list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "OWASP Top 10 for Agentic Applications"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "taxonomy" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/#source-1> , <https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/#source-2> , <https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/#source-1> dcterms:creator "Sotiropoulos, J." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/" ;
+    dcterms:title "OWASP Top 10 for Agentic Applications – The Benchmark for Agentic Security in the Age of Autonomous AI" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/#source-2> dcterms:creator "OWASP Gen AI Security Project" ;
+    dcterms:date "2025" ;
+    dcterms:source "https://genai.owasp.org/llm-top-10/" ;
+    dcterms:title "OWASP Top 10 for LLM Applications 2025" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/#source-3> dcterms:creator "OWASP Gen AI Security Project" ;
+    dcterms:date "2025" ;
+    dcterms:source "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/" ;
+    dcterms:title "OWASP Top 10 for Agentic Applications for 2026" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/parallelization/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "concurrent orchestration (Azure)"@en , "fan-out fan-in"@en , "parallel fan-out and gather (Google ADK)"@en , "scatter-gather"@en , "sectioning and voting (Anthropic)"@en ;
+    skos:definition "Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Parallelization"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/deep-research-loop/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/parallelization/#source-1> , <https://patterns.agenticsystemcore.com/concepts/parallelization/#source-2> , <https://patterns.agenticsystemcore.com/concepts/parallelization/#source-3> , <https://patterns.agenticsystemcore.com/concepts/parallelization/#source-4> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/parallelization/#source-1> dcterms:creator "Schluntz, E.; Zhang, B." ;
+    dcterms:date "2024" ;
+    dcterms:source "https://www.anthropic.com/engineering/building-effective-agents" ;
+    dcterms:title "Building effective agents" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/parallelization/#source-2> dcterms:creator "Google" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://adk.dev/workflows/patterns/" ;
+    dcterms:title "Workflow patterns" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/parallelization/#source-3> dcterms:creator "Huizenga, E.; Yang, B." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/" ;
+    dcterms:title "Agent Development Kit: Making it easy to build multi-agent applications" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/parallelization/#source-4> dcterms:creator "Kittel, C.; Siemens, C." ;
+    dcterms:date "2026" ;
+    dcterms:source "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns" ;
+    dcterms:title "AI agent orchestration patterns" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/> dcterms:created "2026-08-18T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "plan before edit"@en , "plan mode (Anthropic, GitHub, OpenAI)"@en , "propose-approve-execute"@en , "read-only planning phase"@en ;
+    skos:definition "The agent researches and proposes a plan without editing anything; a person approves, changes or rejects it before any edit."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Plan Approval Gate"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/#source-1> , <https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/#source-2> , <https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/#source-3> , <https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/#source-4> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/#source-1> dcterms:creator "Anthropic" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://code.claude.com/docs/en/permission-modes" ;
+    dcterms:title "Choose a permission mode" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/#source-2> dcterms:creator "GitHub" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/" ;
+    dcterms:title "Research, plan, and code with Copilot cloud agent" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/#source-3> dcterms:creator "GitHub" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go/" ;
+    dcterms:title "GitHub Copilot CLI: Plan before you build, steer as you go" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/#source-4> dcterms:creator "OpenAI" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://learn.chatgpt.com/guides/best-practices" ;
+    dcterms:title "Best practices" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "RAG evaluation"@en , "RAG triad"@en , "grounding measurement"@en , "retrieval metrics"@en ;
+    skos:definition "Measure whether retrieval found the right material separately from whether the answer used it faithfully."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Retrieval Evaluation"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/#source-1> , <https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/#source-2> , <https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/#source-1> dcterms:creator "Es, S.; James, J.; Espinosa-Anke, L.; et al." ;
+    dcterms:date "2023" ;
+    dcterms:source "https://arxiv.org/abs/2309.15217" ;
+    dcterms:title "Ragas: Automated Evaluation of Retrieval Augmented Generation" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/#source-2> dcterms:creator "TruLens" ;
+    dcterms:date "2025" ;
+    dcterms:source "https://www.trulens.org/getting_started/core_concepts/rag_triad/" ;
+    dcterms:title "RAG Triad" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/#source-3> dcterms:creator "Miller, E." ;
+    dcterms:date "2024" ;
+    dcterms:source "https://arxiv.org/abs/2411.00640" ;
+    dcterms:title "Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/saga-for-agents/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:definition "Give each important agent step an undo action, so a failed multi-step run can be rolled back instead of left half done."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Saga for Agent Workflows"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/saga-for-agents/#source-1> , <https://patterns.agenticsystemcore.com/concepts/saga-for-agents/#source-2> , <https://patterns.agenticsystemcore.com/concepts/saga-for-agents/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/saga-for-agents/#source-1> dcterms:creator "Richardson, C." ;
+    dcterms:date "2026" ;
+    dcterms:source "https://microservices.io/patterns/data/saga.html" ;
+    dcterms:title "Pattern: Saga" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/saga-for-agents/#source-2> dcterms:creator "Garcia-Molina, H.; Salem, K." ;
+    dcterms:date "1987" ;
+    dcterms:source "https://doi.org/10.1145/38713.38742" ;
+    dcterms:title "Sagas" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/saga-for-agents/#source-3> dcterms:creator "Fortuna, E." ;
+    dcterms:date "2023" ;
+    dcterms:source "https://temporal.io/blog/saga-pattern-made-easy" ;
+    dcterms:title "Saga design pattern explained: Benefits, use cases, and implementation" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/skill-library/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "Voyager-style skill acquisition"@en , "agent skills"@en , "procedural memory"@en , "skill composition"@en ;
+    skos:definition "Store verified procedures so an agent's skills build up across tasks instead of being rediscovered every run."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Skill-Library Compounding"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/skill-library/#source-1> , <https://patterns.agenticsystemcore.com/concepts/skill-library/#source-2> , <https://patterns.agenticsystemcore.com/concepts/skill-library/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/skill-library/#source-1> dcterms:creator "Wang, G.; Xie, Y.; Jiang, Y.; et al." ;
+    dcterms:date "2023" ;
+    dcterms:source "https://arxiv.org/abs/2305.16291" ;
+    dcterms:title "Voyager: An Open-Ended Embodied Agent with Large Language Models" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/skill-library/#source-2> dcterms:creator "Zhang, B.; Lazuka, K.; Murag, M." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" ;
+    dcterms:title "Equipping agents for the real world with Agent Skills" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/skill-library/#source-3> dcterms:creator "Sumers, T. R.; Yao, S.; Narasimhan, K.; et al." ;
+    dcterms:date "2023" ;
+    dcterms:source "https://arxiv.org/abs/2309.02427" ;
+    dcterms:title "Cognitive Architectures for Language Agents" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/specification-gaming/> dcterms:created "2026-08-06T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:definition "Agents optimise the criterion you wrote, not the result you meant; the gap between the two is where failures hide."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Specification Gaming"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/> , <https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/specification-gaming/#source-1> , <https://patterns.agenticsystemcore.com/concepts/specification-gaming/#source-2> , <https://patterns.agenticsystemcore.com/concepts/specification-gaming/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/specification-gaming/#source-1> dcterms:creator "Krakovna, V.; Uesato, J.; Mikulik, V.; et al." ;
+    dcterms:date "2020" ;
+    dcterms:source "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/" ;
+    dcterms:title "Specification gaming: the flip side of AI ingenuity" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/specification-gaming/#source-2> dcterms:creator "Baker, B.; Huizinga, J.; Gao, L.; et al." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://arxiv.org/abs/2503.11926" ;
+    dcterms:title "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/specification-gaming/#source-3> dcterms:creator "Dalrymple, D.; Skalse, J.; Bengio, Y.; et al." ;
+    dcterms:date "2024" ;
+    dcterms:source "https://arxiv.org/abs/2405.06624" ;
+    dcterms:title "Towards Guaranteed Safe AI: A Framework for Ensuring Robust and Reliable AI Systems" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/> dcterms:created "2026-08-21T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:definition "A well-known URI where a system publishes its energy and carbon figures, and reads its peers' figures as input to its decisions."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Sustainability Signal Plane"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/#source-1> , <https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/#source-2> , <https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/#source-3> , <https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/#source-4> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/#source-1> dcterms:creator "Andrei N. Besleaga" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://datatracker.ietf.org/doc/draft-besleaga-sustainability-wellknown/" ;
+    dcterms:title "The 'sustainability-data' Well-Known URI" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/#source-2> dcterms:creator "Green Web Foundation" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://carbontxt.org" ;
+    dcterms:title "carbon.txt" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/#source-3> dcterms:creator "Green Software Foundation" ;
+    dcterms:date "2025" ;
+    dcterms:source "https://github.com/Green-Software-Foundation/real-time-cloud" ;
+    dcterms:title "Real Time Energy and Carbon Standards for Cloud Providers" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/#source-4> dcterms:creator "Andrei N. Besleaga" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://doi.org/10.5281/zenodo.22056634" ;
+    dcterms:title "The Cybernetic Sustainability Loop: Governed Agentic Systems on a Sustainability Data Plane — evaluation package" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/> dcterms:created "2026-08-15T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "final-state grading"@en , "tool-trajectory match"@en , "trajectory evals"@en , "transcript grading"@en ;
+    skos:definition "Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Trajectory and Outcome Evaluation"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/#source-1> , <https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/#source-2> , <https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/#source-1> dcterms:creator "Grace, M.; Hadfield, J.; Olivares, R.; et al." ;
+    dcterms:date "2026" ;
+    dcterms:source "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" ;
+    dcterms:title "Demystifying evals for AI agents" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/#source-2> dcterms:creator "Google" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://adk.dev/evaluate/" ;
+    dcterms:title "Why evaluate agents" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/#source-3> dcterms:creator "Huyen, C." ;
+    dcterms:date "2025" ;
+    dcterms:source "https://huyenchip.com/2025/01/07/agents.html" ;
+    dcterms:title "Agents" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/> dcterms:created "2026-08-16T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "infinite loop"@en , "no stopping condition"@en , "runaway agent loop"@en , "unbounded agent loop"@en ;
+    skos:definition "An agent loop with no step limit, no budget and no independent exit test runs until money, patience or the platform stops it."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Unbounded Loops"@en ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/#source-1> , <https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/#source-2> , <https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/#source-3> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/#source-1> dcterms:creator "Schluntz, E.; Zhang, B." ;
+    dcterms:date "2024" ;
+    dcterms:source "https://www.anthropic.com/engineering/building-effective-agents" ;
+    dcterms:title "Building effective agents" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/#source-2> dcterms:creator "OWASP Gen AI Security Project" ;
+    dcterms:date "2025" ;
+    dcterms:source "https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/" ;
+    dcterms:title "LLM10:2025 Unbounded Consumption" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/#source-3> dcterms:creator "Inkog" ;
+    dcterms:date "2026" ;
+    dcterms:source "https://inkog.io/glossary/infinite-loop-ai-agent" ;
+    dcterms:title "AI Agent Infinite Loop Detection & Prevention" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/> dcterms:created "2026-08-18T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2026-09-29T00:00:00Z"^^xsd:dateTime ;
+    a asc:Concept ;
+    skos:altLabel "can weaker judges oversee stronger agents"@en , "sandwiching experiments"@en , "scalable oversight"@en , "weak-to-strong generalization"@en ;
+    skos:definition "Open question: can weaker judges, human or model, reliably oversee agents stronger than themselves? What is known and what is not."@en ;
+    skos:inScheme <https://patterns.agenticsystemcore.com/> ;
+    skos:prefLabel "Weak-to-Strong Oversight"@en ;
+    skos:related <https://patterns.agenticsystemcore.com/concepts/specification-gaming/> ;
+    schema:license "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    schema:usageInfo "LicenseRef-AgenticSystemCore-Content-Use-1.0" ;
+    asc:kind "pattern" ;
+    asc:operator "human:andreibesleaga" ;
+    asc:origin "imported" ;
+    asc:source <https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/#source-1> , <https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/#source-2> ;
+    asc:status "stable" .
+
+<https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/#source-1> dcterms:creator "Burns, C.; Izmailov, P.; Kirchner, J. H.; et al." ;
+    dcterms:date "2023" ;
+    dcterms:source "https://arxiv.org/abs/2312.09390" ;
+    dcterms:title "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision" ;
+    a asc:Source ;
+    asc:grade "primary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .
+
+<https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/#source-2> dcterms:creator "Bowman, S. R.; Hyun, J.; Perez, E.; et al." ;
+    dcterms:date "2022" ;
+    dcterms:source "https://arxiv.org/abs/2211.03540" ;
+    dcterms:title "Measuring Progress on Scalable Oversight for Large Language Models" ;
+    a asc:Source ;
+    asc:grade "secondary" ;
+    asc:verifiedOn "2026-09-29T00:00:00Z"^^xsd:dateTime .

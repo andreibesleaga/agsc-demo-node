@@ -1,0 +1,12 @@
+label "Memory and context poisoning defense diagram"
+box src 16 40 100 44 "untrusted|sources"
+box self 16 130 100 44 "agent's own|outputs"
+box gate 170 78 110 60 "write gate|scan, attribute" acc
+box mem 330 40 110 44 "memory store|segmented"
+box ret 330 130 110 44 "retrieval"
+arrow src gate
+arrow self gate dashed
+arrow gate mem
+arrow mem ret
+text 385 200 "unverified entries expire" size=11
+note "treat every memory write as untrusted"

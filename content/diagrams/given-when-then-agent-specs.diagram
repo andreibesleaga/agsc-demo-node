@@ -1,0 +1,9 @@
+label "Given/When/Then agent specs diagram"
+box spec 20 60 140 120 "scenario|Given context|When event|Then outcome" acc
+box runner 210 82 120 76 "runner|runs scenario"
+box agent 370 40 76 44 "agent"
+box gate 356 150 96 60 "results"
+arrow spec runner
+arrow runner agent both
+arrow runner gate
+note "one scenario is both the requirement and the evaluation"

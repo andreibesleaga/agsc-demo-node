@@ -1,0 +1,12 @@
+label "Error analysis by open and axial coding diagram"
+box t1 16 60 70 26 "trace"
+box t2 16 92 70 26 "trace"
+box t3 16 124 70 26 "trace"
+box open 120 78 100 56 "open coding|open notes"
+box axial 254 78 110 56 "axial coding|failure taxonomy" acc
+box evals 254 170 110 44 "count per|failure mode"
+arrow t2 open
+arrow open axial
+arrow axial evals
+arrow axial t1 dashed via=310,40;51,40
+note "dashed: repeat until new reviews reveal no new failure modes"

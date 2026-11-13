@@ -14,19 +14,19 @@ aliases:
 clusters:
   - topologies
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://mas.cs.umass.edu/Documents/Erman_Hearsay80.pdf
     title: "The Hearsay-II Speech-Understanding System: Integrating Knowledge to Resolve Uncertainty"
     author: "Erman, L. D.; Hayes-Roth, F.; Lesser, V. R.; et al."
     year: 1980
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://arxiv.org/abs/2507.01701
     title: "Exploring Advanced LLM Multi-Agent Systems Based on Blackboard Architecture"
     author: "Han, B.; Zhang, S."
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

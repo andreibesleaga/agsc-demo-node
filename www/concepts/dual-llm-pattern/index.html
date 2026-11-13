@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dual-LLM Pattern</title>
+<meta name="description" content="Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them.","name":"Dual-LLM Pattern","url":"https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Dual-LLM Pattern</h1>
+<p class="summary"><strong>Summary</strong>Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/security/">Security</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-ea143bf50c8c635b"></span>Intent</h2>
+<p>Keep the model that can act away from untrusted text, so injected instructions cannot trigger actions.</p>
+<h2 id="context-forces"><span id="chunk-6a8516c6fad9363a"></span>Context &amp; Forces</h2>
+<p>E-mails, web pages and files can contain text that looks like a command. Filters lower the risk but do not remove it.</p>
+<h2 id="structure"><span id="chunk-425881e00fc0e645"></span>Structure</h2>
+<p>Simon Willison (2023) uses three parts:</p>
+<ol>
+<li><strong>Privileged model:</strong> takes trusted input, mainly from the user, and can use tools.</li>
+<li><strong>Quarantined model:</strong> reads untrusted content and has no tools.</li>
+<li><strong>Controller:</strong> ordinary code that passes results between them as variables.</li>
+</ol>
+<p>CaMeL (Debenedetti et al., 2025) builds on this. It takes the control flow from the trusted query only, and checks capabilities attached to data whenever a tool is called.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-7eab09fa9903f7d2"></span>Consequences &amp; Trade-offs</h2>
+<p>Injected text cannot change the plan. Some usefulness is lost: CaMeL solved 77% of AgentDojo tasks with provable security, against 84% undefended. Use it when an agent reads untrusted data and holds important tools.</p>
+<h2 id="related-patterns"><span id="chunk-219b8367b9caf1ad"></span>Related Patterns</h2>
+<p>OWASP Top 10 for Agentic Applications (goal hijack).</p>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 270" role="img" aria-labelledby="dual-llm-pattern-title dual-llm-pattern-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="dual-llm-pattern-title">The user talks to a controller made of plain code, which sits between a highlighted privileged LLM that plans and receives only variable names, the tools that return untrusted content, and a quarantined LLM without tools that reads that content.</title>
+  <desc id="dual-llm-pattern-desc">the privileged LLM never reads untrusted text — only variable names</desc>
+  <defs><marker id="dual-llm-pattern-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="116" width="80" height="50" rx="6"/>
+    <rect x="150" y="16" width="160" height="50" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="150" y="116" width="160" height="50" rx="6"/>
+    <rect x="366" y="116" width="80" height="50" rx="6"/>
+    <rect x="150" y="196" width="160" height="46" rx="6"/>
+    <path d="M98 141 L146 141" marker-end="url(#dual-llm-pattern-arrow)" marker-start="url(#dual-llm-pattern-arrow)"/>
+    <path d="M230 70 L230 112" marker-end="url(#dual-llm-pattern-arrow)" marker-start="url(#dual-llm-pattern-arrow)"/>
+    <path d="M314 141 L362 141" marker-end="url(#dual-llm-pattern-arrow)" marker-start="url(#dual-llm-pattern-arrow)"/>
+    <path d="M230 170 L230 192" marker-end="url(#dual-llm-pattern-arrow)" marker-start="url(#dual-llm-pattern-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="54" y="145" font-size="12">user</text>
+    <text x="230" y="37" font-size="12">privileged LLM</text>
+    <text x="230" y="53" font-size="12">plans, chooses actions</text>
+    <text x="230" y="137" font-size="12">controller (code)</text>
+    <text x="230" y="153" font-size="12">holds $VAR1, $VAR2</text>
+    <text x="406" y="137" font-size="12">tools</text>
+    <text x="406" y="153" font-size="12">email, web</text>
+    <text x="230" y="215" font-size="12">quarantined LLM</text>
+    <text x="230" y="231" font-size="12">no tools</text>
+    <text x="238" y="96" font-size="10" text-anchor="start">variable names only</text>
+    <text x="238" y="186" font-size="10" text-anchor="start">untrusted text in</text>
+    <text x="338" y="162" font-size="10">untrusted</text>
+    <text x="230" y="258" font-size="11">the privileged LLM never reads untrusted text — only variable names</text>
+  </g>
+</svg><figcaption>Authority and comprehension are split: the model that acts never reads what the attacker wrote.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Willison, S. (2023). <a href="https://simonwillison.net/2023/Apr/25/dual-llm-pattern/">The Dual LLM pattern for building AI assistants that can resist prompt injection</a>. <span class="source-url"><a href="https://simonwillison.net/2023/Apr/25/dual-llm-pattern/">https://simonwillison.net/2023/Apr/25/dual-llm-pattern/</a></span>. Checked 2026-09-29.</li><li id="source-2">Debenedetti, E.; Shumailov, I.; Fan, T.; et al. (2025). <a href="https://arxiv.org/abs/2503.18813">Defeating Prompt Injections by Design</a>. <span class="source-url"><a href="https://arxiv.org/abs/2503.18813">https://arxiv.org/abs/2503.18813</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/dual-llm-pattern.md">Markdown</a> · <a href="/pages/dual-llm-pattern.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

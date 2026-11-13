@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compose</title>
+<meta name="description" content="Select items and compute a Harness in this page — no server, no key, no upload.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/compose/">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/" aria-current="page">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Compose</h1>
+<p class="summary"><strong>Summary</strong>Select items and compute a Harness in this page — no server, no key, no upload.</p>
+<p>Tick the items you want. The composition rules of the specification (AGSC-07) run <em>in this page</em>:
+no request leaves this origin, no key is needed and nothing is uploaded. The seven
+Harness files are offered one download per file, or all together as one .zip.</p>
+<h2>Items</h2>
+<div role="search"><form class="search" id="filter-form" hidden>
+<label for="filter">Filter the items</label>
+<input id="filter" name="filter" type="search" autocomplete="off" spellcheck="false" aria-controls="items">
+</form></div>
+<p id="filter-status" role="status" aria-live="polite"></p>
+<ul id="items"><li>This page needs JavaScript; the same result comes from <code>agsc compose</code>.</li></ul>
+<h2>Verdict</h2>
+<p id="validity" aria-live="polite">Select one or more items to compose.</p>
+<pre id="verdict" tabindex="0"></pre>
+<h3 id="explanations-heading" hidden>Why an item was added</h3>
+<ul id="explanations" hidden></ul>
+<h3 id="conflicts-heading" hidden>Conflicts</h3>
+<ul id="conflicts" hidden></ul>
+<h3 id="warnings-heading" hidden>Warnings</h3>
+<ul id="warnings" hidden></ul>
+<h2>Harness</h2>
+<p><button id="download" type="button" disabled>Build the Harness</button></p>
+<ul id="files"></ul>
+<p id="archive" aria-live="polite"></p>
+<script src="agsc-core.js"></script>
+<script src="agsc-page-tools.js"></script>
+<script src="agsc-compose.js"></script>
+<script src="webmcp.js"></script>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

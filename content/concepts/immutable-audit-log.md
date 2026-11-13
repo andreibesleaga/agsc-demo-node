@@ -15,25 +15,25 @@ aliases:
 clusters:
   - governance
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://doi.org/10.1007/BF00196791
     title: "How to time-stamp a digital document"
     author: "Haber, S.; Stornetta, W. S."
     year: 1991
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/
     title: "Agentic AI – Threats and Mitigations"
     author: "OWASP Gen AI Security Project"
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://github.blog/changelog/2026-03-20-trace-any-copilot-coding-agent-commit-to-its-session-logs/
     title: "Trace any Copilot coding agent commit to its session logs"
     author: "GitHub"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
@@ -42,6 +42,7 @@ id: immutable-audit-log
 related:
   - meaningful-human-control
   - plan-approval-gate
+  - memory-context-poisoning
 kind: pattern
 evidence: explicit
 maturity: established

@@ -1,0 +1,9 @@
+label "Record-replay cassettes diagram"
+box test 16 104 80 44 "test"
+box agent 130 104 90 44 "agent"
+box cas 250 92 100 68 "cassette|record / replay" acc
+box api 380 104 66 44 "model|API"
+arrow test agent
+arrow agent cas both
+arrow cas api both dashed
+note "dashed: recorded when no cassette exists; later runs answer from the cassette"

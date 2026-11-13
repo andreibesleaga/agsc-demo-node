@@ -1,0 +1,95 @@
+# AgenticSystemCore Demo Node
+
+<!-- agsc:provenance
+bundle: https://patterns.agenticsystemcore.com/
+license: LicenseRef-AgenticSystemCore-Content-Use-1.0
+terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
+spec_version: 1.0.0
+bundle_version: vsite-2026-10-14+7.g71d5329cebf6
+generated_at: 2026-10-29T15:41:54Z
+assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
+-->
+
+> A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.
+
+## Advanced Architectures
+
+- [The Deep Research Loop](https://patterns.agenticsystemcore.com/concepts/deep-research-loop/): Split a question into parts, search them in parallel, combine the findings and check that every claim has a source.
+
+## Anti-Patterns
+
+- [Unbounded Loops](https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/): An agent loop with no step limit, no budget and no independent exit test runs until money, patience or the platform stops it.
+
+## Classical Foundations
+
+- [Saga for Agent Workflows](https://patterns.agenticsystemcore.com/concepts/saga-for-agents/): Give each important agent step an undo action, so a failed multi-step run can be rolled back instead of left half done.
+
+## Cognitive & Behavioral
+
+- [Metacognitive Monitoring and Control](https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/): A meta level watches how sure the agent is while it works and decides to continue, retry or abstain.
+
+## Data & Retrieval
+
+- [Retrieval Evaluation](https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/): Measure whether retrieval found the right material separately from whether the answer used it faithfully.
+
+## Ethics & Sustainability
+
+- [Meaningful Human Control](https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/): Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it.
+
+## Evaluation & Testing
+
+- [Trajectory and Outcome Evaluation](https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/): Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.
+
+## Foundational
+
+- [Agents as Tools](https://patterns.agenticsystemcore.com/concepts/agents-as-tools/): Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control.
+- [Parallelization](https://patterns.agenticsystemcore.com/concepts/parallelization/): Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times.
+
+## Future Research
+
+- [Weak-to-Strong Oversight](https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/): Open question: can weaker judges, human or model, reliably oversee agents stronger than themselves? What is known and what is not.
+
+## Governance & Accountability
+
+- [Tamper-Evident Agent Audit Log](https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/): An append-only, hash-linked record of every important agent action, so what happened can be rebuilt and checked.
+
+## Memory & Cognition
+
+- [Skill-Library Compounding](https://patterns.agenticsystemcore.com/concepts/skill-library/): Store verified procedures so an agent's skills build up across tasks instead of being rediscovered every run.
+
+## Operations & Reliability
+
+- [Exception Handling and Recovery](https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/): Classify each failure, retry short faults with limits, switch route for lasting ones, and report reduced results honestly.
+
+## Product Practice
+
+- [The Autonomy Ladder](https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/): A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability.
+
+## Protocols & Interop
+
+- [Sustainability Signal Plane](https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/): A well-known URI where a system publishes its energy and carbon figures, and reads its peers' figures as input to its decisions.
+
+## Reasoning & Decision
+
+- [Goal Setting and Monitoring](https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/): Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop.
+
+## Reference Architectures
+
+- [Generative Agents](https://patterns.agenticsystemcore.com/concepts/generative-agents/): A simulated character with a full memory record, reflection over it, and plans drawn from both, so it stays consistent over days.
+
+## Agentic SDLC
+
+- [Plan Approval Gate](https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/): The agent researches and proposes a plan without editing anything; a person approves, changes or rejects it before any edit.
+
+## Security
+
+- [Dual-LLM Pattern](https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/): Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them.
+- [OWASP Top 10 for Agentic Applications](https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/): OWASP's list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews.
+
+## Specs & Requirements
+
+- [Specification Gaming](https://patterns.agenticsystemcore.com/concepts/specification-gaming/): Agents optimise the criterion you wrote, not the result you meant; the gap between the two is where failures hide.
+
+## Multi-Agent Topologies
+
+- [Blackboard](https://patterns.agenticsystemcore.com/concepts/blackboard/): Independent specialists work on one problem through a shared workspace; a control step picks who contributes next.

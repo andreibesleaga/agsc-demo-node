@@ -15,19 +15,19 @@ aliases:
 clusters:
   - reference-architectures
 date: 2026-08-16
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://arxiv.org/abs/2304.03442
     title: "Generative Agents: Interactive Simulacra of Human Behavior"
     author: "Park, J. S.; O'Brien, J. C.; Cai, C. J.; et al."
     year: 2023
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://hai.stanford.edu/news/computational-agents-exhibit-believable-humanlike-behavior
     title: "Computational Agents Exhibit Believable Humanlike Behavior"
     author: "Miller, K."
     year: 2023
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

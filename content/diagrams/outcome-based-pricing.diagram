@@ -1,0 +1,10 @@
+label "Outcome based pricing diagram"
+box req 16 98 90 44 "requests"
+box ag 146 98 90 44 "agent"
+arrow req ag
+line 300 30 300 230 dashed acc
+box res 336 56 106 40 "resolved|billed"
+box esc 336 160 106 40 "unresolved · escalated|usually not billed" dashed
+arrow ag res
+arrow ag esc
+text 300 250 "the billing line = the vendor's definition of resolution" size=10

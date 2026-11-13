@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retrieval Evaluation</title>
+<meta name="description" content="Measure whether retrieval found the right material separately from whether the answer used it faithfully.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Measure whether retrieval found the right material separately from whether the answer used it faithfully.","name":"Retrieval Evaluation","url":"https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Retrieval Evaluation</h1>
+<p class="summary"><strong>Summary</strong>Measure whether retrieval found the right material separately from whether the answer used it faithfully.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/data-retrieval/">Data &amp; Retrieval</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-6dac295dec8b147f"></span>Intent</h2>
+<p>Measure whether retrieval found the right material separately from whether the answer used it well.</p>
+<h2 id="context-forces"><span id="chunk-1b94a648f64547cb"></span>Context &amp; Forces</h2>
+<p>When a retrieval-based system answers badly, the retrieved text often never held the answer. One end-to-end score cannot tell the two failures apart.</p>
+<h2 id="structure"><span id="chunk-533e332152a43093"></span>Structure</h2>
+<p>Ragas (Es et al., 2023) checks, without human reference answers, whether retrieved passages are relevant, whether the model uses them faithfully, and answer quality. TruLens calls these the RAG triad: context relevance, groundedness and answer relevance.</p>
+<ol>
+<li><strong>Retrieval:</strong> recall, precision and rank on labelled real queries.</li>
+<li><strong>Grounding:</strong> is the answer supported by the retrieved text?</li>
+<li><strong>Error bars:</strong> report uncertainty, as Miller (2024) shows for model evaluations.</li>
+</ol>
+<h2 id="consequences-trade-offs"><span id="chunk-ce2493111ffd7db0"></span>Consequences &amp; Trade-offs</h2>
+<p>Debugging goes to the failing stage. Labelled sets age, and good scores mean little if test queries differ from real ones.</p>
+<h2 id="related-patterns"><span id="chunk-517b458a7add4512"></span>Related Patterns</h2>
+<ul>
+<li>Trajectory and Outcome Evaluation</li>
+<li>The Deep Research Loop</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 210" role="img" aria-labelledby="retrieval-evaluation-title retrieval-evaluation-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="retrieval-evaluation-title">A query flows through retrieve, generate and answer; a highlighted box under retrieve measures whether the right passages were found and ranked high, and a second box under generate measures whether the answer is supported by them and uses them.</title>
+  <desc id="retrieval-evaluation-desc">measure the two halves separately — else every failure looks like a model failure</desc>
+  <defs><marker id="retrieval-evaluation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="8" y="30" width="54" height="40" rx="6"/>
+    <rect x="86" y="30" width="126" height="40" rx="6"/>
+    <rect x="240" y="30" width="126" height="40" rx="6"/>
+    <rect x="392" y="30" width="60" height="40" rx="6"/>
+    <rect x="86" y="108" width="126" height="50" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="240" y="108" width="126" height="50" rx="6"/>
+    <path d="M66 50 L82 50" marker-end="url(#retrieval-evaluation-arrow)"/>
+    <path d="M216 50 L236 50" marker-end="url(#retrieval-evaluation-arrow)"/>
+    <path d="M370 50 L388 50" marker-end="url(#retrieval-evaluation-arrow)"/>
+    <path d="M149 74 L149 104" marker-end="url(#retrieval-evaluation-arrow)"/>
+    <path d="M303 74 L303 104" marker-end="url(#retrieval-evaluation-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="35" y="54" font-size="12">query</text>
+    <text x="149" y="54" font-size="12">retrieve</text>
+    <text x="303" y="54" font-size="12">generate</text>
+    <text x="422" y="54" font-size="12">answer</text>
+    <text x="149" y="129" font-size="12">retrieval metrics</text>
+    <text x="149" y="145" font-size="12">found? ranked high?</text>
+    <text x="303" y="129" font-size="12">grounding metrics</text>
+    <text x="303" y="145" font-size="12">supported? used?</text>
+    <text x="230" y="198" font-size="11">measure the two halves separately — else every failure looks like a model failure</text>
+  </g>
+</svg><figcaption>Both meters sit beside the chain rather than in it — they locate the failing stage, and still cannot promise a good answer.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Es, S.; James, J.; Espinosa-Anke, L.; et al. (2023). <a href="https://arxiv.org/abs/2309.15217">Ragas: Automated Evaluation of Retrieval Augmented Generation</a>. <span class="source-url"><a href="https://arxiv.org/abs/2309.15217">https://arxiv.org/abs/2309.15217</a></span>. Checked 2026-09-29.</li><li id="source-2">TruLens (2025). <a href="https://www.trulens.org/getting_started/core_concepts/rag_triad/">RAG Triad</a>. <span class="source-url"><a href="https://www.trulens.org/getting_started/core_concepts/rag_triad/">https://www.trulens.org/getting_started/core_concepts/rag_triad/</a></span>. Checked 2026-09-29.</li><li id="source-3">Miller, E. (2024). <a href="https://arxiv.org/abs/2411.00640">Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations</a>. <span class="source-url"><a href="https://arxiv.org/abs/2411.00640">https://arxiv.org/abs/2411.00640</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/retrieval-evaluation.md">Markdown</a> · <a href="/pages/retrieval-evaluation.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

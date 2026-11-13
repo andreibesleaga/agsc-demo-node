@@ -1,0 +1,11 @@
+label "Golden trajectories and snapshot tests diagram"
+box session 20 30 120 44 "known-good run"
+box golden 170 24 130 56 "golden case|expected path + answer" acc
+box build 20 150 120 44 "new build"
+box replay 170 150 130 44 "replay same input"
+box cmp 330 90 110 56 "comparator|flags differences"
+arrow session golden
+arrow golden cmp
+arrow build replay
+arrow replay cmp
+note "differences in tool path or answer are flagged"

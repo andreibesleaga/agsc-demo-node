@@ -1,0 +1,12 @@
+label "Human-only merge gate diagram"
+box pr 14 96 84 44 "agent PR|branch only"
+box ci 130 96 76 44 "session log"
+box rev 238 88 96 60 "human review|and merge" acc
+box main 366 96 80 44 "main"
+arrow pr ci
+arrow ci rev
+arrow rev main
+line 56 140 56 210
+line 56 210 360 210
+cross 360 210
+text 205 200 "direct path: agent cannot merge" size=10

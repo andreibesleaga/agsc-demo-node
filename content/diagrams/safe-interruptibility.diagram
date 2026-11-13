@@ -1,0 +1,12 @@
+label "Safe interruptibility diagram"
+box op 16 44 90 40 "operator"
+box stop 150 40 120 48 "interruption|policy" acc
+box policy 150 132 120 44 "agent policy"
+box act 330 132 100 44 "next action"
+box learn 330 40 100 48 "reward /|learning"
+arrow op stop
+arrow stop policy
+arrow policy act
+arrow stop learn dashed
+cross 300 64
+note "interruption changes behaviour; the agent does not learn to avoid or seek it"

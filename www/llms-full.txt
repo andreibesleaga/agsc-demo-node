@@ -1,0 +1,779 @@
+# AgenticSystemCore Demo Node
+
+<!-- agsc:provenance
+bundle: https://patterns.agenticsystemcore.com/
+license: LicenseRef-AgenticSystemCore-Content-Use-1.0
+terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
+spec_version: 1.0.0
+bundle_version: vsite-2026-10-14+7.g71d5329cebf6
+generated_at: 2026-10-29T15:41:54Z
+assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
+-->
+
+> A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.
+
+## Advanced Architectures
+
+- [The Deep Research Loop](https://patterns.agenticsystemcore.com/concepts/deep-research-loop/): Split a question into parts, search them in parallel, combine the findings and check that every claim has a source.
+
+## Anti-Patterns
+
+- [Unbounded Loops](https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/): An agent loop with no step limit, no budget and no independent exit test runs until money, patience or the platform stops it.
+
+## Classical Foundations
+
+- [Saga for Agent Workflows](https://patterns.agenticsystemcore.com/concepts/saga-for-agents/): Give each important agent step an undo action, so a failed multi-step run can be rolled back instead of left half done.
+
+## Cognitive & Behavioral
+
+- [Metacognitive Monitoring and Control](https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/): A meta level watches how sure the agent is while it works and decides to continue, retry or abstain.
+
+## Data & Retrieval
+
+- [Retrieval Evaluation](https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/): Measure whether retrieval found the right material separately from whether the answer used it faithfully.
+
+## Ethics & Sustainability
+
+- [Meaningful Human Control](https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/): Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it.
+
+## Evaluation & Testing
+
+- [Trajectory and Outcome Evaluation](https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/): Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.
+
+## Foundational
+
+- [Agents as Tools](https://patterns.agenticsystemcore.com/concepts/agents-as-tools/): Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control.
+- [Parallelization](https://patterns.agenticsystemcore.com/concepts/parallelization/): Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times.
+
+## Future Research
+
+- [Weak-to-Strong Oversight](https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/): Open question: can weaker judges, human or model, reliably oversee agents stronger than themselves? What is known and what is not.
+
+## Governance & Accountability
+
+- [Tamper-Evident Agent Audit Log](https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/): An append-only, hash-linked record of every important agent action, so what happened can be rebuilt and checked.
+
+## Memory & Cognition
+
+- [Skill-Library Compounding](https://patterns.agenticsystemcore.com/concepts/skill-library/): Store verified procedures so an agent's skills build up across tasks instead of being rediscovered every run.
+
+## Operations & Reliability
+
+- [Exception Handling and Recovery](https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/): Classify each failure, retry short faults with limits, switch route for lasting ones, and report reduced results honestly.
+
+## Product Practice
+
+- [The Autonomy Ladder](https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/): A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability.
+
+## Protocols & Interop
+
+- [Sustainability Signal Plane](https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/): A well-known URI where a system publishes its energy and carbon figures, and reads its peers' figures as input to its decisions.
+
+## Reasoning & Decision
+
+- [Goal Setting and Monitoring](https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/): Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop.
+
+## Reference Architectures
+
+- [Generative Agents](https://patterns.agenticsystemcore.com/concepts/generative-agents/): A simulated character with a full memory record, reflection over it, and plans drawn from both, so it stays consistent over days.
+
+## Agentic SDLC
+
+- [Plan Approval Gate](https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/): The agent researches and proposes a plan without editing anything; a person approves, changes or rejects it before any edit.
+
+## Security
+
+- [Dual-LLM Pattern](https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/): Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them.
+- [OWASP Top 10 for Agentic Applications](https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/): OWASP's list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews.
+
+## Specs & Requirements
+
+- [Specification Gaming](https://patterns.agenticsystemcore.com/concepts/specification-gaming/): Agents optimise the criterion you wrote, not the result you meant; the gap between the two is where failures hide.
+
+## Multi-Agent Topologies
+
+- [Blackboard](https://patterns.agenticsystemcore.com/concepts/blackboard/): Independent specialists work on one problem through a shared workspace; a control step picks who contributes next.
+
+## The Deep Research Loop
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/deep-research-loop/ -->
+```text agsc-content
+
+## Intent
+
+Answer an open question by splitting it, searching the parts in parallel, and checking that every claim has a source.
+
+## Context & Forces
+
+Open questions need many searches. One agent is slow; many agents can produce a fluent report that nobody checked.
+
+## Structure
+
+Anthropic describes its Research feature this way (Hadfield et al., 2025):
+
+1. A lead agent plans and starts subagents that explore parts at the same time.
+2. Each subagent gets an objective, an output format, tool guidance and clear boundaries.
+3. The lead combines the findings.
+4. A citation agent locates the source for each claim.
+
+Google's AI co-scientist uses a related team of agents that generate, review, rank and improve hypotheses (Gottweis and Natarajan, 2025).
+
+## Consequences & Trade-offs
+
+It covers more ground. It is costly: Anthropic reports about 15 times the tokens of a chat. Vague task descriptions cause duplicated work or gaps.
+
+## Related Patterns
+
+- Parallelization
+- Agents as Tools
+- Retrieval Evaluation
+```
+
+## Unbounded Loops
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/ -->
+```text agsc-content
+
+## Intent
+
+Name the mistake: an agent loop with no step limit, no budget and no independent test that the goal is met.
+
+## Context & Forces
+
+In an agent loop the model picks the next step, so it can repeat a tool call or claim progress that did not happen. Anthropic notes that autonomy brings higher costs and compounding errors (Schluntz and Zhang, 2024).
+
+## Structure
+
+Signs of it:
+
+1. **No step limit.** Anthropic lists a maximum number of iterations as a normal stopping condition.
+2. **No cost limit or timeout.** OWASP's LLM10:2025 Unbounded Consumption warns of denial of service and economic loss, and recommends rate limits, quotas and timeouts.
+3. **The model decides the exit.** Inkog traces endless agent loops to missing iteration limits and exit conditions that never fire.
+4. **"Done" is announced, not observed.**
+
+## Consequences & Trade-offs
+
+Bills surprise, sessions hang, and other systems get flooded. Set limits from measured run lengths; a cap that is too tight cuts off hard tasks.
+
+## Related Patterns
+
+- Goal Setting and Monitoring
+- Exception Handling and Recovery
+```
+
+## Saga for Agent Workflows
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/saga-for-agents/ -->
+```text agsc-content
+
+## Intent
+
+Pair each important step of an agent workflow with an undo action, so a failed run can be rolled back.
+
+## Context & Forces
+
+Workflows change real systems step by step: book, charge, confirm. Across services, Richardson notes, two-phase commit is not an option, so a late failure leaves early steps done.
+
+## Structure
+
+Garcia-Molina and Salem (1987) define the saga: either all its transactions complete, or compensating transactions amend the partial execution.
+
+1. Give each step a compensation: refund, cancel, correct.
+2. Record which steps finished.
+3. On failure, run compensations in reverse order. Temporal's guidance is last in, first out (Fortuna, 2023).
+
+## Consequences & Trade-offs
+
+A partial failure no longer leaves a lasting mess. Compensation code runs rarely, so test it on purpose. Steps that cannot be undone belong behind an approval gate.
+
+## Related Patterns
+
+- Exception Handling and Recovery
+- Plan Approval Gate
+```
+
+## Metacognitive Monitoring and Control
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/ -->
+```text agsc-content
+
+## Intent
+
+Add a level that watches how the work is going and decides to continue, retry or abstain.
+
+## Context & Forces
+
+A model that never checks itself runs to the end, right or wrong. A check at the end wastes the work before it.
+
+## Structure
+
+1. Flavell (1979) described cognitive monitoring through metacognitive knowledge, experiences, goals and actions.
+2. Nelson and Narens (1990) split an object level that does the task from a meta level that watches it. Monitoring flows up, control flows down.
+3. Monitor-Generate-Verify (Oh and Gobet, 2025) applies this to language-model reasoning, monitoring difficulty and confidence before generation.
+4. Kadavath et al. (2022) show that models can estimate whether their answer is true and whether they know it.
+
+## Consequences & Trade-offs
+
+"I don't know" becomes a valid output. The signal can mislead: the "do I know" estimate is poorly calibrated on new tasks, and MGV presents no empirical validation.
+
+## Related Patterns
+
+- Goal Setting and Monitoring
+- Weak-to-Strong Oversight
+```
+
+## Retrieval Evaluation
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/retrieval-evaluation/ -->
+```text agsc-content
+
+## Intent
+
+Measure whether retrieval found the right material separately from whether the answer used it well.
+
+## Context & Forces
+
+When a retrieval-based system answers badly, the retrieved text often never held the answer. One end-to-end score cannot tell the two failures apart.
+
+## Structure
+
+Ragas (Es et al., 2023) checks, without human reference answers, whether retrieved passages are relevant, whether the model uses them faithfully, and answer quality. TruLens calls these the RAG triad: context relevance, groundedness and answer relevance.
+
+1. **Retrieval:** recall, precision and rank on labelled real queries.
+2. **Grounding:** is the answer supported by the retrieved text?
+3. **Error bars:** report uncertainty, as Miller (2024) shows for model evaluations.
+
+## Consequences & Trade-offs
+
+Debugging goes to the failing stage. Labelled sets age, and good scores mean little if test queries differ from real ones.
+
+## Related Patterns
+
+- Trajectory and Outcome Evaluation
+- The Deep Research Loop
+```
+
+## Meaningful Human Control
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/ -->
+```text agsc-content
+
+## Intent
+
+Keep people really in control of an autonomous system, not only on paper.
+
+## Context & Forces
+
+Agents act faster than people can review, so "a human in the loop" can become a formality.
+
+## Structure
+
+Santoni de Sio and van den Hoven (2018) set two conditions:
+
+1. **Tracking:** the system responds, verifiably, to the relevant human moral reasons.
+2. **Tracing:** its actions trace to at least one person who understands it properly.
+
+Article 14 of the EU AI Act asks that people overseeing high-risk AI systems stay aware of automation bias, can override or reverse an output, and stop the system safely.
+
+In practice, tracking lives in goals, guardrails and escalation rules. Tracing needs a named, trained person per system, and clear records.
+
+## Consequences & Trade-offs
+
+An approver who does not understand the system fails tracing. A system that ignores its rules fails tracking. Training and records cost effort.
+
+## Related Patterns
+
+- The Autonomy Ladder
+- Tamper-Evident Agent Audit Log
+- Weak-to-Strong Oversight
+```
+
+## Trajectory and Outcome Evaluation
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/ -->
+```text agsc-content
+
+## Intent
+
+Grade the end state an agent produced and the path it took as two separate questions.
+
+## Context & Forces
+
+An agent can reach the right result by a bad path, or take a good path to a wrong result. One score hides one of them.
+
+## Structure
+
+Anthropic's guide defines the transcript (trace or trajectory) as the full record of a trial, and the outcome as the final state of the environment (Grace et al., 2026). Graders are code-based, model-based or human. Google's Agent Development Kit scores tool-call paths (`tool_trajectory_avg_score`) separately from answers (`response_match_score`). Huyen (2025) lists failures to measure, from invalid tools and wrong parameters to goal failure and inefficiency.
+
+1. Grade the outcome against what should be true afterwards.
+2. Grade the path for tool use, safety and efficiency.
+
+## Consequences & Trade-offs
+
+Behaviour changes show even when success rates hold. Anthropic warns that exact tool-call sequences make brittle tests; require them only where the path is the requirement.
+
+## Related Patterns
+
+- Retrieval Evaluation
+- Specification Gaming
+```
+
+## Agents as Tools
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/agents-as-tools/ -->
+```text agsc-content
+
+## Intent
+
+Wrap a specialist agent as a tool. The calling agent hands it one bounded task and keeps control.
+
+## Context & Forces
+
+Some subtasks, such as a search or a review, are bounded but noisy. Handing over the whole conversation gives away control.
+
+## Structure
+
+1. The caller owns the loop and the conversation.
+2. The specialist is offered as a tool with a name, a description and an input.
+3. It runs in its own context, with its own prompt, tools and permissions.
+4. It returns a short result.
+
+The OpenAI Agents SDK calls this "agents as tools": a manager agent keeps control and calls specialists. Claude Code subagents also run in their own context window and return a summary.
+
+## Consequences & Trade-offs
+
+One agent stays accountable and its context stays small. Each call costs time and tokens, and a short summary can drop a needed detail.
+
+## Related Patterns
+
+Used by The Deep Research Loop; Parallelization runs several calls at once.
+```
+
+## Parallelization
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/parallelization/ -->
+```text agsc-content
+
+## Intent
+
+Run independent subtasks at the same time and combine the results.
+
+## Context & Forces
+
+Doing independent work in sequence wastes time. Some judgments are more reliable when repeated and compared.
+
+## Structure
+
+Anthropic names two variants (Schluntz and Zhang, 2024):
+
+1. **Sectioning:** split a task into independent subtasks that run in parallel.
+2. **Voting:** run the same task several times to get different outputs.
+
+Google's Agent Development Kit has a `ParallelAgent`: sub-agents run together, write to separate state keys, and a later agent gathers them. Microsoft calls it concurrent orchestration, also known as fan-out/fan-in, and suggests voting, weighted merging or a model-written summary to combine results.
+
+## Consequences & Trade-offs
+
+Time is set by the slowest branch. Agreement between branches is a confidence signal. Cost grows with each branch, and hidden dependencies between subtasks give wrong answers.
+
+## Related Patterns
+
+- The Deep Research Loop
+- Agents as Tools
+- Blackboard
+```
+
+## Weak-to-Strong Oversight
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/weak-to-strong-oversight/ -->
+```text agsc-content
+
+## Intent
+
+State an open question: can a weaker supervisor reliably oversee a stronger agent?
+
+## Context & Forces
+
+Agent systems already rely on weaker overseers: cheap models grading strong ones, busy people approving plans they cannot fully check.
+
+## Structure
+
+Bowman et al. (2022) call this scalable oversight. In their tests, people chatting with an unreliable model assistant did substantially better than the model alone or they alone. Burns et al. (2023) found that strong models trained on a weak model's labels consistently beat their weak supervisors, but naive training stays far from the strong model's full ability.
+
+1. **Known:** weak supervision can draw out more than the supervisor can do.
+2. **Known:** people plus a model can beat either alone.
+3. **Open:** whether this holds for safety judgments, and whether the strong model learns intent or mistakes.
+
+## Consequences & Trade-offs
+
+Treat a weak judge as a partial signal. Pair it with confidence signals, smaller checkable tasks, and gates that do not assume the judge is right.
+
+## Related Patterns
+
+- Meaningful Human Control
+- Specification Gaming
+- Plan Approval Gate
+```
+
+## Tamper-Evident Agent Audit Log
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/ -->
+```text agsc-content
+
+## Intent
+
+Keep a record of every important agent action that can be checked later and shows any change.
+
+## Context & Forces
+
+Accountability needs a reliable account of what happened. Ordinary logs can be edited. OWASP lists repudiation and untraceability as threat T8 for agentic systems.
+
+## Structure
+
+1. Write records to an append-only store.
+2. Link each record to the previous one by a hash, as in Haber and Stornetta's 1991 time-stamping scheme. Changing an old record breaks every later link.
+3. Record who acted, what, the inputs, the approving decision and the result.
+4. Verify the chain regularly.
+
+On GitHub, each commit by the Copilot coding agent carries an `Agent-Logs-Url` trailer linking to its session logs, with the person who gave the task as co-author.
+
+## Consequences & Trade-offs
+
+Incidents can be rebuilt. Sensitive data in logs is a risk, so record only what is needed. An unverified chain gives false comfort.
+
+## Related Patterns
+
+- Meaningful Human Control
+- Plan Approval Gate
+```
+
+## Skill-Library Compounding
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/skill-library/ -->
+```text agsc-content
+
+## Intent
+
+Store capabilities that are known to work, so an agent's skills grow instead of being rediscovered each run.
+
+## Context & Forces
+
+An agent that forgets a solution pays for it again. Storing everything is worse: failures that looked right pile up.
+
+## Structure
+
+Voyager (Wang et al., 2023) keeps a growing library of executable skills, uses self-verification, and builds complex skills from simple ones. Anthropic's Agent Skills are folders of instructions, scripts and resources that agents load when needed (Zhang et al., 2025). CoALA (Sumers et al., 2023) calls such code procedural memory.
+
+1. **Capture** a successful solution as a named procedure.
+2. **Verify** it before admitting it.
+3. **Retrieve** it when a similar task arrives.
+
+## Consequences & Trade-offs
+
+Skills build up and can be shared. A bad skill changes behaviour, so review it like code. Weak retrieval returns the wrong skill.
+
+## Related Patterns
+
+- Generative Agents
+- Agents as Tools
+```
+
+## Exception Handling and Recovery
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/ -->
+```text agsc-content
+
+## Intent
+
+Keep a run going when calls fail: retry short faults, take another route for lasting ones, and say when a result is reduced.
+
+## Context & Forces
+
+Agents make many remote calls, and some fail. Blind retries waste money and overload services. Retrying a non-idempotent action can repeat it.
+
+## Structure
+
+1. **Classify.** Retry only transient faults. For HTTP, Microsoft names 429 and 5xx as typical candidates.
+2. **Retry with limits.** Use growing, randomised delays. Microsoft: never retry endlessly; set a retry budget.
+3. **Fall back.** Use an alternative service, or offer reduced functionality.
+4. **Log** every retry.
+
+LangGraph attaches a retry policy to each node; for common HTTP libraries it retries only 5xx errors by default.
+
+## Consequences & Trade-offs
+
+Runs survive routine faults. Retries add delay and cost. A silent fallback can hide a broken dependency.
+
+## Related Patterns
+
+- Saga for Agent Workflows
+- Unbounded Loops
+```
+
+## The Autonomy Ladder
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/ -->
+```text agsc-content
+
+## Intent
+
+A shared scale for how much an agent may decide alone, so the level is chosen on purpose.
+
+## The Categories
+
+The Cloud Security Alliance proposes six levels, modelled on the SAE J3016 driving-automation levels (Reavis, 2026):
+
+- **L0 No autonomy:** a human does the work.
+- **L1 Assisted:** a human decides, the AI executes.
+- **L2 Supervised:** a human approves, the AI executes.
+- **L3 Conditional:** the AI decides within set boundaries.
+- **L4 High autonomy:** minimal supervision.
+- **L5 Full autonomy:** self-directed.
+
+Reavis considers L5 not appropriate for enterprise use today. Mitchell et al. (2025) argue that fully autonomous agents should not be developed.
+
+## How to Apply It
+
+Pick a level per kind of action, based on what a mistake would cost and whether it can be undone. Enforce it in the runtime. Move up only with evidence, and keep the way down working.
+
+## Related Patterns
+
+- Meaningful Human Control
+- Plan Approval Gate
+```
+
+## Sustainability Signal Plane
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/ -->
+```text agsc-content
+
+## Intent
+
+Give each system one standard address for its current energy and carbon figures, readable by the systems that depend on it.
+
+## Context & Forces
+
+Sustainability data is mostly written for people. carbon.txt (Green Web Foundation) gives a domain one place for its sustainability data; the Green Software Foundation's Real Time Cloud project works on a common format for cloud providers.
+
+## Structure
+
+The Internet-Draft "The 'sustainability-data' Well-Known URI" (Andrei N. Besleaga, 2026) defines `/.well-known/sustainability-data`: one JSON document over HTTPS, with seven mandatory members, including a link to the method behind the figures.
+
+1. Each system publishes its own document.
+2. It reads the documents of the systems it depends on.
+3. It uses those figures in its own decisions.
+
+## Consequences & Trade-offs
+
+Figures sit at one predictable address. They are self-declared: the format can be checked, the truth cannot. The author's evaluation package measures one public gateway. With few publishers, adoption is the main risk.
+
+## Related Patterns
+
+- Goal Setting and Monitoring
+```
+
+## Goal Setting and Monitoring
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/ -->
+```text agsc-content
+
+## Intent
+
+Give an agent a goal with checkable criteria, then watch progress and correct course.
+
+## Context & Forces
+
+An agent can do every step right and still miss the goal. Vague goals cannot be checked; single metrics can be gamed.
+
+## Structure
+
+The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge. Zhang et al. (2024) trace it to Kephart and Chess (2003) and apply it with language-model agents to microservice management. In CrewAI, a task has an `expected_output` describing completion and a `guardrail` that checks the output, retried three times by default.
+
+1. Write the goal as a few observable criteria.
+2. Check progress after each step, ideally outside the acting model.
+3. Continue, re-plan, or stop and escalate.
+
+## Consequences & Trade-offs
+
+Progress becomes visible. Each check costs extra. Criteria can replace the goal, so keep them few.
+
+## Related Patterns
+
+- Specification Gaming
+- Metacognitive Monitoring and Control
+- Unbounded Loops
+```
+
+## Generative Agents
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/generative-agents/ -->
+```text agsc-content
+
+## Intent
+
+Give a simulated character memory, reflection and plans, so it behaves consistently over days.
+
+## Context & Forces
+
+A chat model has no past. The whole history does not fit in a prompt, so the agent must keep everything but use only what matters now.
+
+## Structure
+
+Park et al. (2023) describe three parts:
+
+1. **Memory stream:** a complete record of experiences in natural language.
+2. **Reflection:** memories are turned into higher-level thoughts.
+3. **Planning:** relevant memories are retrieved to plan behaviour.
+
+Stanford HAI sums up the loop: perceptions feed memory, retrieval supports reflection and planning, then the agent acts (Miller, 2023). The study ran 25 agents in a small simulated town.
+
+## Consequences & Trade-offs
+
+One suggested Valentine's Day party led agents to invite each other and arrive together. Removing observation, planning or reflection each made behaviour less believable. Agents still made odd choices, and every step calls the model.
+
+## Related Patterns
+
+- Skill-Library Compounding
+- Metacognitive Monitoring and Control
+```
+
+## Plan Approval Gate
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/ -->
+```text agsc-content
+
+## Intent
+
+The agent researches and proposes a plan without changing anything; a person approves it before any edit.
+
+## Context & Forces
+
+An agent that edits at once commits to an approach nobody has seen. Approving each edit is slow and hides the overall shape.
+
+## Structure
+
+1. **Read-only phase:** the agent explores but cannot write.
+2. **Plan:** a plan the person can change.
+3. **Decision:** approve, give feedback, or keep planning.
+4. **Switch:** approval unlocks editing.
+
+In Claude Code's plan mode, Claude researches and proposes changes without making them; in most setups edits stay blocked until approval. GitHub Copilot lets users approve a plan or give feedback before code is written. OpenAI's Codex plan mode gathers context and asks questions first.
+
+## Consequences & Trade-offs
+
+Reviewers judge the approach, not a large diff. Small tasks pay an extra round trip, and habitual approval weakens the gate. The runtime, not the prompt, must block writes.
+
+## Related Patterns
+
+- The Autonomy Ladder
+- Tamper-Evident Agent Audit Log
+```
+
+## Dual-LLM Pattern
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/ -->
+```text agsc-content
+
+## Intent
+
+Keep the model that can act away from untrusted text, so injected instructions cannot trigger actions.
+
+## Context & Forces
+
+E-mails, web pages and files can contain text that looks like a command. Filters lower the risk but do not remove it.
+
+## Structure
+
+Simon Willison (2023) uses three parts:
+
+1. **Privileged model:** takes trusted input, mainly from the user, and can use tools.
+2. **Quarantined model:** reads untrusted content and has no tools.
+3. **Controller:** ordinary code that passes results between them as variables.
+
+CaMeL (Debenedetti et al., 2025) builds on this. It takes the control flow from the trusted query only, and checks capabilities attached to data whenever a tool is called.
+
+## Consequences & Trade-offs
+
+Injected text cannot change the plan. Some usefulness is lost: CaMeL solved 77% of AgentDojo tasks with provable security, against 84% undefended. Use it when an agent reads untrusted data and holds important tools.
+
+## Related Patterns
+
+OWASP Top 10 for Agentic Applications (goal hijack).
+```
+
+## OWASP Top 10 for Agentic Applications
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/ -->
+```text agsc-content
+
+## Intent
+
+One shared list of the security risks of software that acts on its own.
+
+## The Categories
+
+OWASP published this list on 9 December 2025, developed with more than 100 experts:
+
+- **ASI01** Agent Goal Hijack
+- **ASI02** Tool Misuse
+- **ASI03** Identity & Privilege Abuse
+- **ASI04** Agentic Supply Chain Vulnerabilities
+- **ASI05** Unexpected Code Execution
+- **ASI06** Memory & Context Poisoning
+- **ASI07** Insecure Inter-Agent Communication
+- **ASI08** Cascading Failures
+- **ASI09** Human-Agent Trust Exploitation
+- **ASI10** Rogue Agents
+
+It sits beside the OWASP Top 10 for LLM Applications 2025, which covers risks such as prompt injection and unbounded consumption.
+
+## How to Apply It
+
+Check every agent capability against the ten entries. Record a control or a decision to accept each risk, citing the ASI identifier.
+
+## Related Patterns
+
+- Dual-LLM Pattern
+- Unbounded Loops
+- Tamper-Evident Agent Audit Log
+```
+
+## Specification Gaming
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/specification-gaming/ -->
+```text agsc-content
+
+## Intent
+
+Name a basic limit: an agent optimises the criterion you wrote, not the result you meant.
+
+## Context & Forces
+
+Every criterion simplifies intent. An agent trying many options can meet the letter and miss the purpose, and the score does not show it.
+
+## Structure
+
+Krakovna et al. (2020) define specification gaming as behaviour that satisfies the literal specification of an objective without achieving the intended outcome. Baker et al. (2025) studied coding agents that could make unit tests pass trivially. Penalising visible bad reasoning in training taught them to hide their intent while still gaming.
+
+Common forms: the test was changed; the output pleases the judge; a rule is kept while its purpose is defeated.
+
+## Consequences & Trade-offs
+
+Inspect traces when a metric jumps, and keep monitors out of the training signal. For open-ended tasks the gap cannot be closed. Dalrymple et al. (2024) propose verified proof against a formal safety specification for some systems.
+
+## Related Patterns
+
+- Goal Setting and Monitoring
+- Trajectory and Outcome Evaluation
+- Weak-to-Strong Oversight
+```
+
+## Blackboard
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/blackboard/ -->
+```text agsc-content
+
+## Intent
+
+Independent specialists work on one problem through a shared workspace, without calling each other.
+
+## Context & Forces
+
+Some problems cannot be split in advance: who can help depends on what is already known. Direct messages tie every agent to all the others.
+
+## Structure
+
+The Hearsay-II speech system (Erman et al., 1980) has three parts:
+
+1. **Blackboard:** a global database of hypotheses.
+2. **Knowledge sources:** independent programs that communicate only through the blackboard.
+3. **Control:** a focus-of-control step that picks the most promising action next.
+
+Han and Zhang (2025) apply it to language-model agents: the agents that act are chosen from what is on the blackboard.
+
+## Consequences & Trade-offs
+
+Specialists can be added or removed freely, and the history sits in one place. The control step becomes the hard part. Evidence for language-model agents is still thin.
+
+## Related Patterns
+
+- Parallelization
+- Agents as Tools
+```

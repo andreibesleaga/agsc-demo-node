@@ -1,0 +1,11 @@
+label "Judge calibration diagram"
+box out 16 96 90 44 "agent|outputs"
+box human 150 40 110 44 "human labels"
+box judge 150 150 110 44 "model judge"
+box agree 310 92 134 60 "agreement rate|+ bias audit" acc
+arrow out human
+arrow out judge
+arrow human agree
+arrow judge agree
+arrow agree judge dashed via=380,200;205,200
+note "dashed: agreement and bias results go back to the judge"

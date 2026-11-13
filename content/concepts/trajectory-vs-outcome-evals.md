@@ -15,31 +15,32 @@ aliases:
 clusters:
   - evaluation-testing
 date: 2026-08-15
-modified: 2026-11-10
+modified: 2026-11-12
 sources:
   - resource: https://www.anthropic.com/research/demystifying-evals-for-ai-agents
     title: "Demystifying evals for AI agents"
     author: "Grace, M.; Hadfield, J.; Olivares, R.; et al."
     year: 2026
-    verified: 2026-11-10
+    verified: 2026-11-12
     grade: primary
   - resource: https://adk.dev/evaluate/
     title: "Why evaluate agents"
     author: "Google"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://huyenchip.com/2025/01/07/agents.html
     title: "Agents"
     author: "Huyen, C."
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: trajectory-vs-outcome-evals
 related:
+  - pass-hat-k
   - retrieval-evaluation
 kind: pattern
 evidence: explicit
@@ -73,3 +74,4 @@ Behaviour changes show even when success rates hold. Anthropic warns that exact 
 
 - Retrieval Evaluation
 - Specification Gaming
+- Pass^k Reliability

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Autonomy Ladder</title>
+<meta name="description" content="A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability.","name":"The Autonomy Ladder","url":"https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>The Autonomy Ladder</h1>
+<p class="summary"><strong>Summary</strong>A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>taxonomy</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/product/">Product Practice</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-24deba672b0294f3"></span>Intent</h2>
+<p>A shared scale for how much an agent may decide alone, so the level is chosen on purpose.</p>
+<h2 id="the-categories"><span id="chunk-eb30e8e38471b46e"></span>The Categories</h2>
+<p>The Cloud Security Alliance proposes six levels, modelled on the SAE J3016 driving-automation levels (Reavis, 2026):</p>
+<ul>
+<li><strong>L0 No autonomy:</strong> a human does the work.</li>
+<li><strong>L1 Assisted:</strong> a human decides, the AI executes.</li>
+<li><strong>L2 Supervised:</strong> a human approves, the AI executes.</li>
+<li><strong>L3 Conditional:</strong> the AI decides within set boundaries.</li>
+<li><strong>L4 High autonomy:</strong> minimal supervision.</li>
+<li><strong>L5 Full autonomy:</strong> self-directed.</li>
+</ul>
+<p>Reavis considers L5 not appropriate for enterprise use today. Mitchell et al. (2025) argue that fully autonomous agents should not be developed.</p>
+<h2 id="how-to-apply-it"><span id="chunk-dd8bb94992b903ff"></span>How to Apply It</h2>
+<p>Pick a level per kind of action, based on what a mistake would cost and whether it can be undone. Enforce it in the runtime. Move up only with evidence, and keep the way down working.</p>
+<h2 id="related-patterns"><span id="chunk-9b43464972fca933"></span>Related Patterns</h2>
+<ul>
+<li>Meaningful Human Control</li>
+<li>Plan Approval Gate</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="autonomy-ladder-title autonomy-ladder-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="autonomy-ladder-title">Six stacked rungs from L0, where a human performs every action, through per-action approval, plan approval, a highlighted L3 where the agent acts alone within bounds, monitored operation with a kill switch, and L5 full autonomy.</title>
+  <desc id="autonomy-ladder-desc">climb on evidence, by consequence — not capability</desc>
+  <defs><marker id="autonomy-ladder-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="60" y="190" width="340" height="30" rx="6"/>
+    <rect x="80" y="154" width="300" height="30" rx="6"/>
+    <rect x="100" y="118" width="260" height="30" rx="6"/>
+    <rect x="120" y="82" width="220" height="30" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="140" y="46" width="180" height="30" rx="6"/>
+    <rect x="160" y="10" width="140" height="30" rx="6"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="230" y="209" font-size="11">L0 — human performs every action</text>
+    <text x="230" y="173" font-size="11">L1 — per-action approval</text>
+    <text x="230" y="137" font-size="11">L2 — plan approval + rollback</text>
+    <text x="230" y="101" font-size="11">L3 — acts alone in bounds</text>
+    <text x="230" y="65" font-size="11">L4 — monitored + kill switch</text>
+    <text x="230" y="29" font-size="12">L5 — full autonomy</text>
+    <text x="230" y="248" font-size="11">climb on evidence, by consequence — not capability</text>
+  </g>
+</svg><figcaption>One system can sit on several rungs at once — a different one per kind of decision, and the way down stays built.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Reavis, J. (2026). <a href="https://cloudsecurityalliance.org/blog/2026/01/28/levels-of-autonomy">Leveling Up Autonomy in Agentic AI</a>. <span class="source-url"><a href="https://cloudsecurityalliance.org/blog/2026/01/28/levels-of-autonomy">https://cloudsecurityalliance.org/blog/2026/01/28/levels-of-autonomy</a></span>. Checked 2026-09-29.</li><li id="source-2">Mitchell, M.; Ghosh, A.; Luccioni, A. S.; et al. (2025). <a href="https://arxiv.org/abs/2502.02649">Fully Autonomous AI Agents Should Not be Developed</a>. <span class="source-url"><a href="https://arxiv.org/abs/2502.02649">https://arxiv.org/abs/2502.02649</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/autonomy-ladder.md">Markdown</a> · <a href="/pages/autonomy-ladder.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

@@ -11,31 +11,31 @@ tags:
 clusters:
   - protocols
 date: 2026-08-21
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://datatracker.ietf.org/doc/draft-besleaga-sustainability-wellknown/
     title: "The 'sustainability-data' Well-Known URI"
     author: "Andrei N. Besleaga"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://carbontxt.org
     title: "carbon.txt"
     author: "Green Web Foundation"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://github.com/Green-Software-Foundation/real-time-cloud
     title: "Real Time Energy and Carbon Standards for Cloud Providers"
     author: "Green Software Foundation"
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://doi.org/10.5281/zenodo.22056634
     title: "The Cybernetic Sustainability Loop: Governed Agentic Systems on a Sustainability Data Plane — evaluation package"
     author: "Andrei N. Besleaga"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

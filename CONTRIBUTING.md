@@ -1,6 +1,6 @@
 # Contributing
 
-This repository holds the published items of the demonstration node. The maintainer
+This repository holds the published items of AgenticSystemCore Graph. The maintainer
 keeps the node in a working copy that also holds items in draft; an accepted change is
 applied there and appears here with the next update of this repository. The engine,
 the specification and the vocabulary live in the

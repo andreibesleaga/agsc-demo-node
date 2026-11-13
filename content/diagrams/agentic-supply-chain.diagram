@@ -1,0 +1,17 @@
+label "Agentic supply chain integrity diagram"
+box reg 14 30 110 60 "allowlisted|registry"
+box model 14 110 50 30 "model"
+box tool 70 110 50 30 "tool"
+box mcp 14 148 50 30 "server"
+box skill 70 148 50 30 "skill"
+box ver 180 90 120 60 "load-time|verifier" acc
+box prov 180 174 120 44 "signatures|and hashes"
+box agent 350 96 96 48 "agent"
+box revoke 350 174 96 44 "kill switch"
+arrow reg ver
+arrow tool ver
+arrow skill ver
+arrow prov ver
+arrow ver agent
+arrow revoke ver dashed
+note "unsigned components are rejected; a kill switch disables chosen ones"

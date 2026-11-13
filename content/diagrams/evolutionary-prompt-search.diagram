@@ -1,0 +1,12 @@
+label "Evolutionary prompt search diagram"
+box pop 20 90 100 60 "population|of prompts"
+box op 160 82 130 76 "LLM mutation|+ crossover" acc
+box fit 330 40 110 50 "fitness scorer|(training set)"
+box sel 330 150 110 50 "selection|keep fittest"
+box mp 160 12 130 36 "mutation-prompts" dashed
+arrow pop op
+arrow op fit
+arrow fit sel
+arrow sel pop via=385,214;70,214
+arrow mp op
+note "dashed = self-referential variant: the mutation-prompts are themselves evolved"

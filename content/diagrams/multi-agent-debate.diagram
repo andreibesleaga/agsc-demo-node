@@ -1,0 +1,11 @@
+label "Multi-agent debate diagram"
+box a1 20 40 110 44 "debater A"
+box round 170 36 120 52 "debate round|read + revise" acc
+box a2 330 40 110 44 "debater B"
+box judge 170 126 120 44 "judge / stop rule"
+box ans 170 192 120 34 "final answer"
+arrow a1 round both
+arrow round a2 both
+arrow round judge
+arrow judge ans
+note "each round, every debater builds a new response from the others'"

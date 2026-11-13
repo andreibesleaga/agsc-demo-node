@@ -15,25 +15,25 @@ aliases:
 clusters:
   - foundational
 date: 2026-08-16
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://openai.github.io/openai-agents-python/tools/#agents-as-tools
     title: "Tools"
     author: "OpenAI"
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://openai.github.io/openai-agents-python/multi_agent/
     title: "Agent orchestration"
     author: "OpenAI"
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://code.claude.com/docs/en/sub-agents
     title: "Create custom subagents"
     author: "Anthropic"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
@@ -42,6 +42,7 @@ id: agents-as-tools
 related:
   - deep-research-loop
   - parallelization
+  - augmented-llm
 kind: pattern
 evidence: explicit
 maturity: established
@@ -74,4 +75,5 @@ One agent stays accountable and its context stays small. Each call costs time an
 
 ## Related Patterns
 
-Used by The Deep Research Loop; Parallelization runs several calls at once.
+- The Deep Research Loop
+- Parallelization

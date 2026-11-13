@@ -10,25 +10,25 @@ tags:
 clusters:
   - classical
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://microservices.io/patterns/data/saga.html
     title: "Pattern: Saga"
     author: "Richardson, C."
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://doi.org/10.1145/38713.38742
     title: "Sagas"
     author: "Garcia-Molina, H.; Salem, K."
     year: 1987
-    verified: 2026-09-29
+    verified: 2026-11-10
     grade: secondary
   - resource: https://temporal.io/blog/saga-pattern-made-easy
     title: "Saga design pattern explained: Benefits, use cases, and implementation"
     author: "Fortuna, E."
     year: 2023
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

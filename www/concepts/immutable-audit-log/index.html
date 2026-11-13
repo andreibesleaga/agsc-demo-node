@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamper-Evident Agent Audit Log</title>
+<meta name="description" content="An append-only, hash-linked record of every important agent action, so what happened can be rebuilt and checked.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"An append-only, hash-linked record of every important agent action, so what happened can be rebuilt and checked.","name":"Tamper-Evident Agent Audit Log","url":"https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Tamper-Evident Agent Audit Log</h1>
+<p class="summary"><strong>Summary</strong>An append-only, hash-linked record of every important agent action, so what happened can be rebuilt and checked.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/governance/">Governance &amp; Accountability</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/immutable-audit-log/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-0eb9757c3bfcc74b"></span>Intent</h2>
+<p>Keep a record of every important agent action that can be checked later and shows any change.</p>
+<h2 id="context-forces"><span id="chunk-bdb5a5238424459e"></span>Context &amp; Forces</h2>
+<p>Accountability needs a reliable account of what happened. Ordinary logs can be edited. OWASP lists repudiation and untraceability as threat T8 for agentic systems.</p>
+<h2 id="structure"><span id="chunk-825fade408f43540"></span>Structure</h2>
+<ol>
+<li>Write records to an append-only store.</li>
+<li>Link each record to the previous one by a hash, as in Haber and Stornetta's 1991 time-stamping scheme. Changing an old record breaks every later link.</li>
+<li>Record who acted, what, the inputs, the approving decision and the result.</li>
+<li>Verify the chain regularly.</li>
+</ol>
+<p>On GitHub, each commit by the Copilot coding agent carries an <code>Agent-Logs-Url</code> trailer linking to its session logs, with the person who gave the task as co-author.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-59e50aea68f7afd2"></span>Consequences &amp; Trade-offs</h2>
+<p>Incidents can be rebuilt. Sensitive data in logs is a risk, so record only what is needed. An unverified chain gives false comfort.</p>
+<h2 id="related-patterns"><span id="chunk-7c745851ad046458"></span>Related Patterns</h2>
+<ul>
+<li>Meaningful Human Control</li>
+<li>Plan Approval Gate</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 240" role="img" aria-labelledby="immutable-audit-log-title immutable-audit-log-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="immutable-audit-log-title">Three audit records in a row each hold who acted, what was done, the policy verdict and the hash of the record before it; a highlighted verifier below recomputes every link, so changing one record breaks every hash after it.</title>
+  <desc id="immutable-audit-log-desc">append-only: changing any record breaks every hash after it</desc>
+  <defs><marker id="immutable-audit-log-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="30" width="124" height="66" rx="6"/>
+    <rect x="166" y="30" width="124" height="66" rx="6"/>
+    <rect x="318" y="30" width="124" height="66" rx="6"/>
+    <path d="M142 63 L162 63" marker-end="url(#immutable-audit-log-arrow)"/>
+    <path d="M294 63 L314 63" marker-end="url(#immutable-audit-log-arrow)"/>
+    <rect x="148" y="150" width="160" height="48" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <path d="M191.9 147.6 L124.4 98.4" marker-end="url(#immutable-audit-log-arrow)"/>
+    <path d="M228 146 L228 100" marker-end="url(#immutable-audit-log-arrow)"/>
+    <path d="M264.1 147.6 L331.6 98.4" marker-end="url(#immutable-audit-log-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="76" y="51" font-size="12">record 1</text>
+    <text x="76" y="67" font-size="12">who, what, verdict</text>
+    <text x="76" y="83" font-size="12">hash: none</text>
+    <text x="228" y="51" font-size="12">record 2</text>
+    <text x="228" y="67" font-size="12">who, what, verdict</text>
+    <text x="228" y="83" font-size="12">hash of record 1</text>
+    <text x="380" y="51" font-size="12">record 3</text>
+    <text x="380" y="67" font-size="12">who, what, verdict</text>
+    <text x="380" y="83" font-size="12">hash of record 2</text>
+    <text x="228" y="170" font-size="12">verifier</text>
+    <text x="228" y="186" font-size="12">recomputes every link</text>
+    <text x="230" y="228" font-size="11">append-only: changing any record breaks every hash after it</text>
+  </g>
+</svg><figcaption>Only one box in the picture is not a record — and until somebody runs it, the chain is a claim rather than a check.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Haber, S.; Stornetta, W. S. (1991). <a href="https://doi.org/10.1007/BF00196791">How to time-stamp a digital document</a>. <span class="source-url"><a href="https://doi.org/10.1007/BF00196791">https://doi.org/10.1007/BF00196791</a></span>. Checked 2026-09-29.</li><li id="source-2">OWASP Gen AI Security Project (2025). <a href="https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/">Agentic AI – Threats and Mitigations</a>. <span class="source-url"><a href="https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/">https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/</a></span>. Checked 2026-09-29.</li><li id="source-3">GitHub (2026). <a href="https://github.blog/changelog/2026-03-20-trace-any-copilot-coding-agent-commit-to-its-session-logs/">Trace any Copilot coding agent commit to its session logs</a>. <span class="source-url"><a href="https://github.blog/changelog/2026-03-20-trace-any-copilot-coding-agent-commit-to-its-session-logs/">https://github.blog/changelog/2026-03-20-trace-any-copilot-coding-agent-commit-to-its-session-logs/</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/immutable-audit-log.md">Markdown</a> · <a href="/pages/immutable-audit-log.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackboard</title>
+<meta name="description" content="Independent specialists work on one problem through a shared workspace; a control step picks who contributes next.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/blackboard/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Independent specialists work on one problem through a shared workspace; a control step picks who contributes next.","name":"Blackboard","url":"https://patterns.agenticsystemcore.com/concepts/blackboard/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Blackboard</h1>
+<p class="summary"><strong>Summary</strong>Independent specialists work on one problem through a shared workspace; a control step picks who contributes next.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/topologies/">Multi-Agent Topologies</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/blackboard/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-70ee147bb4d39faa"></span>Intent</h2>
+<p>Independent specialists work on one problem through a shared workspace, without calling each other.</p>
+<h2 id="context-forces"><span id="chunk-667ec2b62c21aa35"></span>Context &amp; Forces</h2>
+<p>Some problems cannot be split in advance: who can help depends on what is already known. Direct messages tie every agent to all the others.</p>
+<h2 id="structure"><span id="chunk-ba7794491fe4bf82"></span>Structure</h2>
+<p>The Hearsay-II speech system (Erman et al., 1980) has three parts:</p>
+<ol>
+<li><strong>Blackboard:</strong> a global database of hypotheses.</li>
+<li><strong>Knowledge sources:</strong> independent programs that communicate only through the blackboard.</li>
+<li><strong>Control:</strong> a focus-of-control step that picks the most promising action next.</li>
+</ol>
+<p>Han and Zhang (2025) apply it to language-model agents: the agents that act are chosen from what is on the blackboard.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-c11e440f7d1c79a4"></span>Consequences &amp; Trade-offs</h2>
+<p>Specialists can be added or removed freely, and the history sits in one place. The control step becomes the hard part. Evidence for language-model agents is still thin.</p>
+<h2 id="related-patterns"><span id="chunk-47008e3e409a4c83"></span>Related Patterns</h2>
+<ul>
+<li>Parallelization</li>
+<li>Agents as Tools</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 270" role="img" aria-labelledby="blackboard-title blackboard-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="blackboard-title">Four specialist boxes are each joined to a highlighted central blackboard by a two-way arrow and never to each other; a control box above reads the board and picks which specialist runs next.</title>
+  <desc id="blackboard-desc">no specialist-to-specialist edges — everything goes through the shared state</desc>
+  <defs><marker id="blackboard-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="160" y="100" width="140" height="66" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="20" y="24" width="96" height="34" rx="6"/>
+    <rect x="344" y="24" width="96" height="34" rx="6"/>
+    <rect x="20" y="200" width="96" height="34" rx="6"/>
+    <rect x="344" y="200" width="96" height="34" rx="6"/>
+    <rect x="160" y="14" width="140" height="42" rx="6"/>
+    <path d="M101.4 60 L168.4 98" marker-end="url(#blackboard-arrow)" marker-start="url(#blackboard-arrow)"/>
+    <path d="M358.6 60 L291.6 98" marker-end="url(#blackboard-arrow)" marker-start="url(#blackboard-arrow)"/>
+    <path d="M104.3 198.2 L162.8 167.8" marker-end="url(#blackboard-arrow)" marker-start="url(#blackboard-arrow)"/>
+    <path d="M355.7 198.2 L297.2 167.8" marker-end="url(#blackboard-arrow)" marker-start="url(#blackboard-arrow)"/>
+    <path d="M230 96 L230 60" marker-end="url(#blackboard-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="230" y="129" font-size="12">blackboard</text>
+    <text x="230" y="145" font-size="12">shared state</text>
+    <text x="68" y="45" font-size="12">specialist</text>
+    <text x="392" y="45" font-size="12">specialist</text>
+    <text x="68" y="221" font-size="12">specialist</text>
+    <text x="392" y="221" font-size="12">specialist</text>
+    <text x="230" y="31" font-size="12">control</text>
+    <text x="230" y="47" font-size="12">picks who runs next</text>
+    <text x="236" y="83" font-size="10" text-anchor="start">reads</text>
+    <text x="230" y="258" font-size="11">no specialist-to-specialist edges — everything goes through the shared state</text>
+  </g>
+</svg><figcaption>Every arrow ends at the blackboard, so the small control box above it decides everything: which specialist runs next, and when to stop.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Erman, L. D.; Hayes-Roth, F.; Lesser, V. R.; et al. (1980). <a href="https://mas.cs.umass.edu/Documents/Erman_Hearsay80.pdf">The Hearsay-II Speech-Understanding System: Integrating Knowledge to Resolve Uncertainty</a>. <span class="source-url"><a href="https://mas.cs.umass.edu/Documents/Erman_Hearsay80.pdf">https://mas.cs.umass.edu/Documents/Erman_Hearsay80.pdf</a></span>. Checked 2026-09-29.</li><li id="source-2">Han, B.; Zhang, S. (2025). <a href="https://arxiv.org/abs/2507.01701">Exploring Advanced LLM Multi-Agent Systems Based on Blackboard Architecture</a>. <span class="source-url"><a href="https://arxiv.org/abs/2507.01701">https://arxiv.org/abs/2507.01701</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/blackboard.md">Markdown</a> · <a href="/pages/blackboard.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

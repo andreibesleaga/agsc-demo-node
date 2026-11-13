@@ -1,0 +1,17 @@
+label "Pass^k reliability diagram"
+box task 8 96 76 44 "task"
+region trials 118 22 124 136 "k = 8 independent runs"
+box t1 130 30 44 26 "pass"
+box t2 130 62 44 26 "pass"
+box t3 130 94 44 26 "fail"
+box t4 130 126 44 26 "pass"
+box t5 190 30 44 26 "pass"
+box t6 190 62 44 26 "fail"
+box t7 190 94 44 26 "pass"
+box t8 190 126 44 26 "pass"
+box phk 280 46 166 50 "pass^k|all k must pass" acc
+box pak 280 118 166 50 "pass@k|any one may pass"
+arrow task trials
+arrow trials phk
+arrow trials pak
+note "k = 8 trials · pass@8 = 1 · pass^8 = 0 — same runs, opposite questions"

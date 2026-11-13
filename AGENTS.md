@@ -7,7 +7,7 @@ collects the commands and rules an agent needs first.
 
 ## What this is
 
-The published items of the demonstration node at <https://patterns.agenticsystemcore.com/>:
+The published items of AgenticSystemCore Graph at <https://patterns.agenticsystemcore.com/>:
 one Bundle of the AgenticSystemCore format. Items are Markdown files with YAML frontmatter
 in `content/`; the `agsc` engine (npm package `agentic-system-core`) builds the site, graph
 and machine files from them into `www/`. There is no application code here.

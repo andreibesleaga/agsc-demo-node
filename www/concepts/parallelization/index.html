@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parallelization</title>
+<meta name="description" content="Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/parallelization/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times.","name":"Parallelization","url":"https://patterns.agenticsystemcore.com/concepts/parallelization/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Parallelization</h1>
+<p class="summary"><strong>Summary</strong>Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/foundational/">Foundational</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/parallelization/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-ac7d4bf98a93af2c"></span>Intent</h2>
+<p>Run independent subtasks at the same time and combine the results.</p>
+<h2 id="context-forces"><span id="chunk-ba910eefa9573037"></span>Context &amp; Forces</h2>
+<p>Doing independent work in sequence wastes time. Some judgments are more reliable when repeated and compared.</p>
+<h2 id="structure"><span id="chunk-f69673bf96cef0c7"></span>Structure</h2>
+<p>Anthropic names two variants (Schluntz and Zhang, 2024):</p>
+<ol>
+<li><strong>Sectioning:</strong> split a task into independent subtasks that run in parallel.</li>
+<li><strong>Voting:</strong> run the same task several times to get different outputs.</li>
+</ol>
+<p>Google's Agent Development Kit has a <code>ParallelAgent</code>: sub-agents run together, write to separate state keys, and a later agent gathers them. Microsoft calls it concurrent orchestration, also known as fan-out/fan-in, and suggests voting, weighted merging or a model-written summary to combine results.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-8e0c5e20a414a79c"></span>Consequences &amp; Trade-offs</h2>
+<p>Time is set by the slowest branch. Agreement between branches is a confidence signal. Cost grows with each branch, and hidden dependencies between subtasks give wrong answers.</p>
+<h2 id="related-patterns"><span id="chunk-ed3a43b64d6f9dd8"></span>Related Patterns</h2>
+<ul>
+<li>The Deep Research Loop</li>
+<li>Agents as Tools</li>
+<li>Blackboard</li>
+</ul>
+
+<h2 id="links">Links</h2>
+<ul class="links"><li><code>related</code>: <a href="/concepts/deep-research-loop/">The Deep Research Loop</a></li></ul>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="parallelization-title parallelization-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="parallelization-title">One input fans out to three branches that run at the same time; their outputs converge on a single highlighted aggregate step, done by code or by a model.</title>
+  <desc id="parallelization-desc">same shape, two modes: split different work, or run the same work N ways</desc>
+  <defs><marker id="parallelization-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="20" y="105" width="80" height="42" rx="6"/>
+    <rect x="170" y="26" width="110" height="38" rx="6"/>
+    <rect x="170" y="107" width="110" height="38" rx="6"/>
+    <rect x="170" y="188" width="110" height="38" rx="6"/>
+    <rect x="330" y="100" width="116" height="52" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <path d="M103.6 104.6 L182.7 65.8" marker-end="url(#parallelization-arrow)"/>
+    <path d="M104 126 L166 126" marker-end="url(#parallelization-arrow)"/>
+    <path d="M103.6 147.4 L182.7 186.2" marker-end="url(#parallelization-arrow)"/>
+    <path d="M266.8 65.8 L332.1 98.2" marker-end="url(#parallelization-arrow)"/>
+    <path d="M284 126 L326 126" marker-end="url(#parallelization-arrow)"/>
+    <path d="M266.8 186.2 L332.1 153.8" marker-end="url(#parallelization-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="60" y="130" font-size="12">input</text>
+    <text x="225" y="49" font-size="12">branch 1</text>
+    <text x="225" y="130" font-size="12">branch 2</text>
+    <text x="225" y="211" font-size="12">branch 3</text>
+    <text x="388" y="122" font-size="12">aggregate</text>
+    <text x="388" y="138" font-size="12">code or model</text>
+    <text x="230" y="248" font-size="11">same shape, two modes: split different work, or run the same work N ways</text>
+  </g>
+</svg><figcaption>Adding a branch is easy; the one box everything converges on is where correctness is actually decided.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Schluntz, E.; Zhang, B. (2024). <a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a>. <span class="source-url"><a href="https://www.anthropic.com/engineering/building-effective-agents">https://www.anthropic.com/engineering/building-effective-agents</a></span>. Checked 2026-09-29.</li><li id="source-2">Google (2026). <a href="https://adk.dev/workflows/patterns/">Workflow patterns</a>. <span class="source-url"><a href="https://adk.dev/workflows/patterns/">https://adk.dev/workflows/patterns/</a></span>. Checked 2026-09-29.</li><li id="source-3">Huizenga, E.; Yang, B. (2025). <a href="https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/">Agent Development Kit: Making it easy to build multi-agent applications</a>. <span class="source-url"><a href="https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/">https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/</a></span>. Checked 2026-09-29.</li><li id="source-4">Kittel, C.; Siemens, C. (2026). <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns">AI agent orchestration patterns</a>. <span class="source-url"><a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns">https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/parallelization.md">Markdown</a> · <a href="/pages/parallelization.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

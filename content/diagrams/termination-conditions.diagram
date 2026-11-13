@@ -1,0 +1,12 @@
+label "Termination and exit conditions diagram"
+box loop 16 80 120 60 "loop|iteration"
+box gate 180 66 120 88 "exit check|done · turn cap|blocker" acc
+box done 340 40 100 40 "done"
+box cut 340 96 100 40 "turn limit|error"
+box human 340 152 100 40 "human"
+arrow loop gate
+arrow gate done
+arrow gate cut
+arrow gate human
+arrow gate loop dashed via=240,200;76,200
+note "decide every exit in advance: final output, turn limit, human pause"

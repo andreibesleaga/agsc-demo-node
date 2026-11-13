@@ -15,45 +15,48 @@ aliases:
 clusters:
   - operations-reliability
 date: 2026-08-18
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
     title: "Retry pattern"
     author: "Microsoft"
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults
     title: "Transient fault handling"
     author: "Microsoft"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://docs.langchain.com/oss/python/langgraph/use-graph-api
     title: "Use the graph API"
     author: "LangChain"
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: exception-handling-and-recovery
 related:
+  - bulkhead-isolation
+  - idempotent-agent-actions
+  - termination-conditions
   - saga-for-agents
   - unbounded-agent-loops
 kind: pattern
 evidence: explicit
 maturity: established
+diagram:
+  file: exception-handling-and-recovery.svg
+  alt: A failed call enters a highlighted classify box; transient faults go to a bounded retry with backoff that runs the call again, lasting faults and used-up retries go to a fallback route, and when no path is left the run degrades honestly with a stated partial result.
+  caption: Retry only what can heal; everything else needs a second path or an honest partial answer.
 domain_type: Safeguard
 domain_role: policy
 domain_links:
   guardsAgainst:
     - unbounded-agent-loops
-diagram:
-  file: exception-handling-and-recovery.svg
-  alt: A failed call enters a highlighted classify box; transient faults go to a bounded retry with backoff that runs the call again, lasting faults and used-up retries go to a fallback route, and when no path is left the run degrades honestly with a stated partial result.
-  caption: Retry only what can heal; everything else needs a second path or an honest partial answer.
 ---
 
 ## Intent
@@ -81,3 +84,6 @@ Runs survive routine faults. Retries add delay and cost. A silent fallback can h
 
 - Saga for Agent Workflows
 - Unbounded Loops
+- Bulkhead Isolation
+- Idempotency Keys for Agent Actions
+- Termination and Exit Conditions

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sustainability Signal Plane</title>
+<meta name="description" content="A well-known URI where a system publishes its energy and carbon figures, and reads its peers&#39; figures as input to its decisions.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"A well-known URI where a system publishes its energy and carbon figures, and reads its peers' figures as input to its decisions.","name":"Sustainability Signal Plane","url":"https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Sustainability Signal Plane</h1>
+<p class="summary"><strong>Summary</strong>A well-known URI where a system publishes its energy and carbon figures, and reads its peers&#39; figures as input to its decisions.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/protocols/">Protocols &amp; Interop</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/sustainability-signal-plane/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-24736ac78a620db5"></span>Intent</h2>
+<p>Give each system one standard address for its current energy and carbon figures, readable by the systems that depend on it.</p>
+<h2 id="context-forces"><span id="chunk-1f4d359e672988ff"></span>Context &amp; Forces</h2>
+<p>Sustainability data is mostly written for people. carbon.txt (Green Web Foundation) gives a domain one place for its sustainability data; the Green Software Foundation's Real Time Cloud project works on a common format for cloud providers.</p>
+<h2 id="structure"><span id="chunk-20fe6f6ce0915c4a"></span>Structure</h2>
+<p>The Internet-Draft &quot;The 'sustainability-data' Well-Known URI&quot; (Andrei N. Besleaga, 2026) defines <code>/.well-known/sustainability-data</code>: one JSON document over HTTPS, with seven mandatory members, including a link to the method behind the figures.</p>
+<ol>
+<li>Each system publishes its own document.</li>
+<li>It reads the documents of the systems it depends on.</li>
+<li>It uses those figures in its own decisions.</li>
+</ol>
+<h2 id="consequences-trade-offs"><span id="chunk-7db929ea140e4df6"></span>Consequences &amp; Trade-offs</h2>
+<p>Figures sit at one predictable address. They are self-declared: the format can be checked, the truth cannot. The author's evaluation package measures one public gateway. With few publishers, adoption is the main risk.</p>
+<h2 id="related-patterns"><span id="chunk-d45071a6d8d00ba2"></span>Related Patterns</h2>
+<ul>
+<li>Goal Setting and Monitoring</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 250" role="img" aria-labelledby="sustainability-signal-plane-title sustainability-signal-plane-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="sustainability-signal-plane-title">Three systems each publish their data at the well-known sustainability-data path; a highlighted consuming agent reads all three, decides from them, and publishes its own document at the same path.</title>
+  <desc id="sustainability-signal-plane-desc">every node is both reporter and sensor</desc>
+  <defs><marker id="sustainability-signal-plane-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="30" width="150" height="40" rx="6"/>
+    <rect x="14" y="96" width="150" height="40" rx="6"/>
+    <rect x="14" y="162" width="150" height="40" rx="6"/>
+    <rect x="290" y="80" width="150" height="60" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="290" y="172" width="150" height="40" rx="6"/>
+    <path d="M167.9 67.2 L286.1 92.8" marker-end="url(#sustainability-signal-plane-arrow)"/>
+    <path d="M168 114.3 L286 111.7" marker-end="url(#sustainability-signal-plane-arrow)"/>
+    <path d="M167.9 161.4 L286.1 130.6" marker-end="url(#sustainability-signal-plane-arrow)"/>
+    <path d="M365 144 L365 168" marker-end="url(#sustainability-signal-plane-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="14" y="18" font-size="11" text-anchor="start">each serves /.well-known/sustainability-data</text>
+    <text x="89" y="46" font-size="12">system A</text>
+    <text x="89" y="62" font-size="12">publishes its data</text>
+    <text x="89" y="112" font-size="12">system B</text>
+    <text x="89" y="128" font-size="12">publishes its data</text>
+    <text x="89" y="178" font-size="12">system C</text>
+    <text x="89" y="194" font-size="12">publishes its data</text>
+    <text x="365" y="106" font-size="12">consuming agent</text>
+    <text x="365" y="122" font-size="12">reads peers, decides</text>
+    <text x="365" y="188" font-size="12">publishes its own</text>
+    <text x="365" y="204" font-size="12">at the same path</text>
+    <text x="230" y="238" font-size="11">every node is both reporter and sensor</text>
+  </g>
+</svg><figcaption>Publishing and reading the same format is what makes a loop possible.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Andrei N. Besleaga (2026). <a href="https://datatracker.ietf.org/doc/draft-besleaga-sustainability-wellknown/">The &#39;sustainability-data&#39; Well-Known URI</a>. <span class="source-url"><a href="https://datatracker.ietf.org/doc/draft-besleaga-sustainability-wellknown/">https://datatracker.ietf.org/doc/draft-besleaga-sustainability-wellknown/</a></span>. Checked 2026-09-29.</li><li id="source-2">Green Web Foundation (2026). <a href="https://carbontxt.org">carbon.txt</a>. <span class="source-url"><a href="https://carbontxt.org">https://carbontxt.org</a></span>. Checked 2026-09-29.</li><li id="source-3">Green Software Foundation (2025). <a href="https://github.com/Green-Software-Foundation/real-time-cloud">Real Time Energy and Carbon Standards for Cloud Providers</a>. <span class="source-url"><a href="https://github.com/Green-Software-Foundation/real-time-cloud">https://github.com/Green-Software-Foundation/real-time-cloud</a></span>. Checked 2026-09-29.</li><li id="source-4">Andrei N. Besleaga (2026). <a href="https://doi.org/10.5281/zenodo.22056634">The Cybernetic Sustainability Loop: Governed Agentic Systems on a Sustainability Data Plane — evaluation package</a>. <span class="source-url"><a href="https://doi.org/10.5281/zenodo.22056634">https://doi.org/10.5281/zenodo.22056634</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/sustainability-signal-plane.md">Markdown</a> · <a href="/pages/sustainability-signal-plane.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

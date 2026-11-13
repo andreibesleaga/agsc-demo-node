@@ -11,19 +11,19 @@ tags:
 clusters:
   - advanced
 date: 2026-08-06
-modified: 2026-11-10
+modified: 2026-11-12
 sources:
   - resource: https://www.anthropic.com/research/multi-agent-research-system
     title: "How we built our multi-agent research system"
     author: "Hadfield, J.; Zhang, B.; Lien, K.; et al."
     year: 2025
-    verified: 2026-11-10
+    verified: 2026-11-12
     grade: primary
   - resource: https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/
     title: "Accelerating scientific breakthroughs with an AI co-scientist"
     author: "Gottweis, J.; Natarajan, V."
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

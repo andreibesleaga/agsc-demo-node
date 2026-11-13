@@ -14,25 +14,25 @@ aliases:
 clusters:
   - security
 date: 2026-08-15
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/
     title: "OWASP Top 10 for Agentic Applications – The Benchmark for Agentic Security in the Age of Autonomous AI"
     author: "Sotiropoulos, J."
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://genai.owasp.org/llm-top-10/
     title: "OWASP Top 10 for LLM Applications 2025"
     author: "OWASP Gen AI Security Project"
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     title: "OWASP Top 10 for Agentic Applications for 2026"
     author: "OWASP Gen AI Security Project"
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

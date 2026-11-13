@@ -11,19 +11,19 @@ tags:
 clusters:
   - product
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-12
 sources:
   - resource: https://cloudsecurityalliance.org/blog/2026/01/28/levels-of-autonomy
     title: "Leveling Up Autonomy in Agentic AI"
     author: "Reavis, J."
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://arxiv.org/abs/2502.02649
     title: "Fully Autonomous AI Agents Should Not be Developed"
     author: "Mitchell, M.; Ghosh, A.; Luccioni, A. S.; et al."
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported

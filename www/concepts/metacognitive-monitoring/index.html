@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metacognitive Monitoring and Control</title>
+<meta name="description" content="A meta level watches how sure the agent is while it works and decides to continue, retry or abstain.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"A meta level watches how sure the agent is while it works and decides to continue, retry or abstain.","name":"Metacognitive Monitoring and Control","url":"https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Metacognitive Monitoring and Control</h1>
+<p class="summary"><strong>Summary</strong>A meta level watches how sure the agent is while it works and decides to continue, retry or abstain.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/cognitive-behavioral/">Cognitive &amp; Behavioral</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-c4b3daedf83859c3"></span>Intent</h2>
+<p>Add a level that watches how the work is going and decides to continue, retry or abstain.</p>
+<h2 id="context-forces"><span id="chunk-ee6a08b5c451b55a"></span>Context &amp; Forces</h2>
+<p>A model that never checks itself runs to the end, right or wrong. A check at the end wastes the work before it.</p>
+<h2 id="structure"><span id="chunk-de5699200c990e9f"></span>Structure</h2>
+<ol>
+<li>Flavell (1979) described cognitive monitoring through metacognitive knowledge, experiences, goals and actions.</li>
+<li>Nelson and Narens (1990) split an object level that does the task from a meta level that watches it. Monitoring flows up, control flows down.</li>
+<li>Monitor-Generate-Verify (Oh and Gobet, 2025) applies this to language-model reasoning, monitoring difficulty and confidence before generation.</li>
+<li>Kadavath et al. (2022) show that models can estimate whether their answer is true and whether they know it.</li>
+</ol>
+<h2 id="consequences-trade-offs"><span id="chunk-6234232287fd4ee0"></span>Consequences &amp; Trade-offs</h2>
+<p>&quot;I don't know&quot; becomes a valid output. The signal can mislead: the &quot;do I know&quot; estimate is poorly calibrated on new tasks, and MGV presents no empirical validation.</p>
+<h2 id="related-patterns"><span id="chunk-438b2bd516130eca"></span>Related Patterns</h2>
+<ul>
+<li>Goal Setting and Monitoring</li>
+<li>Weak-to-Strong Oversight</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="metacognitive-monitoring-title metacognitive-monitoring-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="metacognitive-monitoring-title">A task goes to an object level that generates; a dashed confidence signal rises to a highlighted meta level, which sends control back down to continue or retry, or stops with an abstention, while generated work passes a verify step before the answer.</title>
+  <desc id="metacognitive-monitoring-desc">dashed: monitoring up · solid: control down</desc>
+  <defs><marker id="metacognitive-monitoring-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="150" y="20" width="130" height="50" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="150" y="150" width="130" height="50" rx="6"/>
+    <rect x="14" y="155" width="90" height="40" rx="6"/>
+    <rect x="330" y="150" width="116" height="50" rx="6"/>
+    <rect x="330" y="20" width="116" height="50" rx="6"/>
+    <path d="M108 175 L146 175" marker-end="url(#metacognitive-monitoring-arrow)"/>
+    <path d="M284 175 L326 175" marker-end="url(#metacognitive-monitoring-arrow)"/>
+    <path d="M388 146 L388 74" marker-end="url(#metacognitive-monitoring-arrow)"/>
+    <path d="M284 45 L326 45" marker-end="url(#metacognitive-monitoring-arrow)"/>
+    <path d="M185 150 L185 74" marker-end="url(#metacognitive-monitoring-arrow)" stroke-dasharray="4 3"/>
+    <path d="M245 70 L245 146" marker-end="url(#metacognitive-monitoring-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="215" y="41" font-size="12">meta level</text>
+    <text x="215" y="57" font-size="12">monitor + control</text>
+    <text x="215" y="171" font-size="12">object level</text>
+    <text x="215" y="187" font-size="12">generates</text>
+    <text x="59" y="179" font-size="12">task</text>
+    <text x="388" y="179" font-size="12">verify</text>
+    <text x="388" y="41" font-size="12">answer</text>
+    <text x="388" y="57" font-size="12">or abstain</text>
+    <text x="178" y="114" font-size="10" text-anchor="end">confidence</text>
+    <text x="252" y="114" font-size="10" text-anchor="start">continue / retry</text>
+    <text x="305" y="38" font-size="10">stop</text>
+    <text x="230" y="248" font-size="11">dashed: monitoring up · solid: control down</text>
+  </g>
+</svg><figcaption>Monitoring is a separate reading of confidence; control is what that reading changes — a model that only generates has neither.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Flavell, J. H. (1979). <a href="https://doi.org/10.1037/0003-066X.34.10.906">Metacognition and Cognitive Monitoring: A New Area of Cognitive-Developmental Inquiry</a>. <span class="source-url"><a href="https://doi.org/10.1037/0003-066X.34.10.906">https://doi.org/10.1037/0003-066X.34.10.906</a></span>. Checked 2026-09-29.</li><li id="source-2">Nelson, T. O.; Narens, L. (1990). <a href="https://doi.org/10.1016/S0079-7421(08)60053-5">Metamemory: A Theoretical Framework and New Findings</a>. <span class="source-url"><a href="https://doi.org/10.1016/S0079-7421(08)60053-5">https://doi.org/10.1016/S0079-7421(08)60053-5</a></span>. Checked 2026-09-29.</li><li id="source-3">Oh, N.; Gobet, F. (2025). <a href="https://arxiv.org/abs/2511.04341">Monitor-Generate-Verify (MGV): Formalising Metacognitive Theory for Language Model Reasoning</a>. <span class="source-url"><a href="https://arxiv.org/abs/2511.04341">https://arxiv.org/abs/2511.04341</a></span>. Checked 2026-09-29.</li><li id="source-4">Kadavath, S.; Conerly, T.; Askell, A.; et al. (2022). <a href="https://arxiv.org/abs/2207.05221">Language Models (Mostly) Know What They Know</a>. <span class="source-url"><a href="https://arxiv.org/abs/2207.05221">https://arxiv.org/abs/2207.05221</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/metacognitive-monitoring.md">Markdown</a> · <a href="/pages/metacognitive-monitoring.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

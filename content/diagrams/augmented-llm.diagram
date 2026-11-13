@@ -1,0 +1,13 @@
+label "Augmented LLM diagram"
+box in 16 104 70 40 "input"
+box llm 150 92 120 64 "LLM|uses them" acc
+box out 340 104 100 40 "output"
+box ret 30 190 110 36 "retrieval"
+box tools 175 190 110 36 "tools"
+box mem 320 190 110 36 "memory"
+arrow in llm
+arrow llm out
+arrow llm ret both
+arrow llm tools both
+arrow llm mem both
+note "retrieval, tools and memory around one model: the building block of agents"

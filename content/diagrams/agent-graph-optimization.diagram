@@ -1,0 +1,10 @@
+label "Agent-graph optimization diagram"
+box space 10 96 116 60 "workflow space|(nodes, prompts,|edges)"
+box opt 160 96 110 60 "optimizer|proposes graph" acc
+box eval 320 40 120 50 "evaluator"
+box best 320 150 120 50 "best graph|found"
+arrow space opt
+arrow opt eval
+arrow eval opt dashed via=215,65
+arrow opt best
+note "prompts and edges can both be searched once an evaluator exists"

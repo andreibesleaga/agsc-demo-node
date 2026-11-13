@@ -1,0 +1,9 @@
+label "Prompt-caching layout diagram"
+box prefix 22 30 216 54 "stable prefix|tool defs · system rules · documents"
+line 22 100 238 100 acc
+text 130 118 "cache breakpoint" size=11
+box tail 22 132 216 44 "volatile tail|this turn's input"
+box model 306 74 128 48 "model"
+arrow prefix model
+arrow tail model
+note "a change above the breakpoint invalidates the cache from that point on"

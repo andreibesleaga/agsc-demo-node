@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saga for Agent Workflows</title>
+<meta name="description" content="Give each important agent step an undo action, so a failed multi-step run can be rolled back instead of left half done.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/saga-for-agents/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Give each important agent step an undo action, so a failed multi-step run can be rolled back instead of left half done.","name":"Saga for Agent Workflows","url":"https://patterns.agenticsystemcore.com/concepts/saga-for-agents/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Saga for Agent Workflows</h1>
+<p class="summary"><strong>Summary</strong>Give each important agent step an undo action, so a failed multi-step run can be rolled back instead of left half done.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/classical/">Classical Foundations</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/saga-for-agents/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-b8d8ec072339396b"></span>Intent</h2>
+<p>Pair each important step of an agent workflow with an undo action, so a failed run can be rolled back.</p>
+<h2 id="context-forces"><span id="chunk-9d26d9a10e0be631"></span>Context &amp; Forces</h2>
+<p>Workflows change real systems step by step: book, charge, confirm. Across services, Richardson notes, two-phase commit is not an option, so a late failure leaves early steps done.</p>
+<h2 id="structure"><span id="chunk-cd7f7cf31ff55086"></span>Structure</h2>
+<p>Garcia-Molina and Salem (1987) define the saga: either all its transactions complete, or compensating transactions amend the partial execution.</p>
+<ol>
+<li>Give each step a compensation: refund, cancel, correct.</li>
+<li>Record which steps finished.</li>
+<li>On failure, run compensations in reverse order. Temporal's guidance is last in, first out (Fortuna, 2023).</li>
+</ol>
+<h2 id="consequences-trade-offs"><span id="chunk-6f64510ae95226fb"></span>Consequences &amp; Trade-offs</h2>
+<p>A partial failure no longer leaves a lasting mess. Compensation code runs rarely, so test it on purpose. Steps that cannot be undone belong behind an approval gate.</p>
+<h2 id="related-patterns"><span id="chunk-90f4ec7f5ea76a45"></span>Related Patterns</h2>
+<ul>
+<li>Exception Handling and Recovery</li>
+<li>Plan Approval Gate</li>
+</ul>
+
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="saga-for-agents-title saga-for-agents-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="saga-for-agents-title">Three forward steps — book flight, charge card, confirm — where the third fails; a highlighted refund-charge compensation and then a cancel-booking compensation run backwards from the failure.</title>
+  <desc id="saga-for-agents-desc">compensations run backwards from the failure; each step must undo itself</desc>
+  <defs><marker id="saga-for-agents-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="24" y="50" width="110" height="40" rx="6"/>
+    <rect x="176" y="50" width="110" height="40" rx="6"/>
+    <rect x="328" y="50" width="110" height="40" rx="6" stroke-dasharray="5 3"/>
+    <path d="M138 70 L172 70" marker-end="url(#saga-for-agents-arrow)"/>
+    <path d="M290 70 L324 70" marker-end="url(#saga-for-agents-arrow)"/>
+    <rect x="176" y="160" width="110" height="40" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="24" y="160" width="110" height="40" rx="6"/>
+    <path d="M383 90 L383 180 L286 180" marker-end="url(#saga-for-agents-arrow)" stroke-dasharray="4 3"/>
+    <path d="M172 180 L138 180" marker-end="url(#saga-for-agents-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="79" y="74" font-size="12">book flight</text>
+    <text x="231" y="74" font-size="12">charge card</text>
+    <text x="383" y="66" font-size="12">confirm</text>
+    <text x="383" y="82" font-size="12">fails</text>
+    <text x="231" y="184" font-size="12">refund charge</text>
+    <text x="79" y="184" font-size="12">cancel booking</text>
+    <text x="24" y="38" font-size="10" text-anchor="start">forward steps</text>
+    <text x="24" y="148" font-size="10" text-anchor="start">compensations, in reverse</text>
+    <text x="390" y="136" font-size="10" text-anchor="start">on failure</text>
+    <text x="230" y="248" font-size="11">compensations run backwards from the failure; each step must undo itself</text>
+  </g>
+</svg><figcaption>The bottom row only runs on a bad day, which makes it the least-exercised code in the whole workflow.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Richardson, C. (2026). <a href="https://microservices.io/patterns/data/saga.html">Pattern: Saga</a>. <span class="source-url"><a href="https://microservices.io/patterns/data/saga.html">https://microservices.io/patterns/data/saga.html</a></span>. Checked 2026-09-29.</li><li id="source-2">Garcia-Molina, H.; Salem, K. (1987). <a href="https://doi.org/10.1145/38713.38742">Sagas</a>. <span class="source-url"><a href="https://doi.org/10.1145/38713.38742">https://doi.org/10.1145/38713.38742</a></span>. Checked 2026-09-29.</li><li id="source-3">Fortuna, E. (2023). <a href="https://temporal.io/blog/saga-pattern-made-easy">Saga design pattern explained: Benefits, use cases, and implementation</a>. <span class="source-url"><a href="https://temporal.io/blog/saga-pattern-made-easy">https://temporal.io/blog/saga-pattern-made-easy</a></span>. Checked 2026-09-29.</li></ol>
+<p class="views">Machine views: <a href="/pages/saga-for-agents.md">Markdown</a> · <a href="/pages/saga-for-agents.jsonld">JSON-LD</a></p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

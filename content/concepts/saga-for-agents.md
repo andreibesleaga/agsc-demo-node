@@ -34,6 +34,8 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: saga-for-agents
+related:
+  - plan-approval-gate
 kind: pattern
 evidence: explicit
 maturity: established

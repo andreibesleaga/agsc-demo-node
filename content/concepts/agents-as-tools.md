@@ -39,6 +39,9 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: agents-as-tools
+related:
+  - deep-research-loop
+  - parallelization
 kind: pattern
 evidence: explicit
 maturity: established

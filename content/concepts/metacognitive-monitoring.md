@@ -46,6 +46,8 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: metacognitive-monitoring
+related:
+  - weak-to-strong-oversight
 kind: pattern
 evidence: explicit
 maturity: emerging

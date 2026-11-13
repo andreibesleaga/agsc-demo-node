@@ -8,6 +8,21 @@
     "license_schema": "CC0-1.0",
     "operator": "human:andreibesleaga"
   },
+  "domain": {
+    "contexts": [
+      {
+        "cluster": "antipatterns",
+        "namespace": "https://patterns.agenticsystemcore.com/ns/antipatterns#"
+      },
+      {
+        "cluster": "operations-reliability",
+        "namespace": "https://patterns.agenticsystemcore.com/ns/operations-reliability#"
+      }
+    ],
+    "questions": "domain/questions.json",
+    "shapes": "domain/shapes.ttl",
+    "vocabulary": "domain/vocabulary.ttl"
+  },
   "peers": [
     "https://agenticsystemcore.com/.well-known/knowledge-linkset"
   ],
@@ -36,7 +51,7 @@
     ],
     "title": "AgenticSystemCore Demo Node"
   },
-  "spec_version": "1.0.0",
+  "spec_version": "1.1.0",
   "tags": {
     "allowed": [
       "accountability",

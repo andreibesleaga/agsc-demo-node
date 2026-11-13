@@ -38,6 +38,9 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: owasp-agentic-top-10
+related:
+  - immutable-audit-log
+  - unbounded-agent-loops
 kind: taxonomy
 evidence: explicit
 maturity: established

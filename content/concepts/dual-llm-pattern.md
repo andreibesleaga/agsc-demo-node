@@ -33,6 +33,8 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: dual-llm-pattern
+related:
+  - owasp-agentic-top-10
 kind: pattern
 evidence: explicit
 maturity: emerging

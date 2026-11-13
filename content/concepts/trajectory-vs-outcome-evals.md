@@ -15,13 +15,13 @@ aliases:
 clusters:
   - evaluation-testing
 date: 2026-08-15
-modified: 2026-09-29
+modified: 2026-11-10
 sources:
-  - resource: https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents
+  - resource: https://www.anthropic.com/research/demystifying-evals-for-ai-agents
     title: "Demystifying evals for AI agents"
     author: "Grace, M.; Hadfield, J.; Olivares, R.; et al."
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-10
     grade: primary
   - resource: https://adk.dev/evaluate/
     title: "Why evaluate agents"

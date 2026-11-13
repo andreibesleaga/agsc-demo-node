@@ -1,0 +1,15 @@
+[
+  {
+    "expected": {
+      "rows": [
+        [
+          "<https://patterns.agenticsystemcore.com/concepts/unbounded-agent-loops/>",
+          "<https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/>"
+        ]
+      ]
+    },
+    "id": "safeguards-of-each-failure-mode",
+    "query": "SELECT ?failure ?safeguard WHERE { ?failure a <https://patterns.agenticsystemcore.com/ns/antipatterns#FailureMode> . ?failure <https://patterns.agenticsystemcore.com/ns/antipatterns#guardedBy> ?safeguard . } ORDER BY ?failure ?safeguard",
+    "question": "Which safeguard guards against each failure mode?"
+  }
+]

@@ -1,5 +1,5 @@
 ---
-spec_version: 1.0.0
+spec_version: 1.1.0
 okf_version: 0.2
 title: AgenticSystemCore Demo Node
 description: A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.
@@ -21,7 +21,9 @@ This site is software at work. It is a live demonstration node of the AgenticSys
 - **A typed graph.** The items and the typed links between them, in the format's [published vocabulary](https://agenticsystemcore.com/ns/): [JSON-LD](/graph.jsonld), [Turtle](/graph.ttl) and [N-Quads](/graph.nq).
 - **Text for language models.** [`llms.txt`](/llms.txt), [`llms-full.txt`](/llms-full.txt) and the chunk export [`chunks.jsonl`](/chunks.jsonl), every chunk with its source address.
 - **Search.** The [search page](/search/) runs in your browser over a static index; nothing leaves this site.
-- **Tools for assistants in the browser.** Every item page registers seven page tools that an assistant in the browser can call to search, read, follow links, compose and cite ([how they work](https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/USING-WITH-ASSISTANTS.md)).
+- **Tools for assistants in the browser.** Every item page registers ten page tools that an assistant in the browser can call to search, read, follow links, compose and cite ([how they work](https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/USING-WITH-ASSISTANTS.md)).
+- **Queries over the graph.** The [query page](/query/) runs a SPARQL query you write over this node's graph in your browser, with ten example questions to start from; nothing leaves this site.
+- **A vocabulary of its own.** Beside the format's own types and links, this node defines four terms in [`domain/vocabulary.ttl`](https://github.com/andreibesleaga/agsc-demo-node/blob/main/domain/vocabulary.ttl): two kinds of item, a *failure mode* and a *safeguard*, and the link *guards against* with its reverse, *guarded by*. [Exception Handling and Recovery](/concepts/exception-handling-and-recovery/) is a safeguard that guards against [Unbounded Loops](/concepts/unbounded-agent-loops/), a failure mode; the graph carries both types and the link both ways. Each kind of item belongs to the context of its own cluster, and `agsc verify` and `agsc ci` test one rule (every safeguard guards against at least one failure mode) and one question (which safeguard guards against each failure mode).
 - **Machine views.** Beside every page sit a Markdown and a JSON-LD copy — for example the [Markdown](/pages/blackboard.md) and [JSON-LD](/pages/blackboard.jsonld) of [Blackboard](/concepts/blackboard/).
 - **Provenance and checked references.** Each item says where it came from and who answers for it, and lists the public sources it rests on, each checked against the source.
 - **A change ledger.** Every published change is a line of [`ledger.jsonl`](/ledger.jsonl); the [changelog](/changelog/) lists the tagged versions.
@@ -37,4 +39,4 @@ The engine is the npm package `agentic-system-core`. A Python package of the sam
 
 ## What comes next
 
-Planned next: a stated meaning for every typed link, so that the links become a semantic layer software can check, and a graph view of the links — see the [roadmap](https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/ROADMAP.md).
+Each page now shows its typed links in both directions, with what each relation means, and the [clusters page](/clusters/) shows how the clusters connect. What comes after that is in the [roadmap](https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/ROADMAP.md).

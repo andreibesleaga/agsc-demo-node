@@ -35,6 +35,7 @@ prov:
   operator: human:andreibesleaga
 id: weak-to-strong-oversight
 related:
+  - plan-approval-gate
   - specification-gaming
 kind: pattern
 evidence: explicit

@@ -16,13 +16,13 @@ aliases:
 clusters:
   - antipatterns
 date: 2026-08-16
-modified: 2026-09-29
+modified: 2026-11-10
 sources:
-  - resource: https://www.anthropic.com/engineering/building-effective-agents
+  - resource: https://www.anthropic.com/research/building-effective-agents
     title: "Building effective agents"
     author: "Schluntz, E.; Zhang, B."
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-10
     grade: primary
   - resource: https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/
     title: "LLM10:2025 Unbounded Consumption"
@@ -43,6 +43,7 @@ id: unbounded-agent-loops
 kind: pattern
 evidence: explicit
 maturity: emerging
+domain_type: FailureMode
 diagram:
   file: unbounded-agent-loops.svg
   alt: A think, act, observe cycle loops back on itself with no step cap, no budget and no done test; beside it, a highlighted exit gate that checks those three leads to stop or escalate, joined to the loop by a dashed arrow marked missing.

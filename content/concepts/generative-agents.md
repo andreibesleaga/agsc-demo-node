@@ -33,6 +33,9 @@ prov:
   origin: imported
   operator: human:andreibesleaga
 id: generative-agents
+related:
+  - metacognitive-monitoring
+  - skill-library
 kind: pattern
 evidence: explicit
 maturity: established

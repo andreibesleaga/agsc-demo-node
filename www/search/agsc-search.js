@@ -5,7 +5,7 @@
 // ranking below are the SOURCE TEXT of the functions the writer ran to build the
 // index, so the page cannot search differently from how the index was built.
 // No network beyond this origin, no key, no server, no cookie, no storage.
-// spec_version: 1.0.0
+// spec_version: 1.1.0
 (function () {
 function tokenize(text, options) {
   void options;
@@ -91,7 +91,7 @@ function pageIndexOf(map) {
   }
   return index;
 }
-  var PLURALS = {"advanced":"clusters","antipatterns":"clusters","classical":"clusters","cognitive-behavioral":"clusters","data-retrieval":"clusters","ethics":"clusters","evaluation-testing":"clusters","foundational":"clusters","future":"clusters","governance":"clusters","memory-cognition":"clusters","operations-reliability":"clusters","product":"clusters","protocols":"clusters","reasoning-decision":"clusters","reference-architectures":"clusters","sdlc":"clusters","security":"clusters","specs":"clusters","topologies":"clusters"};
+  var PLURALS = {"advanced":"clusters","antipatterns":"clusters","check-a-card-against-its-sources":"procedures","classical":"clusters","cognitive-behavioral":"clusters","data-retrieval":"clusters","ethics":"clusters","evaluation-testing":"clusters","foundational":"clusters","future":"clusters","governance":"clusters","memory-cognition":"clusters","operations-reliability":"clusters","product":"clusters","protocols":"clusters","publish-gate":"gates","reasoning-decision":"clusters","reference-architectures":"clusters","sdlc":"clusters","security":"clusters","specs":"clusters","topologies":"clusters","upkeep":"clusters"};
   var SHOWN = 40;
   var API = { tokenize: tokenize, query: query, pageShardRoutes: pageShardRoutes, pageIndexOf: pageIndexOf, PLURALS: PLURALS };
   globalThis.AGSC_SEARCH = API;

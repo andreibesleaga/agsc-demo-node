@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memory and Context Poisoning Defense — AgenticSystemCore Graph</title>
+<meta name="description" content="Treat writes to agent memory and retrieval stores as untrusted: validate, attribute, segment and expire entries, following OWASP ASI06.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/memory-context-poisoning/">
+<link rel="alternate" href="/pages/memory-context-poisoning.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/memory-context-poisoning/">
+<meta property="og:title" content="Memory and Context Poisoning Defense">
+<meta property="og:description" content="Treat writes to agent memory and retrieval stores as untrusted: validate, attribute, segment and expire entries, following OWASP ASI06.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Treat writes to agent memory and retrieval stores as untrusted: validate, attribute, segment and expire entries, following OWASP ASI06.","name":"Memory and Context Poisoning Defense","url":"https://patterns.agenticsystemcore.com/concepts/memory-context-poisoning/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Graph</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Memory and Context Poisoning Defense</h1>
+<p class="summary"><strong>Summary</strong>Treat writes to agent memory and retrieval stores as untrusted: validate, attribute, segment and expire entries, following OWASP ASI06.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/security/">Security</a></dd>
+<dt>Tags</dt><dd><a href="/tags/prompt-injection/">prompt-injection</a>, <a href="/tags/retrieval/">retrieval</a>, <a href="/tags/accountability/">accountability</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/memory-context-poisoning/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-c0a935b3f86fb177"></span>Intent</h2>
+<p>Treat every write to agent memory or a retrieval store as untrusted.</p>
+<h2 id="context-forces"><span id="chunk-a7c22359e7e4318b"></span>Context &amp; Forces</h2>
+<p>OWASP's ASI06, Memory &amp; Context Poisoning, describes adversaries who corrupt or seed stored context.</p>
+<h2 id="structure"><span id="chunk-8df35eed9d3cf4c6"></span>Structure</h2>
+<p>OWASP's mitigations include scanning new writes before commit, segmenting memory, requiring source attribution, and keeping snapshots for rollback.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-58a9bc7f1f97c7c7"></span>Consequences &amp; Trade-offs</h2>
+<p>OWASP lists these mitigations without measuring them.</p>
+<h2 id="related-patterns"><span id="chunk-1cc3550500b8b901"></span>Related Patterns</h2>
+<ul>
+<li>Tamper-Evident Agent Audit Log</li>
+<li>Skill-Library Compounding</li>
+<li>OWASP Top 10 for Agentic Applications</li>
+</ul>
+
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 100" role="img" aria-labelledby="links_memory-context-poisoning-title links_memory-context-poisoning-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_memory-context-poisoning-title">Relations of Memory and Context Poisoning Defense</title>
+  <desc id="links_memory-context-poisoning-desc">Relations of Memory and Context Poisoning Defense. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_memory-context-poisoning-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="32" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="10" width="190" height="36" rx="6"/>
+    <path d="M440 36.5 L494 28 L510 28" marker-end="url(#links_memory-context-poisoning-arrow)" class="agsc-rel-related"/>
+    <rect x="510" y="54" width="190" height="36" rx="6"/>
+    <path d="M440 63.5 L494 72 L510 72" marker-end="url(#links_memory-context-poisoning-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="10" width="190" height="36" rx="6"/>
+    <path d="M200 28 L216 28 L270 36.5" marker-end="url(#links_memory-context-poisoning-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="54" width="190" height="36" rx="6"/>
+    <path d="M200 72 L216 72 L270 63.5" marker-end="url(#links_memory-context-poisoning-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="54" font-size="11">Memory and Context Pois…</text>
+    <text x="605" y="24" font-size="12">related</text>
+    <text x="605" y="40" font-size="12">OWASP Top 10 for Agentic Ap…</text>
+    <text x="605" y="68" font-size="12">related</text>
+    <text x="605" y="84" font-size="12">Skill-Library Compounding</text>
+    <text x="105" y="24" font-size="12">related</text>
+    <text x="105" y="40" font-size="12">Dual-LLM Pattern</text>
+    <text x="105" y="68" font-size="12">related</text>
+    <text x="105" y="84" font-size="12">Tamper-Evident Agent Audit L…</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/owasp-agentic-top-10/">OWASP Top 10 for Agentic Applications</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/skill-library/">Skill-Library Compounding</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/dual-llm-pattern/">Dual-LLM Pattern</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/immutable-audit-log/">Tamper-Evident Agent Audit Log</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="memory-context-poisoning-title memory-context-poisoning-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="memory-context-poisoning-title">Untrusted sources and the agent's own outputs flow to a highlighted write gate that scans entries and requires source attribution before they reach a segmented memory store, which feeds retrieval; a note says unverified entries expire.</title>
+  <desc id="memory-context-poisoning-desc">treat every memory write as untrusted</desc>
+  <defs><marker id="memory-context-poisoning-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="16" y="40" width="100" height="44" rx="6"/>
+    <rect x="16" y="130" width="100" height="44" rx="6"/>
+    <rect x="170" y="78" width="110" height="60" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="330" y="40" width="110" height="44" rx="6"/>
+    <rect x="330" y="130" width="110" height="44" rx="6"/>
+    <path d="M119.8 77.6 L166.2 91" marker-end="url(#memory-context-poisoning-arrow)"/>
+    <path d="M119.9 137.1 L166.1 124.3" marker-end="url(#memory-context-poisoning-arrow)" stroke-dasharray="4 3"/>
+    <path d="M283.8 91.1 L326.2 78.9" marker-end="url(#memory-context-poisoning-arrow)"/>
+    <path d="M385 88 L385 126" marker-end="url(#memory-context-poisoning-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="66" y="58" font-size="12">untrusted</text>
+    <text x="66" y="74" font-size="12">sources</text>
+    <text x="66" y="148" font-size="12">agent's own</text>
+    <text x="66" y="164" font-size="12">outputs</text>
+    <text x="225" y="104" font-size="12">write gate</text>
+    <text x="225" y="120" font-size="12">scan, attribute</text>
+    <text x="385" y="58" font-size="12">memory store</text>
+    <text x="385" y="74" font-size="12">segmented</text>
+    <text x="385" y="156" font-size="12">retrieval</text>
+    <text x="385" y="200" font-size="11">unverified entries expire</text>
+    <text x="230" y="248" font-size="11">treat every memory write as untrusted</text>
+  </g>
+</svg><figcaption>Every write to agent memory is treated as untrusted and checked before it is committed.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">OWASP Gen AI Security Project (2025). <a href="https://genai.owasp.org/download/52117/?tmstv=1765059207">OWASP Top 10 for Agentic Applications for 2026</a>. <span class="source-url"><a href="https://genai.owasp.org/download/52117/?tmstv=1765059207">https://genai.owasp.org/download/52117/?tmstv=1765059207</a></span>. Checked 2026-11-12.</li><li id="source-2">Chen, Z.; Xiang, Z.; Xiao, C.; et al. (2024). <a href="https://arxiv.org/abs/2407.12784">AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases</a>. <span class="source-url"><a href="https://arxiv.org/abs/2407.12784">https://arxiv.org/abs/2407.12784</a></span>. Checked 2026-11-12.</li><li id="source-3">Rehberger, J. (2024). <a href="https://embracethered.com/blog/posts/2024/chatgpt-macos-app-persistent-data-exfiltration/">Spyware Injection Into Your ChatGPT&#39;s Long-Term Memory (SpAIware)</a>. <span class="source-url"><a href="https://embracethered.com/blog/posts/2024/chatgpt-macos-app-persistent-data-exfiltration/">https://embracethered.com/blog/posts/2024/chatgpt-macos-app-persistent-data-exfiltration/</a></span>. Checked 2026-11-12.</li></ol>
+<p class="views">Machine views: <a href="/pages/memory-context-poisoning.md">Markdown</a> · <a href="/pages/memory-context-poisoning.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/memory-context-poisoning.md" rel="noopener" aria-label="Propose an edit to Memory and Context Poisoning Defense">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

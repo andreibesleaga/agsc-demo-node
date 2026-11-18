@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canary and Shadow Deployment for Prompts and Models — AgenticSystemCore Graph</title>
+<meta name="description" content="Release a changed prompt or model to a small share of live traffic, or to a copy of it, and compare it with the current version before promoting.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/canary-and-shadow-prompts/">
+<link rel="alternate" href="/pages/canary-and-shadow-prompts.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/canary-and-shadow-prompts/">
+<meta property="og:title" content="Canary and Shadow Deployment for Prompts and Models">
+<meta property="og:description" content="Release a changed prompt or model to a small share of live traffic, or to a copy of it, and compare it with the current version before promoting.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Release a changed prompt or model to a small share of live traffic, or to a copy of it, and compare it with the current version before promoting.","name":"Canary and Shadow Deployment for Prompts and Models","url":"https://patterns.agenticsystemcore.com/concepts/canary-and-shadow-prompts/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Graph</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Canary and Shadow Deployment for Prompts and Models</h1>
+<p class="summary"><strong>Summary</strong>Release a changed prompt or model to a small share of live traffic, or to a copy of it, and compare it with the current version before promoting.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/operations-reliability/">Operations &amp; Reliability</a></dd>
+<dt>Tags</dt><dd><a href="/tags/release/">release</a>, <a href="/tags/evaluation/">evaluation</a>, <a href="/tags/metrics/">metrics</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/canary-and-shadow-prompts/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-e7003a927fbe1e81"></span>Intent</h2>
+<p>Compare a changed prompt or model with the current one on real traffic before promoting it.</p>
+<h2 id="context-forces"><span id="chunk-a91b257b72c81b88"></span>Context &amp; Forces</h2>
+<p>Google's SRE Workbook defines canarying as a partial, time-limited deployment of a change and its evaluation.</p>
+<h2 id="structure"><span id="chunk-7d9a488333f207a3"></span>Structure</h2>
+<p>Langfuse's prompt CI/CD guide labels the current prompt production and the candidate canary.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-26de00a76da321aa"></span>Consequences &amp; Trade-offs</h2>
+<p>A canary exposes some live traffic; shadow testing does not affect users.</p>
+<h2 id="related-patterns"><span id="chunk-aaa58258101d3d13"></span>Related Patterns</h2>
+<ul>
+<li>Shadow-Mode Rollout</li>
+<li>Golden Trajectories and Snapshot Tests</li>
+</ul>
+
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 100" role="img" aria-labelledby="links_canary-and-shadow-prompts-title links_canary-and-shadow-prompts-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_canary-and-shadow-prompts-title">Relations of Canary and Shadow Deployment for Prompts and Models</title>
+  <desc id="links_canary-and-shadow-prompts-desc">Relations of Canary and Shadow Deployment for Prompts and Models. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_canary-and-shadow-prompts-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="32" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="32" width="190" height="36" rx="6"/>
+    <path d="M440 50 L494 50 L510 50" marker-end="url(#links_canary-and-shadow-prompts-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="10" width="190" height="36" rx="6"/>
+    <path d="M200 28 L216 28 L270 36.5" marker-end="url(#links_canary-and-shadow-prompts-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="54" width="190" height="36" rx="6"/>
+    <path d="M200 72 L216 72 L270 63.5" marker-end="url(#links_canary-and-shadow-prompts-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="54" font-size="11">Canary and Shadow Deplo…</text>
+    <text x="605" y="46" font-size="12">related</text>
+    <text x="605" y="62" font-size="12">Golden Trajectories and Snap…</text>
+    <text x="105" y="24" font-size="12">related</text>
+    <text x="105" y="40" font-size="12">Evolutionary Prompt Search</text>
+    <text x="105" y="68" font-size="12">related</text>
+    <text x="105" y="84" font-size="12">Shadow-Mode Rollout</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/golden-trajectory-snapshots/">Golden Trajectories and Snapshot Tests</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/evolutionary-prompt-search/">Evolutionary Prompt Search</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/shadow-mode-rollout/">Shadow-Mode Rollout</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="canary-and-shadow-prompts-title canary-and-shadow-prompts-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="canary-and-shadow-prompts-title">Live traffic splits three ways: to the current version, to a highlighted canary version that serves users, and, as a copy, to a shadow version. Current and canary outputs reach users; shadow and canary outputs go to a compare-and-log box.</title>
+  <desc id="canary-and-shadow-prompts-desc">dashed: copies and comparisons; shadow output is not served</desc>
+  <defs><marker id="canary-and-shadow-prompts-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="16" y="104" width="80" height="44" rx="6"/>
+    <rect x="170" y="30" width="120" height="44" rx="6"/>
+    <rect x="170" y="104" width="120" height="44" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="170" y="178" width="120" height="44" rx="6"/>
+    <rect x="350" y="60" width="90" height="44" rx="6"/>
+    <rect x="350" y="160" width="90" height="50" rx="6"/>
+    <path d="M99.7 107.4 L174.6 75.6" marker-end="url(#canary-and-shadow-prompts-arrow)"/>
+    <path d="M100 126 L166 126" marker-end="url(#canary-and-shadow-prompts-arrow)"/>
+    <path d="M99.7 144.6 L174.6 176.4" marker-end="url(#canary-and-shadow-prompts-arrow)" stroke-dasharray="4 3"/>
+    <path d="M293.9 63.6 L346.1 73.1" marker-end="url(#canary-and-shadow-prompts-arrow)"/>
+    <path d="M293.9 109 L346.1 95" marker-end="url(#canary-and-shadow-prompts-arrow)"/>
+    <path d="M294 194.2 L346 189.5" marker-end="url(#canary-and-shadow-prompts-arrow)"/>
+    <path d="M293.8 148.8 L346.2 167.6" marker-end="url(#canary-and-shadow-prompts-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="56" y="122" font-size="12">live</text>
+    <text x="56" y="138" font-size="12">traffic</text>
+    <text x="230" y="56" font-size="12">current version</text>
+    <text x="230" y="122" font-size="12">canary</text>
+    <text x="230" y="138" font-size="12">small slice</text>
+    <text x="230" y="196" font-size="12">shadow</text>
+    <text x="230" y="212" font-size="12">copy only</text>
+    <text x="395" y="86" font-size="12">users</text>
+    <text x="395" y="181" font-size="12">compare</text>
+    <text x="395" y="197" font-size="12">+ log</text>
+    <text x="230" y="248" font-size="11">dashed: copies and comparisons; shadow output is not served</text>
+  </g>
+</svg><figcaption>A canary exposes part of live traffic to the change; shadow testing leaves users undisturbed.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Warner, A.; Davidovič, Š.; Hidalgo, A.; et al. (2018). <a href="https://sre.google/workbook/canarying-releases/">Canarying Releases</a>. <span class="source-url"><a href="https://sre.google/workbook/canarying-releases/">https://sre.google/workbook/canarying-releases/</a></span>. Checked 2026-11-12.</li><li id="source-2">Langfuse (2026). <a href="https://langfuse.com/resources/engineering/prompt-cicd">Prompt CI/CD: version, gate, and roll out prompts like code</a>. <span class="source-url"><a href="https://langfuse.com/resources/engineering/prompt-cicd">https://langfuse.com/resources/engineering/prompt-cicd</a></span>. Checked 2026-11-12.</li><li id="source-3">Statsig (2025). <a href="https://www.statsig.com/perspectives/shadow-testing-ai-model-evaluation">Shadow Testing for AI: How to Evaluate Models Without Affecting Users</a>. <span class="source-url"><a href="https://www.statsig.com/perspectives/shadow-testing-ai-model-evaluation">https://www.statsig.com/perspectives/shadow-testing-ai-model-evaluation</a></span>. Checked 2026-11-12.</li></ol>
+<p class="views">Machine views: <a href="/pages/canary-and-shadow-prompts.md">Markdown</a> · <a href="/pages/canary-and-shadow-prompts.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/canary-and-shadow-prompts.md" rel="noopener" aria-label="Propose an edit to Canary and Shadow Deployment for Prompts and Models">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

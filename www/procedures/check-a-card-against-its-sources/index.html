@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a card against its sources — AgenticSystemCore Graph</title>
+<meta name="description" content="Compare one card with the public sources it cites and propose the result.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/procedures/check-a-card-against-its-sources/">
+<link rel="alternate" href="/pages/check-a-card-against-its-sources.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/procedures/check-a-card-against-its-sources/">
+<meta property="og:title" content="Check a card against its sources">
+<meta property="og:description" content="Compare one card with the public sources it cites and propose the result.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"Compare one card with the public sources it cites and propose the result.","headline":"Check a card against its sources","url":"https://patterns.agenticsystemcore.com/procedures/check-a-card-against-its-sources/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Graph</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Check a card against its sources</h1>
+<p class="summary"><strong>Summary</strong>Compare one card with the public sources it cites and propose the result.</p>
+<dl class="meta">
+<dt>Type</dt><dd>procedure</dd>
+<dt>Cluster</dt><dd><a href="/clusters/upkeep/">Upkeep</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/procedures/check-a-card-against-its-sources/</code></dd>
+<dt>Provenance</dt><dd>Written with AI assistance and reviewed by the operator (origin <code>ai-assisted</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="when"><span id="chunk-1d89e040deabb1be"></span>When</h2>
+<p>A card's sources were last checked more than six months ago.</p>
+<h2 id="steps"><span id="chunk-893661b6bbb5e6c9"></span>Steps</h2>
+<ol>
+<li>Open the card and read the <code>sources</code> in its header.</li>
+<li>Open each source address.</li>
+<li>Compare each sentence of the card with what the source says.</li>
+<li>Propose the new <code>verified</code> date when they agree, or a corrected sentence when they do not.</li>
+</ol>
+<h2 id="checks"><span id="chunk-8d84cfc4a4007631"></span>Checks</h2>
+<p><code>agsc lint</code> passes on the proposal, and the proposal changes one card.</p>
+
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 56" role="img" aria-labelledby="links_check-a-card-against-its-sources-title links_check-a-card-against-its-sources-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_check-a-card-against-its-sources-title">Relations of Check a card against its sources</title>
+  <desc id="links_check-a-card-against-its-sources-desc">Relations of Check a card against its sources. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_check-a-card-against-its-sources-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="10" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="10" width="190" height="36" rx="6"/>
+    <path d="M440 28 L494 28 L510 28" marker-end="url(#links_check-a-card-against-its-sources-arrow)" class="agsc-rel-verifies"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="32" font-size="11">Check a card against its s…</text>
+    <text x="605" y="24" font-size="12">verifies</text>
+    <text x="605" y="40" font-size="12">Card format</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>verifies</td><td>outgoing</td><td><a href="/concepts/card-format/">Card format</a></td><td>This item checks that the target holds.</td></tr>
+</tbody>
+</table></div>
+<p class="views">Machine views: <a href="/pages/check-a-card-against-its-sources.md">Markdown</a> · <a href="/pages/check-a-card-against-its-sources.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/procedures/check-a-card-against-its-sources.md" rel="noopener" aria-label="Propose an edit to Check a card against its sources">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

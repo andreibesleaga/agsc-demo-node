@@ -10,9 +10,9 @@ license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 bundle: https://patterns.agenticsystemcore.com/
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
-spec_version: 1.0.0
-bundle_version: vsite-2026-10-14+7.g71d5329cebf6
-generated_at: 2026-10-29T15:41:54Z
+spec_version: 1.1.0
+bundle_version: vsite-2026-11-13+1.g7dff89daa3b2
+generated_at: 2026-11-18T15:24:06Z
 assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
 -->
 
@@ -22,7 +22,36 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 > under LicenseRef-AgenticSystemCore-Content-Use-1.0 (AGSC-07-16).
 
 - cluster: https://patterns.agenticsystemcore.com/clusters/classical/
-- members: 1
+- members: 2
+
+## Bulkhead Isolation
+
+- item: https://patterns.agenticsystemcore.com/concepts/bulkhead-isolation/
+- type: concept
+
+```text agsc-content
+
+## Intent
+
+Confine a failing element by giving each agent, tenant or dependency its own bounded resource pool.
+
+## Context & Forces
+
+Microsoft says excessive load or failure in a service affects all its consumers.
+
+## Structure
+
+Microsoft says to isolate application elements into pools so that if one fails, the others continue to function.
+
+## Consequences & Trade-offs
+
+Microsoft lists isolation from cascading failure and priority pools for critical consumers as benefits.
+
+## Related Patterns
+
+- Exception Handling and Recovery
+- Unbounded Loops
+```
 
 ## Saga for Agent Workflows
 
@@ -33,23 +62,19 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 
 ## Intent
 
-Pair each important step of an agent workflow with an undo action, so a failed run can be rolled back.
+Pair each important step with an undo action, so a failed run can be rolled back.
 
 ## Context & Forces
 
-Workflows change real systems step by step: book, charge, confirm. Across services, Richardson notes, two-phase commit is not an option, so a late failure leaves early steps done.
+Across services, Richardson notes, two-phase commit is not an option.
 
 ## Structure
 
 Garcia-Molina and Salem (1987) define the saga: either all its transactions complete, or compensating transactions amend the partial execution.
 
-1. Give each step a compensation: refund, cancel, correct.
-2. Record which steps finished.
-3. On failure, run compensations in reverse order. Temporal's guidance is last in, first out (Fortuna, 2023).
-
 ## Consequences & Trade-offs
 
-A partial failure no longer leaves a lasting mess. Compensation code runs rarely, so test it on purpose. Steps that cannot be undone belong behind an approval gate.
+Compensation code runs rarely, so test it on purpose.
 
 ## Related Patterns
 

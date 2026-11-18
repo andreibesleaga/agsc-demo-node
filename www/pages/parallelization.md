@@ -16,31 +16,31 @@ aliases:
 clusters:
   - foundational
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
-  - resource: https://www.anthropic.com/engineering/building-effective-agents
+  - resource: https://www.anthropic.com/research/building-effective-agents
     title: Building effective agents
     author: Schluntz, E.; Zhang, B.
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://adk.dev/workflows/patterns/
     title: Workflow patterns
     author: Google
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/
     title: "Agent Development Kit: Making it easy to build multi-agent applications"
     author: Huizenga, E.; Yang, B.
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns
     title: AI agent orchestration patterns
     author: Kittel, C.; Siemens, C.
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
@@ -63,20 +63,15 @@ Run independent subtasks at the same time and combine the results.
 
 ## Context & Forces
 
-Doing independent work in sequence wastes time. Some judgments are more reliable when repeated and compared.
+Doing independent work in sequence wastes time.
 
 ## Structure
 
-Anthropic names two variants (Schluntz and Zhang, 2024):
-
-1. **Sectioning:** split a task into independent subtasks that run in parallel.
-2. **Voting:** run the same task several times to get different outputs.
-
-Google's Agent Development Kit has a `ParallelAgent`: sub-agents run together, write to separate state keys, and a later agent gathers them. Microsoft calls it concurrent orchestration, also known as fan-out/fan-in, and suggests voting, weighted merging or a model-written summary to combine results.
+Anthropic names two variants (Schluntz and Zhang, 2024): sectioning into parallel subtasks, and voting by running the same task several times.
 
 ## Consequences & Trade-offs
 
-Time is set by the slowest branch. Agreement between branches is a confidence signal. Cost grows with each branch, and hidden dependencies between subtasks give wrong answers.
+Time is set by the slowest branch, and cost grows with each branch.
 
 ## Related Patterns
 

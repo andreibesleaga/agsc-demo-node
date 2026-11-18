@@ -10,9 +10,9 @@ license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 bundle: https://patterns.agenticsystemcore.com/
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
-spec_version: 1.0.0
-bundle_version: vsite-2026-10-14+7.g71d5329cebf6
-generated_at: 2026-10-29T15:41:54Z
+spec_version: 1.1.0
+bundle_version: vsite-2026-11-13+1.g7dff89daa3b2
+generated_at: 2026-11-18T15:24:06Z
 assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
 -->
 
@@ -37,23 +37,20 @@ Give an agent a goal with checkable criteria, then watch progress and correct co
 
 ## Context & Forces
 
-An agent can do every step right and still miss the goal. Vague goals cannot be checked; single metrics can be gamed.
+An agent can do every step right and still miss the goal.
 
 ## Structure
 
-The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge. Zhang et al. (2024) trace it to Kephart and Chess (2003) and apply it with language-model agents to microservice management. In CrewAI, a task has an `expected_output` describing completion and a `guardrail` that checks the output, retried three times by default.
-
-1. Write the goal as a few observable criteria.
-2. Check progress after each step, ideally outside the acting model.
-3. Continue, re-plan, or stop and escalate.
+The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge.
 
 ## Consequences & Trade-offs
 
-Progress becomes visible. Each check costs extra. Criteria can replace the goal, so keep them few.
+Progress becomes visible, but criteria can replace the goal, so keep them few.
 
 ## Related Patterns
 
 - Specification Gaming
 - Metacognitive Monitoring and Control
 - Unbounded Loops
+- Termination and Exit Conditions
 ```

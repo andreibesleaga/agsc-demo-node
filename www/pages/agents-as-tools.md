@@ -15,30 +15,34 @@ aliases:
 clusters:
   - foundational
 date: 2026-08-16
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://openai.github.io/openai-agents-python/tools/#agents-as-tools
     title: Tools
     author: OpenAI
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://openai.github.io/openai-agents-python/multi_agent/
     title: Agent orchestration
     author: OpenAI
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://code.claude.com/docs/en/sub-agents
     title: Create custom subagents
     author: Anthropic
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: agents-as-tools
+related:
+  - deep-research-loop
+  - parallelization
+  - augmented-llm
 kind: pattern
 evidence: explicit
 maturity: established
@@ -50,25 +54,21 @@ diagram:
 
 ## Intent
 
-Wrap a specialist agent as a tool. The calling agent hands it one bounded task and keeps control.
+Wrap a specialist agent as a tool, so the caller keeps control.
 
 ## Context & Forces
 
-Some subtasks, such as a search or a review, are bounded but noisy. Handing over the whole conversation gives away control.
+Handing over the whole conversation gives away control.
 
 ## Structure
 
-1. The caller owns the loop and the conversation.
-2. The specialist is offered as a tool with a name, a description and an input.
-3. It runs in its own context, with its own prompt, tools and permissions.
-4. It returns a short result.
-
-The OpenAI Agents SDK calls this "agents as tools": a manager agent keeps control and calls specialists. Claude Code subagents also run in their own context window and return a summary.
+The caller owns the loop; the specialist runs in its own context and returns a short result.
 
 ## Consequences & Trade-offs
 
-One agent stays accountable and its context stays small. Each call costs time and tokens, and a short summary can drop a needed detail.
+One agent stays accountable and its context stays small, but each call costs time and tokens.
 
 ## Related Patterns
 
-Used by The Deep Research Loop; Parallelization runs several calls at once.
+- The Deep Research Loop
+- Parallelization

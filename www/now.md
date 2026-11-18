@@ -1,18 +1,18 @@
 # Now
 
-content version vsite-2026-10-14+7.g71d5329cebf6, built at 2026-10-29T15:41:54Z, fingerprint 231c564a33416f705d952e7c83b28521df1a3586157ed5157fbe2871cac69638, specification 1.0.0
+content version vsite-2026-11-13+1.g7dff89daa3b2, built at 2026-11-18T15:24:06Z, fingerprint 670aef458dedf8134978e204add2de1064606ed0ae6ca6b21f810a3c03c5639d, specification 1.1.0
 
 ## Counts
 
-- clusters: 20
-- concepts: 22
+- clusters: 21
+- concepts: 54
 - episodes: 0
-- gates: 0
+- gates: 1
 - lessons: 0
-- procedures: 0
+- procedures: 1
 
 ## Monthly spend
 
-- month: 2026-10
+- month: 2026-11
 - spent: 0 USD
 - cap: 10 USD

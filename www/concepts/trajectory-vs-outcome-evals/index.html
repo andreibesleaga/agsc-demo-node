@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trajectory and Outcome Evaluation</title>
+<title>Trajectory and Outcome Evaluation — AgenticSystemCore Graph</title>
 <meta name="description" content="Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/">
+<link rel="alternate" href="/pages/trajectory-vs-outcome-evals.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/">
+<meta property="og:title" content="Trajectory and Outcome Evaluation">
+<meta property="og:description" content="Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.","name":"Trajectory and Outcome Evaluation","url":"https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/"}</script>
 <script src="/compose/agsc-core.js" defer></script>
 <script src="/compose/agsc-page-tools.js" defer></script>
@@ -18,14 +25,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -36,29 +46,88 @@
 <dl class="meta">
 <dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
 <dt>Cluster</dt><dd><a href="/clusters/evaluation-testing/">Evaluation &amp; Testing</a></dd>
+<dt>Tags</dt><dd><a href="/tags/metrics/">metrics</a>, <a href="/tags/observability/">observability</a></dd>
 <dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/</code></dd>
 <dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
 </dl>
 <h2 id="intent"><span id="chunk-3222f6ec0d566ad6"></span>Intent</h2>
 <p>Grade the end state an agent produced and the path it took as two separate questions.</p>
 <h2 id="context-forces"><span id="chunk-a83e0d002f9d4059"></span>Context &amp; Forces</h2>
-<p>An agent can reach the right result by a bad path, or take a good path to a wrong result. One score hides one of them.</p>
+<p>An agent can reach the right result by a bad path.</p>
 <h2 id="structure"><span id="chunk-424762b8ed209d18"></span>Structure</h2>
-<p>Anthropic's guide defines the transcript (trace or trajectory) as the full record of a trial, and the outcome as the final state of the environment (Grace et al., 2026). Graders are code-based, model-based or human. Google's Agent Development Kit scores tool-call paths (<code>tool_trajectory_avg_score</code>) separately from answers (<code>response_match_score</code>). Huyen (2025) lists failures to measure, from invalid tools and wrong parameters to goal failure and inefficiency.</p>
-<ol>
-<li>Grade the outcome against what should be true afterwards.</li>
-<li>Grade the path for tool use, safety and efficiency.</li>
-</ol>
+<p>Anthropic's guide defines the transcript, or trajectory, as the complete record of a trial, and the outcome as the final state of the environment (Grace et al., 2026).</p>
 <h2 id="consequences-trade-offs"><span id="chunk-0f3af5c02f288f33"></span>Consequences &amp; Trade-offs</h2>
-<p>Behaviour changes show even when success rates hold. Anthropic warns that exact tool-call sequences make brittle tests; require them only where the path is the requirement.</p>
+<p>Anthropic warns that exact tool-call sequences make brittle tests.</p>
 <h2 id="related-patterns"><span id="chunk-0339b0de523eeb3a"></span>Related Patterns</h2>
 <ul>
 <li>Retrieval Evaluation</li>
 <li>Specification Gaming</li>
+<li>Pass^k Reliability</li>
 </ul>
 
-<h2 id="links">Links</h2>
-<ul class="links"><li><code>related</code>: <a href="/concepts/retrieval-evaluation/">Retrieval Evaluation</a></li></ul>
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 320" role="img" aria-labelledby="links_trajectory-vs-outcome-evals-title links_trajectory-vs-outcome-evals-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_trajectory-vs-outcome-evals-title">Relations of Trajectory and Outcome Evaluation</title>
+  <desc id="links_trajectory-vs-outcome-evals-desc">Relations of Trajectory and Outcome Evaluation. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_trajectory-vs-outcome-evals-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="142" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="120" width="190" height="36" rx="6"/>
+    <path d="M440 146.5 L494 138 L510 138" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+    <rect x="510" y="164" width="190" height="36" rx="6"/>
+    <path d="M440 173.5 L494 182 L510 182" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="10" width="190" height="36" rx="6"/>
+    <path d="M200 28 L216 28 L336 142" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="54" width="190" height="36" rx="6"/>
+    <path d="M200 72 L216 72 L326.6 142" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="98" width="190" height="36" rx="6"/>
+    <path d="M200 116 L216 116 L298.1 142" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="142" width="190" height="36" rx="6"/>
+    <path d="M200 160 L216 160 L270 160" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="186" width="190" height="36" rx="6"/>
+    <path d="M200 204 L216 204 L298.1 178" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="230" width="190" height="36" rx="6"/>
+    <path d="M200 248 L216 248 L326.6 178" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="274" width="190" height="36" rx="6"/>
+    <path d="M200 292 L216 292 L336 178" marker-end="url(#links_trajectory-vs-outcome-evals-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="164" font-size="11">Trajectory and Outcome E…</text>
+    <text x="605" y="134" font-size="12">related</text>
+    <text x="605" y="150" font-size="12">Pass^k Reliability</text>
+    <text x="605" y="178" font-size="12">related</text>
+    <text x="605" y="194" font-size="12">Retrieval Evaluation</text>
+    <text x="105" y="24" font-size="12">related</text>
+    <text x="105" y="40" font-size="12">Error Analysis by Open and A…</text>
+    <text x="105" y="68" font-size="12">related</text>
+    <text x="105" y="84" font-size="12">Given/When/Then Agent Specs</text>
+    <text x="105" y="112" font-size="12">related</text>
+    <text x="105" y="128" font-size="12">Golden Trajectories and Snap…</text>
+    <text x="105" y="156" font-size="12">related</text>
+    <text x="105" y="172" font-size="12">Judge Calibration</text>
+    <text x="105" y="200" font-size="12">related</text>
+    <text x="105" y="216" font-size="12">Resolution, Containment and…</text>
+    <text x="105" y="244" font-size="12">related</text>
+    <text x="105" y="260" font-size="12">Shadow-Mode Rollout</text>
+    <text x="105" y="288" font-size="12">related</text>
+    <text x="105" y="304" font-size="12">Specification Gaming</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/pass-hat-k/">Pass^k Reliability</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/retrieval-evaluation/">Retrieval Evaluation</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/error-analysis-coding/">Error Analysis by Open and Axial Coding</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/given-when-then-agent-specs/">Given/When/Then Agent Specs</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/golden-trajectory-snapshots/">Golden Trajectories and Snapshot Tests</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/judge-calibration/">Judge Calibration</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/resolution-rate-metrics/">Resolution, Containment and Deflection Metrics</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/shadow-mode-rollout/">Shadow-Mode Rollout</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/specification-gaming/">Specification Gaming</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
 <figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" role="img" aria-labelledby="trajectory-vs-outcome-evals-title trajectory-vs-outcome-evals-desc" font-family="system-ui, sans-serif" font-size="14">
   <title id="trajectory-vs-outcome-evals-title">Three agent steps inside a dashed trajectory area lead to a final-state box; a highlighted trajectory grader below checks the steps for tools, order and efficiency, and a separate outcome grader checks the final state.</title>
   <desc id="trajectory-vs-outcome-evals-desc">graders: code when exact · model when judgment · human to calibrate</desc>
@@ -95,9 +164,10 @@
   </g>
 </svg><figcaption>Two graders, two questions: did it end in the right place, and did it get there the right way.</figcaption></figure>
 <h2 id="references">References</h2>
-<ol class="sources"><li id="source-1">Grace, M.; Hadfield, J.; Olivares, R.; et al. (2026). <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Demystifying evals for AI agents</a>. <span class="source-url"><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents</a></span>. Checked 2026-09-29.</li><li id="source-2">Google (2026). <a href="https://adk.dev/evaluate/">Why evaluate agents</a>. <span class="source-url"><a href="https://adk.dev/evaluate/">https://adk.dev/evaluate/</a></span>. Checked 2026-09-29.</li><li id="source-3">Huyen, C. (2025). <a href="https://huyenchip.com/2025/01/07/agents.html">Agents</a>. <span class="source-url"><a href="https://huyenchip.com/2025/01/07/agents.html">https://huyenchip.com/2025/01/07/agents.html</a></span>. Checked 2026-09-29.</li></ol>
+<ol class="sources"><li id="source-1">Grace, M.; Hadfield, J.; Olivares, R.; et al. (2026). <a href="https://www.anthropic.com/research/demystifying-evals-for-ai-agents">Demystifying evals for AI agents</a>. <span class="source-url"><a href="https://www.anthropic.com/research/demystifying-evals-for-ai-agents">https://www.anthropic.com/research/demystifying-evals-for-ai-agents</a></span>. Checked 2026-11-12.</li><li id="source-2">Google (2026). <a href="https://adk.dev/evaluate/">Why evaluate agents</a>. <span class="source-url"><a href="https://adk.dev/evaluate/">https://adk.dev/evaluate/</a></span>. Checked 2026-11-12.</li><li id="source-3">Huyen, C. (2025). <a href="https://huyenchip.com/2025/01/07/agents.html">Agents</a>. <span class="source-url"><a href="https://huyenchip.com/2025/01/07/agents.html">https://huyenchip.com/2025/01/07/agents.html</a></span>. Checked 2026-11-12.</li></ol>
 <p class="views">Machine views: <a href="/pages/trajectory-vs-outcome-evals.md">Markdown</a> · <a href="/pages/trajectory-vs-outcome-evals.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/trajectory-vs-outcome-evals.md" rel="noopener" aria-label="Propose an edit to Trajectory and Outcome Evaluation">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

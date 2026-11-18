@@ -15,30 +15,34 @@ aliases:
 clusters:
   - governance
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://doi.org/10.1007/BF00196791
     title: How to time-stamp a digital document
     author: Haber, S.; Stornetta, W. S.
     year: 1991
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/
     title: Agentic AI – Threats and Mitigations
     author: OWASP Gen AI Security Project
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://github.blog/changelog/2026-03-20-trace-any-copilot-coding-agent-commit-to-its-session-logs/
     title: Trace any Copilot coding agent commit to its session logs
     author: GitHub
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: immutable-audit-log
+related:
+  - meaningful-human-control
+  - plan-approval-gate
+  - memory-context-poisoning
 kind: pattern
 evidence: explicit
 maturity: established
@@ -50,24 +54,19 @@ diagram:
 
 ## Intent
 
-Keep a record of every important agent action that can be checked later and shows any change.
+Keep a checkable record of every important agent action that shows any change.
 
 ## Context & Forces
 
-Accountability needs a reliable account of what happened. Ordinary logs can be edited. OWASP lists repudiation and untraceability as threat T8 for agentic systems.
+OWASP lists repudiation and untraceability as threat T8 for agentic systems.
 
 ## Structure
 
-1. Write records to an append-only store.
-2. Link each record to the previous one by a hash, as in Haber and Stornetta's 1991 time-stamping scheme. Changing an old record breaks every later link.
-3. Record who acted, what, the inputs, the approving decision and the result.
-4. Verify the chain regularly.
-
-On GitHub, each commit by the Copilot coding agent carries an `Agent-Logs-Url` trailer linking to its session logs, with the person who gave the task as co-author.
+OWASP asks that AI-generated logs be cryptographically signed and immutable.
 
 ## Consequences & Trade-offs
 
-Incidents can be rebuilt. Sensitive data in logs is a risk, so record only what is needed. An unverified chain gives false comfort.
+Incidents can be reconstructed from the log.
 
 ## Related Patterns
 

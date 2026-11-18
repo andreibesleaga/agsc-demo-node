@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Product Practice</title>
+<title>Product Practice — AgenticSystemCore Graph</title>
 <meta name="description" content="Product decisions for agents, such as how much an agent may do on its own.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/clusters/product/">
+<link rel="alternate" href="/pages/product.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/clusters/product/">
+<meta property="og:title" content="Product Practice">
+<meta property="og:description" content="Product decisions for agents, such as how much an agent may do on its own.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"Product decisions for agents, such as how much an agent may do on its own.","headline":"Product Practice","url":"https://patterns.agenticsystemcore.com/clusters/product/"}</script>
 <script src="/compose/agsc-core.js" defer></script>
 <script src="/compose/agsc-page-tools.js" defer></script>
@@ -18,14 +25,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -41,9 +51,44 @@
 <p>Product decisions for agents, such as how much an agent may do on its own.</p>
 
 <h2 id="members">Members</h2>
-<ul class="members"><li><a href="/concepts/autonomy-ladder/">The Autonomy Ladder</a>: A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability.</li></ul>
+<ul class="members"><li><a href="/concepts/autonomy-ladder/">The Autonomy Ladder</a>: A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability.</li><li><a href="/concepts/outcome-based-pricing/">Outcome-Based Pricing</a>: Charge for achieved outcomes such as a resolved conversation instead of seats or usage, which requires agreeing criteria for the outcome upfront.</li><li><a href="/concepts/resolution-rate-metrics/">Resolution, Containment and Deflection Metrics</a>: Separate deflection, containment and resolution, and state how &#39;resolved&#39; is verified, as Intercom, Zendesk and Sierra define it.</li><li><a href="/concepts/shadow-mode-rollout/">Shadow-Mode Rollout</a>: Run an agent on live work with its side effects suppressed, then compare its proposed actions with what people actually did.</li></ul>
+<h3 id="member_links">Links among the members</h3>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356 188" role="img" aria-labelledby="members_product-title members_product-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="members_product-title">Links among the members of Product Practice</title>
+  <desc id="members_product-desc">Links among the members of Product Practice. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="members_product-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="10" y="10" width="260" height="30" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="10" y="50" width="260" height="26" rx="6"/>
+    <rect x="10" y="84" width="260" height="26" rx="6"/>
+    <rect x="10" y="118" width="260" height="26" rx="6"/>
+    <rect x="10" y="152" width="260" height="26" rx="6"/>
+    <path d="M270 97 C294 97 294 63 270 63" marker-end="url(#members_product-arrow)"/>
+    <path d="M270 131 C294 131 294 97 270 97" marker-end="url(#members_product-arrow)"/>
+    <path d="M270 165 C326 165 326 63 270 63" marker-end="url(#members_product-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="140" y="29" font-size="12">Product Practice</text>
+    <text x="140" y="67" font-size="12">The Autonomy Ladder</text>
+    <text x="140" y="101" font-size="12">Outcome-Based Pricing</text>
+    <text x="140" y="135" font-size="11">Resolution, Containment and Deflection…</text>
+    <text x="140" y="169" font-size="12">Shadow-Mode Rollout</text>
+    <text x="292" y="83.5" font-size="10" text-anchor="start">related</text>
+    <text x="292" y="117.5" font-size="10" text-anchor="start">related</text>
+    <text x="316" y="117.5" font-size="10" text-anchor="start">related</text>
+  </g>
+</svg><figcaption>The highlighted box is the cluster and its members are below it. Each arc runs from the member that states a link to its target and names the relation; the table lists the same links.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">From</th><th scope="col">Relation</th><th scope="col">To</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td><a href="/concepts/outcome-based-pricing/">Outcome-Based Pricing</a></td><td>related</td><td><a href="/concepts/autonomy-ladder/">The Autonomy Ladder</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/resolution-rate-metrics/">Resolution, Containment and Deflection Metrics</a></td><td>related</td><td><a href="/concepts/outcome-based-pricing/">Outcome-Based Pricing</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/shadow-mode-rollout/">Shadow-Mode Rollout</a></td><td>related</td><td><a href="/concepts/autonomy-ladder/">The Autonomy Ladder</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
 <p class="views">Machine views: <a href="/pages/product.md">Markdown</a> · <a href="/pages/product.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/clusters/product.md" rel="noopener" aria-label="Propose an edit to Product Practice">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

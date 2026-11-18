@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termination and Exit Conditions — AgenticSystemCore Graph</title>
+<meta name="description" content="Define in advance each way an agent loop ends, such as a final answer, a turn limit, or a pause for human input.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/termination-conditions/">
+<link rel="alternate" href="/pages/termination-conditions.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/termination-conditions/">
+<meta property="og:title" content="Termination and Exit Conditions">
+<meta property="og:description" content="Define in advance each way an agent loop ends, such as a final answer, a turn limit, or a pause for human input.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Define in advance each way an agent loop ends, such as a final answer, a turn limit, or a pause for human input.","name":"Termination and Exit Conditions","url":"https://patterns.agenticsystemcore.com/concepts/termination-conditions/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Graph</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Termination and Exit Conditions</h1>
+<p class="summary"><strong>Summary</strong>Define in advance each way an agent loop ends, such as a final answer, a turn limit, or a pause for human input.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/foundational/">Foundational</a></dd>
+<dt>Tags</dt><dd><a href="/tags/loop/">loop</a>, <a href="/tags/cost-control/">cost-control</a>, <a href="/tags/reliability/">reliability</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/termination-conditions/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-2c052e2cd3d9b424"></span>Intent</h2>
+<p>Decide in advance every way an agent loop can end.</p>
+<h2 id="context-forces"><span id="chunk-d39f8d1d3b8ba5da"></span>Context &amp; Forces</h2>
+<p>Anthropic notes it is common to include stopping conditions.</p>
+<h2 id="structure"><span id="chunk-467a65283199c3a4"></span>Structure</h2>
+<p>The OpenAI Agents SDK ends its runner loop on final output, or raises MaxTurnsExceeded when the run exceeds max_turns.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-be38bb80cbaa93ad"></span>Consequences &amp; Trade-offs</h2>
+<p>A turn limit stops a run that never finishes, at the price of unfinished work.</p>
+<h2 id="related-patterns"><span id="chunk-523a585d599cc0ad"></span>Related Patterns</h2>
+<ul>
+<li>Unbounded Loops</li>
+<li>Exception Handling and Recovery</li>
+</ul>
+
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 188" role="img" aria-labelledby="links_termination-conditions-title links_termination-conditions-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_termination-conditions-title">Relations of Termination and Exit Conditions</title>
+  <desc id="links_termination-conditions-desc">Relations of Termination and Exit Conditions. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_termination-conditions-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="76" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="76" width="190" height="36" rx="6"/>
+    <path d="M440 94 L494 94 L510 94" marker-end="url(#links_termination-conditions-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="10" width="190" height="36" rx="6"/>
+    <path d="M200 28 L216 28 L317.1 76" marker-end="url(#links_termination-conditions-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="54" width="190" height="36" rx="6"/>
+    <path d="M200 72 L216 72 L270 80.5" marker-end="url(#links_termination-conditions-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="98" width="190" height="36" rx="6"/>
+    <path d="M200 116 L216 116 L270 107.5" marker-end="url(#links_termination-conditions-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="142" width="190" height="36" rx="6"/>
+    <path d="M200 160 L216 160 L317.1 112" marker-end="url(#links_termination-conditions-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="98" font-size="11">Termination and Exit Con…</text>
+    <text x="605" y="90" font-size="12">related</text>
+    <text x="605" y="106" font-size="12">Unbounded Loops</text>
+    <text x="105" y="24" font-size="12">related</text>
+    <text x="105" y="40" font-size="12">Exception Handling and Reco…</text>
+    <text x="105" y="68" font-size="12">related</text>
+    <text x="105" y="84" font-size="12">Goal Setting and Monitoring</text>
+    <text x="105" y="112" font-size="12">related</text>
+    <text x="105" y="128" font-size="12">Safe Interruptibility</text>
+    <text x="105" y="156" font-size="12">related</text>
+    <text x="105" y="172" font-size="12">Thinking-Budget Control</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th><th scope="col">Domain type</th><th scope="col">Domain context</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/unbounded-agent-loops/">Unbounded Loops</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td>Failure mode</td><td><a href="/clusters/antipatterns/">Anti-Patterns</a></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/exception-handling-and-recovery/">Exception Handling and Recovery</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td>Safeguard</td><td><a href="/clusters/operations-reliability/">Operations &amp; Reliability</a></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/goal-setting-and-monitoring/">Goal Setting and Monitoring</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/safe-interruptibility/">Safe Interruptibility</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/thinking-budget-control/">Thinking-Budget Control</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+</tbody>
+</table></div>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="termination-conditions-title termination-conditions-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="termination-conditions-title">A loop iteration box feeds a highlighted exit check box listing done, turn cap and blocker; the check points to done, to a turn-limit error, and to a human, with a dashed return arrow back into the loop.</title>
+  <desc id="termination-conditions-desc">decide every exit in advance: final output, turn limit, human pause</desc>
+  <defs><marker id="termination-conditions-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="16" y="80" width="120" height="60" rx="6"/>
+    <rect x="180" y="66" width="120" height="88" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="340" y="40" width="100" height="40" rx="6"/>
+    <rect x="340" y="96" width="100" height="40" rx="6"/>
+    <rect x="340" y="152" width="100" height="40" rx="6"/>
+    <path d="M140 110 L176 110" marker-end="url(#termination-conditions-arrow)"/>
+    <path d="M303.8 88.7 L336.2 77.9" marker-end="url(#termination-conditions-arrow)"/>
+    <path d="M304 112.6 L336 113.8" marker-end="url(#termination-conditions-arrow)"/>
+    <path d="M303.7 136.3 L337.9 150.5" marker-end="url(#termination-conditions-arrow)"/>
+    <path d="M240 154 L240 200 L76 200 L76 140" marker-end="url(#termination-conditions-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="76" y="106" font-size="12">loop</text>
+    <text x="76" y="122" font-size="12">iteration</text>
+    <text x="240" y="98" font-size="12">exit check</text>
+    <text x="240" y="114" font-size="12">done · turn cap</text>
+    <text x="240" y="130" font-size="12">blocker</text>
+    <text x="390" y="64" font-size="12">done</text>
+    <text x="390" y="112" font-size="12">turn limit</text>
+    <text x="390" y="128" font-size="12">error</text>
+    <text x="390" y="176" font-size="12">human</text>
+    <text x="230" y="248" font-size="11">decide every exit in advance: final output, turn limit, human pause</text>
+  </g>
+</svg><figcaption>Every way the loop can end is decided in advance: final output, turn limit, or a pause for a human.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Anthropic (2024). <a href="https://www.anthropic.com/research/building-effective-agents">Building effective agents</a>. <span class="source-url"><a href="https://www.anthropic.com/research/building-effective-agents">https://www.anthropic.com/research/building-effective-agents</a></span>. Checked 2026-11-12.</li><li id="source-2">OpenAI (2025). <a href="https://openai.github.io/openai-agents-python/running_agents/">Running agents</a>. <span class="source-url"><a href="https://openai.github.io/openai-agents-python/running_agents/">https://openai.github.io/openai-agents-python/running_agents/</a></span>. Checked 2026-11-12.</li></ol>
+<p class="views">Machine views: <a href="/pages/termination-conditions.md">Markdown</a> · <a href="/pages/termination-conditions.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/termination-conditions.md" rel="noopener" aria-label="Propose an edit to Termination and Exit Conditions">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

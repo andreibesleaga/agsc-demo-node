@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Security</title>
+<title>Security — AgenticSystemCore Graph</title>
 <meta name="description" content="Threats to agents, and the designs that defend against them.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/clusters/security/">
+<link rel="alternate" href="/pages/security.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/clusters/security/">
+<meta property="og:title" content="Security">
+<meta property="og:description" content="Threats to agents, and the designs that defend against them.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"Threats to agents, and the designs that defend against them.","headline":"Security","url":"https://patterns.agenticsystemcore.com/clusters/security/"}</script>
 <script src="/compose/agsc-core.js" defer></script>
 <script src="/compose/agsc-page-tools.js" defer></script>
@@ -18,14 +25,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -41,9 +51,52 @@
 <p>Threats to agents, and the designs that defend against them.</p>
 
 <h2 id="members">Members</h2>
-<ul class="members"><li><a href="/concepts/dual-llm-pattern/">Dual-LLM Pattern</a>: Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them.</li><li><a href="/concepts/owasp-agentic-top-10/">OWASP Top 10 for Agentic Applications</a>: OWASP&#39;s list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews.</li></ul>
+<ul class="members"><li><a href="/concepts/agent-identity-scoped-credentials/">Agent Identity and Scoped Credentials</a>: Give each agent its own identity and short-lived, task-scoped credentials so delegation narrows authority and actions are attributable.</li><li><a href="/concepts/agentic-supply-chain/">Agentic Supply Chain Integrity</a>: Sign, pin and allowlist the models, tools, protocol servers and prompts an agent loads, and keep a way to revoke any of them at once.</li><li><a href="/concepts/dual-llm-pattern/">Dual-LLM Pattern</a>: Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them.</li><li><a href="/concepts/memory-context-poisoning/">Memory and Context Poisoning Defense</a>: Treat writes to agent memory and retrieval stores as untrusted: validate, attribute, segment and expire entries, following OWASP ASI06.</li><li><a href="/concepts/owasp-agentic-top-10/">OWASP Top 10 for Agentic Applications</a>: OWASP&#39;s list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews.</li></ul>
+<h3 id="member_links">Links among the members</h3>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 368 222" role="img" aria-labelledby="members_security-title members_security-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="members_security-title">Links among the members of Security</title>
+  <desc id="members_security-desc">Links among the members of Security. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="members_security-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="10" y="10" width="260" height="30" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="10" y="50" width="260" height="26" rx="6"/>
+    <rect x="10" y="84" width="260" height="26" rx="6"/>
+    <rect x="10" y="118" width="260" height="26" rx="6"/>
+    <rect x="10" y="152" width="260" height="26" rx="6"/>
+    <rect x="10" y="186" width="260" height="26" rx="6"/>
+    <path d="M270 63 C342 63 342 199 270 199" marker-end="url(#members_security-arrow)"/>
+    <path d="M270 97 C326 97 326 199 270 199" marker-end="url(#members_security-arrow)"/>
+    <path d="M270 131 C294 131 294 165 270 165" marker-end="url(#members_security-arrow)"/>
+    <path d="M270 131 C310 131 310 199 270 199" marker-end="url(#members_security-arrow)"/>
+    <path d="M270 165 C294 165 294 199 270 199" marker-end="url(#members_security-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="140" y="29" font-size="12">Security</text>
+    <text x="140" y="67" font-size="11">Agent Identity and Scoped Credentials</text>
+    <text x="140" y="101" font-size="11">Agentic Supply Chain Integrity</text>
+    <text x="140" y="135" font-size="12">Dual-LLM Pattern</text>
+    <text x="140" y="169" font-size="11">Memory and Context Poisoning Defense</text>
+    <text x="140" y="203" font-size="11">OWASP Top 10 for Agentic Applications</text>
+    <text x="328" y="134.5" font-size="10" text-anchor="start">related</text>
+    <text x="316" y="151.5" font-size="10" text-anchor="start">related</text>
+    <text x="292" y="151.5" font-size="10" text-anchor="start">related</text>
+    <text x="304" y="168.5" font-size="10" text-anchor="start">related</text>
+    <text x="292" y="185.5" font-size="10" text-anchor="start">related</text>
+  </g>
+</svg><figcaption>The highlighted box is the cluster and its members are below it. Each arc runs from the member that states a link to its target and names the relation; the table lists the same links.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">From</th><th scope="col">Relation</th><th scope="col">To</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td><a href="/concepts/agent-identity-scoped-credentials/">Agent Identity and Scoped Credentials</a></td><td>related</td><td><a href="/concepts/owasp-agentic-top-10/">OWASP Top 10 for Agentic Applications</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/agentic-supply-chain/">Agentic Supply Chain Integrity</a></td><td>related</td><td><a href="/concepts/owasp-agentic-top-10/">OWASP Top 10 for Agentic Applications</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/dual-llm-pattern/">Dual-LLM Pattern</a></td><td>related</td><td><a href="/concepts/memory-context-poisoning/">Memory and Context Poisoning Defense</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/dual-llm-pattern/">Dual-LLM Pattern</a></td><td>related</td><td><a href="/concepts/owasp-agentic-top-10/">OWASP Top 10 for Agentic Applications</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/memory-context-poisoning/">Memory and Context Poisoning Defense</a></td><td>related</td><td><a href="/concepts/owasp-agentic-top-10/">OWASP Top 10 for Agentic Applications</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
 <p class="views">Machine views: <a href="/pages/security.md">Markdown</a> · <a href="/pages/security.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/clusters/security.md" rel="noopener" aria-label="Propose an edit to Security">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

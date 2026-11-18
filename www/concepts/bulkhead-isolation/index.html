@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulkhead Isolation — AgenticSystemCore Graph</title>
+<meta name="description" content="Give each agent, tenant or dependency its own bounded resource pool, so a fault or overload in one stays out of the others.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/bulkhead-isolation/">
+<link rel="alternate" href="/pages/bulkhead-isolation.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/bulkhead-isolation/">
+<meta property="og:title" content="Bulkhead Isolation">
+<meta property="og:description" content="Give each agent, tenant or dependency its own bounded resource pool, so a fault or overload in one stays out of the others.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Give each agent, tenant or dependency its own bounded resource pool, so a fault or overload in one stays out of the others.","name":"Bulkhead Isolation","url":"https://patterns.agenticsystemcore.com/concepts/bulkhead-isolation/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Graph</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Bulkhead Isolation</h1>
+<p class="summary"><strong>Summary</strong>Give each agent, tenant or dependency its own bounded resource pool, so a fault or overload in one stays out of the others.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/classical/">Classical Foundations</a></dd>
+<dt>Tags</dt><dd><a href="/tags/fault-tolerance/">fault-tolerance</a>, <a href="/tags/reliability/">reliability</a>, <a href="/tags/cost-control/">cost-control</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/bulkhead-isolation/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-754148308f3a3c4d"></span>Intent</h2>
+<p>Confine a failing element by giving each agent, tenant or dependency its own bounded resource pool.</p>
+<h2 id="context-forces"><span id="chunk-4be552241375e769"></span>Context &amp; Forces</h2>
+<p>Microsoft says excessive load or failure in a service affects all its consumers.</p>
+<h2 id="structure"><span id="chunk-8aae20c19f1269ae"></span>Structure</h2>
+<p>Microsoft says to isolate application elements into pools so that if one fails, the others continue to function.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-dde081b98e587b1e"></span>Consequences &amp; Trade-offs</h2>
+<p>Microsoft lists isolation from cascading failure and priority pools for critical consumers as benefits.</p>
+<h2 id="related-patterns"><span id="chunk-d4d4678b4325b822"></span>Related Patterns</h2>
+<ul>
+<li>Exception Handling and Recovery</li>
+<li>Unbounded Loops</li>
+</ul>
+
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 56" role="img" aria-labelledby="links_bulkhead-isolation-title links_bulkhead-isolation-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_bulkhead-isolation-title">Relations of Bulkhead Isolation</title>
+  <desc id="links_bulkhead-isolation-desc">Relations of Bulkhead Isolation. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_bulkhead-isolation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="10" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="10" width="190" height="36" rx="6"/>
+    <path d="M440 28 L494 28 L510 28" marker-end="url(#links_bulkhead-isolation-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="10" width="190" height="36" rx="6"/>
+    <path d="M200 28 L216 28 L270 28" marker-end="url(#links_bulkhead-isolation-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="32" font-size="12">Bulkhead Isolation</text>
+    <text x="605" y="24" font-size="12">related</text>
+    <text x="605" y="40" font-size="12">Unbounded Loops</text>
+    <text x="105" y="24" font-size="12">related</text>
+    <text x="105" y="40" font-size="12">Exception Handling and Reco…</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th><th scope="col">Domain type</th><th scope="col">Domain context</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/unbounded-agent-loops/">Unbounded Loops</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td>Failure mode</td><td><a href="/clusters/antipatterns/">Anti-Patterns</a></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/exception-handling-and-recovery/">Exception Handling and Recovery</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td>Safeguard</td><td><a href="/clusters/operations-reliability/">Operations &amp; Reliability</a></td></tr>
+</tbody>
+</table></div>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="bulkhead-isolation-title bulkhead-isolation-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="bulkhead-isolation-title">Three agents each call a shared model service through their own bounded pool inside a dashed region; the highlighted pool A is saturated and its path is crossed out, while pools B and C keep flowing to the service.</title>
+  <desc id="bulkhead-isolation-desc">pool A is used up; B and C keep working</desc>
+  <defs><marker id="bulkhead-isolation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="20" y="40" width="90" height="40" rx="6"/>
+    <rect x="20" y="108" width="90" height="40" rx="6"/>
+    <rect x="20" y="176" width="90" height="40" rx="6"/>
+    <rect x="150" y="26" width="130" height="200" rx="8" stroke-dasharray="6 4"/>
+    <rect x="165" y="40" width="100" height="40" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="165" y="108" width="100" height="40" rx="6"/>
+    <rect x="165" y="176" width="100" height="40" rx="6"/>
+    <rect x="330" y="96" width="110" height="64" rx="6"/>
+    <path d="M114 60 L161 60" marker-end="url(#bulkhead-isolation-arrow)"/>
+    <path d="M114 128 L161 128" marker-end="url(#bulkhead-isolation-arrow)"/>
+    <path d="M114 196 L161 196" marker-end="url(#bulkhead-isolation-arrow)"/>
+    <path d="M268.7 81.5 L326.3 104.5" marker-end="url(#bulkhead-isolation-arrow)" stroke-dasharray="4 3"/>
+    <path d="M269 128 L326 128" marker-end="url(#bulkhead-isolation-arrow)"/>
+    <path d="M268.7 174.5 L326.3 151.5" marker-end="url(#bulkhead-isolation-arrow)"/>
+    <path d="M292 80 L308 96 M308 80 L292 96" stroke-width="2"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="65" y="64" font-size="12">agent A</text>
+    <text x="65" y="132" font-size="12">agent B</text>
+    <text x="65" y="200" font-size="12">tenant C</text>
+    <text x="215" y="18" font-size="11">bounded pool per consumer</text>
+    <text x="215" y="56" font-size="12">pool A</text>
+    <text x="215" y="72" font-size="12">saturated</text>
+    <text x="215" y="132" font-size="12">pool B</text>
+    <text x="215" y="200" font-size="12">pool C</text>
+    <text x="385" y="124" font-size="12">shared model</text>
+    <text x="385" y="140" font-size="12">/ tool service</text>
+    <text x="230" y="248" font-size="11">pool A is used up; B and C keep working</text>
+  </g>
+</svg><figcaption>A pool per consumer turns one agent&#39;s runaway into one agent&#39;s outage.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">Microsoft (2026). <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead">Bulkhead pattern</a>. <span class="source-url"><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead">https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead</a></span>. Checked 2026-11-12.</li><li id="source-2">resilience4j (2026). <a href="https://resilience4j.readme.io/docs/bulkhead">Bulkhead</a>. <span class="source-url"><a href="https://resilience4j.readme.io/docs/bulkhead">https://resilience4j.readme.io/docs/bulkhead</a></span>. Checked 2026-11-12.</li><li id="source-3">Wikipedia (2026). <a href="https://en.wikipedia.org/wiki/Bulkhead_pattern">Bulkhead pattern</a>. <span class="source-url"><a href="https://en.wikipedia.org/wiki/Bulkhead_pattern">https://en.wikipedia.org/wiki/Bulkhead_pattern</a></span>. Checked 2026-11-12.</li></ol>
+<p class="views">Machine views: <a href="/pages/bulkhead-isolation.md">Markdown</a> · <a href="/pages/bulkhead-isolation.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/bulkhead-isolation.md" rel="noopener" aria-label="Propose an edit to Bulkhead Isolation">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

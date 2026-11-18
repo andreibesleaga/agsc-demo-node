@@ -3,11 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgenticSystemCore Demo Node</title>
-<meta name="description" content="A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.">
+<title>AgenticSystemCore Graph</title>
+<meta name="description" content="Agent-system designs as a typed, cited graph, built by the AgenticSystemCore reference engine: the second node of the Agentic Knowledge Web.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","description":"A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.","name":"AgenticSystemCore Demo Node","url":"https://patterns.agenticsystemcore.com/"}</script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/">
+<meta property="og:title" content="AgenticSystemCore Graph">
+<meta property="og:description" content="Agent-system designs as a typed, cited graph, built by the AgenticSystemCore reference engine: the second node of the Agentic Knowledge Web.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
+<script type="application/ld+json">{"@context":["https://schema.org",{"prov":"http://www.w3.org/ns/prov#"}],"@id":"https://patterns.agenticsystemcore.com/","@type":"Dataset","creator":{"@id":"https://patterns.agenticsystemcore.com/#creator","@type":"Person","name":"Andrei N. Besleaga"},"description":"Agent-system designs as a typed, cited graph, built by the AgenticSystemCore reference engine: the second node of the Agentic Knowledge Web.","distribution":[{"@type":"DataDownload","contentUrl":"https://patterns.agenticsystemcore.com/graph.jsonld","encodingFormat":"application/ld+json"},{"@type":"DataDownload","contentUrl":"https://patterns.agenticsystemcore.com/graph.ttl","encodingFormat":"text/turtle"},{"@type":"DataDownload","contentUrl":"https://patterns.agenticsystemcore.com/graph.nq","encodingFormat":"application/n-quads"},{"@type":"DataDownload","contentUrl":"https://patterns.agenticsystemcore.com/chunks.jsonl","encodingFormat":"application/jsonl"},{"@type":"DataDownload","contentUrl":"https://patterns.agenticsystemcore.com/.well-known/knowledge-linkset","encodingFormat":"application/linkset+json"}],"isAccessibleForFree":true,"license":"https://patterns.agenticsystemcore.com/legal/","name":"AgenticSystemCore Graph","prov:generatedAtTime":{"@type":"http://www.w3.org/2001/XMLSchema#dateTime","@value":"2026-11-18T15:24:06Z"},"prov:wasAttributedTo":{"@id":"https://patterns.agenticsystemcore.com/#creator"},"url":"https://patterns.agenticsystemcore.com/"}</script>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/theme.js"></script>
 </head>
@@ -15,44 +21,42 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
 </header>
 <main id="main">
-<h1>AgenticSystemCore Demo Node</h1>
-<p class="summary"><strong>Summary</strong>A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.</p>
-<p>This site is software at work. It is a live demonstration node of the AgenticSystemCore reference engine, the open-source program that turns a folder of Markdown files into a knowledge node that people and agents can find, check and cite. It is the second node of the Agentic Knowledge Web, beside <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a>: each of the two names the other in its discovery file. Every page and every file here was built by the engine as static files: no application server and no database run behind it.</p>
-<h2 id="what-the-software-does-on-this-node">What the software does on this node</h2>
+<h1>AgenticSystemCore Graph</h1>
+<p class="summary"><strong>Summary</strong>Agent-system designs as a typed, cited graph, built by the AgenticSystemCore reference engine: the second node of the Agentic Knowledge Web.</p>
+<p>Short cards on well-known agent-system designs, each written from the public sources it cites and joined to the others by typed links. This is the second node of the Agentic Knowledge Web, beside <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a>; each names the other in its discovery file. The AgenticSystemCore engine built every file here as static files: no server and no database run behind it.</p>
+<h2 id="six-ways-to-use-this-node">Six ways to use this node</h2>
 <ul>
-<li><strong>Discovery.</strong> One file tells an agent what this node is and where everything else is, with a digest for every file it names: <a href="/.well-known/knowledge-linkset"><code>/.well-known/knowledge-linkset</code></a>.</li>
-<li><strong>A typed graph.</strong> The items and the typed links between them, in the format's <a href="https://agenticsystemcore.com/ns/">published vocabulary</a>: <a href="/graph.jsonld">JSON-LD</a>, <a href="/graph.ttl">Turtle</a> and <a href="/graph.nq">N-Quads</a>.</li>
-<li><strong>Text for language models.</strong> <a href="/llms.txt"><code>llms.txt</code></a>, <a href="/llms-full.txt"><code>llms-full.txt</code></a> and the chunk export <a href="/chunks.jsonl"><code>chunks.jsonl</code></a>, every chunk with its source address.</li>
-<li><strong>Search.</strong> The <a href="/search/">search page</a> runs in your browser over a static index; nothing leaves this site.</li>
-<li><strong>Tools for assistants in the browser.</strong> Every item page registers seven page tools that an assistant in the browser can call to search, read, follow links, compose and cite (<a href="https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/USING-WITH-ASSISTANTS.md">how they work</a>).</li>
-<li><strong>Machine views.</strong> Beside every page sit a Markdown and a JSON-LD copy — for example the <a href="/pages/blackboard.md">Markdown</a> and <a href="/pages/blackboard.jsonld">JSON-LD</a> of <a href="/concepts/blackboard/">Blackboard</a>.</li>
-<li><strong>Provenance and checked references.</strong> Each item says where it came from and who answers for it, and lists the public sources it rests on, each checked against the source.</li>
-<li><strong>A change ledger.</strong> Every published change is a line of <a href="/ledger.jsonl"><code>ledger.jsonl</code></a>; the <a href="/changelog/">changelog</a> lists the tagged versions.</li>
-<li><strong>Composition.</strong> The <a href="/compose/">compose page</a> turns the items you tick into a starting set of seven harness files, computed in your browser. The <a href="/skills/">skill packs</a> give one file per cluster for agent tool folders.</li>
+<li><strong>Read it as a wiki.</strong> Browse the <a href="/concepts/">concepts</a> and the <a href="/clusters/">clusters</a>, or use the <a href="/search/">search page</a>, which runs in your browser. The <a href="/now/">NOW page</a> lists what has gone stale.</li>
+<li><strong>Use it as an agent's memory.</strong> An agent starts at the <a href="/.well-known/knowledge-linkset">discovery file</a>, which gives a digest for each file it names, then reads <a href="/llms.txt"><code>llms.txt</code></a>, <a href="/llms-full.txt"><code>llms-full.txt</code></a> or the passages in <a href="/chunks.jsonl"><code>chunks.jsonl</code></a>. Every item page offers ten tools to an assistant in the browser (<a href="https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/USING-WITH-ASSISTANTS.md">how they work</a>).</li>
+<li><strong>Keep specifications alive.</strong> The node's own <a href="/concepts/keep-cards-short/">decision</a>, <a href="/concepts/card-format/">card format</a> and <a href="/gates/publish-gate/">gate</a> are items like any other, and the <a href="/boards/upkeep/">board</a> shows its open tasks.</li>
+<li><strong>Take the skills.</strong> The <a href="/skills/">skill packs</a> give one file per cluster for an agent's tool folder, with a hash for every file.</li>
+<li><strong>Compose.</strong> The <a href="/compose/">compose page</a> turns the cards you tick into seven starting files, computed in your browser.</li>
+<li><strong>Work on the board.</strong> Pick an open task on the <a href="/boards/upkeep/">board</a> and send your change as a pull request to the <a href="https://github.com/andreibesleaga/agsc-demo-node">agsc-demo-node repository</a>, which holds the published items. A person merges it.</li>
 </ul>
-<h2 id="the-sample-content">The sample content</h2>
-<p>The content is a small sample of well-known agent-system patterns, each described from public sources and grouped into clusters. It is here so the software has real material to work on: every item carries its references, checked against those sources, and a diagram whose text source travels beside it. Browse the <a href="/concepts/">concepts</a> or the <a href="/clusters/">clusters</a>, or start from the <a href="/search/">search page</a>.</p>
+<h2 id="the-graph">The graph</h2>
+<p>The items and their typed links are published as <a href="/graph.jsonld">JSON-LD</a>, <a href="/graph.ttl">Turtle</a> and <a href="/graph.nq">N-Quads</a>, in the format's <a href="https://agenticsystemcore.com/ns/">published vocabulary</a>. The <a href="https://agenticsystemcore.com/graph/?src=https%3A%2F%2Fpatterns.agenticsystemcore.com%2F">graph explorer</a> draws it, and the <a href="/query/">query page</a> runs a SPARQL query over it in your browser. This node adds four terms of its own in <a href="https://github.com/andreibesleaga/agsc-demo-node/blob/main/domain/vocabulary.ttl"><code>domain/vocabulary.ttl</code></a>: a <em>failure mode</em>, a <em>safeguard</em>, and the link <em>guards against</em> with its reverse. Beside every page sit a Markdown and a JSON-LD copy, for example the <a href="/pages/blackboard.md">Markdown</a> and <a href="/pages/blackboard.jsonld">JSON-LD</a> of <a href="/concepts/blackboard/">Blackboard</a>. Every published change is a line of <a href="/ledger.jsonl"><code>ledger.jsonl</code></a>; the <a href="/changelog/">changelog</a> lists the tagged versions.</p>
 <h2 id="run-your-own-node">Run your own node</h2>
-<p>The engine is the npm package <code>agentic-system-core</code>. A Python package of the same name on PyPI checks and reads published nodes. The source is in the <a href="https://github.com/andreibesleaga/agentic-system-core">engine repository</a>. The published items of this node — the Markdown files, the diagram sources and the configuration — are in the <a href="https://github.com/andreibesleaga/agsc-demo-node">agsc-demo-node repository</a>. To begin, read <a href="https://agenticsystemcore.com/docs/start-here/">start here</a> and <a href="https://agenticsystemcore.com/procedures/publish-a-level-0-node/">publish a Level-0 node</a> on agenticsystemcore.com.</p>
-<h2 id="what-comes-next">What comes next</h2>
-<p>Planned next: a stated meaning for every typed link, so that the links become a semantic layer software can check, and a graph view of the links — see the <a href="https://github.com/andreibesleaga/agentic-system-core/blob/main/docs/ROADMAP.md">roadmap</a>.</p>
+<p>The engine is the npm package <code>agentic-system-core</code>; its source is in the <a href="https://github.com/andreibesleaga/agentic-system-core">engine repository</a>. To begin, read <a href="https://agenticsystemcore.com/docs/start-here/">start here</a> on agenticsystemcore.com.</p>
 
 <h2 id="browse">Browse</h2>
-<ul class="browse"><li><a href="/clusters/">Clusters</a> (20)</li><li><a href="/concepts/">Concepts</a> (22)</li><li><a href="/search/">Search</a></li><li><a href="/now/">Now</a></li></ul>
+<ul class="browse"><li><a href="/clusters/">Clusters</a> (21)</li><li><a href="/concepts/">Concepts</a> (54)</li><li><a href="/gates/">Gates</a> (1)</li><li><a href="/procedures/">Procedures</a> (1)</li><li><a href="/search/">Search</a></li><li><a href="/now/">Now</a></li></ul>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

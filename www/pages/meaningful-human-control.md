@@ -16,26 +16,28 @@ aliases:
 clusters:
   - ethics
 date: 2026-08-18
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2018.00015/full
     title: "Meaningful Human Control over Autonomous Systems: A Philosophical Account"
     author: Santoni de Sio, F.; van den Hoven, J.
     year: 2018
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://artificialintelligenceact.eu/article/14/
     title: "Article 14: Human Oversight"
     author: European Parliament; Council of the European Union
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: meaningful-human-control
 related:
+  - safe-interruptibility
   - autonomy-ladder
+  - weak-to-strong-oversight
 kind: pattern
 evidence: explicit
 maturity: emerging
@@ -47,29 +49,23 @@ diagram:
 
 ## Intent
 
-Keep people really in control of an autonomous system, not only on paper.
+Keep people really in control of an autonomous system, not just on paper.
 
 ## Context & Forces
 
-Agents act faster than people can review, so "a human in the loop" can become a formality.
+Agents act faster than people can review.
 
 ## Structure
 
-Santoni de Sio and van den Hoven (2018) set two conditions:
-
-1. **Tracking:** the system responds, verifiably, to the relevant human moral reasons.
-2. **Tracing:** its actions trace to at least one person who understands it properly.
-
-Article 14 of the EU AI Act asks that people overseeing high-risk AI systems stay aware of automation bias, can override or reverse an output, and stop the system safely.
-
-In practice, tracking lives in goals, guardrails and escalation rules. Tracing needs a named, trained person per system, and clear records.
+Santoni de Sio and van den Hoven (2018) set two conditions: tracking of human moral reasons, and tracing of actions to at least one person who understands the system.
 
 ## Consequences & Trade-offs
 
-An approver who does not understand the system fails tracing. A system that ignores its rules fails tracking. Training and records cost effort.
+Tracing fails when no person in the chain understands the system.
 
 ## Related Patterns
 
 - The Autonomy Ladder
 - Tamper-Evident Agent Audit Log
 - Weak-to-Strong Oversight
+- Safe Interruptibility

@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Goal Setting and Monitoring</title>
+<title>Goal Setting and Monitoring — AgenticSystemCore Graph</title>
 <meta name="description" content="Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/">
+<link rel="alternate" href="/pages/goal-setting-and-monitoring.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/">
+<meta property="og:title" content="Goal Setting and Monitoring">
+<meta property="og:description" content="Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Give an agent a goal with checkable criteria, then monitor its progress and decide to continue, re-plan or stop.","name":"Goal Setting and Monitoring","url":"https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/"}</script>
 <script src="/compose/agsc-core.js" defer></script>
 <script src="/compose/agsc-page-tools.js" defer></script>
@@ -18,14 +25,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -36,31 +46,74 @@
 <dl class="meta">
 <dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
 <dt>Cluster</dt><dd><a href="/clusters/reasoning-decision/">Reasoning &amp; Decision</a></dd>
+<dt>Tags</dt><dd><a href="/tags/loop/">loop</a>, <a href="/tags/planning/">planning</a>, <a href="/tags/observability/">observability</a></dd>
 <dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/goal-setting-and-monitoring/</code></dd>
 <dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
 </dl>
 <h2 id="intent"><span id="chunk-ab4207c90a026bc6"></span>Intent</h2>
 <p>Give an agent a goal with checkable criteria, then watch progress and correct course.</p>
 <h2 id="context-forces"><span id="chunk-ccd0ac683ccd1543"></span>Context &amp; Forces</h2>
-<p>An agent can do every step right and still miss the goal. Vague goals cannot be checked; single metrics can be gamed.</p>
+<p>An agent can do every step right and still miss the goal.</p>
 <h2 id="structure"><span id="chunk-ab1adffe64d687f9"></span>Structure</h2>
-<p>The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge. Zhang et al. (2024) trace it to Kephart and Chess (2003) and apply it with language-model agents to microservice management. In CrewAI, a task has an <code>expected_output</code> describing completion and a <code>guardrail</code> that checks the output, retried three times by default.</p>
-<ol>
-<li>Write the goal as a few observable criteria.</li>
-<li>Check progress after each step, ideally outside the acting model.</li>
-<li>Continue, re-plan, or stop and escalate.</li>
-</ol>
+<p>The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge.</p>
 <h2 id="consequences-trade-offs"><span id="chunk-69f24e9c0649766f"></span>Consequences &amp; Trade-offs</h2>
-<p>Progress becomes visible. Each check costs extra. Criteria can replace the goal, so keep them few.</p>
+<p>Progress becomes visible, but criteria can replace the goal, so keep them few.</p>
 <h2 id="related-patterns"><span id="chunk-ce21f2e675f8e292"></span>Related Patterns</h2>
 <ul>
 <li>Specification Gaming</li>
 <li>Metacognitive Monitoring and Control</li>
 <li>Unbounded Loops</li>
+<li>Termination and Exit Conditions</li>
 </ul>
 
-<h2 id="links">Links</h2>
-<ul class="links"><li><code>related</code>: <a href="/concepts/metacognitive-monitoring/">Metacognitive Monitoring and Control</a>, <a href="/concepts/specification-gaming/">Specification Gaming</a></li></ul>
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 188" role="img" aria-labelledby="links_goal-setting-and-monitoring-title links_goal-setting-and-monitoring-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_goal-setting-and-monitoring-title">Relations of Goal Setting and Monitoring</title>
+  <desc id="links_goal-setting-and-monitoring-desc">Relations of Goal Setting and Monitoring. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_goal-setting-and-monitoring-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="76" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="10" width="190" height="36" rx="6"/>
+    <path d="M392.9 76 L494 28 L510 28" marker-end="url(#links_goal-setting-and-monitoring-arrow)" class="agsc-rel-related"/>
+    <rect x="510" y="54" width="190" height="36" rx="6"/>
+    <path d="M440 80.5 L494 72 L510 72" marker-end="url(#links_goal-setting-and-monitoring-arrow)" class="agsc-rel-related"/>
+    <rect x="510" y="98" width="190" height="36" rx="6"/>
+    <path d="M440 107.5 L494 116 L510 116" marker-end="url(#links_goal-setting-and-monitoring-arrow)" class="agsc-rel-related"/>
+    <rect x="510" y="142" width="190" height="36" rx="6"/>
+    <path d="M392.9 112 L494 160 L510 160" marker-end="url(#links_goal-setting-and-monitoring-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="54" width="190" height="36" rx="6"/>
+    <path d="M200 72 L216 72 L270 80.5" marker-end="url(#links_goal-setting-and-monitoring-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="98" width="190" height="36" rx="6"/>
+    <path d="M200 116 L216 116 L270 107.5" marker-end="url(#links_goal-setting-and-monitoring-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="98" font-size="11">Goal Setting and Monitori…</text>
+    <text x="605" y="24" font-size="12">related</text>
+    <text x="605" y="40" font-size="12">Metacognitive Monitoring an…</text>
+    <text x="605" y="68" font-size="12">related</text>
+    <text x="605" y="84" font-size="12">Specification Gaming</text>
+    <text x="605" y="112" font-size="12">related</text>
+    <text x="605" y="128" font-size="12">Termination and Exit Conditio…</text>
+    <text x="605" y="156" font-size="12">related</text>
+    <text x="605" y="172" font-size="12">Unbounded Loops</text>
+    <text x="105" y="68" font-size="12">related</text>
+    <text x="105" y="84" font-size="12">Curiosity-Driven Curriculum</text>
+    <text x="105" y="112" font-size="12">related</text>
+    <text x="105" y="128" font-size="12">Sustainability Signal Plane</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th><th scope="col">Domain type</th><th scope="col">Domain context</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/metacognitive-monitoring/">Metacognitive Monitoring and Control</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/specification-gaming/">Specification Gaming</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/termination-conditions/">Termination and Exit Conditions</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/unbounded-agent-loops/">Unbounded Loops</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td>Failure mode</td><td><a href="/clusters/antipatterns/">Anti-Patterns</a></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/curiosity-driven-curriculum/">Curiosity-Driven Curriculum</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/sustainability-signal-plane/">Sustainability Signal Plane</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+</tbody>
+</table></div>
 <figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" role="img" aria-labelledby="goal-setting-and-monitoring-title goal-setting-and-monitoring-desc" font-family="system-ui, sans-serif" font-size="14">
   <title id="goal-setting-and-monitoring-title">A goal with success criteria enters a highlighted monitor, the first step of a monitor, analyze, plan and execute loop around shared knowledge; execute acts on the managed task, its progress returns to the monitor, and analyze can exit to done or escalate.</title>
   <desc id="goal-setting-and-monitoring-desc">every check ends in continue, replan, or stop and escalate</desc>
@@ -99,9 +152,10 @@
   </g>
 </svg><figcaption>A goal without criteria cannot be monitored; monitoring without a loop back cannot correct.</figcaption></figure>
 <h2 id="references">References</h2>
-<ol class="sources"><li id="source-1">Zhang, Z.; Yang, F.; Qin, X.; et al. (2024). <a href="https://arxiv.org/html/2407.14402v1">The Vision of Autonomic Computing: Can LLMs Make It a Reality?</a> <span class="source-url"><a href="https://arxiv.org/html/2407.14402v1">https://arxiv.org/html/2407.14402v1</a></span>. Checked 2026-09-29.</li><li id="source-2">CrewAI (2026). <a href="https://docs.crewai.com/en/concepts/tasks">Tasks</a>. <span class="source-url"><a href="https://docs.crewai.com/en/concepts/tasks">https://docs.crewai.com/en/concepts/tasks</a></span>. Checked 2026-09-29.</li></ol>
+<ol class="sources"><li id="source-1">Zhang, Z.; Yang, F.; Qin, X.; et al. (2024). <a href="https://arxiv.org/html/2407.14402v1">The Vision of Autonomic Computing: Can LLMs Make It a Reality?</a> <span class="source-url"><a href="https://arxiv.org/html/2407.14402v1">https://arxiv.org/html/2407.14402v1</a></span>. Checked 2026-11-12.</li><li id="source-2">CrewAI (2026). <a href="https://docs.crewai.com/en/concepts/tasks">Tasks</a>. <span class="source-url"><a href="https://docs.crewai.com/en/concepts/tasks">https://docs.crewai.com/en/concepts/tasks</a></span>. Checked 2026-11-12.</li></ol>
 <p class="views">Machine views: <a href="/pages/goal-setting-and-monitoring.md">Markdown</a> · <a href="/pages/goal-setting-and-monitoring.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/goal-setting-and-monitoring.md" rel="noopener" aria-label="Propose an edit to Goal Setting and Monitoring">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

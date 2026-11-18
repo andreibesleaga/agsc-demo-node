@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic Supply Chain Integrity — AgenticSystemCore Graph</title>
+<meta name="description" content="Sign, pin and allowlist the models, tools, protocol servers and prompts an agent loads, and keep a way to revoke any of them at once.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/agentic-supply-chain/">
+<link rel="alternate" href="/pages/agentic-supply-chain.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/agentic-supply-chain/">
+<meta property="og:title" content="Agentic Supply Chain Integrity">
+<meta property="og:description" content="Sign, pin and allowlist the models, tools, protocol servers and prompts an agent loads, and keep a way to revoke any of them at once.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Sign, pin and allowlist the models, tools, protocol servers and prompts an agent loads, and keep a way to revoke any of them at once.","name":"Agentic Supply Chain Integrity","url":"https://patterns.agenticsystemcore.com/concepts/agentic-supply-chain/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Graph</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Agentic Supply Chain Integrity</h1>
+<p class="summary"><strong>Summary</strong>Sign, pin and allowlist the models, tools, protocol servers and prompts an agent loads, and keep a way to revoke any of them at once.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/security/">Security</a></dd>
+<dt>Tags</dt><dd><a href="/tags/accountability/">accountability</a>, <a href="/tags/standards/">standards</a>, <a href="/tags/governance/">governance</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/agentic-supply-chain/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-d0bbd2d35f3a7aa9"></span>Intent</h2>
+<p>Keep every component an agent loads traceable to a known source, unaltered, and revocable.</p>
+<h2 id="context-forces"><span id="chunk-d185177e9696ff63"></span>Context &amp; Forces</h2>
+<p>OWASP notes that agentic systems often compose capabilities at runtime, shifting focus from manifest to run-time security.</p>
+<h2 id="structure"><span id="chunk-2ae50bc41ad94d7b"></span>Structure</h2>
+<p>OWASP's prevention list includes signing manifests, curated registries, rejecting unsigned components, re-checking signatures at runtime, and a kill switch.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-4ca0cd19ee6406bf"></span>Consequences &amp; Trade-offs</h2>
+<p>The sources describe controls, not measured results.</p>
+<h2 id="related-patterns"><span id="chunk-82911d5fc5c5670a"></span>Related Patterns</h2>
+<ul>
+<li>OWASP Top 10 for Agentic Applications</li>
+<li>Skill-Library Compounding</li>
+</ul>
+
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 100" role="img" aria-labelledby="links_agentic-supply-chain-title links_agentic-supply-chain-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_agentic-supply-chain-title">Relations of Agentic Supply Chain Integrity</title>
+  <desc id="links_agentic-supply-chain-desc">Relations of Agentic Supply Chain Integrity. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_agentic-supply-chain-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="32" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="10" width="190" height="36" rx="6"/>
+    <path d="M440 36.5 L494 28 L510 28" marker-end="url(#links_agentic-supply-chain-arrow)" class="agsc-rel-related"/>
+    <rect x="510" y="54" width="190" height="36" rx="6"/>
+    <path d="M440 63.5 L494 72 L510 72" marker-end="url(#links_agentic-supply-chain-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="54" font-size="11">Agentic Supply Chain Inte…</text>
+    <text x="605" y="24" font-size="12">related</text>
+    <text x="605" y="40" font-size="12">OWASP Top 10 for Agentic Ap…</text>
+    <text x="605" y="68" font-size="12">related</text>
+    <text x="605" y="84" font-size="12">Skill-Library Compounding</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/owasp-agentic-top-10/">OWASP Top 10 for Agentic Applications</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/skill-library/">Skill-Library Compounding</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="agentic-supply-chain-title agentic-supply-chain-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="agentic-supply-chain-title">Model, tool, MCP server and skill artifacts flow from an allowlisted registry through a highlighted load-time verifier, which also takes a store of signatures and hashes, before reaching the agent; a kill-switch box feeds into the verifier.</title>
+  <desc id="agentic-supply-chain-desc">unsigned components are rejected; a kill switch disables chosen ones</desc>
+  <defs><marker id="agentic-supply-chain-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="30" width="110" height="60" rx="6"/>
+    <rect x="14" y="110" width="50" height="30" rx="6"/>
+    <rect x="70" y="110" width="50" height="30" rx="6"/>
+    <rect x="14" y="148" width="50" height="30" rx="6"/>
+    <rect x="70" y="148" width="50" height="30" rx="6"/>
+    <rect x="180" y="90" width="120" height="60" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="180" y="174" width="120" height="44" rx="6"/>
+    <rect x="350" y="96" width="96" height="48" rx="6"/>
+    <rect x="350" y="174" width="96" height="44" rx="6"/>
+    <path d="M127.8 80.6 L176.2 97.6" marker-end="url(#agentic-supply-chain-arrow)"/>
+    <path d="M124 124 L176 122.2" marker-end="url(#agentic-supply-chain-arrow)"/>
+    <path d="M123.8 154.4 L176.2 138.9" marker-end="url(#agentic-supply-chain-arrow)"/>
+    <path d="M240 170 L240 154" marker-end="url(#agentic-supply-chain-arrow)"/>
+    <path d="M304 120 L346 120" marker-end="url(#agentic-supply-chain-arrow)"/>
+    <path d="M348.7 172.3 L303.6 150.6" marker-end="url(#agentic-supply-chain-arrow)" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="69" y="56" font-size="12">allowlisted</text>
+    <text x="69" y="72" font-size="12">registry</text>
+    <text x="39" y="129" font-size="12">model</text>
+    <text x="95" y="129" font-size="12">tool</text>
+    <text x="39" y="167" font-size="12">server</text>
+    <text x="95" y="167" font-size="12">skill</text>
+    <text x="240" y="116" font-size="12">load-time</text>
+    <text x="240" y="132" font-size="12">verifier</text>
+    <text x="240" y="192" font-size="12">signatures</text>
+    <text x="240" y="208" font-size="12">and hashes</text>
+    <text x="398" y="124" font-size="12">agent</text>
+    <text x="398" y="200" font-size="12">kill switch</text>
+    <text x="230" y="248" font-size="11">unsigned components are rejected; a kill switch disables chosen ones</text>
+  </g>
+</svg><figcaption>Agents often compose capabilities at runtime, so signatures are re-checked at runtime too.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">OWASP Gen AI Security Project (2025). <a href="https://genai.owasp.org/download/52117/?tmstv=1765059207">OWASP Top 10 for Agentic Applications for 2026</a>. <span class="source-url"><a href="https://genai.owasp.org/download/52117/?tmstv=1765059207">https://genai.owasp.org/download/52117/?tmstv=1765059207</a></span>. Checked 2026-11-12.</li><li id="source-2">Maruseac, M. (2025). <a href="https://blog.sigstore.dev/model-transparency-v1.0/">Taming the Wild West of ML: Practical Model Signing with Sigstore</a>. <span class="source-url"><a href="https://blog.sigstore.dev/model-transparency-v1.0/">https://blog.sigstore.dev/model-transparency-v1.0/</a></span>. Checked 2026-11-12.</li><li id="source-3">OpenSSF SLSA project (2023). <a href="https://slsa.dev/spec/v1.0/about">About SLSA</a>. <span class="source-url"><a href="https://slsa.dev/spec/v1.0/about">https://slsa.dev/spec/v1.0/about</a></span>. Checked 2026-11-12.</li></ol>
+<p class="views">Machine views: <a href="/pages/agentic-supply-chain.md">Markdown</a> · <a href="/pages/agentic-supply-chain.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/agentic-supply-chain.md" rel="noopener" aria-label="Propose an edit to Agentic Supply Chain Integrity">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

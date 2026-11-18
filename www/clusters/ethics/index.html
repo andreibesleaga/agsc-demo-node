@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ethics &amp; Sustainability</title>
+<title>Ethics &amp; Sustainability — AgenticSystemCore Graph</title>
 <meta name="description" content="Human control over autonomous systems, and their effects on people and the environment.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/clusters/ethics/">
+<link rel="alternate" href="/pages/ethics.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/clusters/ethics/">
+<meta property="og:title" content="Ethics &amp; Sustainability">
+<meta property="og:description" content="Human control over autonomous systems, and their effects on people and the environment.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"Human control over autonomous systems, and their effects on people and the environment.","headline":"Ethics & Sustainability","url":"https://patterns.agenticsystemcore.com/clusters/ethics/"}</script>
 <script src="/compose/agsc-core.js" defer></script>
 <script src="/compose/agsc-page-tools.js" defer></script>
@@ -18,14 +25,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -41,9 +51,34 @@
 <p>Human control over autonomous systems, and their effects on people and the environment.</p>
 
 <h2 id="members">Members</h2>
-<ul class="members"><li><a href="/concepts/meaningful-human-control/">Meaningful Human Control</a>: Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it.</li></ul>
+<ul class="members"><li><a href="/concepts/meaningful-human-control/">Meaningful Human Control</a>: Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it.</li><li><a href="/concepts/safe-interruptibility/">Safe Interruptibility</a>: Design agents so a human stop is honoured and the agent does not learn to avoid or seek interruption.</li></ul>
+<h3 id="member_links">Links among the members</h3>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332 120" role="img" aria-labelledby="members_ethics-title members_ethics-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="members_ethics-title">Links among the members of Ethics &amp; Sustainability</title>
+  <desc id="members_ethics-desc">Links among the members of Ethics &amp; Sustainability. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="members_ethics-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="10" y="10" width="260" height="30" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="10" y="50" width="260" height="26" rx="6"/>
+    <rect x="10" y="84" width="260" height="26" rx="6"/>
+    <path d="M270 63 C294 63 294 97 270 97" marker-end="url(#members_ethics-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="140" y="29" font-size="11">Ethics &amp; Sustainability</text>
+    <text x="140" y="67" font-size="11">Meaningful Human Control</text>
+    <text x="140" y="101" font-size="12">Safe Interruptibility</text>
+    <text x="292" y="83.5" font-size="10" text-anchor="start">related</text>
+  </g>
+</svg><figcaption>The highlighted box is the cluster and its members are below it. Each arc runs from the member that states a link to its target and names the relation; the table lists the same links.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">From</th><th scope="col">Relation</th><th scope="col">To</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td><a href="/concepts/meaningful-human-control/">Meaningful Human Control</a></td><td>related</td><td><a href="/concepts/safe-interruptibility/">Safe Interruptibility</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
 <p class="views">Machine views: <a href="/pages/ethics.md">Markdown</a> · <a href="/pages/ethics.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/clusters/ethics.md" rel="noopener" aria-label="Propose an edit to Ethics &amp; Sustainability">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

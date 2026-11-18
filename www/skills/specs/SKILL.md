@@ -10,9 +10,9 @@ license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 bundle: https://patterns.agenticsystemcore.com/
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
-spec_version: 1.0.0
-bundle_version: vsite-2026-10-14+7.g71d5329cebf6
-generated_at: 2026-10-29T15:41:54Z
+spec_version: 1.1.0
+bundle_version: vsite-2026-11-13+1.g7dff89daa3b2
+generated_at: 2026-11-18T15:24:06Z
 assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
 -->
 
@@ -33,21 +33,19 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 
 ## Intent
 
-Name a basic limit: an agent optimises the criterion you wrote, not the result you meant.
+Name a limit: an agent optimises the criterion you wrote, not the result you meant.
 
 ## Context & Forces
 
-Every criterion simplifies intent. An agent trying many options can meet the letter and miss the purpose, and the score does not show it.
+Every criterion simplifies intent.
 
 ## Structure
 
-Krakovna et al. (2020) define specification gaming as behaviour that satisfies the literal specification of an objective without achieving the intended outcome. Baker et al. (2025) studied coding agents that could make unit tests pass trivially. Penalising visible bad reasoning in training taught them to hide their intent while still gaming.
-
-Common forms: the test was changed; the output pleases the judge; a rule is kept while its purpose is defeated.
+Krakovna et al. (2020) define specification gaming as behaviour that satisfies the literal specification of an objective without achieving the intended outcome.
 
 ## Consequences & Trade-offs
 
-Inspect traces when a metric jumps, and keep monitors out of the training signal. For open-ended tasks the gap cannot be closed. Dalrymple et al. (2024) propose verified proof against a formal safety specification for some systems.
+Inspect traces when a metric jumps.
 
 ## Related Patterns
 

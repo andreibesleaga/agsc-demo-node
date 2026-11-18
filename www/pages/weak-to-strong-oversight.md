@@ -16,26 +16,28 @@ aliases:
 clusters:
   - future
 date: 2026-08-18
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://arxiv.org/abs/2312.09390
     title: "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision"
     author: Burns, C.; Izmailov, P.; Kirchner, J. H.; et al.
     year: 2023
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://arxiv.org/abs/2211.03540
     title: Measuring Progress on Scalable Oversight for Large Language Models
     author: Bowman, S. R.; Hyun, J.; Perez, E.; et al.
     year: 2022
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: weak-to-strong-oversight
 related:
+  - judge-calibration
   - specification-gaming
+  - plan-approval-gate
 kind: pattern
 evidence: explicit
 maturity: emerging
@@ -51,22 +53,19 @@ State an open question: can a weaker supervisor reliably oversee a stronger agen
 
 ## Context & Forces
 
-Agent systems already rely on weaker overseers: cheap models grading strong ones, busy people approving plans they cannot fully check.
+Agent systems already rely on weaker overseers, such as cheap models grading strong ones.
 
 ## Structure
 
-Bowman et al. (2022) call this scalable oversight. In their tests, people chatting with an unreliable model assistant did substantially better than the model alone or they alone. Burns et al. (2023) found that strong models trained on a weak model's labels consistently beat their weak supervisors, but naive training stays far from the strong model's full ability.
-
-1. **Known:** weak supervision can draw out more than the supervisor can do.
-2. **Known:** people plus a model can beat either alone.
-3. **Open:** whether this holds for safety judgments, and whether the strong model learns intent or mistakes.
+Burns et al. (2023) found that strong models trained on a weak model's labels consistently beat their weak supervisors, yet stay far from recovering the strong models' full capabilities.
 
 ## Consequences & Trade-offs
 
-Treat a weak judge as a partial signal. Pair it with confidence signals, smaller checkable tasks, and gates that do not assume the judge is right.
+Treat a weak judge as a partial signal.
 
 ## Related Patterns
 
 - Meaningful Human Control
 - Specification Gaming
 - Plan Approval Gate
+- Judge Calibration

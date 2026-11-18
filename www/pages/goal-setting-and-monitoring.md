@@ -16,27 +16,29 @@ aliases:
 clusters:
   - reasoning-decision
 date: 2026-08-18
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://arxiv.org/html/2407.14402v1
     title: "The Vision of Autonomic Computing: Can LLMs Make It a Reality?"
     author: Zhang, Z.; Yang, F.; Qin, X.; et al.
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://docs.crewai.com/en/concepts/tasks
     title: Tasks
     author: CrewAI
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: goal-setting-and-monitoring
 related:
+  - termination-conditions
   - metacognitive-monitoring
   - specification-gaming
+  - unbounded-agent-loops
 kind: pattern
 evidence: explicit
 maturity: established
@@ -52,22 +54,19 @@ Give an agent a goal with checkable criteria, then watch progress and correct co
 
 ## Context & Forces
 
-An agent can do every step right and still miss the goal. Vague goals cannot be checked; single metrics can be gamed.
+An agent can do every step right and still miss the goal.
 
 ## Structure
 
-The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge. Zhang et al. (2024) trace it to Kephart and Chess (2003) and apply it with language-model agents to microservice management. In CrewAI, a task has an `expected_output` describing completion and a `guardrail` that checks the output, retried three times by default.
-
-1. Write the goal as a few observable criteria.
-2. Check progress after each step, ideally outside the acting model.
-3. Continue, re-plan, or stop and escalate.
+The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge.
 
 ## Consequences & Trade-offs
 
-Progress becomes visible. Each check costs extra. Criteria can replace the goal, so keep them few.
+Progress becomes visible, but criteria can replace the goal, so keep them few.
 
 ## Related Patterns
 
 - Specification Gaming
 - Metacognitive Monitoring and Control
 - Unbounded Loops
+- Termination and Exit Conditions

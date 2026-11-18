@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Foundational</title>
+<title>Foundational — AgenticSystemCore Graph</title>
 <meta name="description" content="The basic building blocks of agents, such as loops, tools and ways of combining model calls.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/clusters/foundational/">
+<link rel="alternate" href="/pages/foundational.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/clusters/foundational/">
+<meta property="og:title" content="Foundational">
+<meta property="og:description" content="The basic building blocks of agents, such as loops, tools and ways of combining model calls.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"The basic building blocks of agents, such as loops, tools and ways of combining model calls.","headline":"Foundational","url":"https://patterns.agenticsystemcore.com/clusters/foundational/"}</script>
 <script src="/compose/agsc-core.js" defer></script>
 <script src="/compose/agsc-page-tools.js" defer></script>
@@ -18,14 +25,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -41,9 +51,56 @@
 <p>The basic building blocks of agents: loops, tools and ways of combining model calls.</p>
 
 <h2 id="members">Members</h2>
-<ul class="members"><li><a href="/concepts/agents-as-tools/">Agents as Tools</a>: Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control.</li><li><a href="/concepts/parallelization/">Parallelization</a>: Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times.</li></ul>
+<ul class="members"><li><a href="/concepts/agent-graph-optimization/">Agent-Graph Optimization</a>: Treat an agent workflow as a graph of nodes, edges and prompts, and search that space with an evaluator, as GPTSwarm, AFlow and MASS do.</li><li><a href="/concepts/agents-as-tools/">Agents as Tools</a>: Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control.</li><li><a href="/concepts/augmented-llm/">The Augmented LLM</a>: A language model enhanced with retrieval, tools and memory that it uses actively, described by Anthropic as the basic building block of agentic systems.</li><li><a href="/concepts/graph-of-thoughts/">Graph of Thoughts</a>: Model LLM reasoning as a graph of thoughts and dependencies, so thoughts can be combined and refined, not only branched.</li><li><a href="/concepts/parallelization/">Parallelization</a>: Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times.</li><li><a href="/concepts/state-graph-agents/">Agent as State Graph</a>: Express an agent as nodes, edges and shared state run in super-steps with checkpoints, as in LangGraph and Google&#39;s Pregel model.</li><li><a href="/concepts/termination-conditions/">Termination and Exit Conditions</a>: Define in advance each way an agent loop ends, such as a final answer, a turn limit, or a pause for human input.</li></ul>
+<h3 id="member_links">Links among the members</h3>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 290" role="img" aria-labelledby="members_foundational-title members_foundational-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="members_foundational-title">Links among the members of Foundational</title>
+  <desc id="members_foundational-desc">Links among the members of Foundational. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="members_foundational-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="10" y="10" width="260" height="30" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="10" y="50" width="260" height="26" rx="6"/>
+    <rect x="10" y="84" width="260" height="26" rx="6"/>
+    <rect x="10" y="118" width="260" height="26" rx="6"/>
+    <rect x="10" y="152" width="260" height="26" rx="6"/>
+    <rect x="10" y="186" width="260" height="26" rx="6"/>
+    <rect x="10" y="220" width="260" height="26" rx="6"/>
+    <rect x="10" y="254" width="260" height="26" rx="6"/>
+    <path d="M270 63 C326 63 326 165 270 165" marker-end="url(#members_foundational-arrow)"/>
+    <path d="M270 63 C358 63 358 233 270 233" marker-end="url(#members_foundational-arrow)"/>
+    <path d="M270 97 C294 97 294 131 270 131" marker-end="url(#members_foundational-arrow)"/>
+    <path d="M270 97 C326 97 326 199 270 199" marker-end="url(#members_foundational-arrow)"/>
+    <path d="M270 165 C310 165 310 233 270 233" marker-end="url(#members_foundational-arrow)"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="140" y="29" font-size="12">Foundational</text>
+    <text x="140" y="67" font-size="11">Agent-Graph Optimization</text>
+    <text x="140" y="101" font-size="12">Agents as Tools</text>
+    <text x="140" y="135" font-size="12">The Augmented LLM</text>
+    <text x="140" y="169" font-size="12">Graph of Thoughts</text>
+    <text x="140" y="203" font-size="12">Parallelization</text>
+    <text x="140" y="237" font-size="12">Agent as State Graph</text>
+    <text x="140" y="271" font-size="11">Termination and Exit Conditions</text>
+    <text x="316" y="117.5" font-size="10" text-anchor="start">related</text>
+    <text x="340" y="151.5" font-size="10" text-anchor="start">related</text>
+    <text x="292" y="117.5" font-size="10" text-anchor="start">related</text>
+    <text x="316" y="151.5" font-size="10" text-anchor="start">related</text>
+    <text x="304" y="202.5" font-size="10" text-anchor="start">related</text>
+  </g>
+</svg><figcaption>The highlighted box is the cluster and its members are below it. Each arc runs from the member that states a link to its target and names the relation; the table lists the same links.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">From</th><th scope="col">Relation</th><th scope="col">To</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td><a href="/concepts/agent-graph-optimization/">Agent-Graph Optimization</a></td><td>related</td><td><a href="/concepts/graph-of-thoughts/">Graph of Thoughts</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/agent-graph-optimization/">Agent-Graph Optimization</a></td><td>related</td><td><a href="/concepts/state-graph-agents/">Agent as State Graph</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/agents-as-tools/">Agents as Tools</a></td><td>related</td><td><a href="/concepts/augmented-llm/">The Augmented LLM</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/agents-as-tools/">Agents as Tools</a></td><td>related</td><td><a href="/concepts/parallelization/">Parallelization</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td><a href="/concepts/graph-of-thoughts/">Graph of Thoughts</a></td><td>related</td><td><a href="/concepts/state-graph-agents/">Agent as State Graph</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
 <p class="views">Machine views: <a href="/pages/foundational.md">Markdown</a> · <a href="/pages/foundational.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/clusters/foundational.md" rel="noopener" aria-label="Propose an edit to Foundational">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

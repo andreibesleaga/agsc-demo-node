@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skill-Library Compounding</title>
+<title>Skill-Library Compounding — AgenticSystemCore Graph</title>
 <meta name="description" content="Store verified procedures so an agent&#39;s skills build up across tasks instead of being rediscovered every run.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/skill-library/">
+<link rel="alternate" href="/pages/skill-library.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/skill-library/">
+<meta property="og:title" content="Skill-Library Compounding">
+<meta property="og:description" content="Store verified procedures so an agent&#39;s skills build up across tasks instead of being rediscovered every run.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"Store verified procedures so an agent's skills build up across tasks instead of being rediscovered every run.","name":"Skill-Library Compounding","url":"https://patterns.agenticsystemcore.com/concepts/skill-library/"}</script>
 <script src="/compose/agsc-core.js" defer></script>
 <script src="/compose/agsc-page-tools.js" defer></script>
@@ -18,14 +25,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -36,28 +46,67 @@
 <dl class="meta">
 <dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
 <dt>Cluster</dt><dd><a href="/clusters/memory-cognition/">Memory &amp; Cognition</a></dd>
+<dt>Tags</dt><dd><a href="/tags/self-improvement/">self-improvement</a>, <a href="/tags/persistence/">persistence</a></dd>
 <dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/skill-library/</code></dd>
 <dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
 </dl>
 <h2 id="intent"><span id="chunk-b0bf8580f774f9c0"></span>Intent</h2>
-<p>Store capabilities that are known to work, so an agent's skills grow instead of being rediscovered each run.</p>
+<p>Store capabilities known to work, so an agent's skills grow instead of being rediscovered.</p>
 <h2 id="context-forces"><span id="chunk-38d38f667ef2043c"></span>Context &amp; Forces</h2>
-<p>An agent that forgets a solution pays for it again. Storing everything is worse: failures that looked right pile up.</p>
+<p>An agent that forgets a solution pays for it again.</p>
 <h2 id="structure"><span id="chunk-808ddc945a153162"></span>Structure</h2>
-<p>Voyager (Wang et al., 2023) keeps a growing library of executable skills, uses self-verification, and builds complex skills from simple ones. Anthropic's Agent Skills are folders of instructions, scripts and resources that agents load when needed (Zhang et al., 2025). CoALA (Sumers et al., 2023) calls such code procedural memory.</p>
-<ol>
-<li><strong>Capture</strong> a successful solution as a named procedure.</li>
-<li><strong>Verify</strong> it before admitting it.</li>
-<li><strong>Retrieve</strong> it when a similar task arrives.</li>
-</ol>
+<p>Voyager (Wang et al., 2023) keeps a growing library of executable skills, uses self-verification, and builds complex skills from simple ones.</p>
 <h2 id="consequences-trade-offs"><span id="chunk-c3621f2fd3dbbc71"></span>Consequences &amp; Trade-offs</h2>
-<p>Skills build up and can be shared. A bad skill changes behaviour, so review it like code. Weak retrieval returns the wrong skill.</p>
+<p>A bad skill changes behaviour, so review it like code.</p>
 <h2 id="related-patterns"><span id="chunk-236a8630c0e3b316"></span>Related Patterns</h2>
 <ul>
 <li>Generative Agents</li>
 <li>Agents as Tools</li>
 </ul>
 
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 188" role="img" aria-labelledby="links_skill-library-title links_skill-library-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_skill-library-title">Relations of Skill-Library Compounding</title>
+  <desc id="links_skill-library-desc">Relations of Skill-Library Compounding. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_skill-library-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="76" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="76" width="190" height="36" rx="6"/>
+    <path d="M440 94 L494 94 L510 94" marker-end="url(#links_skill-library-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="10" width="190" height="36" rx="6"/>
+    <path d="M200 28 L216 28 L317.1 76" marker-end="url(#links_skill-library-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="54" width="190" height="36" rx="6"/>
+    <path d="M200 72 L216 72 L270 80.5" marker-end="url(#links_skill-library-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="98" width="190" height="36" rx="6"/>
+    <path d="M200 116 L216 116 L270 107.5" marker-end="url(#links_skill-library-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="142" width="190" height="36" rx="6"/>
+    <path d="M200 160 L216 160 L317.1 112" marker-end="url(#links_skill-library-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="98" font-size="11">Skill-Library Compounding</text>
+    <text x="605" y="90" font-size="12">related</text>
+    <text x="605" y="106" font-size="12">Agents as Tools</text>
+    <text x="105" y="24" font-size="12">related</text>
+    <text x="105" y="40" font-size="12">Agentic Supply Chain Integrity</text>
+    <text x="105" y="68" font-size="12">related</text>
+    <text x="105" y="84" font-size="12">Curiosity-Driven Curriculum</text>
+    <text x="105" y="112" font-size="12">related</text>
+    <text x="105" y="128" font-size="12">Generative Agents</text>
+    <text x="105" y="156" font-size="12">related</text>
+    <text x="105" y="172" font-size="12">Memory and Context Poisoni…</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/agents-as-tools/">Agents as Tools</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/agentic-supply-chain/">Agentic Supply Chain Integrity</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/curiosity-driven-curriculum/">Curiosity-Driven Curriculum</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/generative-agents/">Generative Agents</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/memory-context-poisoning/">Memory and Context Poisoning Defense</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
 <figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 240" role="img" aria-labelledby="skill-library-title skill-library-desc" font-family="system-ui, sans-serif" font-size="14">
   <title id="skill-library-title">A new task goes to solve and then verify; a failure returns to solve for revision, a pass is stored in a highlighted library of verified skills, and retrieved skills feed back into solving the next task.</title>
   <desc id="skill-library-desc">only verified skills enter; stored skills feed the next task</desc>
@@ -86,9 +135,10 @@
   </g>
 </svg><figcaption>Only verified skills enter the library — the verification gate is what stops it filling with plausible failures.</figcaption></figure>
 <h2 id="references">References</h2>
-<ol class="sources"><li id="source-1">Wang, G.; Xie, Y.; Jiang, Y.; et al. (2023). <a href="https://arxiv.org/abs/2305.16291">Voyager: An Open-Ended Embodied Agent with Large Language Models</a>. <span class="source-url"><a href="https://arxiv.org/abs/2305.16291">https://arxiv.org/abs/2305.16291</a></span>. Checked 2026-09-29.</li><li id="source-2">Zhang, B.; Lazuka, K.; Murag, M. (2025). <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills">Equipping agents for the real world with Agent Skills</a>. <span class="source-url"><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills">https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills</a></span>. Checked 2026-09-29.</li><li id="source-3">Sumers, T. R.; Yao, S.; Narasimhan, K.; et al. (2023). <a href="https://arxiv.org/abs/2309.02427">Cognitive Architectures for Language Agents</a>. <span class="source-url"><a href="https://arxiv.org/abs/2309.02427">https://arxiv.org/abs/2309.02427</a></span>. Checked 2026-09-29.</li></ol>
+<ol class="sources"><li id="source-1">Wang, G.; Xie, Y.; Jiang, Y.; et al. (2023). <a href="https://arxiv.org/abs/2305.16291">Voyager: An Open-Ended Embodied Agent with Large Language Models</a>. <span class="source-url"><a href="https://arxiv.org/abs/2305.16291">https://arxiv.org/abs/2305.16291</a></span>. Checked 2026-11-12.</li><li id="source-2">Zhang, B.; Lazuka, K.; Murag, M. (2025). <a href="https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills">Equipping agents for the real world with Agent Skills</a>. <span class="source-url"><a href="https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills">https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills</a></span>. Checked 2026-11-12.</li><li id="source-3">Sumers, T. R.; Yao, S.; Narasimhan, K.; et al. (2023). <a href="https://arxiv.org/abs/2309.02427">Cognitive Architectures for Language Agents</a>. <span class="source-url"><a href="https://arxiv.org/abs/2309.02427">https://arxiv.org/abs/2309.02427</a></span>. Checked 2026-11-12.</li></ol>
 <p class="views">Machine views: <a href="/pages/skill-library.md">Markdown</a> · <a href="/pages/skill-library.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/skill-library.md" rel="noopener" aria-label="Propose an edit to Skill-Library Compounding">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

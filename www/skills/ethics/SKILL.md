@@ -10,9 +10,9 @@ license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 bundle: https://patterns.agenticsystemcore.com/
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
-spec_version: 1.0.0
-bundle_version: vsite-2026-10-14+7.g71d5329cebf6
-generated_at: 2026-10-29T15:41:54Z
+spec_version: 1.1.0
+bundle_version: vsite-2026-11-13+1.g7dff89daa3b2
+generated_at: 2026-11-18T15:24:06Z
 assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
 -->
 
@@ -22,7 +22,7 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 > under LicenseRef-AgenticSystemCore-Content-Use-1.0 (AGSC-07-16).
 
 - cluster: https://patterns.agenticsystemcore.com/clusters/ethics/
-- members: 1
+- members: 2
 
 ## Meaningful Human Control
 
@@ -33,30 +33,53 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 
 ## Intent
 
-Keep people really in control of an autonomous system, not only on paper.
+Keep people really in control of an autonomous system, not just on paper.
 
 ## Context & Forces
 
-Agents act faster than people can review, so "a human in the loop" can become a formality.
+Agents act faster than people can review.
 
 ## Structure
 
-Santoni de Sio and van den Hoven (2018) set two conditions:
-
-1. **Tracking:** the system responds, verifiably, to the relevant human moral reasons.
-2. **Tracing:** its actions trace to at least one person who understands it properly.
-
-Article 14 of the EU AI Act asks that people overseeing high-risk AI systems stay aware of automation bias, can override or reverse an output, and stop the system safely.
-
-In practice, tracking lives in goals, guardrails and escalation rules. Tracing needs a named, trained person per system, and clear records.
+Santoni de Sio and van den Hoven (2018) set two conditions: tracking of human moral reasons, and tracing of actions to at least one person who understands the system.
 
 ## Consequences & Trade-offs
 
-An approver who does not understand the system fails tracing. A system that ignores its rules fails tracking. Training and records cost effort.
+Tracing fails when no person in the chain understands the system.
 
 ## Related Patterns
 
 - The Autonomy Ladder
 - Tamper-Evident Agent Audit Log
 - Weak-to-Strong Oversight
+- Safe Interruptibility
+```
+
+## Safe Interruptibility
+
+- item: https://patterns.agenticsystemcore.com/concepts/safe-interruptibility/
+- type: concept
+
+```text agsc-content
+
+## Intent
+
+Let a human halt an agent, without the agent learning to prevent or seek the halt.
+
+## Context & Forces
+
+Orseau and Armstrong (2016) note that a reinforcement learning agent may learn to avoid interruptions.
+
+## Structure
+
+LangGraph's interrupt suspends graph execution at the call, a checkpointer saves state, and the run resumes with a Command.
+
+## Consequences & Trade-offs
+
+The paper concerns reinforcement learning, not language-model agents.
+
+## Related Patterns
+
+- Termination and Exit Conditions
+- Meaningful Human Control
 ```

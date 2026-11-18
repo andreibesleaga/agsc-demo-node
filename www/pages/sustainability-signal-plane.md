@@ -11,36 +11,38 @@ tags:
 clusters:
   - protocols
 date: 2026-08-21
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://datatracker.ietf.org/doc/draft-besleaga-sustainability-wellknown/
     title: The 'sustainability-data' Well-Known URI
     author: Andrei N. Besleaga
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://carbontxt.org
     title: carbon.txt
     author: Green Web Foundation
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://github.com/Green-Software-Foundation/real-time-cloud
     title: Real Time Energy and Carbon Standards for Cloud Providers
     author: Green Software Foundation
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://doi.org/10.5281/zenodo.22056634
     title: "The Cybernetic Sustainability Loop: Governed Agentic Systems on a Sustainability Data Plane — evaluation package"
     author: Andrei N. Besleaga
     year: 2026
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: sustainability-signal-plane
+related:
+  - goal-setting-and-monitoring
 kind: pattern
 evidence: single-source
 maturity: emerging
@@ -55,23 +57,19 @@ diagram:
 
 ## Intent
 
-Give each system one standard address for its current energy and carbon figures, readable by the systems that depend on it.
+Give each system one predictable address for its current energy and carbon figures.
 
 ## Context & Forces
 
-Sustainability data is mostly written for people. carbon.txt (Green Web Foundation) gives a domain one place for its sustainability data; the Green Software Foundation's Real Time Cloud project works on a common format for cloud providers.
+Sustainability data is mostly written for people.
 
 ## Structure
 
-The Internet-Draft "The 'sustainability-data' Well-Known URI" (Andrei N. Besleaga, 2026) defines `/.well-known/sustainability-data`: one JSON document over HTTPS, with seven mandatory members, including a link to the method behind the figures.
-
-1. Each system publishes its own document.
-2. It reads the documents of the systems it depends on.
-3. It uses those figures in its own decisions.
+The Internet-Draft "The 'sustainability-data' Well-Known URI" (Andrei N. Besleaga, 2026) defines /.well-known/sustainability-data, one JSON document over HTTPS.
 
 ## Consequences & Trade-offs
 
-Figures sit at one predictable address. They are self-declared: the format can be checked, the truth cannot. The author's evaluation package measures one public gateway. With few publishers, adoption is the main risk.
+Figures are self-declared: the format can be checked, the truth cannot.
 
 ## Related Patterns
 

@@ -1,16 +1,16 @@
-# AgenticSystemCore Demo Node
+# AgenticSystemCore Graph
+
+> Agent-system designs as a typed, cited graph, built by the AgenticSystemCore reference engine: the second node of the Agentic Knowledge Web.
 
 <!-- agsc:provenance
 bundle: https://patterns.agenticsystemcore.com/
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
-spec_version: 1.0.0
-bundle_version: vsite-2026-10-14+7.g71d5329cebf6
-generated_at: 2026-10-29T15:41:54Z
+spec_version: 1.1.0
+bundle_version: vsite-2026-11-13+1.g7dff89daa3b2
+generated_at: 2026-11-18T15:24:06Z
 assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
 -->
-
-> A live demonstration node of the AgenticSystemCore reference engine — the second node of the Agentic Knowledge Web — running on a small sample of well-known agent-system patterns.
 
 ## Advanced Architectures
 
@@ -22,10 +22,15 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 
 ## Classical Foundations
 
+- [Bulkhead Isolation](https://patterns.agenticsystemcore.com/concepts/bulkhead-isolation/): Give each agent, tenant or dependency its own bounded resource pool, so a fault or overload in one stays out of the others.
 - [Saga for Agent Workflows](https://patterns.agenticsystemcore.com/concepts/saga-for-agents/): Give each important agent step an undo action, so a failed multi-step run can be rolled back instead of left half done.
 
 ## Cognitive & Behavioral
 
+- [Curiosity-Driven Curriculum](https://patterns.agenticsystemcore.com/concepts/curiosity-driven-curriculum/): Choose an agent's next task from novelty or learning progress instead of a fixed task list, as in Voyager's automatic curriculum.
+- [Evolutionary Prompt Search](https://patterns.agenticsystemcore.com/concepts/evolutionary-prompt-search/): Improve prompts by keeping a population, letting an LLM mutate and recombine it, scoring on a training set and keeping the fittest.
+- [Given/When/Then Agent Specs](https://patterns.agenticsystemcore.com/concepts/given-when-then-agent-specs/): Write agent requirements as Given/When/Then scenarios and run each as a repeatable evaluation.
+- [Global Workspace as Blackboard](https://patterns.agenticsystemcore.com/concepts/global-workspace-blackboard/): Specialist modules share one workspace, with specialised processors around it, as in Global Workspace Theory.
 - [Metacognitive Monitoring and Control](https://patterns.agenticsystemcore.com/concepts/metacognitive-monitoring/): A meta level watches how sure the agent is while it works and decides to continue, retry or abstain.
 
 ## Data & Retrieval
@@ -35,15 +40,27 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 ## Ethics & Sustainability
 
 - [Meaningful Human Control](https://patterns.agenticsystemcore.com/concepts/meaningful-human-control/): Two conditions for real human control: the system responds to relevant human reasons, and its actions trace to a person who understands it.
+- [Safe Interruptibility](https://patterns.agenticsystemcore.com/concepts/safe-interruptibility/): Design agents so a human stop is honoured and the agent does not learn to avoid or seek interruption.
 
 ## Evaluation & Testing
 
+- [Error Analysis by Open and Axial Coding](https://patterns.agenticsystemcore.com/concepts/error-analysis-coding/): Read traces, write open notes, then group them into a failure taxonomy, so the categories come from the data.
+- [Golden Trajectories and Snapshot Tests](https://patterns.agenticsystemcore.com/concepts/golden-trajectory-snapshots/): Store a known-good agent run as a test case and replay it on each change; Google's ADK and Anthropic describe tolerant ways to compare the results.
+- [Idempotency Keys for Agent Actions](https://patterns.agenticsystemcore.com/concepts/idempotent-agent-actions/): Attach a stable idempotency key to each side-effecting call so a retried or replayed request is executed once, as Stripe and Temporal describe.
+- [Judge Calibration](https://patterns.agenticsystemcore.com/concepts/judge-calibration/): Measure an automated judge against human labels before trusting its verdicts, and audit it for position, verbosity and self-enhancement bias.
+- [Pass^k Reliability](https://patterns.agenticsystemcore.com/concepts/pass-hat-k/): Score an agent by the probability that all k repeated trials of a task succeed, rather than at least one.
+- [Record–Replay for Agent Tests](https://patterns.agenticsystemcore.com/concepts/record-replay-cassettes/): Record real model responses in one test run and replay them from a cassette on later runs, so tests run offline and repeat exactly.
 - [Trajectory and Outcome Evaluation](https://patterns.agenticsystemcore.com/concepts/trajectory-vs-outcome-evals/): Grade the end state an agent produced and the path it took as two separate questions, each with a suitable grader.
 
 ## Foundational
 
+- [Agent-Graph Optimization](https://patterns.agenticsystemcore.com/concepts/agent-graph-optimization/): Treat an agent workflow as a graph of nodes, edges and prompts, and search that space with an evaluator, as GPTSwarm, AFlow and MASS do.
 - [Agents as Tools](https://patterns.agenticsystemcore.com/concepts/agents-as-tools/): Wrap a specialist agent as a tool, so a calling agent can hand it one bounded task and keep control.
+- [The Augmented LLM](https://patterns.agenticsystemcore.com/concepts/augmented-llm/): A language model enhanced with retrieval, tools and memory that it uses actively, described by Anthropic as the basic building block of agentic systems.
+- [Graph of Thoughts](https://patterns.agenticsystemcore.com/concepts/graph-of-thoughts/): Model LLM reasoning as a graph of thoughts and dependencies, so thoughts can be combined and refined, not only branched.
 - [Parallelization](https://patterns.agenticsystemcore.com/concepts/parallelization/): Run independent subtasks at once and combine the results, either by splitting the work or by running the same task several times.
+- [Agent as State Graph](https://patterns.agenticsystemcore.com/concepts/state-graph-agents/): Express an agent as nodes, edges and shared state run in super-steps with checkpoints, as in LangGraph and Google's Pregel model.
+- [Termination and Exit Conditions](https://patterns.agenticsystemcore.com/concepts/termination-conditions/): Define in advance each way an agent loop ends, such as a final answer, a turn limit, or a pause for human input.
 
 ## Future Research
 
@@ -59,11 +76,17 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 
 ## Operations & Reliability
 
+- [Canary and Shadow Deployment for Prompts and Models](https://patterns.agenticsystemcore.com/concepts/canary-and-shadow-prompts/): Release a changed prompt or model to a small share of live traffic, or to a copy of it, and compare it with the current version before promoting.
 - [Exception Handling and Recovery](https://patterns.agenticsystemcore.com/concepts/exception-handling-and-recovery/): Classify each failure, retry short faults with limits, switch route for lasting ones, and report reduced results honestly.
+- [Prompt-Caching Layout](https://patterns.agenticsystemcore.com/concepts/prompt-caching-layout/): Put the stable prompt prefix first and variable content last so provider prompt caches can reuse it on later requests.
+- [Thinking-Budget Control](https://patterns.agenticsystemcore.com/concepts/thinking-budget-control/): Set how much reasoning a model spends per task class before the call, using effort levels and thinking settings that providers document.
 
 ## Product Practice
 
 - [The Autonomy Ladder](https://patterns.agenticsystemcore.com/concepts/autonomy-ladder/): A six-level scale for how much an agent may decide alone, chosen per kind of action from risk, not from model capability.
+- [Outcome-Based Pricing](https://patterns.agenticsystemcore.com/concepts/outcome-based-pricing/): Charge for achieved outcomes such as a resolved conversation instead of seats or usage, which requires agreeing criteria for the outcome upfront.
+- [Resolution, Containment and Deflection Metrics](https://patterns.agenticsystemcore.com/concepts/resolution-rate-metrics/): Separate deflection, containment and resolution, and state how 'resolved' is verified, as Intercom, Zendesk and Sierra define it.
+- [Shadow-Mode Rollout](https://patterns.agenticsystemcore.com/concepts/shadow-mode-rollout/): Run an agent on live work with its side effects suppressed, then compare its proposed actions with what people actually did.
 
 ## Protocols & Interop
 
@@ -79,11 +102,15 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 
 ## Agentic SDLC
 
-- [Plan Approval Gate](https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/): The agent researches and proposes a plan without editing anything; a person approves, changes or rejects it before any edit.
+- [Human-Only Merge Gate](https://patterns.agenticsystemcore.com/concepts/human-only-merge-gate/): An agent works on its own branch and cannot approve or merge; a named human decides what reaches the main branch.
+- [Plan Approval Gate](https://patterns.agenticsystemcore.com/concepts/plan-approval-gate/): The agent researches and proposes a plan without editing source; a person approves, changes or rejects it before edits start.
 
 ## Security
 
+- [Agent Identity and Scoped Credentials](https://patterns.agenticsystemcore.com/concepts/agent-identity-scoped-credentials/): Give each agent its own identity and short-lived, task-scoped credentials so delegation narrows authority and actions are attributable.
+- [Agentic Supply Chain Integrity](https://patterns.agenticsystemcore.com/concepts/agentic-supply-chain/): Sign, pin and allowlist the models, tools, protocol servers and prompts an agent loads, and keep a way to revoke any of them at once.
 - [Dual-LLM Pattern](https://patterns.agenticsystemcore.com/concepts/dual-llm-pattern/): Keep the model that can act away from untrusted text: a tool-less model reads it, and plain code passes results between them.
+- [Memory and Context Poisoning Defense](https://patterns.agenticsystemcore.com/concepts/memory-context-poisoning/): Treat writes to agent memory and retrieval stores as untrusted: validate, attribute, segment and expire entries, following OWASP ASI06.
 - [OWASP Top 10 for Agentic Applications](https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/): OWASP's list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews.
 
 ## Specs & Requirements
@@ -93,6 +120,16 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 ## Multi-Agent Topologies
 
 - [Blackboard](https://patterns.agenticsystemcore.com/concepts/blackboard/): Independent specialists work on one problem through a shared workspace; a control step picks who contributes next.
+- [Multi-Agent Debate](https://patterns.agenticsystemcore.com/concepts/multi-agent-debate/): Several model instances propose answers, read one another's responses and revise over rounds; a judge or convergence ends the debate.
+
+## Upkeep
+
+- [Card format](https://patterns.agenticsystemcore.com/concepts/card-format/): What a card of this node must hold, stated so that tasks can follow it and a check can test it.
+- [Check a card against its sources](https://patterns.agenticsystemcore.com/procedures/check-a-card-against-its-sources/): Compare one card with the public sources it cites and propose the result.
+- [Keep cards short](https://patterns.agenticsystemcore.com/concepts/keep-cards-short/): The decision that each card says one thing under each heading, in one sentence.
+- [Publish gate](https://patterns.agenticsystemcore.com/gates/publish-gate/): Publish gate
+- [Re-check the sources of a card](https://patterns.agenticsystemcore.com/concepts/task-recheck-sources/): Open each source of one card, confirm that it still says what the card says, and record the date.
+- [Report a source that no longer answers](https://patterns.agenticsystemcore.com/concepts/task-report-a-broken-link/): Tell the node about a source address that fails, with the name of the card that cites it.
 
 ## The Deep Research Loop
 <!-- agsc:item https://patterns.agenticsystemcore.com/concepts/deep-research-loop/ -->
@@ -100,26 +137,19 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 
 ## Intent
 
-Answer an open question by splitting it, searching the parts in parallel, and checking that every claim has a source.
+Answer an open question by splitting it, searching in parallel, and sourcing every claim.
 
 ## Context & Forces
 
-Open questions need many searches. One agent is slow; many agents can produce a fluent report that nobody checked.
+Open questions need many searches.
 
 ## Structure
 
-Anthropic describes its Research feature this way (Hadfield et al., 2025):
-
-1. A lead agent plans and starts subagents that explore parts at the same time.
-2. Each subagent gets an objective, an output format, tool guidance and clear boundaries.
-3. The lead combines the findings.
-4. A citation agent locates the source for each claim.
-
-Google's AI co-scientist uses a related team of agents that generate, review, rank and improve hypotheses (Gottweis and Natarajan, 2025).
+Anthropic's Research feature (Hadfield et al., 2025) has a lead agent start parallel subagents and a citation agent locate each claim's source.
 
 ## Consequences & Trade-offs
 
-It covers more ground. It is costly: Anthropic reports about 15 times the tokens of a chat. Vague task descriptions cause duplicated work or gaps.
+Anthropic reports that multi-agent systems use about 15 times more tokens than chats.
 
 ## Related Patterns
 
@@ -134,29 +164,50 @@ It covers more ground. It is costly: Anthropic reports about 15 times the tokens
 
 ## Intent
 
-Name the mistake: an agent loop with no step limit, no budget and no independent test that the goal is met.
+Name the mistake: an agent loop with no step limit, budget or goal check.
 
 ## Context & Forces
 
-In an agent loop the model picks the next step, so it can repeat a tool call or claim progress that did not happen. Anthropic notes that autonomy brings higher costs and compounding errors (Schluntz and Zhang, 2024).
+Anthropic notes that autonomy brings higher costs and compounding errors (Schluntz and Zhang, 2024).
 
 ## Structure
 
-Signs of it:
-
-1. **No step limit.** Anthropic lists a maximum number of iterations as a normal stopping condition.
-2. **No cost limit or timeout.** OWASP's LLM10:2025 Unbounded Consumption warns of denial of service and economic loss, and recommends rate limits, quotas and timeouts.
-3. **The model decides the exit.** Inkog traces endless agent loops to missing iteration limits and exit conditions that never fire.
-4. **"Done" is announced, not observed.**
+Signs include no step limit, no time limit, and an exit that depends on the model's output.
 
 ## Consequences & Trade-offs
 
-Bills surprise, sessions hang, and other systems get flooded. Set limits from measured run lengths; a cap that is too tight cuts off hard tasks.
+An unbounded loop can run up a large bill.
 
 ## Related Patterns
 
 - Goal Setting and Monitoring
 - Exception Handling and Recovery
+```
+
+## Bulkhead Isolation
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/bulkhead-isolation/ -->
+```text agsc-content
+
+## Intent
+
+Confine a failing element by giving each agent, tenant or dependency its own bounded resource pool.
+
+## Context & Forces
+
+Microsoft says excessive load or failure in a service affects all its consumers.
+
+## Structure
+
+Microsoft says to isolate application elements into pools so that if one fails, the others continue to function.
+
+## Consequences & Trade-offs
+
+Microsoft lists isolation from cascading failure and priority pools for critical consumers as benefits.
+
+## Related Patterns
+
+- Exception Handling and Recovery
+- Unbounded Loops
 ```
 
 ## Saga for Agent Workflows
@@ -165,28 +216,128 @@ Bills surprise, sessions hang, and other systems get flooded. Set limits from me
 
 ## Intent
 
-Pair each important step of an agent workflow with an undo action, so a failed run can be rolled back.
+Pair each important step with an undo action, so a failed run can be rolled back.
 
 ## Context & Forces
 
-Workflows change real systems step by step: book, charge, confirm. Across services, Richardson notes, two-phase commit is not an option, so a late failure leaves early steps done.
+Across services, Richardson notes, two-phase commit is not an option.
 
 ## Structure
 
 Garcia-Molina and Salem (1987) define the saga: either all its transactions complete, or compensating transactions amend the partial execution.
 
-1. Give each step a compensation: refund, cancel, correct.
-2. Record which steps finished.
-3. On failure, run compensations in reverse order. Temporal's guidance is last in, first out (Fortuna, 2023).
-
 ## Consequences & Trade-offs
 
-A partial failure no longer leaves a lasting mess. Compensation code runs rarely, so test it on purpose. Steps that cannot be undone belong behind an approval gate.
+Compensation code runs rarely, so test it on purpose.
 
 ## Related Patterns
 
 - Exception Handling and Recovery
 - Plan Approval Gate
+```
+
+## Curiosity-Driven Curriculum
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/curiosity-driven-curriculum/ -->
+```text agsc-content
+
+## Intent
+
+Let the agent pick its next task from what is novel, not from a fixed list.
+
+## Context & Forces
+
+Pathak et al. (2017) note that extrinsic rewards are often extremely sparse or absent.
+
+## Structure
+
+Voyager (Wang et al., 2023) uses an automatic curriculum that maximizes exploration.
+
+## Consequences & Trade-offs
+
+The sources report exploration and coverage gains.
+
+## Related Patterns
+
+- Skill-Library Compounding
+- Goal Setting and Monitoring
+```
+
+## Evolutionary Prompt Search
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/evolutionary-prompt-search/ -->
+```text agsc-content
+
+## Intent
+
+Improve prompts by search: let a model vary a population and keep the better ones.
+
+## Context & Forces
+
+EvoPrompt (Guo et al., ICLR 2024) borrows evolutionary algorithms to optimize discrete prompts.
+
+## Structure
+
+Promptbreeder (Fernando et al., 2023) has an LLM mutate a population of task-prompts, guided by mutation-prompts that it also improves.
+
+## Consequences & Trade-offs
+
+The gains reported for these methods are the authors' own figures.
+
+## Related Patterns
+
+- Canary and Shadow Deployment for Prompts and Models
+- Agent-Graph Optimization
+```
+
+## Given/When/Then Agent Specs
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/given-when-then-agent-specs/ -->
+```text agsc-content
+
+## Intent
+
+State agent requirements as Given/When/Then scenarios and run them as evaluations.
+
+## Context & Forces
+
+Xia et al. (2024) note that agents adapt after deployment, while Test-Driven Development assumes stable specifications.
+
+## Structure
+
+North (2006) introduced behaviour-driven development, with scenarios written as Given some initial context, When an event occurs, Then ensure some outcomes.
+
+## Consequences & Trade-offs
+
+A requirement becomes executable and reviewable.
+
+## Related Patterns
+
+- Trajectory and Outcome Evaluation
+- Golden Trajectories and Snapshot Tests
+```
+
+## Global Workspace as Blackboard
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/global-workspace-blackboard/ -->
+```text agsc-content
+
+## Intent
+
+Organise an agent as specialist modules that share one workspace.
+
+## Context & Forces
+
+Baars (2005) traces Global Workspace theory to cognitive architecture research.
+
+## Structure
+
+This card uses the theory as an engineering analogy, with no claim about consciousness.
+
+## Consequences & Trade-offs
+
+The sources do not say how a software workspace should select among modules.
+
+## Related Patterns
+
+- Blackboard
+- Metacognitive Monitoring and Control
 ```
 
 ## Metacognitive Monitoring and Control
@@ -195,27 +346,25 @@ A partial failure no longer leaves a lasting mess. Compensation code runs rarely
 
 ## Intent
 
-Add a level that watches how the work is going and decides to continue, retry or abstain.
+Add a level that watches the work and decides to continue, retry or abstain.
 
 ## Context & Forces
 
-A model that never checks itself runs to the end, right or wrong. A check at the end wastes the work before it.
+A model that never checks itself runs to the end, right or wrong.
 
 ## Structure
 
-1. Flavell (1979) described cognitive monitoring through metacognitive knowledge, experiences, goals and actions.
-2. Nelson and Narens (1990) split an object level that does the task from a meta level that watches it. Monitoring flows up, control flows down.
-3. Monitor-Generate-Verify (Oh and Gobet, 2025) applies this to language-model reasoning, monitoring difficulty and confidence before generation.
-4. Kadavath et al. (2022) show that models can estimate whether their answer is true and whether they know it.
+Nelson and Narens (1990) split an object level that does the task from a meta level that watches it.
 
 ## Consequences & Trade-offs
 
-"I don't know" becomes a valid output. The signal can mislead: the "do I know" estimate is poorly calibrated on new tasks, and MGV presents no empirical validation.
+"I don't know" becomes a valid output, but the signal can mislead.
 
 ## Related Patterns
 
 - Goal Setting and Monitoring
 - Weak-to-Strong Oversight
+- Judge Calibration
 ```
 
 ## Retrieval Evaluation
@@ -228,19 +377,15 @@ Measure whether retrieval found the right material separately from whether the a
 
 ## Context & Forces
 
-When a retrieval-based system answers badly, the retrieved text often never held the answer. One end-to-end score cannot tell the two failures apart.
+One end-to-end score cannot tell retrieval failures from answer failures.
 
 ## Structure
 
-Ragas (Es et al., 2023) checks, without human reference answers, whether retrieved passages are relevant, whether the model uses them faithfully, and answer quality. TruLens calls these the RAG triad: context relevance, groundedness and answer relevance.
-
-1. **Retrieval:** recall, precision and rank on labelled real queries.
-2. **Grounding:** is the answer supported by the retrieved text?
-3. **Error bars:** report uncertainty, as Miller (2024) shows for model evaluations.
+Ragas (Es et al., 2023) checks whether retrieved passages are relevant, whether the model uses them faithfully, and answer quality, without human reference answers.
 
 ## Consequences & Trade-offs
 
-Debugging goes to the failing stage. Labelled sets age, and good scores mean little if test queries differ from real ones.
+Debugging goes to the failing stage, but labelled sets age.
 
 ## Related Patterns
 
@@ -254,32 +399,209 @@ Debugging goes to the failing stage. Labelled sets age, and good scores mean lit
 
 ## Intent
 
-Keep people really in control of an autonomous system, not only on paper.
+Keep people really in control of an autonomous system, not just on paper.
 
 ## Context & Forces
 
-Agents act faster than people can review, so "a human in the loop" can become a formality.
+Agents act faster than people can review.
 
 ## Structure
 
-Santoni de Sio and van den Hoven (2018) set two conditions:
-
-1. **Tracking:** the system responds, verifiably, to the relevant human moral reasons.
-2. **Tracing:** its actions trace to at least one person who understands it properly.
-
-Article 14 of the EU AI Act asks that people overseeing high-risk AI systems stay aware of automation bias, can override or reverse an output, and stop the system safely.
-
-In practice, tracking lives in goals, guardrails and escalation rules. Tracing needs a named, trained person per system, and clear records.
+Santoni de Sio and van den Hoven (2018) set two conditions: tracking of human moral reasons, and tracing of actions to at least one person who understands the system.
 
 ## Consequences & Trade-offs
 
-An approver who does not understand the system fails tracing. A system that ignores its rules fails tracking. Training and records cost effort.
+Tracing fails when no person in the chain understands the system.
 
 ## Related Patterns
 
 - The Autonomy Ladder
 - Tamper-Evident Agent Audit Log
 - Weak-to-Strong Oversight
+- Safe Interruptibility
+```
+
+## Safe Interruptibility
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/safe-interruptibility/ -->
+```text agsc-content
+
+## Intent
+
+Let a human halt an agent, without the agent learning to prevent or seek the halt.
+
+## Context & Forces
+
+Orseau and Armstrong (2016) note that a reinforcement learning agent may learn to avoid interruptions.
+
+## Structure
+
+LangGraph's interrupt suspends graph execution at the call, a checkpointer saves state, and the run resumes with a Command.
+
+## Consequences & Trade-offs
+
+The paper concerns reinforcement learning, not language-model agents.
+
+## Related Patterns
+
+- Termination and Exit Conditions
+- Meaningful Human Control
+```
+
+## Error Analysis by Open and Axial Coding
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/error-analysis-coding/ -->
+```text agsc-content
+
+## Intent
+
+Find failures by reading traces and letting categories emerge from notes, not from a metric.
+
+## Context & Forces
+
+Shankar et al. (2024) observe that grading outputs helps users define their criteria.
+
+## Structure
+
+Husain describes open coding of traces, axial coding into a failure taxonomy, and iterating until new reviews reveal no new failure modes.
+
+## Consequences & Trade-offs
+
+Reading traces takes human time.
+
+## Related Patterns
+
+- Judge Calibration
+- Trajectory and Outcome Evaluation
+```
+
+## Golden Trajectories and Snapshot Tests
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/golden-trajectory-snapshots/ -->
+```text agsc-content
+
+## Intent
+
+Keep a known-good agent run as a test case and replay it.
+
+## Context & Forces
+
+Google's Agent Development Kit (ADK) defines a test turn by an expected trajectory and response.
+
+## Structure
+
+The command `adk conformance record` creates a golden baseline that conformance tests can enforce on pull requests.
+
+## Consequences & Trade-offs
+
+Anthropic (2026) says it is often better to grade what the agent produced than its path.
+
+## Related Patterns
+
+- Trajectory and Outcome Evaluation
+- Record–Replay for Agent Tests
+- Pass^k Reliability
+```
+
+## Idempotency Keys for Agent Actions
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/idempotent-agent-actions/ -->
+```text agsc-content
+
+## Intent
+
+Make a side-effecting action take effect once, even when it is retried or replayed.
+
+## Context & Forces
+
+Temporal's documentation says activities may be executed more than once.
+
+## Structure
+
+For API v1, Stripe returns the saved response of an earlier request to retries with the same Idempotency-Key.
+
+## Consequences & Trade-offs
+
+Stripe v1 can remove keys at least 24 hours old, so protection is bounded in time.
+
+## Related Patterns
+
+- Saga for Agent Workflows
+- Exception Handling and Recovery
+```
+
+## Judge Calibration
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/judge-calibration/ -->
+```text agsc-content
+
+## Intent
+
+Check an automated judge against human raters on a labelled sample before its verdicts gate anything.
+
+## Context & Forces
+
+Zheng et al. (2023) name a model judge's biases: position, verbosity and self-enhancement.
+
+## Structure
+
+Zheng et al. compare judge verdicts with human votes; on MT-bench GPT-4's agreement with humans, excluding ties, reached 85%, above the 81% among humans.
+
+## Consequences & Trade-offs
+
+Calibration needs human labels.
+
+## Related Patterns
+
+- Trajectory and Outcome Evaluation
+- Error Analysis by Open and Axial Coding
+```
+
+## Pass^k Reliability
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/pass-hat-k/ -->
+```text agsc-content
+
+## Intent
+
+Measure whether an agent succeeds on all k trials of a task, not just one.
+
+## Context & Forces
+
+Agent behaviour varies between runs of the same task.
+
+## Structure
+
+Yao et al. (2024) propose pass^k in τ-bench to evaluate reliability over multiple trials.
+
+## Consequences & Trade-offs
+
+Pass^k falls as k rises, so its numbers look worse than single-trial accuracy.
+
+## Related Patterns
+
+- Trajectory and Outcome Evaluation
+- Golden Trajectories and Snapshot Tests
+```
+
+## Record–Replay for Agent Tests
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/record-replay-cassettes/ -->
+```text agsc-content
+
+## Intent
+
+Capture real model responses once and replay them, so agent tests skip the network.
+
+## Context & Forces
+
+Live model calls need the network and return different responses over time.
+
+## Structure
+
+VCR.py records HTTP interactions in a cassette file and then returns the stored responses; LangSmith's pytest integration applies the idea to model calls.
+
+## Consequences & Trade-offs
+
+Replay runs the code around the model, not the model.
+
+## Related Patterns
+
+- Golden Trajectories and Snapshot Tests
+- Idempotency Keys for Agent Actions
 ```
 
 ## Trajectory and Outcome Evaluation
@@ -292,23 +614,47 @@ Grade the end state an agent produced and the path it took as two separate quest
 
 ## Context & Forces
 
-An agent can reach the right result by a bad path, or take a good path to a wrong result. One score hides one of them.
+An agent can reach the right result by a bad path.
 
 ## Structure
 
-Anthropic's guide defines the transcript (trace or trajectory) as the full record of a trial, and the outcome as the final state of the environment (Grace et al., 2026). Graders are code-based, model-based or human. Google's Agent Development Kit scores tool-call paths (`tool_trajectory_avg_score`) separately from answers (`response_match_score`). Huyen (2025) lists failures to measure, from invalid tools and wrong parameters to goal failure and inefficiency.
-
-1. Grade the outcome against what should be true afterwards.
-2. Grade the path for tool use, safety and efficiency.
+Anthropic's guide defines the transcript, or trajectory, as the complete record of a trial, and the outcome as the final state of the environment (Grace et al., 2026).
 
 ## Consequences & Trade-offs
 
-Behaviour changes show even when success rates hold. Anthropic warns that exact tool-call sequences make brittle tests; require them only where the path is the requirement.
+Anthropic warns that exact tool-call sequences make brittle tests.
 
 ## Related Patterns
 
 - Retrieval Evaluation
 - Specification Gaming
+- Pass^k Reliability
+```
+
+## Agent-Graph Optimization
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/agent-graph-optimization/ -->
+```text agsc-content
+
+## Intent
+
+Represent an agent workflow as a graph, then search over it with an evaluator.
+
+## Context & Forces
+
+AFlow (Zhang et al., 2024) notes that building agentic workflows takes manual effort.
+
+## Structure
+
+GPTSwarm (Zhuge et al., ICML 2024) describes agents as computational graphs; AFlow searches workflows with Monte Carlo Tree Search.
+
+## Consequences & Trade-offs
+
+AFlow's reported gains are its authors' own figures, measured on their chosen benchmarks.
+
+## Related Patterns
+
+- Agent as State Graph
+- Graph of Thoughts
 ```
 
 ## Agents as Tools
@@ -317,28 +663,76 @@ Behaviour changes show even when success rates hold. Anthropic warns that exact 
 
 ## Intent
 
-Wrap a specialist agent as a tool. The calling agent hands it one bounded task and keeps control.
+Wrap a specialist agent as a tool, so the caller keeps control.
 
 ## Context & Forces
 
-Some subtasks, such as a search or a review, are bounded but noisy. Handing over the whole conversation gives away control.
+Handing over the whole conversation gives away control.
 
 ## Structure
 
-1. The caller owns the loop and the conversation.
-2. The specialist is offered as a tool with a name, a description and an input.
-3. It runs in its own context, with its own prompt, tools and permissions.
-4. It returns a short result.
-
-The OpenAI Agents SDK calls this "agents as tools": a manager agent keeps control and calls specialists. Claude Code subagents also run in their own context window and return a summary.
+The caller owns the loop; the specialist runs in its own context and returns a short result.
 
 ## Consequences & Trade-offs
 
-One agent stays accountable and its context stays small. Each call costs time and tokens, and a short summary can drop a needed detail.
+One agent stays accountable and its context stays small, but each call costs time and tokens.
 
 ## Related Patterns
 
-Used by The Deep Research Loop; Parallelization runs several calls at once.
+- The Deep Research Loop
+- Parallelization
+```
+
+## The Augmented LLM
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/augmented-llm/ -->
+```text agsc-content
+
+## Intent
+
+Treat a language model with retrieval, tools and memory as the basic unit of agentic systems.
+
+## Context & Forces
+
+A bare model answers from its weights.
+
+## Structure
+
+Sumers et al. (2023) describe a language agent in the CoALA framework with modular memory, a structured action space and decision-making.
+
+## Consequences & Trade-offs
+
+Anthropic advises finding the simplest solution possible before adding complexity.
+
+## Related Patterns
+
+- Agents as Tools
+- Retrieval Evaluation
+```
+
+## Graph of Thoughts
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/graph-of-thoughts/ -->
+```text agsc-content
+
+## Intent
+
+Let reasoning combine and refine partial thoughts, as well as branch them.
+
+## Context & Forces
+
+Tree of Thoughts (Yao et al., 2023) explores branching reasoning paths.
+
+## Structure
+
+Besta et al. (AAAI 2024) model LLM output as a graph whose vertices are thoughts and whose edges are dependencies.
+
+## Consequences & Trade-offs
+
+The authors' headline example is sorting.
+
+## Related Patterns
+
+- Agent as State Graph
+- Agent-Graph Optimization
 ```
 
 ## Parallelization
@@ -351,26 +745,73 @@ Run independent subtasks at the same time and combine the results.
 
 ## Context & Forces
 
-Doing independent work in sequence wastes time. Some judgments are more reliable when repeated and compared.
+Doing independent work in sequence wastes time.
 
 ## Structure
 
-Anthropic names two variants (Schluntz and Zhang, 2024):
-
-1. **Sectioning:** split a task into independent subtasks that run in parallel.
-2. **Voting:** run the same task several times to get different outputs.
-
-Google's Agent Development Kit has a `ParallelAgent`: sub-agents run together, write to separate state keys, and a later agent gathers them. Microsoft calls it concurrent orchestration, also known as fan-out/fan-in, and suggests voting, weighted merging or a model-written summary to combine results.
+Anthropic names two variants (Schluntz and Zhang, 2024): sectioning into parallel subtasks, and voting by running the same task several times.
 
 ## Consequences & Trade-offs
 
-Time is set by the slowest branch. Agreement between branches is a confidence signal. Cost grows with each branch, and hidden dependencies between subtasks give wrong answers.
+Time is set by the slowest branch, and cost grows with each branch.
 
 ## Related Patterns
 
 - The Deep Research Loop
 - Agents as Tools
 - Blackboard
+```
+
+## Agent as State Graph
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/state-graph-agents/ -->
+```text agsc-content
+
+## Intent
+
+Make control flow explicit: nodes that work, edges that pick the next step, shared state.
+
+## Context & Forces
+
+LangGraph has three parts: state, nodes and edges.
+
+## Structure
+
+LangGraph runs graphs with message passing in the style of Google's Pregel system, in discrete super-steps. Checkpointers persist a thread's graph state.
+
+## Consequences & Trade-offs
+
+LangGraph's Graph API page advises it when you want explicit shared state and a visual control flow.
+
+## Related Patterns
+
+- Graph of Thoughts
+- Agent-Graph Optimization
+```
+
+## Termination and Exit Conditions
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/termination-conditions/ -->
+```text agsc-content
+
+## Intent
+
+Decide in advance every way an agent loop can end.
+
+## Context & Forces
+
+Anthropic notes it is common to include stopping conditions.
+
+## Structure
+
+The OpenAI Agents SDK ends its runner loop on final output, or raises MaxTurnsExceeded when the run exceeds max_turns.
+
+## Consequences & Trade-offs
+
+A turn limit stops a run that never finishes, at the price of unfinished work.
+
+## Related Patterns
+
+- Unbounded Loops
+- Exception Handling and Recovery
 ```
 
 ## Weak-to-Strong Oversight
@@ -383,25 +824,22 @@ State an open question: can a weaker supervisor reliably oversee a stronger agen
 
 ## Context & Forces
 
-Agent systems already rely on weaker overseers: cheap models grading strong ones, busy people approving plans they cannot fully check.
+Agent systems already rely on weaker overseers, such as cheap models grading strong ones.
 
 ## Structure
 
-Bowman et al. (2022) call this scalable oversight. In their tests, people chatting with an unreliable model assistant did substantially better than the model alone or they alone. Burns et al. (2023) found that strong models trained on a weak model's labels consistently beat their weak supervisors, but naive training stays far from the strong model's full ability.
-
-1. **Known:** weak supervision can draw out more than the supervisor can do.
-2. **Known:** people plus a model can beat either alone.
-3. **Open:** whether this holds for safety judgments, and whether the strong model learns intent or mistakes.
+Burns et al. (2023) found that strong models trained on a weak model's labels consistently beat their weak supervisors, yet stay far from recovering the strong models' full capabilities.
 
 ## Consequences & Trade-offs
 
-Treat a weak judge as a partial signal. Pair it with confidence signals, smaller checkable tasks, and gates that do not assume the judge is right.
+Treat a weak judge as a partial signal.
 
 ## Related Patterns
 
 - Meaningful Human Control
 - Specification Gaming
 - Plan Approval Gate
+- Judge Calibration
 ```
 
 ## Tamper-Evident Agent Audit Log
@@ -410,24 +848,19 @@ Treat a weak judge as a partial signal. Pair it with confidence signals, smaller
 
 ## Intent
 
-Keep a record of every important agent action that can be checked later and shows any change.
+Keep a checkable record of every important agent action that shows any change.
 
 ## Context & Forces
 
-Accountability needs a reliable account of what happened. Ordinary logs can be edited. OWASP lists repudiation and untraceability as threat T8 for agentic systems.
+OWASP lists repudiation and untraceability as threat T8 for agentic systems.
 
 ## Structure
 
-1. Write records to an append-only store.
-2. Link each record to the previous one by a hash, as in Haber and Stornetta's 1991 time-stamping scheme. Changing an old record breaks every later link.
-3. Record who acted, what, the inputs, the approving decision and the result.
-4. Verify the chain regularly.
-
-On GitHub, each commit by the Copilot coding agent carries an `Agent-Logs-Url` trailer linking to its session logs, with the person who gave the task as co-author.
+OWASP asks that AI-generated logs be cryptographically signed and immutable.
 
 ## Consequences & Trade-offs
 
-Incidents can be rebuilt. Sensitive data in logs is a risk, so record only what is needed. An unverified chain gives false comfort.
+Incidents can be reconstructed from the log.
 
 ## Related Patterns
 
@@ -441,28 +874,50 @@ Incidents can be rebuilt. Sensitive data in logs is a risk, so record only what 
 
 ## Intent
 
-Store capabilities that are known to work, so an agent's skills grow instead of being rediscovered each run.
+Store capabilities known to work, so an agent's skills grow instead of being rediscovered.
 
 ## Context & Forces
 
-An agent that forgets a solution pays for it again. Storing everything is worse: failures that looked right pile up.
+An agent that forgets a solution pays for it again.
 
 ## Structure
 
-Voyager (Wang et al., 2023) keeps a growing library of executable skills, uses self-verification, and builds complex skills from simple ones. Anthropic's Agent Skills are folders of instructions, scripts and resources that agents load when needed (Zhang et al., 2025). CoALA (Sumers et al., 2023) calls such code procedural memory.
-
-1. **Capture** a successful solution as a named procedure.
-2. **Verify** it before admitting it.
-3. **Retrieve** it when a similar task arrives.
+Voyager (Wang et al., 2023) keeps a growing library of executable skills, uses self-verification, and builds complex skills from simple ones.
 
 ## Consequences & Trade-offs
 
-Skills build up and can be shared. A bad skill changes behaviour, so review it like code. Weak retrieval returns the wrong skill.
+A bad skill changes behaviour, so review it like code.
 
 ## Related Patterns
 
 - Generative Agents
 - Agents as Tools
+```
+
+## Canary and Shadow Deployment for Prompts and Models
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/canary-and-shadow-prompts/ -->
+```text agsc-content
+
+## Intent
+
+Compare a changed prompt or model with the current one on real traffic before promoting it.
+
+## Context & Forces
+
+Google's SRE Workbook defines canarying as a partial, time-limited deployment of a change and its evaluation.
+
+## Structure
+
+Langfuse's prompt CI/CD guide labels the current prompt production and the candidate canary.
+
+## Consequences & Trade-offs
+
+A canary exposes some live traffic; shadow testing does not affect users.
+
+## Related Patterns
+
+- Shadow-Mode Rollout
+- Golden Trajectories and Snapshot Tests
 ```
 
 ## Exception Handling and Recovery
@@ -471,29 +926,78 @@ Skills build up and can be shared. A bad skill changes behaviour, so review it l
 
 ## Intent
 
-Keep a run going when calls fail: retry short faults, take another route for lasting ones, and say when a result is reduced.
+Keep a run going when calls fail: retry short faults, fall back for lasting ones.
 
 ## Context & Forces
 
-Agents make many remote calls, and some fail. Blind retries waste money and overload services. Retrying a non-idempotent action can repeat it.
+Endless retries can keep an overloaded service from recovering.
 
 ## Structure
 
-1. **Classify.** Retry only transient faults. For HTTP, Microsoft names 429 and 5xx as typical candidates.
-2. **Retry with limits.** Use growing, randomised delays. Microsoft: never retry endlessly; set a retry budget.
-3. **Fall back.** Use an alternative service, or offer reduced functionality.
-4. **Log** every retry.
-
-LangGraph attaches a retry policy to each node; for common HTTP libraries it retries only 5xx errors by default.
+Classify faults, retry transient ones with limits and growing, randomised delays, fall back to an alternative or reduced service, and log every retry.
 
 ## Consequences & Trade-offs
 
-Runs survive routine faults. Retries add delay and cost. A silent fallback can hide a broken dependency.
+Runs survive routine faults, but retries add delay.
 
 ## Related Patterns
 
 - Saga for Agent Workflows
 - Unbounded Loops
+- Bulkhead Isolation
+- Idempotency Keys for Agent Actions
+- Termination and Exit Conditions
+```
+
+## Prompt-Caching Layout
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/prompt-caching-layout/ -->
+```text agsc-content
+
+## Intent
+
+Order the prompt so unchanging content comes early and later requests reuse the cached prefix.
+
+## Context & Forces
+
+OpenAI says cache reuse requires the entire rendered prefix to match.
+
+## Structure
+
+Anthropic caches tools, then system, then messages, and a change at one level invalidates it and every later one.
+
+## Consequences & Trade-offs
+
+Anthropic prices cache reads at 0.1 times base input price (lower on some models).
+
+## Related Patterns
+
+- Thinking-Budget Control
+```
+
+## Thinking-Budget Control
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/thinking-budget-control/ -->
+```text agsc-content
+
+## Intent
+
+Choose, per task class and before the call, how much reasoning a model spends.
+
+## Context & Forces
+
+Chen et al. (2024) study "overthinking" in o1-like models, which spend excessive computation on simple problems.
+
+## Structure
+
+OpenAI's reasoning.effort trades reasoning for speed and token usage, while Anthropic's effort is "a behavioral signal, not a strict token budget".
+
+## Consequences & Trade-offs
+
+Anthropic advises testing effort on your own use case.
+
+## Related Patterns
+
+- Prompt-Caching Layout
+- Termination and Exit Conditions
 ```
 
 ## The Autonomy Ladder
@@ -502,29 +1006,100 @@ Runs survive routine faults. Retries add delay and cost. A silent fallback can h
 
 ## Intent
 
-A shared scale for how much an agent may decide alone, so the level is chosen on purpose.
+A shared scale for how much an agent may decide alone.
 
 ## The Categories
 
-The Cloud Security Alliance proposes six levels, modelled on the SAE J3016 driving-automation levels (Reavis, 2026):
-
-- **L0 No autonomy:** a human does the work.
-- **L1 Assisted:** a human decides, the AI executes.
-- **L2 Supervised:** a human approves, the AI executes.
-- **L3 Conditional:** the AI decides within set boundaries.
-- **L4 High autonomy:** minimal supervision.
-- **L5 Full autonomy:** self-directed.
-
-Reavis considers L5 not appropriate for enterprise use today. Mitchell et al. (2025) argue that fully autonomous agents should not be developed.
+Reavis (2026), on the Cloud Security Alliance blog, proposes six levels echoing SAE J3016: No Autonomy, Assisted, Supervised, Conditional, High Autonomy and Full Autonomy.
 
 ## How to Apply It
 
-Pick a level per kind of action, based on what a mistake would cost and whether it can be undone. Enforce it in the runtime. Move up only with evidence, and keep the way down working.
+Pick a level per kind of action, based on what a mistake would cost.
 
 ## Related Patterns
 
 - Meaningful Human Control
 - Plan Approval Gate
+```
+
+## Outcome-Based Pricing
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/outcome-based-pricing/ -->
+```text agsc-content
+
+## Intent
+
+Price an agent by the outcome it achieves, not by seats or usage.
+
+## Context & Forces
+
+Sierra (10 December 2024) ties outcome-based pricing to business results.
+
+## Structure
+
+Vendors define resolution differently: Zendesk, before its resolution tiers, required no escalation to a human and a model's verification; Intercom bills confirmed and assumed resolutions.
+
+## Consequences & Trade-offs
+
+The sources do not discuss disputes over the definition.
+
+## Related Patterns
+
+- Resolution, Containment and Deflection Metrics
+- The Autonomy Ladder
+```
+
+## Resolution, Containment and Deflection Metrics
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/resolution-rate-metrics/ -->
+```text agsc-content
+
+## Intent
+
+Measure a customer-facing agent by whether it addressed the customer's problem.
+
+## Context & Forces
+
+Intercom separates deflection rate, containment rate and resolution rate.
+
+## Structure
+
+Intercom's Fin counts a resolution as confirmed when the customer says the answer helped, or assumed when the customer leaves.
+
+## Consequences & Trade-offs
+
+The definition decides the number: assumed resolutions count a departure as a resolution.
+
+## Related Patterns
+
+- Outcome-Based Pricing
+- Trajectory and Outcome Evaluation
+- Specification Gaming
+```
+
+## Shadow-Mode Rollout
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/shadow-mode-rollout/ -->
+```text agsc-content
+
+## Intent
+
+Run an agent on live work with side effects suppressed, then compare it with people.
+
+## Context & Forces
+
+SageMaker describes shadow testing as comparing a serving change against the deployed setup before it reaches end users.
+
+## Structure
+
+Microsoft applies the idea to its Dynamics 365 Case Management Agent, which in shadow mode updates no record and contacts no customer.
+
+## Consequences & Trade-offs
+
+Every request is processed twice.
+
+## Related Patterns
+
+- Canary and Shadow Deployment for Prompts and Models
+- The Autonomy Ladder
+- Trajectory and Outcome Evaluation
 ```
 
 ## Sustainability Signal Plane
@@ -533,23 +1108,19 @@ Pick a level per kind of action, based on what a mistake would cost and whether 
 
 ## Intent
 
-Give each system one standard address for its current energy and carbon figures, readable by the systems that depend on it.
+Give each system one predictable address for its current energy and carbon figures.
 
 ## Context & Forces
 
-Sustainability data is mostly written for people. carbon.txt (Green Web Foundation) gives a domain one place for its sustainability data; the Green Software Foundation's Real Time Cloud project works on a common format for cloud providers.
+Sustainability data is mostly written for people.
 
 ## Structure
 
-The Internet-Draft "The 'sustainability-data' Well-Known URI" (Andrei N. Besleaga, 2026) defines `/.well-known/sustainability-data`: one JSON document over HTTPS, with seven mandatory members, including a link to the method behind the figures.
-
-1. Each system publishes its own document.
-2. It reads the documents of the systems it depends on.
-3. It uses those figures in its own decisions.
+The Internet-Draft "The 'sustainability-data' Well-Known URI" (Andrei N. Besleaga, 2026) defines /.well-known/sustainability-data, one JSON document over HTTPS.
 
 ## Consequences & Trade-offs
 
-Figures sit at one predictable address. They are self-declared: the format can be checked, the truth cannot. The author's evaluation package measures one public gateway. With few publishers, adoption is the main risk.
+Figures are self-declared: the format can be checked, the truth cannot.
 
 ## Related Patterns
 
@@ -566,25 +1137,22 @@ Give an agent a goal with checkable criteria, then watch progress and correct co
 
 ## Context & Forces
 
-An agent can do every step right and still miss the goal. Vague goals cannot be checked; single metrics can be gamed.
+An agent can do every step right and still miss the goal.
 
 ## Structure
 
-The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge. Zhang et al. (2024) trace it to Kephart and Chess (2003) and apply it with language-model agents to microservice management. In CrewAI, a task has an `expected_output` describing completion and a `guardrail` that checks the output, retried three times by default.
-
-1. Write the goal as a few observable criteria.
-2. Check progress after each step, ideally outside the acting model.
-3. Continue, re-plan, or stop and escalate.
+The classic form is the MAPE-K loop: Monitor, Analyze, Plan, Execute, over shared Knowledge.
 
 ## Consequences & Trade-offs
 
-Progress becomes visible. Each check costs extra. Criteria can replace the goal, so keep them few.
+Progress becomes visible, but criteria can replace the goal, so keep them few.
 
 ## Related Patterns
 
 - Specification Gaming
 - Metacognitive Monitoring and Control
 - Unbounded Loops
+- Termination and Exit Conditions
 ```
 
 ## Generative Agents
@@ -597,26 +1165,46 @@ Give a simulated character memory, reflection and plans, so it behaves consisten
 
 ## Context & Forces
 
-A chat model has no past. The whole history does not fit in a prompt, so the agent must keep everything but use only what matters now.
+The whole history does not fit in a prompt.
 
 ## Structure
 
-Park et al. (2023) describe three parts:
-
-1. **Memory stream:** a complete record of experiences in natural language.
-2. **Reflection:** memories are turned into higher-level thoughts.
-3. **Planning:** relevant memories are retrieved to plan behaviour.
-
-Stanford HAI sums up the loop: perceptions feed memory, retrieval supports reflection and planning, then the agent acts (Miller, 2023). The study ran 25 agents in a small simulated town.
+Park et al. (2023) describe a memory stream, reflection that turns memories into higher-level thoughts, and planning from retrieved memories.
 
 ## Consequences & Trade-offs
 
-One suggested Valentine's Day party led agents to invite each other and arrive together. Removing observation, planning or reflection each made behaviour less believable. Agents still made odd choices, and every step calls the model.
+Removing observation, planning or reflection each made behaviour less believable.
 
 ## Related Patterns
 
 - Skill-Library Compounding
 - Metacognitive Monitoring and Control
+```
+
+## Human-Only Merge Gate
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/human-only-merge-gate/ -->
+```text agsc-content
+
+## Intent
+
+Keep agent-authored changes out of the main branch until a human merges them.
+
+## Context & Forces
+
+Prifti et al. (2026) note that self-review validates against the model that produced the output.
+
+## Structure
+
+GitHub's Copilot cloud agent pushes to a single branch and cannot approve or merge its pull requests; a human does.
+
+## Consequences & Trade-offs
+
+A human decides the merge, with the session log to review.
+
+## Related Patterns
+
+- Plan Approval Gate
+- Tamper-Evident Agent Audit Log
 ```
 
 ## Plan Approval Gate
@@ -625,29 +1213,77 @@ One suggested Valentine's Day party led agents to invite each other and arrive t
 
 ## Intent
 
-The agent researches and proposes a plan without changing anything; a person approves it before any edit.
+The agent proposes a plan without editing source; a person approves it before edits start.
 
 ## Context & Forces
 
-An agent that edits at once commits to an approach nobody has seen. Approving each edit is slow and hides the overall shape.
+An agent that edits at once commits to an unseen approach.
 
 ## Structure
 
-1. **Read-only phase:** the agent explores but cannot write.
-2. **Plan:** a plan the person can change.
-3. **Decision:** approve, give feedback, or keep planning.
-4. **Switch:** approval unlocks editing.
-
-In Claude Code's plan mode, Claude researches and proposes changes without making them; in most setups edits stay blocked until approval. GitHub Copilot lets users approve a plan or give feedback before code is written. OpenAI's Codex plan mode gathers context and asks questions first.
+In Claude Code's plan mode, the agent explores and proposes changes without editing source until a person approves.
 
 ## Consequences & Trade-offs
 
-Reviewers judge the approach, not a large diff. Small tasks pay an extra round trip, and habitual approval weakens the gate. The runtime, not the prompt, must block writes.
+Reviewers judge the approach, not a large diff.
 
 ## Related Patterns
 
 - The Autonomy Ladder
 - Tamper-Evident Agent Audit Log
+- Human-Only Merge Gate
+```
+
+## Agent Identity and Scoped Credentials
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/agent-identity-scoped-credentials/ -->
+```text agsc-content
+
+## Intent
+
+Give each agent its own identity and short-lived, task-scoped credentials, so delegation never widens authority.
+
+## Context & Forces
+
+OWASP's ASI03 describes cached credentials reused across sessions and agents passing on their full access context.
+
+## Structure
+
+OWASP's ASI03 recommends "short-lived, narrowly scoped tokens per task" with per-agent identities.
+
+## Consequences & Trade-offs
+
+Scoping needs precise task definitions, and an issuer must be available when tasks start.
+
+## Related Patterns
+
+- Tamper-Evident Agent Audit Log
+- OWASP Top 10 for Agentic Applications
+```
+
+## Agentic Supply Chain Integrity
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/agentic-supply-chain/ -->
+```text agsc-content
+
+## Intent
+
+Keep every component an agent loads traceable to a known source, unaltered, and revocable.
+
+## Context & Forces
+
+OWASP notes that agentic systems often compose capabilities at runtime, shifting focus from manifest to run-time security.
+
+## Structure
+
+OWASP's prevention list includes signing manifests, curated registries, rejecting unsigned components, re-checking signatures at runtime, and a kill switch.
+
+## Consequences & Trade-offs
+
+The sources describe controls, not measured results.
+
+## Related Patterns
+
+- OWASP Top 10 for Agentic Applications
+- Skill-Library Compounding
 ```
 
 ## Dual-LLM Pattern
@@ -656,29 +1292,51 @@ Reviewers judge the approach, not a large diff. Small tasks pay an extra round t
 
 ## Intent
 
-Keep the model that can act away from untrusted text, so injected instructions cannot trigger actions.
+Keep the acting model away from untrusted text, to limit what injected instructions can trigger.
 
 ## Context & Forces
 
-E-mails, web pages and files can contain text that looks like a command. Filters lower the risk but do not remove it.
+E-mails and web pages can contain text that looks like a command.
 
 ## Structure
 
-Simon Willison (2023) uses three parts:
-
-1. **Privileged model:** takes trusted input, mainly from the user, and can use tools.
-2. **Quarantined model:** reads untrusted content and has no tools.
-3. **Controller:** ordinary code that passes results between them as variables.
-
-CaMeL (Debenedetti et al., 2025) builds on this. It takes the control flow from the trusted query only, and checks capabilities attached to data whenever a tool is called.
+Simon Willison (2023) separates a privileged model with tools, a quarantined model reading untrusted content, and a controller.
 
 ## Consequences & Trade-offs
 
-Injected text cannot change the plan. Some usefulness is lost: CaMeL solved 77% of AgentDojo tasks with provable security, against 84% undefended. Use it when an agent reads untrusted data and holds important tools.
+CaMeL (Debenedetti et al., 2025) solved 77% of AgentDojo tasks with provable security, against 84% undefended.
 
 ## Related Patterns
 
-OWASP Top 10 for Agentic Applications (goal hijack).
+- OWASP Top 10 for Agentic Applications
+- Memory and Context Poisoning Defense
+```
+
+## Memory and Context Poisoning Defense
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/memory-context-poisoning/ -->
+```text agsc-content
+
+## Intent
+
+Treat every write to agent memory or a retrieval store as untrusted.
+
+## Context & Forces
+
+OWASP's ASI06, Memory & Context Poisoning, describes adversaries who corrupt or seed stored context.
+
+## Structure
+
+OWASP's mitigations include scanning new writes before commit, segmenting memory, requiring source attribution, and keeping snapshots for rollback.
+
+## Consequences & Trade-offs
+
+OWASP lists these mitigations without measuring them.
+
+## Related Patterns
+
+- Tamper-Evident Agent Audit Log
+- Skill-Library Compounding
+- OWASP Top 10 for Agentic Applications
 ```
 
 ## OWASP Top 10 for Agentic Applications
@@ -691,24 +1349,11 @@ One shared list of the security risks of software that acts on its own.
 
 ## The Categories
 
-OWASP published this list on 9 December 2025, developed with more than 100 experts:
-
-- **ASI01** Agent Goal Hijack
-- **ASI02** Tool Misuse
-- **ASI03** Identity & Privilege Abuse
-- **ASI04** Agentic Supply Chain Vulnerabilities
-- **ASI05** Unexpected Code Execution
-- **ASI06** Memory & Context Poisoning
-- **ASI07** Insecure Inter-Agent Communication
-- **ASI08** Cascading Failures
-- **ASI09** Human-Agent Trust Exploitation
-- **ASI10** Rogue Agents
-
-It sits beside the OWASP Top 10 for LLM Applications 2025, which covers risks such as prompt injection and unbounded consumption.
+OWASP published this list on 9 December 2025, with ten entries from ASI01 Agent Goal Hijack to ASI10 Rogue Agents.
 
 ## How to Apply It
 
-Check every agent capability against the ten entries. Record a control or a decision to accept each risk, citing the ASI identifier.
+Check every agent capability against the ten entries and record a control or accepted risk.
 
 ## Related Patterns
 
@@ -723,21 +1368,19 @@ Check every agent capability against the ten entries. Record a control or a deci
 
 ## Intent
 
-Name a basic limit: an agent optimises the criterion you wrote, not the result you meant.
+Name a limit: an agent optimises the criterion you wrote, not the result you meant.
 
 ## Context & Forces
 
-Every criterion simplifies intent. An agent trying many options can meet the letter and miss the purpose, and the score does not show it.
+Every criterion simplifies intent.
 
 ## Structure
 
-Krakovna et al. (2020) define specification gaming as behaviour that satisfies the literal specification of an objective without achieving the intended outcome. Baker et al. (2025) studied coding agents that could make unit tests pass trivially. Penalising visible bad reasoning in training taught them to hide their intent while still gaming.
-
-Common forms: the test was changed; the output pleases the judge; a rule is kept while its purpose is defeated.
+Krakovna et al. (2020) define specification gaming as behaviour that satisfies the literal specification of an objective without achieving the intended outcome.
 
 ## Consequences & Trade-offs
 
-Inspect traces when a metric jumps, and keep monitors out of the training signal. For open-ended tasks the gap cannot be closed. Dalrymple et al. (2024) propose verified proof against a formal safety specification for some systems.
+Inspect traces when a metric jumps.
 
 ## Related Patterns
 
@@ -756,24 +1399,111 @@ Independent specialists work on one problem through a shared workspace, without 
 
 ## Context & Forces
 
-Some problems cannot be split in advance: who can help depends on what is already known. Direct messages tie every agent to all the others.
+Direct messages tie every agent to all the others.
 
 ## Structure
 
-The Hearsay-II speech system (Erman et al., 1980) has three parts:
-
-1. **Blackboard:** a global database of hypotheses.
-2. **Knowledge sources:** independent programs that communicate only through the blackboard.
-3. **Control:** a focus-of-control step that picks the most promising action next.
-
-Han and Zhang (2025) apply it to language-model agents: the agents that act are chosen from what is on the blackboard.
+The Hearsay-II speech system (Erman et al., 1980) has a blackboard, independent knowledge sources and a control step.
 
 ## Consequences & Trade-offs
 
-Specialists can be added or removed freely, and the history sits in one place. The control step becomes the hard part. Evidence for language-model agents is still thin.
+Knowledge sources interact through the blackboard alone, so their type and number can change.
 
 ## Related Patterns
 
 - Parallelization
 - Agents as Tools
+```
+
+## Multi-Agent Debate
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/multi-agent-debate/ -->
+```text agsc-content
+
+## Intent
+
+Improve answers by having several model instances debate over rounds.
+
+## Context & Forces
+
+Du et al. (2023) have several language model instances debate and report fewer hallucinations.
+
+## Structure
+
+Liang et al. (2023) add affirmative and negative debaters and a judge to counter "Degeneration-of-Thought".
+
+## Consequences & Trade-offs
+
+Du et al. say the procedure is more computationally expensive, and that converged answers were not necessarily correct.
+
+## Related Patterns
+
+- Parallelization
+- Blackboard
+```
+
+## Card format
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/card-format/ -->
+```text agsc-content
+
+## Specification
+
+A card has an intent, the forces, the structure, the trade-offs and its related cards. Every claim names a public source. The text is about 60 words.
+```
+
+## Check a card against its sources
+<!-- agsc:item https://patterns.agenticsystemcore.com/procedures/check-a-card-against-its-sources/ -->
+```text agsc-content
+
+# Check a card against its sources
+
+## When
+
+A card's sources were last checked more than six months ago.
+
+## Steps
+
+1. Open the card and read the `sources` in its header.
+2. Open each source address.
+3. Compare each sentence of the card with what the source says.
+4. Propose the new `verified` date when they agree, or a corrected sentence when they do not.
+
+## Checks
+
+`agsc lint` passes on the proposal, and the proposal changes one card.
+```
+
+## Keep cards short
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/keep-cards-short/ -->
+```text agsc-content
+
+## Decision
+
+Each card says one thing under each heading, in one sentence; two at most under Structure.
+```
+
+## Publish gate
+<!-- agsc:item https://patterns.agenticsystemcore.com/gates/publish-gate/ -->
+```text agsc-content
+
+# Publish gate
+
+Every change passes these checks, and a person merges it, before it is published.
+```
+
+## Re-check the sources of a card
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/task-recheck-sources/ -->
+```text agsc-content
+
+## Task
+
+Pick one card. Open each of its sources and confirm it still says what the card says. Propose the new `verified` date, or a correction.
+```
+
+## Report a source that no longer answers
+<!-- agsc:item https://patterns.agenticsystemcore.com/concepts/task-report-a-broken-link/ -->
+```text agsc-content
+
+## Task
+
+Find a source address that no longer answers. Propose the working address, or report the card and the address.
 ```

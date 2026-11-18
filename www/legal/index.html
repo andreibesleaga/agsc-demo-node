@@ -3,10 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Legal and privacy</title>
+<title>Legal and privacy — AgenticSystemCore Graph</title>
 <meta name="description" content="The terms every export of this node carries, the licence of its prose, the privacy notice and who operates this node.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/legal/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/legal/">
+<meta property="og:title" content="Legal and privacy">
+<meta property="og:description" content="The terms every export of this node carries, the licence of its prose, the privacy notice and who operates this node.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/theme.js"></script>
 </head>
@@ -14,14 +20,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -87,7 +96,7 @@ under an earlier version keep it.</p>
 <p><strong>The software.</strong> The engine that built this site is provided under the Apache License 2.0, which carries its own disclaimer of warranty (section 7) and limitation of liability (section 8).</p>
 <p><strong>Links to other sites.</strong> Links to other sites, including the sources the items cite, are there for reference. What they lead to belongs to its owners; the author does not control it and is not responsible for it, and a link does not mean the author approves of it.</p>
 <p><strong>Nobody else is behind this.</strong> This is the independent work of one person. No standards body, no foundation, no company and no institution named anywhere on this site has reviewed, approved, sponsored or is otherwise connected with it. This is not a document of the IETF, of the W3C or of any other body, and none of them has adopted it.</p>
-<p><strong>This is a work on its own.</strong> This node and its sample content are an independent work, complete in itself. It is not an edition, an extract, a summary or an accompaniment of any other publication, by this author or by anyone else, and it reproduces no text and no figure from one. Where a pattern is also described elsewhere, the item rests on the public sources it cites and on nothing else. Nothing here grants anyone an exclusive right: every licence on this page is non-exclusive, and the author keeps every right not expressly granted, including the right to publish the same material elsewhere, in any form.</p>
+<p><strong>This is a work on its own.</strong> This node and its content are an independent work, complete in itself. It is not an edition, an extract, a summary or an accompaniment of any other publication, by this author or by anyone else, and it reproduces no text and no figure from one. Where a pattern is also described elsewhere, the item rests on the public sources it cites and on nothing else. Nothing here grants anyone an exclusive right: every licence on this page is non-exclusive, and the author keeps every right not expressly granted, including the right to publish the same material elsewhere, in any form.</p>
 <p><strong>Other people's names belong to them.</strong> Product, project and organisation names used here — among them those of the IETF, IANA, the W3C, the Linux Foundation, Cloudflare, GitHub, npm, Google, OpenAI, Anthropic, Meta and Zenodo — are used only to say what is being talked about. They are the marks of their respective owners, and using a name is not a claim of any connection with its owner.</p>
 <p><strong>The name of this project.</strong> AgenticSystemCore™ is a trademark of Andrei N. Besleaga. Other names belong to their owners. How the name may be used is set out in the project's trademark policy, https://github.com/andreibesleaga/agentic-system-core/blob/main/TRADEMARK-POLICY.md, and how the project is governed in https://github.com/andreibesleaga/agentic-system-core/blob/main/GOVERNANCE.md.</p>
 <p><strong>What you may do with this text.</strong> The prose of this node is published under the Content Use Terms above: all rights are reserved, and you may read it, quote it with attribution, index it, cite a chunk with its provenance, and compose items into a Harness for your own project. See the terms in full on this page.</p>
@@ -102,7 +111,7 @@ under an earlier version keep it.</p>
 <p><strong>What your assistant says is not this site speaking.</strong> The page tools and the exports hand this node's published text to software that someone else runs. What an assistant or agent writes from it is that software's output and the responsibility of the person who runs it: it is not a statement by the author, and it can be wrong even where the text it read is right. The Content Use Terms still apply to any of this node's text it reproduces.</p>
 
 <h2 id="privacy">Privacy</h2>
-<p>This site sets no cookies and uses no analytics, and the pages it builds load nothing from any other host. Its scripts are all served from this node, and none of them sends anything anywhere: the compose page, which works in your browser and uploads nothing, the in-page tools on item pages, which answer an assistant running in your own browser from this node's own published files; and the theme control on every page. If you pick light or dark, that choice is kept in your browser's local storage under the one key <code>agsc-theme</code>; it is never sent anywhere, choosing Auto removes it, and clearing this site's data in your browser removes it too. It collects no personal data.</p>
+<p>This site sets no cookies and uses no analytics, and the pages it builds load nothing from any other host. Its scripts are all served from this node, and none of them sends anything anywhere: the compose page, which works in your browser and uploads nothing, the in-page tools on item pages, which answer an assistant running in your own browser from this node's own published files; the search on the <a href="/search/">search page</a>, which reads an index built with the site; the explorer on the <a href="/clusters/">clusters page</a>, which draws this node's published graph; the <a href="/query/">query page</a>, which runs a query you write over this node's published graph in your browser, with a query engine (Oxigraph, compiled to WebAssembly) served from this node, and keeps no query; and the theme control on every page. If you pick light or dark, that choice is kept in your browser's local storage under the one key <code>agsc-theme</code>; it is never sent anywhere, choosing Auto removes it, and clearing this site's data in your browser removes it too. It collects no personal data.</p>
 <p>It does publish some. Every pattern names the person accountable for it, as the identifier <code>human:andreibesleaga</code>, in its page, its provenance record and the machine-readable views. The patterns cite other people's work by author, title and year, as a bibliography does. Contributions to this node arrive as pull requests on the public repository <code>agsc-demo-node</code>, which mirrors the published items and their sources; a contributor's name, the address they commit under and the sign-off line this project's specification requires become part of that repository's public history on GitHub — not of this site.</p>
 <p><strong>Why.</strong> The names are published so that every statement on this node can be traced to a person who answers for it — that is what the whole project is about — and so that contributions can be attributed to the people who made them. The footing for publishing them is the operator's own interest in running an accountable, attributable public record of technical work, and the public interest in being able to check who said what. Anyone named may object, and what happens then is set out below. Nothing is used for advertising, for profiling, or for any purpose other than the one stated here.</p>
 <p>The site is served by Cloudflare Pages. To deliver and protect it, Cloudflare processes the technical data of each request, such as the IP address, the requested address and the user agent, under its own privacy policy and its own retention periods. Cloudflare can also add features of its own to what it serves, which are not in the files this site builds: a bot-detection script that it injects into pages, a Network Error Logging header (<code>NEL</code>, with <code>Report-To</code>) that asks your browser to report failed connections to Cloudflare at <code>a.nel.cloudflare.com</code>, and a speculation rules header that lets your browser load a linked page before you open it. Where they are switched on, they belong to Cloudflare and work under its policy. The operator runs no server and receives no per-request logs; what Cloudflare shows the operator is aggregate, such as how many requests the site served, from which countries and with which status codes. The maintainer's working copy of this node, with its drafts, is a private repository on GitHub; the published items and their sources are mirrored in the public repository <code>agsc-demo-node</code>, whose history — including a contributor's name, the address they commit under and their sign-off line — is held and published by GitHub under its own terms. Cloudflare and GitHub are companies based in the United States and may handle this data outside the European Union; both say that they rely on the EU–U.S. Data Privacy Framework and on the European Commission's standard contractual clauses for such transfers. No decision about anyone is made automatically.</p>
@@ -114,9 +123,10 @@ under an earlier version keep it.</p>
 <h2 id="operator">Operator</h2>
 <p>This node is published by Andrei N. Besleaga (human:andreibesleaga).</p>
 <h2 id="ai-assistance">How this text was written</h2>
+<p>Written with AI assistance, reviewed and published by a person. A person decides what is written and why, an assistant drafts and checks it under their direction, and a person reads, edits and approves every sentence before it is published and answers for it.</p>
 <p>Every item on this node records how its text was made — written by a person, written with AI assistance, generated by a model, or imported from elsewhere — and names the person accountable for it. You can read that record on the item's own page and in the machine-readable views. Each accepted contribution carries the same record in its sign-off.</p>
 <p>This is the statement every agent-facing export of this node carries, in its own words: <code>content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer</code></p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

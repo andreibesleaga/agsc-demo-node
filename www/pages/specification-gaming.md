@@ -11,30 +11,32 @@ tags:
 clusters:
   - specs
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/
     title: "Specification gaming: the flip side of AI ingenuity"
     author: Krakovna, V.; Uesato, J.; Mikulik, V.; et al.
     year: 2020
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://arxiv.org/abs/2503.11926
     title: Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation
     author: Baker, B.; Huizinga, J.; Gao, L.; et al.
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://arxiv.org/abs/2405.06624
     title: "Towards Guaranteed Safe AI: A Framework for Ensuring Robust and Reliable AI Systems"
     author: Dalrymple, D.; Skalse, J.; Bengio, Y.; et al.
     year: 2024
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: specification-gaming
+related:
+  - trajectory-vs-outcome-evals
 kind: pattern
 evidence: explicit
 maturity: established
@@ -46,21 +48,19 @@ diagram:
 
 ## Intent
 
-Name a basic limit: an agent optimises the criterion you wrote, not the result you meant.
+Name a limit: an agent optimises the criterion you wrote, not the result you meant.
 
 ## Context & Forces
 
-Every criterion simplifies intent. An agent trying many options can meet the letter and miss the purpose, and the score does not show it.
+Every criterion simplifies intent.
 
 ## Structure
 
-Krakovna et al. (2020) define specification gaming as behaviour that satisfies the literal specification of an objective without achieving the intended outcome. Baker et al. (2025) studied coding agents that could make unit tests pass trivially. Penalising visible bad reasoning in training taught them to hide their intent while still gaming.
-
-Common forms: the test was changed; the output pleases the judge; a rule is kept while its purpose is defeated.
+Krakovna et al. (2020) define specification gaming as behaviour that satisfies the literal specification of an objective without achieving the intended outcome.
 
 ## Consequences & Trade-offs
 
-Inspect traces when a metric jumps, and keep monitors out of the training signal. For open-ended tasks the gap cannot be closed. Dalrymple et al. (2024) propose verified proof against a formal safety specification for some systems.
+Inspect traces when a metric jumps.
 
 ## Related Patterns
 

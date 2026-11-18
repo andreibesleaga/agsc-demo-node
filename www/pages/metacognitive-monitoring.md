@@ -16,36 +16,39 @@ aliases:
 clusters:
   - cognitive-behavioral
 date: 2026-08-16
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://doi.org/10.1037/0003-066X.34.10.906
     title: "Metacognition and Cognitive Monitoring: A New Area of Cognitive-Developmental Inquiry"
     author: Flavell, J. H.
     year: 1979
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://doi.org/10.1016/S0079-7421(08)60053-5
     title: "Metamemory: A Theoretical Framework and New Findings"
     author: Nelson, T. O.; Narens, L.
     year: 1990
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://arxiv.org/abs/2511.04341
     title: "Monitor-Generate-Verify (MGV): Formalising Metacognitive Theory for Language Model Reasoning"
     author: Oh, N.; Gobet, F.
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
   - resource: https://arxiv.org/abs/2207.05221
     title: Language Models (Mostly) Know What They Know
     author: Kadavath, S.; Conerly, T.; Askell, A.; et al.
     year: 2022
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: metacognitive-monitoring
+related:
+  - judge-calibration
+  - weak-to-strong-oversight
 kind: pattern
 evidence: explicit
 maturity: emerging
@@ -58,24 +61,22 @@ diagram:
 
 ## Intent
 
-Add a level that watches how the work is going and decides to continue, retry or abstain.
+Add a level that watches the work and decides to continue, retry or abstain.
 
 ## Context & Forces
 
-A model that never checks itself runs to the end, right or wrong. A check at the end wastes the work before it.
+A model that never checks itself runs to the end, right or wrong.
 
 ## Structure
 
-1. Flavell (1979) described cognitive monitoring through metacognitive knowledge, experiences, goals and actions.
-2. Nelson and Narens (1990) split an object level that does the task from a meta level that watches it. Monitoring flows up, control flows down.
-3. Monitor-Generate-Verify (Oh and Gobet, 2025) applies this to language-model reasoning, monitoring difficulty and confidence before generation.
-4. Kadavath et al. (2022) show that models can estimate whether their answer is true and whether they know it.
+Nelson and Narens (1990) split an object level that does the task from a meta level that watches it.
 
 ## Consequences & Trade-offs
 
-"I don't know" becomes a valid output. The signal can mislead: the "do I know" estimate is poorly calibrated on new tasks, and MGV presents no empirical validation.
+"I don't know" becomes a valid output, but the signal can mislead.
 
 ## Related Patterns
 
 - Goal Setting and Monitoring
 - Weak-to-Strong Oversight
+- Judge Calibration

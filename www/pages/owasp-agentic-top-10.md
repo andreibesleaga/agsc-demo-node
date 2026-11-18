@@ -14,30 +14,33 @@ aliases:
 clusters:
   - security
 date: 2026-08-15
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
   - resource: https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/
     title: OWASP Top 10 for Agentic Applications – The Benchmark for Agentic Security in the Age of Autonomous AI
     author: Sotiropoulos, J.
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://genai.owasp.org/llm-top-10/
-    title: OWASP Top 10 for LLM Applications 2025
+    title: LLMRisks Archive - OWASP Gen AI Security Project
     author: OWASP Gen AI Security Project
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-18
     grade: secondary
   - resource: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     title: OWASP Top 10 for Agentic Applications for 2026
     author: OWASP Gen AI Security Project
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: owasp-agentic-top-10
+related:
+  - immutable-audit-log
+  - unbounded-agent-loops
 kind: taxonomy
 evidence: explicit
 maturity: established
@@ -53,24 +56,11 @@ One shared list of the security risks of software that acts on its own.
 
 ## The Categories
 
-OWASP published this list on 9 December 2025, developed with more than 100 experts:
-
-- **ASI01** Agent Goal Hijack
-- **ASI02** Tool Misuse
-- **ASI03** Identity & Privilege Abuse
-- **ASI04** Agentic Supply Chain Vulnerabilities
-- **ASI05** Unexpected Code Execution
-- **ASI06** Memory & Context Poisoning
-- **ASI07** Insecure Inter-Agent Communication
-- **ASI08** Cascading Failures
-- **ASI09** Human-Agent Trust Exploitation
-- **ASI10** Rogue Agents
-
-It sits beside the OWASP Top 10 for LLM Applications 2025, which covers risks such as prompt injection and unbounded consumption.
+OWASP published this list on 9 December 2025, with ten entries from ASI01 Agent Goal Hijack to ASI10 Rogue Agents.
 
 ## How to Apply It
 
-Check every agent capability against the ten entries. Record a control or a decision to accept each risk, citing the ASI identifier.
+Check every agent capability against the ten entries and record a control or accepted risk.
 
 ## Related Patterns
 

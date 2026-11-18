@@ -11,24 +11,26 @@ tags:
 clusters:
   - advanced
 date: 2026-08-06
-modified: 2026-09-29
+modified: 2026-11-18
 sources:
-  - resource: https://www.anthropic.com/engineering/multi-agent-research-system
+  - resource: https://www.anthropic.com/research/multi-agent-research-system
     title: How we built our multi-agent research system
     author: Hadfield, J.; Zhang, B.; Lien, K.; et al.
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: primary
   - resource: https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/
     title: Accelerating scientific breakthroughs with an AI co-scientist
     author: Gottweis, J.; Natarajan, V.
     year: 2025
-    verified: 2026-09-29
+    verified: 2026-11-12
     grade: secondary
 prov:
   origin: imported
   operator: human:andreibesleaga
 id: deep-research-loop
+related:
+  - retrieval-evaluation
 kind: pattern
 evidence: explicit
 maturity: emerging
@@ -40,26 +42,19 @@ diagram:
 
 ## Intent
 
-Answer an open question by splitting it, searching the parts in parallel, and checking that every claim has a source.
+Answer an open question by splitting it, searching in parallel, and sourcing every claim.
 
 ## Context & Forces
 
-Open questions need many searches. One agent is slow; many agents can produce a fluent report that nobody checked.
+Open questions need many searches.
 
 ## Structure
 
-Anthropic describes its Research feature this way (Hadfield et al., 2025):
-
-1. A lead agent plans and starts subagents that explore parts at the same time.
-2. Each subagent gets an objective, an output format, tool guidance and clear boundaries.
-3. The lead combines the findings.
-4. A citation agent locates the source for each claim.
-
-Google's AI co-scientist uses a related team of agents that generate, review, rank and improve hypotheses (Gottweis and Natarajan, 2025).
+Anthropic's Research feature (Hadfield et al., 2025) has a lead agent start parallel subagents and a citation agent locate each claim's source.
 
 ## Consequences & Trade-offs
 
-It covers more ground. It is costly: Anthropic reports about 15 times the tokens of a chat. Vague task descriptions cause duplicated work or gaps.
+Anthropic reports that multi-agent systems use about 15 times more tokens than chats.
 
 ## Related Patterns
 

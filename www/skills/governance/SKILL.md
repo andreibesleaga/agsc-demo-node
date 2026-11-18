@@ -10,9 +10,9 @@ license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 bundle: https://patterns.agenticsystemcore.com/
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
-spec_version: 1.0.0
-bundle_version: vsite-2026-10-14+7.g71d5329cebf6
-generated_at: 2026-10-29T15:41:54Z
+spec_version: 1.1.0
+bundle_version: vsite-2026-11-13+1.g7dff89daa3b2
+generated_at: 2026-11-18T15:24:06Z
 assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
 -->
 
@@ -33,24 +33,19 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 
 ## Intent
 
-Keep a record of every important agent action that can be checked later and shows any change.
+Keep a checkable record of every important agent action that shows any change.
 
 ## Context & Forces
 
-Accountability needs a reliable account of what happened. Ordinary logs can be edited. OWASP lists repudiation and untraceability as threat T8 for agentic systems.
+OWASP lists repudiation and untraceability as threat T8 for agentic systems.
 
 ## Structure
 
-1. Write records to an append-only store.
-2. Link each record to the previous one by a hash, as in Haber and Stornetta's 1991 time-stamping scheme. Changing an old record breaks every later link.
-3. Record who acted, what, the inputs, the approving decision and the result.
-4. Verify the chain regularly.
-
-On GitHub, each commit by the Copilot coding agent carries an `Agent-Logs-Url` trailer linking to its session logs, with the person who gave the task as co-author.
+OWASP asks that AI-generated logs be cryptographically signed and immutable.
 
 ## Consequences & Trade-offs
 
-Incidents can be rebuilt. Sensitive data in logs is a risk, so record only what is needed. An unverified chain gives false comfort.
+Incidents can be reconstructed from the log.
 
 ## Related Patterns
 

@@ -10,9 +10,9 @@ license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 bundle: https://patterns.agenticsystemcore.com/
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
-spec_version: 1.0.0
-bundle_version: vsite-2026-10-14+7.g71d5329cebf6
-generated_at: 2026-10-29T15:41:54Z
+spec_version: 1.1.0
+bundle_version: vsite-2026-11-13+1.g7dff89daa3b2
+generated_at: 2026-11-18T15:24:06Z
 assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
 -->
 
@@ -22,7 +22,7 @@ assistance: content may be AI-assisted; each item states its origin in prov.orig
 > under LicenseRef-AgenticSystemCore-Content-Use-1.0 (AGSC-07-16).
 
 - cluster: https://patterns.agenticsystemcore.com/clusters/topologies/
-- members: 1
+- members: 2
 
 ## Blackboard
 
@@ -37,24 +37,47 @@ Independent specialists work on one problem through a shared workspace, without 
 
 ## Context & Forces
 
-Some problems cannot be split in advance: who can help depends on what is already known. Direct messages tie every agent to all the others.
+Direct messages tie every agent to all the others.
 
 ## Structure
 
-The Hearsay-II speech system (Erman et al., 1980) has three parts:
-
-1. **Blackboard:** a global database of hypotheses.
-2. **Knowledge sources:** independent programs that communicate only through the blackboard.
-3. **Control:** a focus-of-control step that picks the most promising action next.
-
-Han and Zhang (2025) apply it to language-model agents: the agents that act are chosen from what is on the blackboard.
+The Hearsay-II speech system (Erman et al., 1980) has a blackboard, independent knowledge sources and a control step.
 
 ## Consequences & Trade-offs
 
-Specialists can be added or removed freely, and the history sits in one place. The control step becomes the hard part. Evidence for language-model agents is still thin.
+Knowledge sources interact through the blackboard alone, so their type and number can change.
 
 ## Related Patterns
 
 - Parallelization
 - Agents as Tools
+```
+
+## Multi-Agent Debate
+
+- item: https://patterns.agenticsystemcore.com/concepts/multi-agent-debate/
+- type: concept
+
+```text agsc-content
+
+## Intent
+
+Improve answers by having several model instances debate over rounds.
+
+## Context & Forces
+
+Du et al. (2023) have several language model instances debate and report fewer hallucinations.
+
+## Structure
+
+Liang et al. (2023) add affirmative and negative debaters and a judge to counter "Degeneration-of-Thought".
+
+## Consequences & Trade-offs
+
+Du et al. say the procedure is more computationally expensive, and that converged answers were not necessarily correct.
+
+## Related Patterns
+
+- Parallelization
+- Blackboard
 ```

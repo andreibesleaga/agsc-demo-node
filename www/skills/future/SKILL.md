@@ -10,9 +10,9 @@ license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 bundle: https://patterns.agenticsystemcore.com/
 license: LicenseRef-AgenticSystemCore-Content-Use-1.0
 terms: LicenseRef-AgenticSystemCore-Content-Use-1.0
-spec_version: 1.0.0
-bundle_version: vsite-2026-10-14+7.g71d5329cebf6
-generated_at: 2026-10-29T15:41:54Z
+spec_version: 1.1.0
+bundle_version: vsite-2026-11-13+1.g7dff89daa3b2
+generated_at: 2026-11-18T15:24:06Z
 assistance: content may be AI-assisted; each item states its origin in prov.origin and each accepted contribution carries an Assisted-by: trailer
 -->
 
@@ -37,23 +37,20 @@ State an open question: can a weaker supervisor reliably oversee a stronger agen
 
 ## Context & Forces
 
-Agent systems already rely on weaker overseers: cheap models grading strong ones, busy people approving plans they cannot fully check.
+Agent systems already rely on weaker overseers, such as cheap models grading strong ones.
 
 ## Structure
 
-Bowman et al. (2022) call this scalable oversight. In their tests, people chatting with an unreliable model assistant did substantially better than the model alone or they alone. Burns et al. (2023) found that strong models trained on a weak model's labels consistently beat their weak supervisors, but naive training stays far from the strong model's full ability.
-
-1. **Known:** weak supervision can draw out more than the supervisor can do.
-2. **Known:** people plus a model can beat either alone.
-3. **Open:** whether this holds for safety judgments, and whether the strong model learns intent or mistakes.
+Burns et al. (2023) found that strong models trained on a weak model's labels consistently beat their weak supervisors, yet stay far from recovering the strong models' full capabilities.
 
 ## Consequences & Trade-offs
 
-Treat a weak judge as a partial signal. Pair it with confidence signals, smaller checkable tasks, and gates that do not assume the judge is right.
+Treat a weak judge as a partial signal.
 
 ## Related Patterns
 
 - Meaningful Human Control
 - Specification Gaming
 - Plan Approval Gate
+- Judge Calibration
 ```

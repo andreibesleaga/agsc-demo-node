@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human-Only Merge Gate — AgenticSystemCore Graph</title>
+<meta name="description" content="An agent works on its own branch and cannot approve or merge; a named human decides what reaches the main branch.">
+<link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
+<link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/human-only-merge-gate/">
+<link rel="alternate" href="/pages/human-only-merge-gate.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/human-only-merge-gate/">
+<meta property="og:title" content="Human-Only Merge Gate">
+<meta property="og:description" content="An agent works on its own branch and cannot approve or merge; a named human decides what reaches the main branch.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"An agent works on its own branch and cannot approve or merge; a named human decides what reaches the main branch.","name":"Human-Only Merge Gate","url":"https://patterns.agenticsystemcore.com/concepts/human-only-merge-gate/"}</script>
+<script src="/compose/agsc-core.js" defer></script>
+<script src="/compose/agsc-page-tools.js" defer></script>
+<script src="/compose/webmcp.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+<nav aria-label="Site">
+<a class="brand" href="/">AgenticSystemCore Graph</a>
+<ul>
+<li><a href="/clusters/">Clusters</a></li>
+<li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
+<li><a href="/skills/">Skills</a></li>
+<li><a href="/now/">Now</a></li>
+<li><a href="/compose/">Compose</a></li>
+<li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
+</ul>
+<div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+</nav>
+</header>
+<main id="main">
+<h1>Human-Only Merge Gate</h1>
+<p class="summary"><strong>Summary</strong>An agent works on its own branch and cannot approve or merge; a named human decides what reaches the main branch.</p>
+<dl class="meta">
+<dt>Type</dt><dd>concept · kind <code>pattern</code></dd>
+<dt>Cluster</dt><dd><a href="/clusters/sdlc/">Agentic SDLC</a></dd>
+<dt>Tags</dt><dd><a href="/tags/accountability/">accountability</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/governance/">governance</a></dd>
+<dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/human-only-merge-gate/</code></dd>
+<dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
+</dl>
+<h2 id="intent"><span id="chunk-fbd0177ed59367f3"></span>Intent</h2>
+<p>Keep agent-authored changes out of the main branch until a human merges them.</p>
+<h2 id="context-forces"><span id="chunk-e6df03741440834b"></span>Context &amp; Forces</h2>
+<p>Prifti et al. (2026) note that self-review validates against the model that produced the output.</p>
+<h2 id="structure"><span id="chunk-8b981f44f5b31f8d"></span>Structure</h2>
+<p>GitHub's Copilot cloud agent pushes to a single branch and cannot approve or merge its pull requests; a human does.</p>
+<h2 id="consequences-trade-offs"><span id="chunk-a5de09f74574ec86"></span>Consequences &amp; Trade-offs</h2>
+<p>A human decides the merge, with the session log to review.</p>
+<h2 id="related-patterns"><span id="chunk-aa85a32a10529c3d"></span>Related Patterns</h2>
+<ul>
+<li>Plan Approval Gate</li>
+<li>Tamper-Evident Agent Audit Log</li>
+</ul>
+
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 56" role="img" aria-labelledby="links_human-only-merge-gate-title links_human-only-merge-gate-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_human-only-merge-gate-title">Relations of Human-Only Merge Gate</title>
+  <desc id="links_human-only-merge-gate-desc">Relations of Human-Only Merge Gate. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_human-only-merge-gate-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="10" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="10" width="190" height="36" rx="6"/>
+    <path d="M440 28 L494 28 L510 28" marker-end="url(#links_human-only-merge-gate-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="10" width="190" height="36" rx="6"/>
+    <path d="M200 28 L216 28 L270 28" marker-end="url(#links_human-only-merge-gate-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="32" font-size="12">Human-Only Merge Gate</text>
+    <text x="605" y="24" font-size="12">related</text>
+    <text x="605" y="40" font-size="12">Tamper-Evident Agent Audit L…</text>
+    <text x="105" y="24" font-size="12">related</text>
+    <text x="105" y="40" font-size="12">Plan Approval Gate</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/immutable-audit-log/">Tamper-Evident Agent Audit Log</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/plan-approval-gate/">Plan Approval Gate</a></td><td>The two items are connected in meaning, and neither depends on the other.</td></tr>
+</tbody>
+</table></div>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" role="img" aria-labelledby="human-only-merge-gate-title human-only-merge-gate-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="human-only-merge-gate-title">An agent's pull request (branch only) flows through its session log to a highlighted human review-and-merge box before the main branch; a direct agent-to-main path is shown crossed out.</title>
+  <desc id="human-only-merge-gate-desc">An agent's pull request (branch only) flows through its session log to a highlighted human review-and-merge box before the main branch; a direct agent-to-main path is shown crossed out.. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="human-only-merge-gate-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="14" y="96" width="84" height="44" rx="6"/>
+    <rect x="130" y="96" width="76" height="44" rx="6"/>
+    <rect x="238" y="88" width="96" height="60" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="366" y="96" width="80" height="44" rx="6"/>
+    <path d="M102 118 L126 118" marker-end="url(#human-only-merge-gate-arrow)"/>
+    <path d="M210 118 L234 118" marker-end="url(#human-only-merge-gate-arrow)"/>
+    <path d="M338 118 L362 118" marker-end="url(#human-only-merge-gate-arrow)"/>
+    <path d="M56 140 L56 210"/>
+    <path d="M56 210 L360 210"/>
+    <path d="M352 202 L368 218 M368 202 L352 218" stroke-width="2"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="56" y="114" font-size="12">agent PR</text>
+    <text x="56" y="130" font-size="12">branch only</text>
+    <text x="168" y="122" font-size="12">session log</text>
+    <text x="286" y="114" font-size="12">human review</text>
+    <text x="286" y="130" font-size="12">and merge</text>
+    <text x="406" y="122" font-size="12">main</text>
+    <text x="205" y="200" font-size="10">direct path: agent cannot merge</text>
+  </g>
+</svg><figcaption>The agent cannot approve or merge its own pull request; a human does.</figcaption></figure>
+<h2 id="references">References</h2>
+<ol class="sources"><li id="source-1">GitHub (2026). <a href="https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations">Risks and mitigations for GitHub Copilot cloud agent</a>. <span class="source-url"><a href="https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations">https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations</a></span>. Checked 2026-11-12.</li><li id="source-2">Prifti, Y.; De Meo, P.; Provetti, A. (2026). <a href="https://arxiv.org/abs/2606.20615">Specifying AI-SDLC Processes: A Protocol Language for Human-Agent Boundaries</a>. <span class="source-url"><a href="https://arxiv.org/abs/2606.20615">https://arxiv.org/abs/2606.20615</a></span>. Checked 2026-11-12.</li></ol>
+<p class="views">Machine views: <a href="/pages/human-only-merge-gate.md">Markdown</a> · <a href="/pages/human-only-merge-gate.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/human-only-merge-gate.md" rel="noopener" aria-label="Propose an edit to Human-Only Merge Gate">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
+</main>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+</body>
+</html>

@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OWASP Top 10 for Agentic Applications</title>
+<title>OWASP Top 10 for Agentic Applications — AgenticSystemCore Graph</title>
 <meta name="description" content="OWASP&#39;s list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews.">
 <link rel="describedby" href="/.well-known/knowledge-linkset" type="application/linkset+json">
+<link rel="describedby" href="/llms.txt" type="text/plain">
 <link rel="canonical" href="https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/">
+<link rel="alternate" href="/pages/owasp-agentic-top-10.md" type="text/markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/">
+<meta property="og:title" content="OWASP Top 10 for Agentic Applications">
+<meta property="og:description" content="OWASP&#39;s list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews.">
+<meta property="og:site_name" content="AgenticSystemCore Graph">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","description":"OWASP's list of ten security risks for agents that act, a shared vocabulary for threat models and security reviews.","name":"OWASP Top 10 for Agentic Applications","url":"https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/"}</script>
 <script src="/compose/agsc-core.js" defer></script>
 <script src="/compose/agsc-page-tools.js" defer></script>
@@ -18,14 +25,17 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
 <nav aria-label="Site">
-<a class="brand" href="/">AgenticSystemCore Demo Node</a>
+<a class="brand" href="/">AgenticSystemCore Graph</a>
 <ul>
 <li><a href="/clusters/">Clusters</a></li>
 <li><a href="/concepts/">Concepts</a></li>
+<li><a href="/gates/">Gates</a></li>
+<li><a href="/procedures/">Procedures</a></li>
 <li><a href="/skills/">Skills</a></li>
 <li><a href="/now/">Now</a></li>
 <li><a href="/compose/">Compose</a></li>
 <li><a href="/search/">Search</a></li>
+<li><a href="/query/">Query</a></li>
 </ul>
 <div class="theme" id="theme" hidden><select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
 </nav>
@@ -36,28 +46,16 @@
 <dl class="meta">
 <dt>Type</dt><dd>concept · kind <code>taxonomy</code></dd>
 <dt>Cluster</dt><dd><a href="/clusters/security/">Security</a></dd>
+<dt>Tags</dt><dd><a href="/tags/taxonomy/">taxonomy</a>, <a href="/tags/standards/">standards</a>, <a href="/tags/governance/">governance</a></dd>
 <dt>IRI</dt><dd><code>https://patterns.agenticsystemcore.com/concepts/owasp-agentic-top-10/</code></dd>
 <dt>Provenance</dt><dd>Imported from another source (origin <code>imported</code>, operator <code>human:andreibesleaga</code>)</dd>
 </dl>
 <h2 id="intent"><span id="chunk-f8b88d4c38edfd4e"></span>Intent</h2>
 <p>One shared list of the security risks of software that acts on its own.</p>
 <h2 id="the-categories"><span id="chunk-ee7370dc35f6e762"></span>The Categories</h2>
-<p>OWASP published this list on 9 December 2025, developed with more than 100 experts:</p>
-<ul>
-<li><strong>ASI01</strong> Agent Goal Hijack</li>
-<li><strong>ASI02</strong> Tool Misuse</li>
-<li><strong>ASI03</strong> Identity &amp; Privilege Abuse</li>
-<li><strong>ASI04</strong> Agentic Supply Chain Vulnerabilities</li>
-<li><strong>ASI05</strong> Unexpected Code Execution</li>
-<li><strong>ASI06</strong> Memory &amp; Context Poisoning</li>
-<li><strong>ASI07</strong> Insecure Inter-Agent Communication</li>
-<li><strong>ASI08</strong> Cascading Failures</li>
-<li><strong>ASI09</strong> Human-Agent Trust Exploitation</li>
-<li><strong>ASI10</strong> Rogue Agents</li>
-</ul>
-<p>It sits beside the OWASP Top 10 for LLM Applications 2025, which covers risks such as prompt injection and unbounded consumption.</p>
+<p>OWASP published this list on 9 December 2025, with ten entries from ASI01 Agent Goal Hijack to ASI10 Rogue Agents.</p>
 <h2 id="how-to-apply-it"><span id="chunk-7f354f48633dd1f4"></span>How to Apply It</h2>
-<p>Check every agent capability against the ten entries. Record a control or a decision to accept each risk, citing the ASI identifier.</p>
+<p>Check every agent capability against the ten entries and record a control or accepted risk.</p>
 <h2 id="related-patterns"><span id="chunk-cd7f0e373afcc04b"></span>Related Patterns</h2>
 <ul>
 <li>Dual-LLM Pattern</li>
@@ -65,6 +63,54 @@
 <li>Tamper-Evident Agent Audit Log</li>
 </ul>
 
+<h2 id="links">Relations</h2>
+<p>An outgoing relation is stated by this item; an incoming one is a backlink, stated by the other item. Each meaning reads from the item that states the relation towards its target.</p>
+<figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 188" role="img" aria-labelledby="links_owasp-agentic-top-10-title links_owasp-agentic-top-10-desc" font-family="system-ui, sans-serif" font-size="14">
+  <title id="links_owasp-agentic-top-10-title">Relations of OWASP Top 10 for Agentic Applications</title>
+  <desc id="links_owasp-agentic-top-10-desc">Relations of OWASP Top 10 for Agentic Applications. A line drawing; the highlighted element carries the accent.</desc>
+  <defs><marker id="links_owasp-agentic-top-10-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="76" width="170" height="36" rx="6" class="agsc-accent" stroke-width="2.2"/>
+    <rect x="510" y="54" width="190" height="36" rx="6"/>
+    <path d="M440 80.5 L494 72 L510 72" marker-end="url(#links_owasp-agentic-top-10-arrow)" class="agsc-rel-related"/>
+    <rect x="510" y="98" width="190" height="36" rx="6"/>
+    <path d="M440 107.5 L494 116 L510 116" marker-end="url(#links_owasp-agentic-top-10-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="10" width="190" height="36" rx="6"/>
+    <path d="M200 28 L216 28 L317.1 76" marker-end="url(#links_owasp-agentic-top-10-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="54" width="190" height="36" rx="6"/>
+    <path d="M200 72 L216 72 L270 80.5" marker-end="url(#links_owasp-agentic-top-10-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="98" width="190" height="36" rx="6"/>
+    <path d="M200 116 L216 116 L270 107.5" marker-end="url(#links_owasp-agentic-top-10-arrow)" class="agsc-rel-related"/>
+    <rect x="10" y="142" width="190" height="36" rx="6"/>
+    <path d="M200 160 L216 160 L317.1 112" marker-end="url(#links_owasp-agentic-top-10-arrow)" class="agsc-rel-related"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle">
+    <text x="355" y="98" font-size="11">OWASP Top 10 for Agentic…</text>
+    <text x="605" y="68" font-size="12">related</text>
+    <text x="605" y="84" font-size="12">Tamper-Evident Agent Audit L…</text>
+    <text x="605" y="112" font-size="12">related</text>
+    <text x="605" y="128" font-size="12">Unbounded Loops</text>
+    <text x="105" y="24" font-size="12">related</text>
+    <text x="105" y="40" font-size="12">Agent Identity and Scoped Cr…</text>
+    <text x="105" y="68" font-size="12">related</text>
+    <text x="105" y="84" font-size="12">Agentic Supply Chain Integrity</text>
+    <text x="105" y="112" font-size="12">related</text>
+    <text x="105" y="128" font-size="12">Dual-LLM Pattern</text>
+    <text x="105" y="156" font-size="12">related</text>
+    <text x="105" y="172" font-size="12">Memory and Context Poisoni…</text>
+  </g>
+</svg><figcaption>The highlighted box is this item. Each arrow runs from the item that states a relation to its target; the table lists the same relations.</figcaption></figure>
+<div class="table-wrap"><table class="relations">
+<thead><tr><th scope="col">Relation</th><th scope="col">Direction</th><th scope="col">Item</th><th scope="col">Meaning</th><th scope="col">Domain type</th><th scope="col">Domain context</th></tr></thead>
+<tbody>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/immutable-audit-log/">Tamper-Evident Agent Audit Log</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>outgoing</td><td><a href="/concepts/unbounded-agent-loops/">Unbounded Loops</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td>Failure mode</td><td><a href="/clusters/antipatterns/">Anti-Patterns</a></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/agent-identity-scoped-credentials/">Agent Identity and Scoped Credentials</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/agentic-supply-chain/">Agentic Supply Chain Integrity</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/dual-llm-pattern/">Dual-LLM Pattern</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+<tr><td>related</td><td>incoming</td><td><a href="/concepts/memory-context-poisoning/">Memory and Context Poisoning Defense</a></td><td>The two items are connected in meaning, and neither depends on the other.</td><td></td><td></td></tr>
+</tbody>
+</table></div>
 <figure class="diagram" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 252" role="img" aria-labelledby="owasp-agentic-top-10-title owasp-agentic-top-10-desc" font-family="system-ui, sans-serif" font-size="14">
   <title id="owasp-agentic-top-10-title">Ten boxes in two columns of five list ASI01 to ASI10 by their full names, with the first entry, Agent Goal Hijack, highlighted and no arrows between them.</title>
   <desc id="owasp-agentic-top-10-desc">what a system can be made to do — not only what a model can be made to say</desc>
@@ -106,9 +152,10 @@
   </g>
 </svg><figcaption>No arrows means no order and no priority — the only way to use this picture is to account for all ten.</figcaption></figure>
 <h2 id="references">References</h2>
-<ol class="sources"><li id="source-1">Sotiropoulos, J. (2025). <a href="https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/">OWASP Top 10 for Agentic Applications – The Benchmark for Agentic Security in the Age of Autonomous AI</a>. <span class="source-url"><a href="https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/">https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/</a></span>. Checked 2026-09-29.</li><li id="source-2">OWASP Gen AI Security Project (2025). <a href="https://genai.owasp.org/llm-top-10/">OWASP Top 10 for LLM Applications 2025</a>. <span class="source-url"><a href="https://genai.owasp.org/llm-top-10/">https://genai.owasp.org/llm-top-10/</a></span>. Checked 2026-09-29.</li><li id="source-3">OWASP Gen AI Security Project (2025). <a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/">OWASP Top 10 for Agentic Applications for 2026</a>. <span class="source-url"><a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/">https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/</a></span>. Checked 2026-09-29.</li></ol>
+<ol class="sources"><li id="source-1">Sotiropoulos, J. (2025). <a href="https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/">OWASP Top 10 for Agentic Applications – The Benchmark for Agentic Security in the Age of Autonomous AI</a>. <span class="source-url"><a href="https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/">https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/</a></span>. Checked 2026-11-12.</li><li id="source-2">OWASP Gen AI Security Project (2025). <a href="https://genai.owasp.org/llm-top-10/">LLMRisks Archive - OWASP Gen AI Security Project</a>. <span class="source-url"><a href="https://genai.owasp.org/llm-top-10/">https://genai.owasp.org/llm-top-10/</a></span>. Checked 2026-11-18.</li><li id="source-3">OWASP Gen AI Security Project (2025). <a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/">OWASP Top 10 for Agentic Applications for 2026</a>. <span class="source-url"><a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/">https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/</a></span>. Checked 2026-11-12.</li></ol>
 <p class="views">Machine views: <a href="/pages/owasp-agentic-top-10.md">Markdown</a> · <a href="/pages/owasp-agentic-top-10.jsonld">JSON-LD</a></p>
+<p class="contribute"><a href="https://github.com/andreibesleaga/agsc-demo-node/edit/HEAD/content/concepts/owasp-agentic-top-10.md" rel="noopener" aria-label="Propose an edit to OWASP Top 10 for Agentic Applications">Propose an edit</a> — your change is proposed, and a person reviews and merges it.</p>
 </main>
-<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
+<footer class="site"><p class="terms">&#169; 2026 Andrei N. Besleaga. All rights reserved, citing and linking allowed. AI-assisted, human-reviewed. As is, no warranty or liability; not advice. Unaffiliated with named organisations; marks belong to their owners. <a href="/legal/">Legal &amp; privacy</a> · <a href="/legal/#terms" rel="license" data-spdx="LicenseRef-AgenticSystemCore-Content-Use-1.0">Content Use Terms</a> · <a href="https://agenticsystemcore.com/">agenticsystemcore.com</a></p></footer>
 </body>
 </html>

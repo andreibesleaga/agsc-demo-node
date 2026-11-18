@@ -3,7 +3,8 @@
 Agent-system designs as a typed, cited graph: short reference cards on well-known
 agent-system patterns and failure modes, each written from the public sources it cites and
 built by the AgenticSystemCore reference engine. It is the second node of the Agentic Knowledge Web, beside the reference
-node at <https://agenticsystemcore.com/>; each names the other in its discovery document.
+node at <https://agenticsystemcore.com/> and the standards node at
+<https://standards.agenticsystemcore.com/>; each names the others in its discovery document.
 
 Published at <https://patterns.agenticsystemcore.com/>.
 

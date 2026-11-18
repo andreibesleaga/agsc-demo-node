@@ -61,7 +61,7 @@ Burns et al. (2023) found that strong models trained on a weak model's labels co
 
 ## Consequences & Trade-offs
 
-Treat a weak judge as a partial signal.
+Whether this holds for safety judgments is open; treat a weak judge as a partial signal.
 
 ## Related Patterns
 

@@ -22,7 +22,7 @@ sources:
     title: "Building effective agents"
     author: "Anthropic"
     year: 2024
-    verified: 2026-11-12
+    verified: 2026-11-18
     grade: primary
   - resource: https://openai.github.io/openai-agents-python/running_agents/
     title: "Running agents"
@@ -54,7 +54,7 @@ Decide in advance every way an agent loop can end.
 
 ## Context & Forces
 
-Anthropic notes it is common to include stopping conditions.
+Anthropic notes it is common to include stopping conditions, and that agents can pause for human feedback at checkpoints or blockers.
 
 ## Structure
 

@@ -6,6 +6,12 @@
   "skip": [],
   "allow": [
     {
+      "check": "secret",
+      "path": "www/.well-known/sustainability-data",
+      "text": "\"signed\":",
+      "reason": "the signed member is a public JSON Web Signature over this document (EdDSA, its public key embedded; draft-besleaga-sustainability-wellknown), placed by the operator's monthly report tool; it is a signature anyone can verify, not a credential"
+    },
+    {
       "check": "process",
       "path": "content/concepts/exception-handling-and-recovery.md",
       "text": "checklist for",

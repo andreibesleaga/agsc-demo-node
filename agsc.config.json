@@ -8,6 +8,12 @@
     "license_schema": "CC0-1.0",
     "operator": "human:andreibesleaga"
   },
+  "contribute": [
+    {
+      "mode": "pr",
+      "target": "https://github.com/andreibesleaga/agsc-demo-node"
+    }
+  ],
   "domain": {
     "contexts": [
       {

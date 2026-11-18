@@ -16,13 +16,13 @@ aliases:
 clusters:
   - evaluation-testing
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://hamel.dev/blog/posts/evals-faq/
-    title: "LLM Evals: Everything You Need to Know"
-    author: "Husain, H."
-    year: 2025
-    verified: 2026-11-12
+    title: "AI Evals: Everything You Need to Know"
+    author: "Husain, H.; Shankar, S."
+    year: 2026
+    verified: 2026-11-18
     grade: primary
   - resource: https://hamel.dev/blog/posts/field-guide/
     title: "A Field Guide to Rapidly Improving AI Products"
@@ -55,23 +55,15 @@ x-oldsite-subdeck: Evaluation
 
 ## Intent
 
-Find what goes wrong by reading traces and letting failure categories emerge from notes, instead of choosing a metric in advance.
+Find failures by reading traces and letting categories emerge from notes, not from a metric.
 
 ## Context & Forces
 
-Shankar et al. (2024) observe that users need criteria to grade outputs, but grading outputs also helps them define the criteria.
+Shankar et al. (2024) observe that grading outputs helps users define their criteria.
 
 ## Structure
 
-Husain describes these steps:
-
-1. **Open coding:** review traces and write open-ended notes on any issue.
-2. **Axial coding:** group the notes into a failure taxonomy. He calls it "the most important step".
-3. **Iterate** until new reviews stop revealing failure modes.
-
-He suggests one domain expert as "benevolent dictator" for annotation, binary pass/fail labels for more consistent labeling, and reviewing at least 100 traces.
-
-In his field guide, the NurtureBoss team wrote notes on conversations, had a language model build a taxonomy, and counted each failure mode: three issues made up over 60% of problems.
+Husain describes open coding of traces, axial coding into a failure taxonomy, and iterating until new reviews reveal no new failure modes.
 
 ## Consequences & Trade-offs
 

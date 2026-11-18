@@ -1,7 +1,7 @@
 ---
 type: concept
 title: Outcome-Based Pricing
-description: "Charge for achieved outcomes such as a resolved conversation instead of seats or usage, which requires agreeing a written definition of the outcome."
+description: "Charge for achieved outcomes such as a resolved conversation instead of seats or usage, which requires agreeing criteria for the outcome upfront."
 status: stable
 release: product
 tags:
@@ -11,7 +11,7 @@ tags:
 clusters:
   - product
 date: 2026-08-06
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://sierra.ai/blog/outcome-based-pricing-for-ai-agents
     title: "Outcome-based pricing for AI agents"
@@ -53,17 +53,15 @@ Price an agent by the outcome it achieves, not by seats or usage.
 
 ## Context & Forces
 
-Sierra (10 December 2024) ties outcome-based pricing to tangible business results: a resolved support conversation, a saved cancellation, an upsell or a cross-sell. If a conversation is unresolved, it says, there is in most cases no charge.
+Sierra (10 December 2024) ties outcome-based pricing to business results.
 
 ## Structure
 
-Sierra says it agrees criteria for each outcome upfront, and uses blended pricing for cases such as routing.
-
-Vendors define resolution differently. Zendesk bills an automated resolution only when the request is resolved "without any escalation to a human agent" and a large language model verifies it. Intercom bills confirmed and assumed resolutions, and deducts one if the customer returns for more help.
+Vendors define resolution differently: Zendesk, before its resolution tiers, required no escalation to a human and a model's verification; Intercom bills confirmed and assumed resolutions.
 
 ## Consequences & Trade-offs
 
-Sierra says the model aligns its incentives with the customer's. The sources do not discuss disputes over the definition.
+The sources do not discuss disputes over the definition.
 
 ## Related Patterns
 

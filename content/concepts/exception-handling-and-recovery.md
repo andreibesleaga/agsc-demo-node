@@ -15,7 +15,7 @@ aliases:
 clusters:
   - operations-reliability
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
     title: "Retry pattern"
@@ -30,10 +30,10 @@ sources:
     verified: 2026-11-12
     grade: secondary
   - resource: https://docs.langchain.com/oss/python/langgraph/use-graph-api
-    title: "Use the graph API"
+    title: "Build checklist for the Graph API"
     author: "LangChain"
     year: 2026
-    verified: 2026-11-12
+    verified: 2026-11-18
     grade: secondary
 prov:
   origin: imported
@@ -61,24 +61,19 @@ domain_links:
 
 ## Intent
 
-Keep a run going when calls fail: retry short faults, take another route for lasting ones, and say when a result is reduced.
+Keep a run going when calls fail: retry short faults, fall back for lasting ones.
 
 ## Context & Forces
 
-Agents make many remote calls, and some fail. Blind retries waste money and overload services. Retrying a non-idempotent action can repeat it.
+Endless retries can keep an overloaded service from recovering.
 
 ## Structure
 
-1. **Classify.** Retry only transient faults. For HTTP, Microsoft names 429 and 5xx as typical candidates.
-2. **Retry with limits.** Use growing, randomised delays. Microsoft: never retry endlessly; set a retry budget.
-3. **Fall back.** Use an alternative service, or offer reduced functionality.
-4. **Log** every retry.
-
-LangGraph attaches a retry policy to each node; for common HTTP libraries it retries only 5xx errors by default.
+Classify faults, retry transient ones with limits and growing, randomised delays, fall back to an alternative or reduced service, and log every retry.
 
 ## Consequences & Trade-offs
 
-Runs survive routine faults. Retries add delay and cost. A silent fallback can hide a broken dependency.
+Runs survive routine faults, but retries add delay.
 
 ## Related Patterns
 

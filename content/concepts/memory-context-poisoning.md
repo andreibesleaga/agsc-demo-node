@@ -15,7 +15,7 @@ aliases:
 clusters:
   - security
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://genai.owasp.org/download/52117/?tmstv=1765059207
     title: "OWASP Top 10 for Agentic Applications for 2026"
@@ -60,22 +60,15 @@ Treat every write to agent memory or a retrieval store as untrusted.
 
 ## Context & Forces
 
-OWASP's ASI06, Memory & Context Poisoning, describes adversaries who corrupt or seed stored context so that future reasoning, planning or tool use becomes biased or unsafe. Rehberger (2024) showed prompt injection planting persistent spyware in ChatGPT's macOS app memory; OpenAI fixed the exfiltration vector, not the injection. AgentPoison (Chen et al., 2024) reports above 80% attack success on each of three agents at a poison rate under 0.1%.
+OWASP's ASI06, Memory & Context Poisoning, describes adversaries who corrupt or seed stored context.
 
 ## Structure
 
-OWASP's mitigations:
-
-- scan new writes before commit;
-- segment memory by session and domain;
-- require source attribution;
-- block re-ingestion of the agent's own outputs;
-- expire unverified memory;
-- keep snapshots for rollback.
+OWASP's mitigations include scanning new writes before commit, segmenting memory, requiring source attribution, and keeping snapshots for rollback.
 
 ## Consequences & Trade-offs
 
-The sources list defenses without measuring them.
+OWASP lists these mitigations without measuring them.
 
 ## Related Patterns
 

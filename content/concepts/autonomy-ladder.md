@@ -11,7 +11,7 @@ tags:
 clusters:
   - product
 date: 2026-08-06
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://cloudsecurityalliance.org/blog/2026/01/28/levels-of-autonomy
     title: "Leveling Up Autonomy in Agentic AI"
@@ -42,24 +42,15 @@ diagram:
 
 ## Intent
 
-A shared scale for how much an agent may decide alone, so the level is chosen on purpose.
+A shared scale for how much an agent may decide alone.
 
 ## The Categories
 
-The Cloud Security Alliance proposes six levels, modelled on the SAE J3016 driving-automation levels (Reavis, 2026):
-
-- **L0 No autonomy:** a human does the work.
-- **L1 Assisted:** a human decides, the AI executes.
-- **L2 Supervised:** a human approves, the AI executes.
-- **L3 Conditional:** the AI decides within set boundaries.
-- **L4 High autonomy:** minimal supervision.
-- **L5 Full autonomy:** self-directed.
-
-Reavis considers L5 not appropriate for enterprise use today. Mitchell et al. (2025) argue that fully autonomous agents should not be developed.
+Reavis (2026), on the Cloud Security Alliance blog, proposes six levels echoing SAE J3016: No Autonomy, Assisted, Supervised, Conditional, High Autonomy and Full Autonomy.
 
 ## How to Apply It
 
-Pick a level per kind of action, based on what a mistake would cost and whether it can be undone. Enforce it in the runtime. Move up only with evidence, and keep the way down working.
+Pick a level per kind of action, based on what a mistake would cost.
 
 ## Related Patterns
 

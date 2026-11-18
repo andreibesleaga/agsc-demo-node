@@ -16,7 +16,7 @@ aliases:
 clusters:
   - foundational
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://arxiv.org/abs/2402.16823
     title: "Language Agents as Optimizable Graphs"
@@ -59,19 +59,15 @@ Represent an agent workflow as a graph, then search over it with an evaluator.
 
 ## Context & Forces
 
-AFlow (Zhang et al., 2024) notes that building agentic workflows takes manual effort, which limits scalability. MASS (Zhou et al., 2025) reports that agent prompts and topology both strongly affect performance.
+AFlow (Zhang et al., 2024) notes that building agentic workflows takes manual effort.
 
 ## Structure
 
-GPTSwarm (Zhuge et al., ICML 2024) describes agents as computational graphs: nodes process data or query LLMs, and edges carry information. It proposes node optimization of prompts and edge optimization of connectivity.
-
-AFlow searches code-represented workflows with Monte Carlo Tree Search and execution feedback. Its authors report about 5.7% average improvement over baselines on six benchmarks, and smaller models beating GPT-4o on specific tasks at 4.55% of its cost.
-
-MASS optimizes in three stages: block-level prompts, workflow topology, then workflow-level prompts.
+GPTSwarm (Zhuge et al., ICML 2024) describes agents as computational graphs; AFlow searches workflows with Monte Carlo Tree Search.
 
 ## Consequences & Trade-offs
 
-The gains above are the authors' own figures, measured on their chosen benchmarks.
+AFlow's reported gains are its authors' own figures, measured on their chosen benchmarks.
 
 ## Related Patterns
 

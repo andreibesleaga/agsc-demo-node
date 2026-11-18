@@ -53,6 +53,12 @@
   "thinking-budget-control",
   "trajectory-vs-outcome-evals",
   "unbounded-agent-loops",
-  "weak-to-strong-oversight"
+  "weak-to-strong-oversight",
+  "keep-cards-short",
+  "card-format",
+  "task-recheck-sources",
+  "task-report-a-broken-link",
+  "publish-gate",
+  "check-a-card-against-its-sources"
  ]
 }

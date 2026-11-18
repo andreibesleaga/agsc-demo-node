@@ -16,7 +16,7 @@ aliases:
 clusters:
   - cognitive-behavioral
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://dannorth.net/blog/introducing-bdd/
     title: "Introducing BDD"
@@ -62,15 +62,15 @@ x-oldsite-subdeck: Behavior-driven specification
 
 ## Intent
 
-State what an agent must do as Given/When/Then scenarios and run them as evaluations, so the requirement and the test are one artefact.
+State agent requirements as Given/When/Then scenarios and run them as evaluations.
 
 ## Context & Forces
 
-Xia et al. (2024) note that LLM agents pursue loosely defined goals and adapt after deployment, while Test-Driven and Behaviour-Driven Development assume stable specifications.
+Xia et al. (2024) note that agents adapt after deployment, while Test-Driven Development assumes stable specifications.
 
 ## Structure
 
-North (2006) introduced behaviour-driven development: "A story's behaviour is simply its acceptance criteria", written as scenarios of the form "Given some initial context (the givens), When an event occurs, Then ensure some outcomes." Cucumber's Gherkin reference says Given steps describe the initial context of the system, When steps an event or action, and Then steps an expected outcome. Xia et al. build their evaluation process on the iterative principles of TDD and BDD. promptfoo's scenarios group a set of data with the tests to run on it.
+North (2006) introduced behaviour-driven development, with scenarios written as Given some initial context, When an event occurs, Then ensure some outcomes.
 
 ## Consequences & Trade-offs
 

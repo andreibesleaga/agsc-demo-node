@@ -15,7 +15,7 @@ aliases:
 clusters:
   - operations-reliability
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://sre.google/workbook/canarying-releases/
     title: "Canarying Releases"
@@ -57,15 +57,15 @@ Compare a changed prompt or model with the current one on real traffic before pr
 
 ## Context & Forces
 
-Google's SRE Workbook defines canarying as "a partial and time-limited deployment of a change in a service and its evaluation". The canary population receives the change; the rest acts as control, and metrics should be representative and attributable.
+Google's SRE Workbook defines canarying as a partial, time-limited deployment of a change and its evaluation.
 
 ## Structure
 
-Langfuse's prompt CI/CD guide (current as of July 2026) applies this to prompts. Its example labels the current prompt `production` and the candidate `canary`, and application code picks the canary when a random draw falls below 0.10. Metrics compare latency, tokens, cost and score per version. Promotion, or rollback, moves the `production` label, with no redeploy. Statsig (2025) describes shadow testing: duplicating requests to the existing and candidate models for side-by-side evaluation while users continue undisturbed.
+Langfuse's prompt CI/CD guide labels the current prompt production and the candidate canary.
 
 ## Consequences & Trade-offs
 
-A canary exposes part of live traffic to the change; shadow testing does not affect users.
+A canary exposes some live traffic; shadow testing does not affect users.
 
 ## Related Patterns
 

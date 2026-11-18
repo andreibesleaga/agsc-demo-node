@@ -15,7 +15,7 @@ aliases:
 clusters:
   - evaluation-testing
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://vcrpy.readthedocs.io/en/latest/
     title: "VCR.py documentation"
@@ -60,19 +60,19 @@ x-oldsite-subdeck: Determinism & Replay
 
 ## Intent
 
-Capture real model responses once and replay them on later runs, so agent tests skip the network and repeat exactly.
+Capture real model responses once and replay them, so agent tests skip the network.
 
 ## Context & Forces
 
-Live model calls need the network and return different responses over time. A recording returns the same ones.
+Live model calls need the network and return different responses over time.
 
 ## Structure
 
-VCR.py, "a Python version of Ruby's VCR library", "records all HTTP interactions that take place through the libraries it supports" in a cassette file, then returns the stored responses. Its record modes differ: `once` (the default) replays and records only if no cassette exists; `none` replays only; `all` always records. LangSmith's pytest integration applies the idea to model calls: "All requests will be cached to `tests/cassettes` and loaded from there on subsequent runs."
+VCR.py records HTTP interactions in a cassette file and then returns the stored responses; LangSmith's pytest integration applies the idea to model calls.
 
 ## Consequences & Trade-offs
 
-Replay runs the code around the model, not the model. Under `none`, and under `once` once a cassette exists, a request that is not in the cassette raises an error.
+Replay runs the code around the model, not the model.
 
 ## Related Patterns
 

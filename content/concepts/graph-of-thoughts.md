@@ -16,7 +16,7 @@ aliases:
 clusters:
   - foundational
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://arxiv.org/abs/2308.09687
     title: "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
@@ -55,23 +55,19 @@ x-oldsite-subdeck: Graph-Structured Control Flow
 
 ## Intent
 
-Let reasoning combine and refine partial thoughts, not only branch them.
+Let reasoning combine and refine partial thoughts, as well as branch them.
 
 ## Context & Forces
 
-Tree of Thoughts (Yao et al., 2023) explores branching reasoning paths; in the Game of 24 it solved 74% of tasks, where GPT-4 with chain-of-thought solved 4%.
+Tree of Thoughts (Yao et al., 2023) explores branching reasoning paths.
 
 ## Structure
 
-Besta et al. (AAAI 2024) model LLM output as an arbitrary graph: thoughts are vertices, dependencies are edges. This allows combining thoughts and enhancing them with feedback loops.
-
-A Graph of Operations is a static plan that decomposes the task; a Controller coordinates reasoning. Transformations are generation, aggregation and refining.
-
-Evaluated tasks include sorting, set intersection, keyword counting and document merging. On sorting the authors report 62% higher quality than Tree of Thoughts at over 31% lower cost.
+Besta et al. (AAAI 2024) model LLM output as a graph whose vertices are thoughts and whose edges are dependencies.
 
 ## Consequences & Trade-offs
 
-The headline gains rest on sorting.
+The authors' headline example is sorting.
 
 ## Related Patterns
 

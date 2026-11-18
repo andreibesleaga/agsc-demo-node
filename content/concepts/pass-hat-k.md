@@ -14,7 +14,7 @@ aliases:
 clusters:
   - evaluation-testing
 date: 2026-08-15
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://arxiv.org/abs/2406.12045
     title: "τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains"
@@ -47,15 +47,15 @@ x-oldsite-subdeck: Evaluation
 
 ## Intent
 
-Measure whether an agent succeeds on every one of k trials of a task, not only on at least one.
+Measure whether an agent succeeds on all k trials of a task, not just one.
 
 ## Context & Forces
 
-Agent behaviour varies between runs of the same task. Anthropic (2026) defines pass@k as "the likelihood that an agent gets at least one correct solution in k attempts".
+Agent behaviour varies between runs of the same task.
 
 ## Structure
 
-Yao et al. (2024) propose pass^k in τ-bench to evaluate the reliability of agent behaviour over multiple trials. Anthropic defines pass^k as "the probability that all k trials succeed". The τ-bench authors report that gpt-4o with function calling succeeded on about 61% of retail tasks in a single trial (pass^1) and about 25% when it had to succeed on all of eight trials (pass^8).
+Yao et al. (2024) propose pass^k in τ-bench to evaluate reliability over multiple trials.
 
 ## Consequences & Trade-offs
 

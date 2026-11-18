@@ -15,7 +15,7 @@ aliases:
 clusters:
   - security
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://simonwillison.net/2023/Apr/25/dual-llm-pattern/
     title: "The Dual LLM pattern for building AI assistants that can resist prompt injection"
@@ -47,25 +47,19 @@ diagram:
 
 ## Intent
 
-Keep the model that can act away from untrusted text, so injected instructions cannot trigger actions.
+Keep the acting model away from untrusted text, to limit what injected instructions can trigger.
 
 ## Context & Forces
 
-E-mails, web pages and files can contain text that looks like a command. Filters lower the risk but do not remove it.
+E-mails and web pages can contain text that looks like a command.
 
 ## Structure
 
-Simon Willison (2023) uses three parts:
-
-1. **Privileged model:** takes trusted input, mainly from the user, and can use tools.
-2. **Quarantined model:** reads untrusted content and has no tools.
-3. **Controller:** ordinary code that passes results between them as variables.
-
-CaMeL (Debenedetti et al., 2025) builds on this. It takes the control flow from the trusted query only, and checks capabilities attached to data whenever a tool is called.
+Simon Willison (2023) separates a privileged model with tools, a quarantined model reading untrusted content, and a controller.
 
 ## Consequences & Trade-offs
 
-Injected text cannot change the plan. Some usefulness is lost: CaMeL solved 77% of AgentDojo tasks with provable security, against 84% undefended. Use it when an agent reads untrusted data and holds important tools.
+CaMeL (Debenedetti et al., 2025) solved 77% of AgentDojo tasks with provable security, against 84% undefended.
 
 ## Related Patterns
 

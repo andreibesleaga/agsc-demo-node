@@ -1,7 +1,7 @@
 ---
 type: concept
 title: Global Workspace as Blackboard
-description: "Specialist modules compete to put content in one small workspace whose contents are broadcast to all modules, as in Global Workspace Theory."
+description: "Specialist modules share one workspace, with specialised processors around it, as in Global Workspace Theory."
 status: stable
 release: cognitive
 tags:
@@ -16,7 +16,7 @@ aliases:
 clusters:
   - cognitive-behavioral
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://pubmed.ncbi.nlm.nih.gov/16186014/
     title: "Global workspace theory of consciousness: toward a cognitive neuroscience of human experience"
@@ -62,17 +62,15 @@ x-oldsite-subdeck: Neuro-cognitive skill architectures
 
 ## Intent
 
-Organise an agent as parallel specialist modules that compete to place content in one small workspace, whose contents all modules receive.
+Organise an agent as specialist modules that share one workspace.
 
 ## Context & Forces
 
-Baars (2005) traces Global Workspace theory to cognitive architecture research, including Newell's blackboard model.
+Baars (2005) traces Global Workspace theory to cognitive architecture research.
 
 ## Structure
 
-Dehaene, Kerszberg and Changeux (1998) model a workspace of distributed, densely interconnected neurons alongside specialised processors for perception, action, memory, evaluation and attention. Workspace neurons are recruited when specialised processors are insufficient. Baars and Franklin (2007) describe a hybrid architecture with distributed "codelets" that accounts for the theory and the LIDA architecture. Goldstein and Kirk-Giannini (2024) derive conditions from the theory and argue that language agents could meet them.
-
-This card uses the theory as an engineering analogy and makes no claim about consciousness. It keeps three parts: modules, a workspace, and a return of its contents to the modules.
+This card uses the theory as an engineering analogy, with no claim about consciousness.
 
 ## Consequences & Trade-offs
 

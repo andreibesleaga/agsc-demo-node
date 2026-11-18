@@ -16,7 +16,7 @@ aliases:
 clusters:
   - product
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html
     title: "Shadow tests"
@@ -56,7 +56,7 @@ x-oldsite-subdeck: Rollout
 
 ## Intent
 
-Run an agent on live work with side effects suppressed, to compare its proposals with what people did.
+Run an agent on live work with side effects suppressed, then compare it with people.
 
 ## Context & Forces
 
@@ -64,9 +64,7 @@ SageMaker describes shadow testing as comparing a serving change against the dep
 
 ## Structure
 
-SageMaker routes a copy of the inference requests to a shadow variant in real time. Only production responses go back to the caller; shadow responses can be discarded or logged for offline comparison.
-
-Microsoft applies the idea to its Dynamics 365 Case Management Agent. In shadow mode the agent "simulates exactly what it would do if it were live"; no record is updated and no customer contacted. It predicts intent, drafts responses and proposes field updates. Administrators compare these with actual human actions and assess readiness for partial or full automation.
+Microsoft applies the idea to its Dynamics 365 Case Management Agent, which in shadow mode updates no record and contacts no customer.
 
 ## Consequences & Trade-offs
 

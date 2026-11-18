@@ -13,7 +13,7 @@ aliases:
 clusters:
   - operations-reliability
 date: 2026-08-19
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://platform.claude.com/docs/en/build-with-claude/effort
     title: "Effort"
@@ -68,15 +68,15 @@ Choose, per task class and before the call, how much reasoning a model spends.
 
 ## Context & Forces
 
-Chen et al. (2024) study "overthinking" in o1-like models, where excessive computational resources are allocated to simple problems with minimal benefit. OpenAI says reasoning tokens occupy context and are billed as output tokens. Google prices thinking tokens with output tokens.
+Chen et al. (2024) study "overthinking" in o1-like models, which spend excessive computation on simple problems.
 
 ## Structure
 
-OpenAI's `reasoning.effort` can take values from none to max, depending on the model, and lower effort favours speed and lower token usage. Anthropic's `effort` parameter affects all tokens in a response, including tool calls, and is "a behavioral signal, not a strict token budget"; fixed `budget_tokens` (minimum 1,024) is deprecated on Anthropic's current models and rejected on later ones. Google advises minimal thinking for fact retrieval or classification.
+OpenAI's reasoning.effort trades reasoning for speed and token usage, while Anthropic's effort is "a behavioral signal, not a strict token budget".
 
 ## Consequences & Trade-offs
 
-Anthropic advises testing effort on your own use case, and holding top-level effort constant in cached conversations because changing it invalidates prompt caching.
+Anthropic advises testing effort on your own use case.
 
 ## Related Patterns
 

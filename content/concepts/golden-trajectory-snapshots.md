@@ -16,7 +16,7 @@ aliases:
 clusters:
   - evaluation-testing
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://adk.dev/evaluate/
     title: "Why evaluate agents"
@@ -49,19 +49,19 @@ x-oldsite-subdeck: Determinism & Replay
 
 ## Intent
 
-Keep a known-good agent run as a test case, replay it on each change, and flag differences in tool path or answer.
+Keep a known-good agent run as a test case and replay it.
 
 ## Context & Forces
 
-Google's Agent Development Kit (ADK) defines a test turn as a user query, an expected intermediate tool-use trajectory and an expected final response. Anthropic (2026) calls checking "a sequence of tool calls in the right order" too rigid, giving "overly brittle tests", because agents regularly find valid approaches that designers did not anticipate.
+Google's Agent Development Kit (ADK) defines a test turn by an expected trajectory and response.
 
 ## Structure
 
-ADK scores trajectories with `tool_trajectory_avg_score` (exact match) and responses with `response_match_score` (ROUGE-1 similarity). `adk eval` and `pytest` run cases. `adk conformance record` creates a "golden baseline", and conformance tests can run on pull requests and block merges that change expected behaviour.
+The command `adk conformance record` creates a golden baseline that conformance tests can enforce on pull requests.
 
 ## Consequences & Trade-offs
 
-Anthropic advises turning manual development checks and user-reported failures into cases, and says it is often better to grade what the agent produced than the path it took.
+Anthropic (2026) says it is often better to grade what the agent produced than its path.
 
 ## Related Patterns
 

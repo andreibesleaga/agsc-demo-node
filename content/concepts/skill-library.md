@@ -15,7 +15,7 @@ aliases:
 clusters:
   - memory-cognition
 date: 2026-08-06
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://arxiv.org/abs/2305.16291
     title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
@@ -52,23 +52,19 @@ diagram:
 
 ## Intent
 
-Store capabilities that are known to work, so an agent's skills grow instead of being rediscovered each run.
+Store capabilities known to work, so an agent's skills grow instead of being rediscovered.
 
 ## Context & Forces
 
-An agent that forgets a solution pays for it again. Storing everything is worse: failures that looked right pile up.
+An agent that forgets a solution pays for it again.
 
 ## Structure
 
-Voyager (Wang et al., 2023) keeps a growing library of executable skills, uses self-verification, and builds complex skills from simple ones. Anthropic's Agent Skills are folders of instructions, scripts and resources that agents load when needed (Zhang et al., 2025). CoALA (Sumers et al., 2023) calls such code procedural memory.
-
-1. **Capture** a successful solution as a named procedure.
-2. **Verify** it before admitting it.
-3. **Retrieve** it when a similar task arrives.
+Voyager (Wang et al., 2023) keeps a growing library of executable skills, uses self-verification, and builds complex skills from simple ones.
 
 ## Consequences & Trade-offs
 
-Skills build up and can be shared. A bad skill changes behaviour, so review it like code. Weak retrieval returns the wrong skill.
+A bad skill changes behaviour, so review it like code.
 
 ## Related Patterns
 

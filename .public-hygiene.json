@@ -4,5 +4,48 @@
     "www"
   ],
   "skip": [],
-  "allow": []
+  "allow": [
+    {
+      "check": "process",
+      "path": "content/concepts/exception-handling-and-recovery.md",
+      "text": "checklist for",
+      "reason": "the exact title of a cited page of the LangGraph documentation (\"Build checklist for the Graph API\"), in a source entry"
+    },
+    {
+      "check": "process",
+      "path": "www/concepts/exception-handling-and-recovery/index.html",
+      "text": "checklist for",
+      "reason": "the exact title of a cited page of the LangGraph documentation (\"Build checklist for the Graph API\"), in a source entry"
+    },
+    {
+      "check": "process",
+      "path": "www/graph.jsonld",
+      "text": "checklist for",
+      "reason": "the exact title of a cited page of the LangGraph documentation (\"Build checklist for the Graph API\"), in a source entry"
+    },
+    {
+      "check": "process",
+      "path": "www/graph.nq",
+      "text": "checklist for",
+      "reason": "the exact title of a cited page of the LangGraph documentation (\"Build checklist for the Graph API\"), in a source entry"
+    },
+    {
+      "check": "process",
+      "path": "www/graph.ttl",
+      "text": "checklist for",
+      "reason": "the exact title of a cited page of the LangGraph documentation (\"Build checklist for the Graph API\"), in a source entry"
+    },
+    {
+      "check": "process",
+      "path": "www/pages/exception-handling-and-recovery.jsonld",
+      "text": "checklist for",
+      "reason": "the exact title of a cited page of the LangGraph documentation (\"Build checklist for the Graph API\"), in a source entry"
+    },
+    {
+      "check": "process",
+      "path": "www/pages/exception-handling-and-recovery.md",
+      "text": "checklist for",
+      "reason": "the exact title of a cited page of the LangGraph documentation (\"Build checklist for the Graph API\"), in a source entry"
+    }
+  ]
 }

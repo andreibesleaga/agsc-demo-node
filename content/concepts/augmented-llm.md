@@ -15,7 +15,7 @@ aliases:
 clusters:
   - foundational
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://www.anthropic.com/research/building-effective-agents
     title: "Building effective agents"
@@ -47,19 +47,19 @@ x-oldsite-subdeck: The Loop Itself
 
 ## Intent
 
-Treat a language model with retrieval, tools and memory as the basic unit from which agentic systems are built.
+Treat a language model with retrieval, tools and memory as the basic unit of agentic systems.
 
 ## Context & Forces
 
-A bare model answers from its weights. Anthropic (2024) writes that "the basic building block of agentic systems is an LLM enhanced with augmentations such as retrieval, tools, and memory", and that current models actively use them: generating their own search queries, selecting tools and determining what information to retain.
+A bare model answers from its weights.
 
 ## Structure
 
-Anthropic names its Model Context Protocol as one way to integrate third-party tools. Sumers et al. (2023) describe a language agent in the CoALA framework with three parts: modular memory components, a structured action space for interacting with internal memory and external environments, and a generalised decision-making process to choose actions.
+Sumers et al. (2023) describe a language agent in the CoALA framework with modular memory, a structured action space and decision-making.
 
 ## Consequences & Trade-offs
 
-Anthropic advises finding the simplest solution possible before adding complexity. It says agent autonomy means higher costs and the potential for compounding errors.
+Anthropic advises finding the simplest solution possible before adding complexity.
 
 ## Related Patterns
 

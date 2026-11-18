@@ -15,7 +15,7 @@ aliases:
 clusters:
   - security
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     title: "OWASP Top 10 for Agentic Applications for 2026"
@@ -51,19 +51,19 @@ x-oldsite-subdeck: Privilege & Identity
 
 ## Intent
 
-Give each agent its own identity and short-lived, task-scoped credentials, so delegation only narrows authority.
+Give each agent its own identity and short-lived, task-scoped credentials, so delegation never widens authority.
 
 ## Context & Forces
 
-Identity systems were built for people and long-lived services; agents start per task and delegate. A reused user session gives a confused agent everything the principal holds.
+OWASP's ASI03 describes cached credentials reused across sessions and agents passing on their full access context.
 
 ## Structure
 
-OWASP's ASI03, Identity & Privilege Abuse, describes attackers manipulating delegation chains, role inheritance and agent context. Its mitigations include "short-lived, narrowly scoped tokens per task" with per-agent identities, and no privilege inheritance across agents unless the original intent is re-validated. The Cloud Security Alliance (2025) proposes a unique identity for each ephemeral agent, credentials "with specific permissions for limited time periods and particular tasks", and "clear chains of accountability from human principals to agents".
+OWASP's ASI03 recommends "short-lived, narrowly scoped tokens per task" with per-agent identities.
 
 ## Consequences & Trade-offs
 
-Each credential covers one task. Scoping needs precise task definitions, and an issuer must be available when tasks start.
+Scoping needs precise task definitions, and an issuer must be available when tasks start.
 
 ## Related Patterns
 

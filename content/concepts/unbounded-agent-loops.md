@@ -16,7 +16,7 @@ aliases:
 clusters:
   - antipatterns
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://www.anthropic.com/research/building-effective-agents
     title: "Building effective agents"
@@ -52,24 +52,19 @@ domain_type: FailureMode
 
 ## Intent
 
-Name the mistake: an agent loop with no step limit, no budget and no independent test that the goal is met.
+Name the mistake: an agent loop with no step limit, budget or goal check.
 
 ## Context & Forces
 
-In an agent loop the model picks the next step, so it can repeat a tool call or claim progress that did not happen. Anthropic notes that autonomy brings higher costs and compounding errors (Schluntz and Zhang, 2024).
+Anthropic notes that autonomy brings higher costs and compounding errors (Schluntz and Zhang, 2024).
 
 ## Structure
 
-Signs of it:
-
-1. **No step limit.** Anthropic lists a maximum number of iterations as a normal stopping condition.
-2. **No cost limit or timeout.** OWASP's LLM10:2025 Unbounded Consumption warns of denial of service and economic loss, and recommends rate limits, quotas and timeouts.
-3. **The model decides the exit.** Inkog traces endless agent loops to missing iteration limits and exit conditions that never fire.
-4. **"Done" is announced, not observed.**
+Signs include no step limit, no time limit, and an exit that depends on the model's output.
 
 ## Consequences & Trade-offs
 
-Bills surprise, sessions hang, and other systems get flooded. Set limits from measured run lengths; a cap that is too tight cuts off hard tasks.
+An unbounded loop can run up a large bill.
 
 ## Related Patterns
 

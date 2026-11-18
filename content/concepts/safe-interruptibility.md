@@ -16,7 +16,7 @@ aliases:
 clusters:
   - ethics
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://intelligence.org/files/Interruptibility.pdf
     title: "Safely Interruptible Agents"
@@ -55,15 +55,15 @@ x-oldsite-subdeck: Human Agency
 
 ## Intent
 
-Let a human halt an agent at any moment, without the agent learning to prevent or seek the halt.
+Let a human halt an agent, without the agent learning to prevent or seek the halt.
 
 ## Context & Forces
 
-Orseau and Armstrong (2016) describe a reinforcement learning agent under human supervision. An operator may need to press "the big red button" to stop a harmful sequence of actions. If the agent expects rewards from it, the agent may learn to avoid interruptions, for example by disabling the button.
+Orseau and Armstrong (2016) note that a reinforcement learning agent may learn to avoid interruptions.
 
 ## Structure
 
-The paper defines safe interruptibility so that an agent will not learn to prevent or seek being interrupted. Interruptions forcibly and temporarily change the agent's behaviour, so it seems to follow its own interruption policy. LangGraph's `interrupt` is a runtime mechanism for pausing: it suspends graph execution at the call, a checkpointer saves state, and the run resumes with a `Command(resume=...)`.
+LangGraph's interrupt suspends graph execution at the call, a checkpointer saves state, and the run resumes with a Command.
 
 ## Consequences & Trade-offs
 

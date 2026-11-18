@@ -16,7 +16,7 @@ aliases:
 clusters:
   - topologies
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://arxiv.org/abs/2305.14325
     title: "Improving Factuality and Reasoning in Language Models through Multiagent Debate"
@@ -59,15 +59,15 @@ Improve answers by having several model instances debate over rounds.
 
 ## Context & Forces
 
-In Du et al. (2023), multiple language model instances propose and debate their responses, each instructed to construct a new response based on the others'. Their main experiments use three agents and two rounds. They report enhanced mathematical and strategic reasoning and fewer hallucinations.
+Du et al. (2023) have several language model instances debate and report fewer hallucinations.
 
 ## Structure
 
-Liang et al. (2023) add roles against "Degeneration-of-Thought": affirmative and negative debaters argue in a "tit for tat" state, and a judge manages the debate process to obtain a final solution. The Agent Design Pattern Catalogue (Liu et al., 2024) lists "Debate-based cooperation".
+Liang et al. (2023) add affirmative and negative debaters and a judge to counter "Degeneration-of-Thought".
 
 ## Consequences & Trade-offs
 
-Du et al. say the procedure is more computationally expensive, and that converged answers were not necessarily correct. Liang et al. find the judge prefers the side backed by the same LLM, and use an adaptive break to end the debate at the optimal moment.
+Du et al. say the procedure is more computationally expensive, and that converged answers were not necessarily correct.
 
 ## Related Patterns
 

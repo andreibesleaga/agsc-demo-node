@@ -16,7 +16,7 @@ aliases:
 clusters:
   - cognitive-behavioral
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/neuro.12.006.2007/full
     title: "What is intrinsic motivation? A typology of computational approaches"
@@ -62,23 +62,19 @@ x-oldsite-subdeck: Motivation & goal systems
 
 ## Intent
 
-Let the agent pick its next task from what is novel or still being learned, without a fixed task list.
+Let the agent pick its next task from what is novel, not from a fixed list.
 
 ## Context & Forces
 
-Pathak et al. (2017) note that extrinsic rewards are often extremely sparse or absent, and define curiosity as the error in predicting the consequence of the agent's own actions.
+Pathak et al. (2017) note that extrinsic rewards are often extremely sparse or absent.
 
 ## Structure
 
-Oudeyer and Kaplan (2007) define intrinsic motivation as doing an activity for its inherent satisfaction, and sort computational approaches into knowledge-based (novelty, prediction error, learning progress), competence-based and morphological.
-
-Voyager (Wang et al., 2023) uses an automatic curriculum that maximizes exploration. Its prompt asks for diverse discoveries and a next task that is not too hard for current resources. The authors call it an in-context form of novelty search.
-
-Hong et al. (2024) apply novelty-optimizing curiosity to red teaming and report greater test-case coverage.
+Voyager (Wang et al., 2023) uses an automatic curriculum that maximizes exploration.
 
 ## Consequences & Trade-offs
 
-The sources report exploration and coverage gains, not cost or drift.
+The sources report exploration and coverage gains.
 
 ## Related Patterns
 

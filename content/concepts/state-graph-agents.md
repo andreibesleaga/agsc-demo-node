@@ -16,7 +16,7 @@ aliases:
 clusters:
   - foundational
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://docs.langchain.com/oss/python/langgraph/graph-api
     title: "Graph API overview"
@@ -59,19 +59,15 @@ Make control flow explicit: nodes that work, edges that pick the next step, shar
 
 ## Context & Forces
 
-LangGraph has three parts. State is a shared snapshot, usually a typed schema. Nodes read state, do work and return updates. Edges are fixed or conditional transitions to the next node.
+LangGraph has three parts: state, nodes and edges.
 
 ## Structure
 
-LangGraph runs graphs with message passing in the style of Google's Pregel system. Execution advances in discrete super-steps, and parallel nodes share one. A run ends when every node is inactive and no messages are in transit.
-
-Malewicz et al. (SIGMOD 2010) describe Pregel as iterations in which each vertex receives messages, sends messages and updates its state, inspired by Valiant's Bulk Synchronous Parallel model; vertices vote to halt.
-
-Checkpointers persist a thread's graph state, supporting human-in-the-loop workflows, time travel and failure recovery.
+LangGraph runs graphs with message passing in the style of Google's Pregel system, in discrete super-steps. Checkpointers persist a thread's graph state.
 
 ## Consequences & Trade-offs
 
-The documentation does not say when this structure pays off.
+LangGraph's Graph API page advises it when you want explicit shared state and a visual control flow.
 
 ## Related Patterns
 

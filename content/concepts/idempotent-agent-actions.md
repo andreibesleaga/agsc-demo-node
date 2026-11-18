@@ -16,7 +16,7 @@ aliases:
 clusters:
   - evaluation-testing
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://docs.stripe.com/api/idempotent_requests
     title: "Idempotent requests"
@@ -52,15 +52,15 @@ Make a side-effecting action take effect once, even when it is retried or replay
 
 ## Context & Forces
 
-Temporal's documentation says activities "may be executed more than once" and recommends that activities which perform writes be idempotent. A caller whose request timed out cannot tell whether the first attempt succeeded.
+Temporal's documentation says activities may be executed more than once.
 
 ## Structure
 
-Stripe's API lets a client send an `Idempotency-Key`. For API v1, Stripe saves the status code and body of the first request made with a key, once execution begins, and returns that response to retries with the same key. Temporal suggests "a combination of the Workflow Run ID and the Activity ID" as an idempotency key.
+For API v1, Stripe returns the saved response of an earlier request to retries with the same Idempotency-Key.
 
 ## Consequences & Trade-offs
 
-Stripe v1 can remove keys once they are at least 24 hours old, and a reused pruned key starts a new request, so protection is bounded in time.
+Stripe v1 can remove keys at least 24 hours old, so protection is bounded in time.
 
 ## Related Patterns
 

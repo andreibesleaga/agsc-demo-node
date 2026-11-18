@@ -14,7 +14,7 @@ aliases:
 clusters:
   - operations-reliability
 date: 2026-08-19
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://platform.claude.com/docs/en/build-with-claude/prompt-caching
     title: "Prompt caching"
@@ -58,19 +58,19 @@ x-oldsite-subdeck: Cost & Performance (FinOps)
 
 ## Intent
 
-Order the prompt so unchanging content comes first and later requests can reuse the provider's cached prefix.
+Order the prompt so unchanging content comes early and later requests reuse the cached prefix.
 
 ## Context & Forces
 
-OpenAI says cache reuse requires the entire rendered prefix to match, and advises putting stable instructions and shared reference material first, timestamps and user-specific details last. Google enables implicit caching by default for Gemini 2.5 and newer models and advises putting large repeated content first.
+OpenAI says cache reuse requires the entire rendered prefix to match.
 
 ## Structure
 
-Anthropic caches in the order tools, system, then messages, up to a block marked with `cache_control`. A change at one level invalidates that level and every later one; modifying tool definitions invalidates everything. Anthropic advises putting the breakpoint on the last block that stays identical across requests, not on content such as timestamps.
+Anthropic caches tools, then system, then messages, and a change at one level invalidates it and every later one.
 
 ## Consequences & Trade-offs
 
-Anthropic prices cache reads at 0.1 times base input price (lower on some models) and 5-minute cache writes at 1.25 times. Prompts below a model-specific minimum length are not cached.
+Anthropic prices cache reads at 0.1 times base input price (lower on some models).
 
 ## Related Patterns
 

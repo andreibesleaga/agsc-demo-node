@@ -14,7 +14,7 @@ aliases:
 clusters:
   - topologies
 date: 2026-08-06
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://mas.cs.umass.edu/Documents/Erman_Hearsay80.pdf
     title: "The Hearsay-II Speech-Understanding System: Integrating Knowledge to Resolve Uncertainty"
@@ -50,21 +50,15 @@ Independent specialists work on one problem through a shared workspace, without 
 
 ## Context & Forces
 
-Some problems cannot be split in advance: who can help depends on what is already known. Direct messages tie every agent to all the others.
+Direct messages tie every agent to all the others.
 
 ## Structure
 
-The Hearsay-II speech system (Erman et al., 1980) has three parts:
-
-1. **Blackboard:** a global database of hypotheses.
-2. **Knowledge sources:** independent programs that communicate only through the blackboard.
-3. **Control:** a focus-of-control step that picks the most promising action next.
-
-Han and Zhang (2025) apply it to language-model agents: the agents that act are chosen from what is on the blackboard.
+The Hearsay-II speech system (Erman et al., 1980) has a blackboard, independent knowledge sources and a control step.
 
 ## Consequences & Trade-offs
 
-Specialists can be added or removed freely, and the history sits in one place. The control step becomes the hard part. Evidence for language-model agents is still thin.
+Knowledge sources interact through the blackboard alone, so their type and number can change.
 
 ## Related Patterns
 

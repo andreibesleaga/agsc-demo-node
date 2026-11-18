@@ -16,7 +16,7 @@ aliases:
 clusters:
   - security
 date: 2026-08-16
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://genai.owasp.org/download/52117/?tmstv=1765059207
     title: "OWASP Top 10 for Agentic Applications for 2026"
@@ -61,19 +61,11 @@ Keep every component an agent loads traceable to a known source, unaltered, and 
 
 ## Context & Forces
 
-OWASP's ASI04, Agentic Supply Chain Vulnerabilities, covers models, tools, plug-ins, datasets, other agents, MCP and A2A interfaces, registries and update channels. It notes that agentic systems often compose capabilities at runtime, shifting focus from manifest to run-time security.
+OWASP notes that agentic systems often compose capabilities at runtime, shifting focus from manifest to run-time security.
 
 ## Structure
 
-OWASP's prevention list includes:
-
-- signing manifests, prompts and tool definitions, with SBOMs and AIBOMs;
-- curated registries, allowlists, and pinning by content hash;
-- rejecting unsigned components;
-- re-checking signatures at runtime;
-- a kill switch that disables specific tools, prompts or agent connections across deployments.
-
-Sigstore's model-signing project reached 1.0 in April 2025 and stores signatures in a transparency log. SLSA offers supply-chain security guidelines.
+OWASP's prevention list includes signing manifests, curated registries, rejecting unsigned components, re-checking signatures at runtime, and a kill switch.
 
 ## Consequences & Trade-offs
 

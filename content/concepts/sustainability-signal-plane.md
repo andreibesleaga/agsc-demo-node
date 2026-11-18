@@ -11,7 +11,7 @@ tags:
 clusters:
   - protocols
 date: 2026-08-21
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://datatracker.ietf.org/doc/draft-besleaga-sustainability-wellknown/
     title: "The 'sustainability-data' Well-Known URI"
@@ -57,23 +57,19 @@ diagram:
 
 ## Intent
 
-Give each system one standard address for its current energy and carbon figures, readable by the systems that depend on it.
+Give each system one predictable address for its current energy and carbon figures.
 
 ## Context & Forces
 
-Sustainability data is mostly written for people. carbon.txt (Green Web Foundation) gives a domain one place for its sustainability data; the Green Software Foundation's Real Time Cloud project works on a common format for cloud providers.
+Sustainability data is mostly written for people.
 
 ## Structure
 
-The Internet-Draft "The 'sustainability-data' Well-Known URI" (Andrei N. Besleaga, 2026) defines `/.well-known/sustainability-data`: one JSON document over HTTPS, with seven mandatory members, including a link to the method behind the figures.
-
-1. Each system publishes its own document.
-2. It reads the documents of the systems it depends on.
-3. It uses those figures in its own decisions.
+The Internet-Draft "The 'sustainability-data' Well-Known URI" (Andrei N. Besleaga, 2026) defines /.well-known/sustainability-data, one JSON document over HTTPS.
 
 ## Consequences & Trade-offs
 
-Figures sit at one predictable address. They are self-declared: the format can be checked, the truth cannot. The author's evaluation package measures one public gateway. With few publishers, adoption is the main risk.
+Figures are self-declared: the format can be checked, the truth cannot.
 
 ## Related Patterns
 

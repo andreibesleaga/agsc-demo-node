@@ -15,7 +15,7 @@ aliases:
 clusters:
   - evaluation-testing
 date: 2026-08-15
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://www.anthropic.com/research/demystifying-evals-for-ai-agents
     title: "Demystifying evals for AI agents"
@@ -57,18 +57,15 @@ Grade the end state an agent produced and the path it took as two separate quest
 
 ## Context & Forces
 
-An agent can reach the right result by a bad path, or take a good path to a wrong result. One score hides one of them.
+An agent can reach the right result by a bad path.
 
 ## Structure
 
-Anthropic's guide defines the transcript (trace or trajectory) as the full record of a trial, and the outcome as the final state of the environment (Grace et al., 2026). Graders are code-based, model-based or human. Google's Agent Development Kit scores tool-call paths (`tool_trajectory_avg_score`) separately from answers (`response_match_score`). Huyen (2025) lists failures to measure, from invalid tools and wrong parameters to goal failure and inefficiency.
-
-1. Grade the outcome against what should be true afterwards.
-2. Grade the path for tool use, safety and efficiency.
+Anthropic's guide defines the transcript, or trajectory, as the complete record of a trial, and the outcome as the final state of the environment (Grace et al., 2026).
 
 ## Consequences & Trade-offs
 
-Behaviour changes show even when success rates hold. Anthropic warns that exact tool-call sequences make brittle tests; require them only where the path is the requirement.
+Anthropic warns that exact tool-call sequences make brittle tests.
 
 ## Related Patterns
 

@@ -15,7 +15,7 @@ aliases:
 clusters:
   - product
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes
     title: "Fin AI Agent outcomes"
@@ -61,19 +61,19 @@ x-oldsite-subdeck: Metrics
 
 ## Intent
 
-Measure a customer-facing agent by whether it addressed the customer's problem, and define "resolved" precisely enough to count.
+Measure a customer-facing agent by whether it addressed the customer's problem.
 
 ## Context & Forces
 
-Intercom separates three measures. Deflection rate is the percentage of inbound queries that never reach a human agent; Intercom says it "tells you nothing about customer outcomes". Containment rate is the share of AI conversations that ended without handoff. Resolution rate attempts to measure whether the agent addressed the customer's reason.
+Intercom separates deflection rate, containment rate and resolution rate.
 
 ## Structure
 
-Intercom's Fin counts a resolution as confirmed when the customer says the answer helped, or assumed when the customer leaves without asking for more. Zendesk counts an automated resolution only without escalation and after LLM verification. Sierra bills resolved conversations.
+Intercom's Fin counts a resolution as confirmed when the customer says the answer helped, or assumed when the customer leaves.
 
 ## Consequences & Trade-offs
 
-The definition decides the number: assumed resolutions count a departure as a resolution, and LLM verification is itself an automated judgment.
+The definition decides the number: assumed resolutions count a departure as a resolution.
 
 ## Related Patterns
 

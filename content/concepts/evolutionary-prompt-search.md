@@ -15,7 +15,7 @@ aliases:
 clusters:
   - cognitive-behavioral
 date: 2026-08-18
-modified: 2026-11-12
+modified: 2026-11-18
 sources:
   - resource: https://arxiv.org/abs/2309.08532
     title: "EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers"
@@ -30,10 +30,10 @@ sources:
     verified: 2026-11-12
     grade: secondary
   - resource: https://dspy.ai/current/api/optimizers/GEPA/overview/
-    title: "GEPA: Reflective Prompt Evolution"
+    title: "GEPA Overview"
     author: "DSPy"
     year: 2025
-    verified: 2026-11-12
+    verified: 2026-11-18
     grade: secondary
 prov:
   origin: imported
@@ -56,7 +56,7 @@ x-oldsite-subdeck: Evolutionary & genetic patterns
 
 ## Intent
 
-Improve prompts by search: keep a population, let a model vary it, and keep the best.
+Improve prompts by search: let a model vary a population and keep the better ones.
 
 ## Context & Forces
 
@@ -64,15 +64,11 @@ EvoPrompt (Guo et al., ICLR 2024) borrows evolutionary algorithms to optimize di
 
 ## Structure
 
-EvoPrompt starts from a population of prompts and uses LLMs to generate candidates through evolutionary operators. Its authors report gains of up to 25% on BBH over existing methods.
-
-Promptbreeder (Fernando et al., 2023) is self-referential. An LLM mutates a population of task-prompts and scores them on a training set, guided by mutation-prompts that it also improves. The authors report it beats Chain-of-Thought and Plan-and-Solve prompting on arithmetic and commonsense benchmarks.
-
-DSPy's GEPA (Genetic-Pareto) has LLMs reflect on execution traces and propose improved instructions. It keeps candidates that top at least one evaluation instance and mutates from that set.
+Promptbreeder (Fernando et al., 2023) has an LLM mutate a population of task-prompts, guided by mutation-prompts that it also improves.
 
 ## Consequences & Trade-offs
 
-These gains are the authors' own figures.
+The gains reported for these methods are the authors' own figures.
 
 ## Related Patterns
 

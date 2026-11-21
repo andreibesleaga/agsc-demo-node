@@ -1,4 +1,4 @@
-# AgenticSystemCore Graph
+# Systems Graph
 
 Agent-system designs as a typed, cited graph: short reference cards on well-known
 agent-system patterns and failure modes, each written from the public sources it cites and

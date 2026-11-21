@@ -1,7 +1,7 @@
 ---
 spec_version: 1.1.0
 okf_version: 0.2
-title: AgenticSystemCore Graph
+title: Systems Graph
 description: "Agent-system designs as a typed, cited graph, built by the AgenticSystemCore reference engine: the second node of the Agentic Knowledge Web."
 base: https://patterns.agenticsystemcore.com/
 lang: en
@@ -11,7 +11,7 @@ prov:
   operator: human:andreibesleaga
 ---
 
-# AgenticSystemCore Graph
+# Systems Graph
 
 Short cards on well-known agent-system designs, each written from the public sources it cites and joined to the others by typed links. This is the second node of the Agentic Knowledge Web, beside [agenticsystemcore.com](https://agenticsystemcore.com/) and [standards.agenticsystemcore.com](https://standards.agenticsystemcore.com/); each names the others in its discovery file. The AgenticSystemCore engine built every file here as static files: no server and no database run behind it.
 
